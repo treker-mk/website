@@ -1,5 +1,5 @@
 import { parseISO, format } from "date-fns";
-import sl from "date-fns/locale/sl";
+import mk from "date-fns/locale/mk";
 
 import Vue from "vue";
 
@@ -34,7 +34,7 @@ Vue.filter("formatDate", function(value, fmt) {
   }
 
   return format(date, fmt, {
-    locale: sl
+    locale: mk
   });
 
 });
