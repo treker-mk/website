@@ -25,11 +25,16 @@
       </a>
       <div class="router-link">
         <span>
-          <a :href="'/sl/'+$route.path.slice(4)"
-             hreflang="sl"
+          <a :href="'/mk/'+$route.path.slice(4)"
+             hreflang="mk"
              class="router-link-anchor"
-             :class="{ active: $i18n.i18next.language === 'sl' }"
-             @click.prevent="changeLanguage('sl')">SL</a> /
+             :class="{ active: $i18n.i18next.language === 'mk' }"
+             @click.prevent="changeLanguage('mk')">MK</a> /
+          <a :href="'/sq/'+$route.path.slice(4)"
+             hreflang="sq"
+             class="router-link-anchor"
+             :class="{ active: $i18n.i18next.language === 'sq' }"
+             @click.prevent="changeLanguage('sq')">AL</a> /
           <a :href="'/en/'+$route.path.slice(4)"
              hreflang="en"
              class="router-link-anchor"

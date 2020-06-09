@@ -5,7 +5,7 @@ import VueI18Next from '@panter/vue-i18next'
 import moment from 'moment'
 import en from './locales/en.json'
 import mk from './locales/mk.json'
-import al from './locales/al.json'
+import sq from './locales/sq.json'
 
 Vue.use(VueI18Next)
 
@@ -25,11 +25,12 @@ const detectionOptions = {
 
 i18next.use(LanguageDetector).init({
   lng: 'mk',
-  fallbackLng: 'mk',
+  fallbackLng: ['en', 'sl']],
   returnObjects: true,
   resources: {
     mk: { translation: mk },
-    al: { translation: al },
+    sq: { translation: sq },
+    sl: { translation: sl },
     en: { translation: en },
   },
   detection: detectionOptions,
