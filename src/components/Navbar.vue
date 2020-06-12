@@ -19,17 +19,22 @@
       <router-link to="team" class="router-link"><span>{{ $t("navbar.team") }}</span></router-link>
       <router-link to="sources" class="router-link"><span>{{ $t("navbar.sources") }}</span></router-link>
       <router-link to="links" class="router-link"><span>{{ $t("navbar.links") }}</span></router-link>
-      <a href="https://github.com/sledilnik" target="_blank" class="router-link router-link-icon">
+      <a href="https://github.com/treker-mk" target="_blank" class="router-link router-link-icon">
         <img src="../assets/svg/gh-icon.svg" :alt="$t('navbar.github')" />
         <span>{{ $t("navbar.github") }}</span>
       </a>
       <div class="router-link">
         <span>
-          <a :href="'/sl/'+$route.path.slice(4)"
-             hreflang="sl"
+          <a :href="'/mk/'+$route.path.slice(4)"
+             hreflang="mk"
              class="router-link-anchor"
-             :class="{ active: $i18n.i18next.language === 'sl' }"
-             @click.prevent="changeLanguage('sl')">SL</a> /
+             :class="{ active: $i18n.i18next.language === 'mk' }"
+             @click.prevent="changeLanguage('mk')">MK</a> /
+          <a :href="'/sq/'+$route.path.slice(4)"
+             hreflang="sq"
+             class="router-link-anchor"
+             :class="{ active: $i18n.i18next.language === 'sq' }"
+             @click.prevent="changeLanguage('sq')">SQ</a> /
           <a :href="'/en/'+$route.path.slice(4)"
              hreflang="en"
              class="router-link-anchor"

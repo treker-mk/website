@@ -5,7 +5,7 @@ open Fable.SimpleJson
 
 open Types
 
-let url = "https://api.sledilnik.org/api/municipalities"
+let url = "https://api.treker.mk/api/municipalities"
 
 let parseRegionsData data =
     data

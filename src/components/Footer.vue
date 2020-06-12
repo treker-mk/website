@@ -5,21 +5,21 @@
         <span>{{ $t('footer.copyright') }}</span>
       </div>
       <div class="email">
-        <a href="mailto:info@sledilnik.org">
-          <span>info@sledilnik.org</span>
+        <a href="mailto:info@treker.mk">
+          <span>info@treker.mk</span>
         </a>
       </div>
       <div class="social">
-        <a href="https://fb.me/COVID19Sledilnik" target="_blank">
+        <a href="https://fb.me/COVID19Treker" target="_blank">
           <img src="../assets/svg/fb-icon.svg" alt="Facebook" />
         </a>
-        <a href="https://twitter.com/sledilnik" target="_blank">
+        <a href="https://twitter.com/treker" target="_blank">
           <img src="../assets/svg/tw-icon.svg" alt="Twitter" />
         </a>
-        <a href="https://medium.com/sledilnik" target="_blank">
+        <a href="https://medium.com/treker" target="_blank">
           <img src="../assets/svg/medium-icon.svg" alt="Medium" />
         </a>
-        <a href="https://github.com/sledilnik" target="_blank">
+        <a href="https://github.com/treker-mk" target="_blank">
           <img src="../assets/svg/gh-icon.svg" alt="GitHub" class="gh-icon" />
         </a>
       </div>
