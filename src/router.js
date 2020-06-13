@@ -11,34 +11,86 @@ import DataPage from './pages/DataPage.vue'
 
 import * as aboutMd from './content/about.md'
 import * as aboutMdEn from './content/about_en.md'
+import * as aboutMdMk from './content/about_mk.md'
+import * as aboutMdSq from './content/about_sq.md'
 import * as linksMd from './content/links.md'
 import * as linksMdEn from './content/links_en.md'
-import * as contentMd from './content/FAQ.md'
-import * as contentMdEn from './content/FAQ_en.md'
+import * as linksMdMk from './content/links_mk.md'
+import * as linksMdSq from './content/links_sq.md'
+import * as contentMd from './content/faq.md'
+import * as contentMdEn from './content/faq_en.md'
+import * as contentMdMk from './content/faq_mk.md'
+import * as contentMdSq from './content/faq_sq.md'
 import * as teamMd from './content/team.md'
 import * as teamMdEn from './content/team_en.md'
+import * as teamMdMk from './content/team_mk.md'
+import * as teamMdSq from './content/team_sq.md'
 import * as sourcesMd from './content/sources.md'
 import * as sourcesMdEn from './content/sources_en.md'
+import * as sourcesMdMk from './content/sources_mk.md'
+import * as sourcesMdSq from './content/sources_sq.md'
 import * as modelsMd from './content/models.md'
 import * as modelsMdEn from './content/models_en.md'
+import * as modelsMdMk from './content/models_mk.md'
+import * as modelsMdSq from './content/models_sq.md'
 import * as datasourcesMd from './content/datasources.md'
 import * as datasourcesMdEn from './content/datasources_en.md'
+import * as datasourcesMdMk from './content/datasources_mk.md'
+import * as datasourcesMdSq from './content/datasources_sq.md'
 
 Vue.use(VueRouter)
 Vue.use(VueMeta)
 
 const mdContent = {
-  FAQ: { sl: contentMd, en: contentMdEn },
-  about: { sl: aboutMd, en: aboutMdEn },
-  team: { sl: teamMd, en: teamMdEn },
-  links: { sl: linksMd, en: linksMdEn },
-  sources: { sl: sourcesMd, en: sourcesMdEn },
-  models: { sl: modelsMd, en: modelsMdEn },
-  datasources: { sl: datasourcesMd, en: datasourcesMdEn },
+  faq: {
+    sl: contentMd,
+    en: contentMdEn,
+    mk: contentMdMk,
+    sq: contentMdSq,
+  },
+  about: {
+    sl: aboutMd,
+    en: aboutMdEn,
+    mk: aboutMdMk,
+    sq: aboutMdSq,
+  },
+  team: {
+    sl: teamMd,
+    en: teamMdEn,
+    mk: teamMdMk,
+    sq: teamMdSq,
+  },
+  links: {
+    sl: linksMd,
+    en: linksMdEn,
+    mk: linksMdMk,
+    sq: linksMdSq,
+  },
+  sources: {
+    sl: sourcesMd,
+    en: sourcesMdEn,
+    mk: sourcesMdMk,
+    sq: sourcesMdSq,
+  },
+  models: {
+    sl: modelsMd,
+    en: modelsMdEn,
+    mk: modelsMdMk,
+    sq: modelsMdSq,
+  },
+  datasources: {
+    sl: datasourcesMd,
+    en: datasourcesMdEn,
+    mk: datasourcesMdMk,
+    sq: datasourcesMdSq,
+  },
 }
 
 function dynamicProps(route) {
-  let baseRoute = route.path.slice(4)
+  let baseRoute = route.path
+    .slice(4)
+    .toLowerCase()
+    .replace(/\/$/, '')
   let lang = route.params.lang
 
   return {
@@ -103,7 +155,6 @@ const routes = [
     redirect: `/${i18next.language}/data`,
   },
   {
-    // TODO: this doesn't work
     path: '/embed',
     redirect: `/${i18next.language}/embed`,
   },
@@ -131,7 +182,7 @@ const routes = [
     },
     children: [
       {
-        path:'/',
+        path: '/',
         redirect: 'stats',
       },
       {
@@ -162,7 +213,7 @@ const routes = [
         next(path)
         return
       }
-      next({ path: '/mk/stats' })
+      next({ path: `/${process.env.VUE_APP_DEFAULT_LANGUAGE}/stats` })
     },
   },
 ]

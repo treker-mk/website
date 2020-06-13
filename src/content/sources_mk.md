@@ -1,4 +1,4 @@
-# Sources *EN 
+# Sources *MK 
 
 *Da bi zagotovili maksimalno natančnost in zanesljivost podatkov v zbirki, podatke zbiramo in primerjamo iz večih uradnih virov, ki jih navajamo.*
 

@@ -1,547 +1,424 @@
 {
-    "meta": {
-        "title": "COVID-19 Tracking",
-        "description": "COVID-19 Slovenia Tracking - collected, verified, updated, analyzed and reviewed COVID-19 data for Slovenia."
-    },
-    "navbar": {
-        "home": "Home",
-        "tables": "Table",
-        "models": "Models",
-        "faq": "FAQ",
-        "about": "About",
-        "team": "Team",
-        "sources": "Sources",
-        "links": "Links",
-        "github": "GitHub",
-        "language": {
-            "slovenian": "Slovenian",
-            "english": "English"
-        }
+    "notice": {
+        "news001": "Новости:",
+        "news002": "структура на хоспитализираните во КОВИД-19 болниците."
     },
     "timestamp": {
-        "updated": "Updated {{ date, MMMM Do YYYY }}",
-        "at": "at {{ date, HH:mm }}"
+        "at": "на {{ date, HH.mm }}",
+        "updated": "Ажурирано на {{ date, D. MMMM YYYY }}"
     },
-    "notice": {
-        "news001": "New:",
-        "news002": "structure of hospitalized for each COVID-19 hospital."
+    "navbar": {
+        "language": {
+            "english": "Англиски",
+            "slovenian": "Словенечки"
+        },
+        "github": "GitHub",
+        "links": "Линкови",
+        "sources": "Извори",
+        "team": "Тим",
+        "about": "За проектот",
+        "faq": "ЧПП",
+        "models": "Модели",
+        "tables": "Табела",
+        "home": "Дома"
+    },
+    "meta": {
+        "title": "CoViD-19 Трекер",
+        "description": "КОВИД-19 Трекер Македонија - собрани, проверени, обработени, анализирани и прегледани податоци за епидемијата на КОВИД-19 кај нас."
     },
     "infocard": {
-        "confirmedToDate": "Confirmed Cases",
-        "recoveredToDate": "Recovered",
-        "inHospital": "Hospitalized",
-        "icu": "In ICU",
-        "deceasedToDate": "Confirmed Deaths",
-        "accordingTo": "According to {{ date, MMMM Do }}",
-        "lastUpdated": "{{ date, MMMM Do }}"
-    },
-    "tables": {
-        "title": "Table",
-        "tabSummary": "Summary",
-        "tabByRegion": "By region",
-        "tabByAgeMale": "By age - Male",
-        "tabByAgeFemale": "By age - Female",
-        "source": "Data source in other formats",
-        "sourceLink": "GDocs spreadsheet, CSV format or REST API",
-        "day": "{{ date, M/D }}"
-    },
-    "embedMaker": {
-        "title": "Embed a chart into your web page",
-        "chooseChart": "Choose a chart",
-        "preview": "Preview:",
-        "embedCode": "Embed code:",
-        "description": "Specific view can be adopted to your needs. You can change the size of the embedded view or you can limit to only specific region or municipality. For more, <a href=\"https://github.com/sledilnik/website/blob/master/examples/README.md\">check here</a>.",
-        "descriptionPart1": "Specific view can be adopted to your needs. You can change the size of the embedded view or you can limit to only specific region or municipality. For more, ",
-        "descriptionPart2": "check here.",
-        "copy": "Copy",
-        "copied": "Copied!"
-    },
-    "month": {
-        "0": "January",
-        "1": "February",
-        "2": "March",
-        "3": "April",
-        "4": "May",
-        "5": "June",
-        "6": "July",
-        "7": "August",
-        "8": "September",
-        "9": "October",
-        "10": "November",
-        "11": "December"
-    },
-    "shortMonth": {
-        "0": "Jan",
-        "1": "Feb",
-        "2": "Mar",
-        "3": "Apr",
-        "4": "May",
-        "5": "Jun",
-        "6": "Jul",
-        "7": "Aug",
-        "8": "Sep",
-        "9": "Oct",
-        "10": "Nov",
-        "11": "Dec"
-    },
-    "weekday": {
-        "0": "Sunday",
-        "1": "Monday",
-        "2": "Tuesday",
-        "3": "Wednesday",
-        "4": "Thursday",
-        "5": "Friday",
-        "6": "Saturday"
-    },
-    "phase": {
-        "1": {
-            "title": "Phase 1"
-        },
-        "2": {
-            "title": "Phase 2",
-            "description": "epidemic, new testing methodology"
-        },
-        "3": {
-            "title": "Phase 3",
-            "description": "new testing methodology"
-        },
-        "4": {
-            "title": "Phase 4",
-            "description": "new testing methodology"
-        },
-        "5": {
-            "title": "Phase 5",
-            "description": "new testing methodology"
-        },
-        "6": {
-            "title": "Phase 6",
-            "description": "new testing methodology, study"
-        },
-        "7": {
-            "title": "Phase 7",
-            "description": "end of epidemic"
-        }
-    },
-    "charts": {
-        "common": {
-            "loading": "Loading data…",
-            "yAxis": "Y axis:",
-            "linear": "Linear",
-            "log": "Logarithmic",
-            "noteFaq": "Note: limitation of presented data is described in ",
-            "linkFaq": "FAQ",
-            "xAxis": "X axis:",
-            "facebook": "Facebook",
-            "twitter": "Twitter",
-            "webpage": "Webpage",
-            "share": "Share",
-            "close": "Close"
-        },
-        "metricsComparison": {
-            "title": "COVID-19 Situation in Slovenia",
-            "tests": "Tests (daily)",
-            "testsToDate": "Tests (to date)",
-            "confirmed": "Confirmed Cases (daily)",
-            "confirmedToDate": "Confirmed Cases (to date)",
-            "active": "Active Cases",
-            "recovered": "Recovered (to date)",
-            "hospitalized": "Hospitalized",
-            "hospitalizedToDate": "Hospitalized (to date)",
-            "icu": "In ICU",
-            "ventilator": "On Ventilator",
-            "discharged": "Discharged from Hospital (daily)",
-            "dischargedToDate": "Discharged from Hospital (to date)",
-            "deceased": "Deaths (daily)",
-            "deceasedToDate": "Deaths (to date)"
-        },
-        "cases": {
-            "title": "Confirmed Cases",
-            "active": "Active",
-            "hospitalized": "Hospitalized",
-            "icu": "In ICU",
-            "ventilator": "On Ventilator",
-            "recovered": "Recovered",
-            "deceased": "Died"
-        },
-        "patients": {
-            "title": "Hospitalizations",
-            "structure": "Structure",
-            "byHospital": "By Hospital",
-            "hospitalizedIn": "Hospitalized In:",
-            "admitted": "Admitted",
-            "hospitalized": "Hospitalized",
-            "icu": "In ICU",
-            "ventilator": "On Ventilator",
-            "discharged": "Discharged",
-            "deceased": "Died",
-            "allHospitals": "All Hospitals"
-        },
-        "ratios": {
-            "title": "Share of Serious Cases",
-            "seriousCases": "Serious Cases",
-            "hospitalizations": "Hospitalizations",
-            "mortality": "Mortality",
-            "hospitalCases": "Hospitalized",
-            "icuCases": "In ICU",
-            "ventilatorCases": "On Ventilator",
-            "deceasedCases": "Deaths",
-            "icuHospital": "In ICU",
-            "ventilatorHospital": "On Ventilator",
-            "deceasedHospital": "Deaths",
-            "hospitalMortality": "Hospital Mortality",
-            "icuMortality": "ICU Mortality",
-            "icuDeceasedShare": "Share of ICU Deaths",
-            "hospitalDeceasedShare": "Share of Hospital Deaths"
-        },
-        "hCenters": {
-            "title": "Healthcare Center Treatment",
-            "emergencyExamination": "Emergency Examinations",
-            "suspectedCovidExamination": "Suspected COVID-19 (examination)",
-            "suspectedCovidPhone": "Suspected COVID-19 (phone)",
-            "sentToSelfIsolation": "Sent to Self-isolation",
-            "testsPerformed": "Tests (performed)",
-            "testsPositive": "Tests (positive*)",
-            "allRegions": "All regions"
-        },
-        "tests": {
-            "title": "Testing",
-            "allTesting": "All",
-            "regularTesting": "Regular",
-            "nationalStudyTesting": "Study",
-            "negativeTests": "Negative Tests",
-            "positiveTests": "Positive Tests",
-            "shareOfPositive": "Share of Positive Tests (%)"
-        },
-        "infections": {
-            "title": "Structure of Confirmed Cases",
-            "averageByDay": "By Day (average)",
-            "all": "All",
-            "relative": "Relative",
-            "hcStaff": "Healthcare Staff",
-            "rhStaff": "Retirement Home Staff",
-            "rhOccupant": "Retirement Home Residents",
-            "allConfirmed": "All Confirmed",
-            "otherPersons": "Other Persons"
-        },
-        "spread": {
-            "title": "Growth of Confirmed Cases",
-            "hospitalized": "hospitalized",
-            "inFourWeeks": "In four weeks",
-            "inThreeWeeks": "In three weeks",
-            "inTwoWeeks": "In two weeks",
-            "inOneWeek": "In one week",
-            "today": "Today",
-            "ifExpGrowth": "If the infection would spread exponentially with duplication at 7, then you could expect:",
-            "oneMonth": "One month",
-            "oneWeek": "One week",
-            "oneDay": "One day",
-            "everageSouthKorea": "South Korea's average in recent days",
-            "relativeTitle": "Daily Growth of Infected",
-            "confirmedCases": "confirmed cases",
-            "timesAsMany": "- times as much",
-            "doublingRateLabel": "In how many days does the number of infected people double",
-            "doublingRateTitle": "Exponential Growth Rate [in days]",
-            "relativeLabel": "Relative Growth in %",
-            "absoluteLabel": "Confirmed Cases (daily)",
-            "absoluteTitle": "Daily Growth of Confirmed Cases",
-            "explainer": "What does exponential growth mean",
-            "doublingRate": "Exponential Growth in Days",
-            "percentage": "Relative Daily Growth",
-            "absolute": "Absolute Daily Growth"
-        },
-        "regions": {
-            "title": "Confirmed Cases by Region"
-        },
-        "map": {
-            "title": "Municipality Map",
-            "mortalityOfConfirmedCases": "Mortality of Confirmed Cases",
-            "all": "All",
-            "populationShare": "Population Share",
-            "populationC": "Population",
-            "population": "population",
-            "days": "days",
-            "absolute": "Absolute",
-            "view": "Show:",
-            "deceased": "Deaths",
-            "confirmedCases": "Confirmed Cases"
-        },
-        "municipalities": {
-            "title": "Cases by Municipalities",
-            "sortLast": "Last",
-            "sortDoublingTime": "Doubling time",
-            "sortTotal": "All",
-            "sortActive": "Active",
-            "sortBy": "Sort by:",
-            "allRegions": "All regions",
-            "search": "Search municipality",
-            "showAll": "Show All",
-            "showLess": "Show Less",
-            "all": "All:",
-            "active": "Active:",
-            "recovered": "Recovered:",
-            "deceased": "Deaths:",
-            "doubles": "Doubles ",
-            "yesterday": "yesterday",
-            "today": "today",
-            "lastCase": "Last case: "
-        },
-        "ageGroups": {
-            "title": "Age Groups",
-            "male": "Male",
-            "female": "Female",
-            "absolute": "Absolute",
-            "relative": "Relative",
-            "populationTotal": "Population Total",
-            "shareOfDeceasedConfirmedCases": "Share of Deaths in Confirmed Cases",
-            "shareOfDeceasedPopulation": "Share of Deaths in Population",
-            "shareOfInfectedPopulation": "Share of Confirmed Cases in Population",
-            "deceasedPerConfirmedCases": "Deaths per Confirmed Cases",
-            "deceasedPerPopulation": "Deaths per Population",
-            "confirmedCasesPerPopulation": "Confirmed Cases per Population",
-            "age": "Age",
-            "deceased": "Deaths",
-            "confirmedCases": "Confirmed Cases",
-            "view": "Show:"
-        },
-        "countries": {
-            "title": "Comparison by Country",
-            "dataSourceOWID": "data source: Our World In Data",
-            "nrDeathsPerMillion": "Nr. deaths per 1 million people",
-            "daysFromOneDeathPerMillion": "Nr. days since first died per 1 million people",
-            "daysFromFirstDeath": "Nr. days since first death",
-            "sinceOneDeathPerMillion": "Since first death per million people",
-            "deathsPerMillion": "Deaths per Million People",
-            "sinceFirstDeath": "Since the first death",
-            "chronologically": "Chronological",
-            "groupEastAsiaOceania": "East Asia and Oceania",
-            "groupExYu": "Ex-Yugoslavia",
-            "groupNordic": "Nordic countries",
-            "groupCriticalWorld": "Critical countries (World)",
-            "groupCriticalEU": "Critical countries (EU)",
-            "groupNeighbouringWoItaly": "Surroundings (excluding Italy)"
-        },
-        "hospitals": {
-            "bedsShort": "Beds",
-            "beds": "Hospital beds",
-            "allHospitals": "All hospitals",
-            "data": "Data",
-            "max": "Max",
-            "all": "All",
-            "full": "Full",
-            "empty": "Empty",
-            "bedsICUFull": "ICU beds, full",
-            "bedsICU70": "ICU beds, 70%",
-            "bedsICUAll": "ICU beds, all",
-            "bedsFull": "Beds, full",
-            "beds70": "Beds, 70%",
-            "bedsAll": "Beds, all",
-            "bedsMax": "Beds, maximum",
-            "bedsICUShort": "ICU beds"
-        }
-    },
-    "footer": {
-        "copyright": "© 2020 Sledilnik.org"
-    },
-    "tableDict": {
-        "tests_performed": "Tests (daily)",
-        "tests_performed_todate": "Tests (to date)",
-        "cases_confirmed": "Confirmed Cases (daily)",
-        "cases_confirmed_todate": "Confirmed Cases (to date)",
-        "cases_active": "Active Cases",
-        "cases_recovered_todate": "Recovered (to date)",
-        "cases_closed_todate": "Closed Cases (to date)",
-        "cases_hs_employee_confirmed_todate": "Confirmed Cases - Healthcare Staff (to date)",
-        "cases_rh_employee_confirmed_todate": "Confirmed Cases - Retirement Home Staff (to date)",
-        "cases_rh_occupant_confirmed_todate": "Confirmed Cases - Retirement Home Residents (to date)",
-        "cases_unclassified_confirmed_todate": "Confirmed Cases - Others (to date)",
-        "state_in_hospital": "Hospitalized (active)",
-        "state_icu": "In ICU (active)",
-        "state_critical": "On Ventilator (active)",
-        "state_deceased_todate": "Confirmed Deaths (to date)",
-        "state_in_hospital_todate": "Hospitalized (to date)",
-        "state_out_of_hospital_todate": "Discharged from Hospital (to date)",
-        "age_male_todate": "Total",
-        "age_male_0-4_todate": "0 - 4 years",
-        "age_male_5-14_todate": "5 - 14 years",
-        "age_male_15-24_todate": "15 - 24 years",
-        "age_male_25-34_todate": "25 - 34 years",
-        "age_male_35-44_todate": "35 - 44 years",
-        "age_male_45-54_todate": "45 - 54 years",
-        "age_male_55-64_todate": "55 - 64 years",
-        "age_male_65-74_todate": "65 - 74 years",
-        "age_male_75-84_todate": "75 - 84 years",
-        "age_male_85+_todate": "85+ years",
-        "age_female_todate": "Total",
-        "age_female_0-4_todate": "0 - 4 years",
-        "age_female_5-14_todate": "5 - 14 years",
-        "age_female_15-24_todate": "15 - 24 years",
-        "age_female_25-34_todate": "25 - 34 years",
-        "age_female_35-44_todate": "35 - 44 years",
-        "age_female_45-54_todate": "45 - 54 years",
-        "age_female_55-64_todate": "55 - 64 years",
-        "age_female_65-74_todate": "65 - 74 years",
-        "age_female_75-84_todate": "75 - 84 years",
-        "age_female_85+_todate": "85+ years",
-        "region_kr_todate": "Upper Carniola Region",
-        "region_ng_todate": "Gorizia Region",
-        "region_nm_todate": "Southeast Slovenia",
-        "region_sg_todate": "Carinthia",
-        "region_kp_todate": "Coastal–Karst Region",
-        "region_lj_todate": "Central Slovenia",
-        "region_mb_todate": "Drava Region",
-        "region_ms_todate": "Mura Region",
-        "region_kk_todate": "Lower Sava Region",
-        "region_po_todate": "Littoral–Inner Carniola",
-        "region_ce_todate": "Savinja Region",
-        "region_za_todate": "Central Sava Region",
-        "region_todate": "Total"
+        "deceasedToDate": "Починати",
+        "icu": "На интензивна нега",
+        "inHospital": "Хоспитализирани",
+        "recoveredToDate": "Оздравени",
+        "active": "Активни случаи",
+        "confirmedToDate": "Позитивни случаи",
+        "tests": "Тестови на ден",
+        "lastUpdated": "{{ date, D. MMMM }}",
+        "accordingTo": "Во однос на {{ date, D. MMMM }}"
     },
     "cm": {
-        "firstCase": {
-            "description": "First confirmed case:<br>tourist returning from Morocco",
-            "title": "1st case"
-        },
-        "liftFoodMarkets": {
-            "title": "Markets",
-            "description": "Relaxation: markets, service on the terraces, shops up to 400m2, hairdressing and beauty salons"
-        },
-        "liftMunicipality": {
-            "description": "Relaxation: movement outside the boundaries of your municipality",
-            "title": "Municipalities"
-        },
-        "liftMuseums": {
-            "title": "Museums",
-            "description": "Relaxation: libraries, galleries, museums, real-estate, chimney sweeping"
-        },
-        "nationalStudy": {
-            "title": "Study",
-            "description": "Launch of a national study of 3000 randomly selected individuals"
-        },
-        "liftService": {
-            "title": "Services",
-            "description": "Relaxation: construction, services, outdoor sports, <br>some regular public transport services allowed"
-        },
-        "quarantine": {
-            "description": "Mandatory 7 day quarantine when arriving from abroad",
-            "title": "Quarantine"
-        },
-        "shops": {
-            "title": "Shops",
-            "description": "Shops from 8-10 am and the last hour exclusively <br>for vulnerable groups (disabled, retired, pregnant women)"
-        },
-        "municipality": {
-            "title": "Municipalities",
-            "description": "Prohibition of movement outside municipal borders, mandatory disinfection <br>of multi-apartment buildings, shops for vulnerable groups until 10 am"
-        },
-        "gatherings": {
-            "description": "Prohibition of gathering in public places",
-            "title": "Gatherings"
-        },
-        "schools": {
-            "description": "Closure of schools, restaurants",
-            "title": "Schools"
+        "publicTransport": {
+            "title": "Превоз",
+            "description": "Укинување на јавен превоз"
         },
         "epidemic": {
-            "description": "Declared epidemic, prescribed general self-isolation",
-            "title": "Epidemic"
-        },
-        "liftQuarantine": {
-            "description": "Relaxation: quarantine only for foreigners from third countries",
-            "title": "Quarantine"
-        },
-        "liftPublicTransport": {
-            "description": "Relaxation: public transport, all health and dental services",
-            "title": "Transport"
-        },
-        "liftVacationHomes": {
-            "description": "Relaxation: movement between municipalities (vacation homes…), <br>explanations regarding the general ban on movement",
-            "title": "Vac.homes"
-        },
-        "publicTransport": {
-            "description": "The suspension of public transport",
-            "title": "Transport"
+            "title": "Епидемија"
         },
         "borders": {
-            "description": "Closing of some border crossings with Italy,<br>tighter controls on passenger cars",
-            "title": "Borders"
-        },
-        "checkpoints": {
-            "description": "16 entry points for testing",
-            "title": "EP"
-        },
-        "retirementHomes": {
-            "description": "The ban on visits to the retirement homes.<br>Confirmed infection of a doctor in Metlika",
-            "title": "RH"
-        },
-        "liftSchools1to3": {
-            "description": "Relaxation: kindergarten and primary school 1-3, 9 grade. Secondary school 4 grade",
-            "title": "Kindergarten"
-        },
-        "quarantine14days": {
-            "title": "Quarantine",
-            "description": "Mandatory 14 day quarantine for foreigners arriving from abroad <br> (for the EU with exceptions and third countries)"
+            "title": "Граници"
         },
         "liftSchools4to5": {
-            "description": "Relaxation: elementary school 4th, 5th grade, gathering up to 200 people, all accommodations",
-            "title": "Schools"
+            "title": "Училишта"
+        },
+        "liftSchools1to3": {
+            "title": "Детски градинки"
+        },
+        "liftPublicTransport": {
+            "title": "Превоз"
+        },
+        "liftFoodMarkets": {
+            "title": "Пазари"
+        },
+        "liftMunicipality": {
+            "title": "Општини"
+        },
+        "liftMuseums": {
+            "title": "Музеи"
+        },
+        "liftVacationHomes": {
+            "title": "Викендици"
+        },
+        "municipality": {
+            "title": "Општини"
+        },
+        "gatherings": {
+            "description": "Забрана на јавни собири",
+            "title": "Собири"
+        },
+        "schools": {
+            "title": "Училишта",
+            "description": "Затворање на училишта, ресторани"
+        },
+        "firstCase": {
+            "title": "Прв случај"
+        },
+        "quarantine14days": {
+            "title": "Карантин"
+        },
+        "liftQuarantine": {
+            "title": "Карантин"
+        },
+        "shops": {
+            "title": "Продавници"
+        },
+        "quarantine": {
+            "title": "Карантин"
+        }
+    },
+    "country": {
+        "USA": "САД",
+        "TUR": "Турција",
+        "TWN": "Тајван",
+        "SWE": "Шведска",
+        "SVN": "Словенија",
+        "SVK": "Словачка",
+        "SRB": "Србија",
+        "SGP": "Сингапур",
+        "RUS": "Русија",
+        "RKS": "Косово",
+        "NOR": "Норвешка",
+        "NZL": "Нов Зеланд",
+        "MNE": "Црна Гора",
+        "MKD": "С. Македонија",
+        "KOR": "Ј. Кореја",
+        "JPN": "Јапонија",
+        "ITA": "Италија",
+        "ISL": "Исланд",
+        "IRN": "Иран",
+        "HUN": "Унгарија",
+        "HRV": "Хрватска",
+        "CZE": "Чешка",
+        "GBR": "Велика Британија",
+        "FRA": "Франција",
+        "FIN": "Финска",
+        "ESP": "Шпанија",
+        "DNK": "Данска",
+        "DEU": "Германија",
+        "CHN": "НР Кина",
+        "CHE": "Швајцарија",
+        "BIH": "Босна и Херцеговина",
+        "BEL": "Белгија",
+        "AUT": "Австрија",
+        "AUS": "Австралија"
+    },
+    "shortMonth": {
+        "2": "мар",
+        "11": "дек",
+        "10": "нов",
+        "9": "окт",
+        "8": "сеп",
+        "7": "авг",
+        "6": "јул",
+        "5": "јун",
+        "4": "мај",
+        "3": "апр",
+        "1": "фев",
+        "0": "јан"
+    },
+    "weekday": {
+        "6": "сабота",
+        "5": "петок",
+        "4": "четврток",
+        "3": "среда",
+        "2": "вторник",
+        "1": "понеделник",
+        "0": "недела"
+    },
+    "month": {
+        "11": "декември",
+        "10": "ноември",
+        "9": "октомври",
+        "8": "септември",
+        "7": "август",
+        "6": "јули",
+        "5": "јуни",
+        "4": "мај",
+        "3": "април",
+        "2": "март",
+        "1": "февруари",
+        "0": "јануари"
+    },
+    "embedMaker": {
+        "copied": "Ископирано!",
+        "copy": "Копирај",
+        "descriptionPart2": "Проверете овде.",
+        "chooseChart": "Изберете графикон",
+        "preview": "Преглед:"
+    },
+    "tables": {
+        "tabByAgeFemale": "По возраст - Женски",
+        "tabByAgeMale": "По возраст - Машки",
+        "title": "Табела",
+        "day": "{{ date, D.M. }}",
+        "sourceLink": "GDocs табела во CSV облик или REST API",
+        "source": "Извори на податоци во други облици"
+    },
+    "charts": {
+        "metricsComparison": {
+            "hospitalized": "Хоспитализирани",
+            "recovered": "Оздравени (вкупно)",
+            "active": "Активни случаи",
+            "confirmedToDate": "Позитивни случаи (вкупно)",
+            "confirmed": "Позитивни случаи (дневно)",
+            "testsToDate": "Тестови (вкупно)",
+            "tests": "Тестови (дневно)",
+            "hospitalizedToDate": "Хоспитализирани (вкупно)",
+            "title": "Состојба со COVID-19 во Република Северна Македонија",
+            "deceasedToDate": "Починати (вкупно)",
+            "deceased": "Починати (дневно)",
+            "ventilator": "На респиратор",
+            "icu": "На интензивна нега"
+        },
+        "common": {
+            "twitter": "Twitter",
+            "facebook": "Facebook",
+            "linkFaq": "ЧПП",
+            "yAxis": "Y-оска:",
+            "xAxis": "Х-оска:",
+            "log": "Логаритамска",
+            "linear": "Линеарна",
+            "close": "Затвори",
+            "webpage": "Веб страница",
+            "loading": "Вчитување на податоците…"
+        },
+        "municipalities": {
+            "yesterday": "вчера",
+            "lastCase": "Последен случај: ",
+            "today": "денес",
+            "doubles": "Удвојување ",
+            "deceased": "Починати:",
+            "recovered": "Оздравени:",
+            "active": "Активни:",
+            "all": "Сите:",
+            "sortActive": "Активни",
+            "sortTotal": "Сите",
+            "sortDoublingTime": "Време на удвојување",
+            "sortBy": "Подреди по:",
+            "sortLast": "Последен",
+            "showLess": "Прикажи помалку општини",
+            "showAll": "Прикажи ги сите општини",
+            "search": "Барај општина",
+            "title": "Случаи по општини"
+        },
+        "spread": {
+            "today": "Денес",
+            "absoluteTitle": "Дневен прираст на потврдени случаи",
+            "absoluteLabel": "Потврдени случаи (дневно)",
+            "relativeLabel": "Релативен прираст во %",
+            "doublingRateLabel": "За колку дена бројот на инфицирани се удвојува",
+            "confirmedCases": "потврдени случаи",
+            "relativeTitle": "Дневен прираст на инфицирани",
+            "oneDay": "Еден ден",
+            "oneWeek": "Една недела",
+            "oneMonth": "Еден месец",
+            "inOneWeek": "По една недела",
+            "inTwoWeeks": "По две недели",
+            "inThreeWeeks": "По три недели",
+            "inFourWeeks": "По 4 недели",
+            "hospitalized": "хоспитализирани",
+            "title": "Раст на потврдени случаи",
+            "absolute": "Апсолутен дневен прираст",
+            "percentage": "Релативен дневен прираст",
+            "doublingRate": "Експоненцијален раст во денови",
+            "explainer": "Што значи експоненцијален прираст"
+        },
+        "hospitals": {
+            "data": "Податоци",
+            "allHospitals": "Сите болници",
+            "beds": "Болнички кревети",
+            "bedsShort": "Кревети",
+            "ventilators": "Респиратори",
+            "all": "Сите",
+            "title": "Болнички капацитети",
+            "projection": "Проекција",
+            "projection7": "Проекција, удвојување за 7 дена",
+            "projection14": "проекција, удвојување за 14 дена",
+            "projection21": "Проекција, удвојување за 21 ден"
+        },
+        "countries": {
+            "groupNordic": "Нордиски земји",
+            "groupEastAsiaOceania": "Источна Азија и Океанија",
+            "chronologically": "Хронолошки",
+            "groupCriticalEU": "Критични држави (ЕУ)",
+            "groupCriticalWorld": "Критични држави (на светско ниво)"
+        },
+        "ageGroups": {
+            "confirmedCases": "Потврдени случаи",
+            "deceased": "Починати",
+            "age": "Возраст",
+            "populationTotal": "Население (вкупно)",
+            "female": "Женски",
+            "male": "Машки",
+            "view": "Прикажи:",
+            "relative": "Релативно",
+            "absolute": "Апсолутно",
+            "title": "Старосни групи"
+        },
+        "map": {
+            "confirmedCases": "Потврдени случаи",
+            "deceased": "Починати",
+            "last_x_days": "{{ count }} ден",
+            "last_x_days_plural": "{{ count }} дена",
+            "all": "Сите",
+            "absolute": "Апсолутно",
+            "population": "население",
+            "populationC": "Население",
+            "mortalityOfConfirmedCases": "Смртност на позитивни случаи",
+            "view": "Прикажи:"
+        },
+        "infections": {
+            "allConfirmed": "Сите потврдени",
+            "rhOccupant": "Штитеници во домови за згрижување на стари лица",
+            "rhStaff": "Вработени во домови за згрижување на стари лица",
+            "hcStaff": "Здравствени работници",
+            "all": "Вкупно",
+            "averageByDay": "По ден (просек)",
+            "title": "Структура на потврдените случаи",
+            "relative": "Релативно"
+        },
+        "tests": {
+            "positiveTests": "Позитивни тестови",
+            "negativeTests": "Негативни тестови",
+            "allTesting": "Вкупно",
+            "title": "Тестирање"
+        },
+        "hCenters": {
+            "testsPositive": "Тестови (позитивни*)",
+            "testsPerformed": "Тестови (вкупно)"
+        },
+        "ratios": {
+            "deceasedHospital": "Починати",
+            "ventilatorHospital": "На респиратор",
+            "icuHospital": "На интензивна нега",
+            "deceasedCases": "Починати",
+            "ventilatorCases": "На респиратор",
+            "icuCases": "На интензивна нега",
+            "hospitalCases": "Хоспитализирани",
+            "mortality": "Смртност",
+            "hospitalizations": "Хоспитализирани"
+        },
+        "patients": {
+            "allHospitals": "Сите болници",
+            "deceased": "Починати",
+            "ventilator": "На респиратор",
+            "icu": "На интензивна нега",
+            "hospitalized": "Хоспитализирани",
+            "hospitalizedIn": "Хоспитализирани во:",
+            "structure": "Структура",
+            "title": "Хоспитализирани"
+        },
+        "cases": {
+            "deceased": "Починати",
+            "recovered": "Оздравени",
+            "ventilator": "На респиратор",
+            "icu": "На интензивна нега",
+            "hospitalized": "Хоспитализирани",
+            "active": "Активни",
+            "title": "Потврдени случаи"
+        }
+    },
+    "phase": {
+        "7": {
+            "title": "Фаза 7"
+        },
+        "6": {
+            "title": "Фаза 6"
+        },
+        "5": {
+            "title": "Фаза 5"
+        },
+        "4": {
+            "title": "Фаза 4"
+        },
+        "3": {
+            "title": "Фаза 3"
+        },
+        "2": {
+            "title": "Фаза 2"
+        },
+        "1": {
+            "title": "Фаза 1"
         }
     },
     "days": {
-        "in_x_days": "in {{ count }} day",
-        "in_x_days_plural": "in {{ count }} days",
-        "x_days_ago": "{{ count }} day ago",
-        "x_days_ago_plural": "{{ count }} days ago",
-        "date": "{{ date, MMMM Do }}",
-        "longerDate": "{{ date, MMMM Do YYYY }}"
+        "longerDate": "{{ date, D. MMMM YYYY }}",
+        "date": "{{ date, D. MMMM }}",
+        "x_days_ago": "пред {{ count }} ден",
+        "x_days_ago_plural": "пред {{ count }} дена",
+        "in_x_days": "во {{ count }} ден",
+        "in_x_days_plural": "во {{ count }} дена"
     },
-    "region": {
-        "za": "Central Sava Region",
-        "ce": "Savinja Region",
-        "po": "Littoral–Inner Carniola",
-        "kk": "Lower Sava Region",
-        "ms": "Mura Region",
-        "mb": "Drava Region",
-        "lj": "Central Slovenia",
-        "kp": "Coastal–Karst Region",
-        "sg": "Carinthia",
-        "nm": "Southeast Slovenia",
-        "ng": "Gorizia Region",
-        "kr": "Upper Carniola Region"
+    "tableDict": {
+        "tests_performed": "Тестови (дневно)",
+        "region_todate": "Вкупно",
+        "age_female_85+_todate": "85+ години",
+        "age_female_75-84_todate": "75 - 84 години",
+        "age_female_65-74_todate": "65 - 74 години",
+        "age_female_55-64_todate": "55 - 64 години",
+        "age_female_45-54_todate": "45 - 54 години",
+        "age_female_35-44_todate": "35 - 44 години",
+        "age_female_25-34_todate": "25 - 34 години",
+        "age_female_15-24_todate": "15 - 24 години",
+        "age_female_5-14_todate": "5 - 14 години",
+        "age_female_0-4_todate": "0 - 4 години",
+        "age_female_todate": "Вкупно",
+        "age_male_85+_todate": "85+ години",
+        "age_male_75-84_todate": "75 - 84 години",
+        "age_male_65-74_todate": "65 - 74 години",
+        "age_male_55-64_todate": "55 - 64 години",
+        "age_male_45-54_todate": "45 - 54 години",
+        "age_male_35-44_todate": "35 - 44 години",
+        "age_male_25-34_todate": "25 - 34 години",
+        "age_male_15-24_todate": "15 - 24 години",
+        "age_male_5-14_todate": "5 - 14 години",
+        "age_male_0-4_todate": "0 - 4 години",
+        "age_male_todate": "Вкупно",
+        "state_in_hospital_todate": "Хоспитализирани (вкупно)",
+        "state_deceased_todate": "Починати (вкупно)",
+        "state_critical": "На респиратор (активни)",
+        "state_icu": "На интензивна нега (активни)",
+        "state_in_hospital": "Хоспитализирани (активни)",
+        "cases_rh_occupant_confirmed_todate": "Потврдени случаи кај штитеници на домови за грижа на стари лица (вкупно)",
+        "cases_rh_employee_confirmed_todate": "Потврдени случаи кај вработени во домови за грижа на стари лица (вкупно)",
+        "cases_hs_employee_confirmed_todate": "Потврдени случаи кај здравствени работници (вкупно)",
+        "cases_recovered_todate": "Оздравени (вкупно)",
+        "cases_active": "Активни случаи",
+        "cases_confirmed_todate": "Потврдени случаи (вкупно)",
+        "cases_confirmed": "Потврдени случаи (дневно)",
+        "tests_performed_todate": "Тестови (вкупно)"
     },
-    "country": {
-        "USA": "USA",
-        "TUR": "Turkey",
-        "TWN": "Taiwan",
-        "SWE": "Sweden",
-        "SVN": "Slovenia",
-        "SVK": "Slovakia",
-        "SRB": "Serbia",
-        "SGP": "Singapore",
-        "RUS": "Russia",
-        "RKS": "Kosovo",
-        "NOR": "Norway",
-        "NZL": "New Zealand",
-        "MNE": "Montenegro",
-        "MKD": "N. Macedonia",
-        "KOR": "S. Korea",
-        "JPN": "Japan",
-        "ITA": "Italy",
-        "ISL": "Iceland",
-        "IRN": "Iran",
-        "HUN": "Hungary",
-        "HRV": "Croatia",
-        "GBR": "United Kingdom",
-        "FRA": "France",
-        "FIN": "Finland",
-        "ESP": "Spain",
-        "DNK": "Denmark",
-        "DEU": "Germany",
-        "CZE": "Czech Republic",
-        "CHN": "China",
-        "CHE": "Switzerland",
-        "BIH": "Bosnia and Herzegovina",
-        "BEL": "Belgium",
-        "AUT": "Austria",
-        "AUS": "Australia"
+    "footer": {
+        "copyright": "© 2020 Sledilnik.org"
     }
 }

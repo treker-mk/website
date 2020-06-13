@@ -1,4 +1,4 @@
-# Models *EN
+# Models *SQ
 
 V naši skupnosti sodelujejo tudi strokovnjaki za statistično modeliranje in računalniške simulacije.
 Na tej strani objavljamo povezave na nekatere od njihovih modelov,
