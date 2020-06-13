@@ -28,13 +28,13 @@ let dropdown (viz: Visualization) =
             | _ -> (1140, 720)
 
         let graphUrl =
-            "https://covid-19.sledilnik.org/"
+            "https://covid-19.treker.mk/"
             + localStorage.getItem ("i18nextLng")
             + "/stats%23"
             + viz.ClassName
 
         let embedUrl =
-            "https://covid-19.sledilnik.org/"
+            "https://covid-19.treker.mk/"
             + "embed.html#/"
             + localStorage.getItem ("i18nextLng")
             + "/chart/"
@@ -121,7 +121,7 @@ let dropdown (viz: Visualization) =
                                     [ Html.span [ prop.text (I18N.t "embedMaker.descriptionPart1") ]
                                       Html.a
                                           [ prop.href
-                                              "https://github.com/sledilnik/website/blob/master/examples/README.md"
+                                              "https://github.com/treker-mk/website/blob/master/examples/README.md"
                                             prop.text (I18N.t "embedMaker.descriptionPart2") ] ]
                                 Html.textarea
                                     [ prop.title (I18N.t "embedMaker.copy")

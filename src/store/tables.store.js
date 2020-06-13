@@ -67,11 +67,11 @@ const actions = {
     const ts = new Date().getTime()
 
     const d = await exportTime(
-      `https://raw.githubusercontent.com/sledilnik/data/master/csv/stats.csv.timestamp?nocache=${ts}`
+      `https://raw.githubusercontent.com/treker-mk/data/master/csv/stats.csv.timestamp?nocache=${ts}`
     )
 
     const data = await loadCsv(
-      `https://raw.githubusercontent.com/sledilnik/data/master/csv/stats.csv?nocache=${ts}`
+      `https://raw.githubusercontent.com/treker-mk/data/master/csv/stats.csv?nocache=${ts}`
     )
 
     commit('setData', data)

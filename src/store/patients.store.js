@@ -15,7 +15,7 @@ const getters = {
 
 const actions = {
   fetchData: async ({ commit }) => {
-    const data = await ApiService.get('https://api.sledilnik.org/api/patients')
+    const data = await ApiService.get('https://api.treker.mk/api/patients')
     const d = exportTime(data.headers.timestamp)
 
     commit('setData', data.data)

@@ -5,7 +5,7 @@ open Fable.SimpleJson
 
 open Types
 
-let url = "https://api.sledilnik.org/api/stats"
+let url = "https://api.treker.mk/api/stats"
 
 type TransferAgeGroup =
     { ageFrom : int option

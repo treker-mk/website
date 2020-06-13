@@ -168,11 +168,11 @@ const statsStore = {
       const ts = new Date().getTime()
 
       const d = await exportTime(
-        `https://raw.githubusercontent.com/sledilnik/data/master/csv/stats.csv.timestamp?nocache=${ts}`
+        `https://raw.githubusercontent.com/treker-mk/data/master/csv/stats.csv.timestamp?nocache=${ts}`
       )
 
       const data = await ApiService.get(
-        'https://api.sledilnik.org/api/stats'
+        'https://api.treker.mk/api/stats'
       ).then((result) => {
         return result.data
       })
