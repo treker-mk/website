@@ -3,7 +3,7 @@
     <p v-if="exportTime">
       {{ $t("timestamp.updated", { date: new Date(exportTime) }) }}
       {{ $t("timestamp.at", { date: new Date(exportTime) }) }}
-      <b style="color:#FF0000";>WORK IN PROGRESS, Ignore the visualizations which are based on the data from Slovenia</b>
+      <b>WORK IN PROGRESS, Ignore the visualizations which are based on the data from Slovenia</b>
     </p>
   </div>
 </template>
