@@ -3,73 +3,74 @@
 _Qëllimi i projektit Treker dhe të gjitha grafikët statistikorë dhe tabelat/prezantimet e tij është që të shfaqen të gjitha të dhënat ekzistuese në lidhje me epideminë KOVID-19 në Maqedonia e Veriut në një mënyrë të kuptueshme. Ne kemi përpiluar disa nga pyetjet më të shpeshta. Lista e pyetjeve më të shpeshta nuk është përfundimtare në këtë moment, por azhurnohet shpesh, kështu që vazhdoni të kontrolloni përsëri. Në rast të ndonjë pyetjeje, ju lutemi na kontaktoni në: info@treker.mk. (Gjithashtu presim komplimentet, përshtypjet ose sugjerimet tuaja!)_
 
 
-## General Information
+## Informacion i pergjithshem
 
 <details>
-  <summary id=why-sledilnik>Why Sledilnik?</summary>
+  <summary id=why-sledilnik>Pse Sledilnik?</summary>
 
-Our goal is to help understand the spread of the virus and to help raise awareness, responsiveness, and the effectiveness of the measures implemented to curb the virus. You can find more about the project in the [About tab](/en/about). 
+Qëllimi ynë është të ndihmojmë të kuptohet përhapja e virusit dhe të ndihmojmë në rritjen e vetëdijës, reagimit dhe efektivitetit të masave të zbatuara për të frenuar virusin. Mund të mësoni më shumë rreth projektit në skedën [Për neve](/sq/about). 
 
 </details>
 
 <details>
-  <summary id=virus-vs-disease>What is the difference between SARS-CoV-2 and COVID-19?</summary>
+  <summary id=virus-vs-disease>Cili është dallimi mes SARS-CoV-2 dhe KOVID-19? </summary>
 
-**SARS-CoV-2** is the abbreviation for ‘Severe Acute Respiratory Syndrome Coronavirus 2’ – it is the internationally accepted name of the virus that causes the disease named **COVID-19**. The latter name is also an acronym, coined from the words COrona VIrus Disease, and 2019, the year when the disease first erupted.
+**SARS-CoV-2** iështë akronim për ‘Sindromë e rëndë Akute e frymëmarrjes Koronavirus 2’ - që është emri i pranuar ndërkombëtarisht i virusit që shkakton sëmundjen e quajtur  **KOVID-19**. Emri i fundit është gjithashtu një akronim, i krijuar nga fjalët  COrona VIrus Disease (Sëmundja Korona Virus), dhe 2019, është viti kur e njëjta shpërtheu për herë të parë.
 
 
 </details>
 
 <details>
-  <summary id=confirmed-cases>What is the difference between ‘new cases’ and ‘confirmed cases’?
+  <summary id=confirmed-cases>Cili është dallimi midis "rasteve të reja" dhe "rasteve të konfirmuara"?
 </summary>
 
-Terminology in use on Sledilnik is explained under [What does it mean](#chart-terminology). According to the WHO definition, a *confirmed case* is a person with laboratory confirmation of COVID-19 infection, irrespective of clinical signs and symptoms. Other terms, such as newly infected, may appear in the media but are not used in our graphs. All terms used by Sledilnik are explained in these FAQ. 
+Terminologjia në përdorim në Treker shpjegohet nën  [Çfarë do të thotë](#chart-terminology). ASipas përcaktimit të OBSH-së, një rast i konfirmuar është një person me konfirmim laboratorik të infeksionit KOVID-19, pavarësisht nga shenjat dhe simptomat klinike. Termat e tjerë, siç është të infektuar të ri, mund të shfaqen në media, por nuk përdoren në grafikët tanë. Të gjitha termat e përdorur nga Treker shpjegohen në këto Pyetje më të shpeshta. 
 
 </details>
 
 <details>
-  <summary id=all-infected>Is it possible to get statistical information on all infected persons, even the asymptomatic cases?
+  <summary id=all-infected>A është e mundur të merren informacione statistikore për të gjithë personat e infektuar, madje edhe për rastet asimptomatike?
 </summary>
 
-Unfortunately, this data is unavailable for now. There are several reasons: Previously, tests have only covered a certain proportion of the population (patients with signs and symptoms of acute respiratory infection who may need hospital treatment, healthcare professionals, retirement home residents with respiratory symptoms, and people above 60 if their doctor so requires). Even though now the testing guidance for COVID-19 is expanded to include anyone displaying symptoms of the disease, many might be carriers with no or only mild symptoms. For this reason, our statistics can cover only part of the population that clearly shows signs of infection. Thus, the younger and the untested populations are disproportionately represented. Data for asymptomatic patients who do not show symptoms and are not recorded anywhere can therefore not be obtained.
+Fatkeqësisht, këto të dhëna tani nuk janë të disponueshme. Ekzistojnë disa arsye: Më parë, testet kanë mbuluar vetëm një pjesë të caktuar të popullsisë (pacientë me shenja dhe simptoma të infeksionit akut të frymëmarrjes, të cilët mund të kenë nevojë për trajtim spitalor, profesionistë të kujdesit shëndetësor, banorë të pensionuarëve me simptoma të frymëmarrjes dhe njerëz mbi 60 vjeç nëse mjeku i tyre kështu kërkon). Edhe pse tani udhëzimi i testimit për KOVID-19 është zgjëruar për të përfshirë cilindo që shfaq simptoma të sëmundjes, shumë mund të jenë bartës pa ose vetëm simptoma të buta. Për këtë arsye, statistikat tona mund të mbulojnë vetëm një pjesë të popullsisë që tregon qartë shenja të infeksionit. Kështu, popullata më e re dhe ato të patestuar përfaqësohen në mënyrë disproporcionale. Të dhënat për pacientët asimptomatikë të cilët nuk shfaqin simptoma dhe nuk janë regjistruar askund nuk mund të sigurohen.
 
 </details>
 
 <details>
-  <summary id=other-countries>Where can I find a comparison between Slovenia and other countries?</summary>
+  <summary id=other-countries>Ku mund të gjej një krahasim midis Maqedonia e Veriut dhe vendeve të tjera?</summary>
 
-You can find [a comparison graph](/en/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between Slovenia and different clusters of countries in relation to the *number of deaths* caused by COVID-19 *per million inhabitants*. 
-The clusters of countries that are compared to Slovenia are as follows:
--   Neighboring countries (excluding Italy)
--   Critical countries (EU)
--   Critical countries (global)
--   Nordic countries
--   ex-Yugoslavian countries
--   East Asian countries and Oceania
+Ju mund të gjeni një  [grafik krahasimi ](/sq/stats#countries-chart) në pjesën e poshtme të pultit. Grafiku tregon një krahasim midis Maqedonia e Veriut dhe grupimeve të ndryshme të vendeve në lidhje me numrin e vdekjeve të shkaktuara nga KOVID-19 për një milion banorë. Grupimet e vendeve që krahasohen me Maqedonia e Veriut janë si në vijim:
 
-The graph is arranged chronologically, from January 1, from the first death, and from the first death per million, respectively. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs.
+-   Vendet fqinje (me përjashtim të Italisë)
+-   Vendet kritike (BE)
+-   Vendet kritike (globale)
+-   Vendet Nordike
+-   Vendet e ish-Jugosllavisë
+-   Vendet e Azisë Lindore dhe Oqeanisë
 
-</details>
 
-<details>
-  <summary id=english-translation>Is your webpage available in English?</summary>
-
-Currently, only the [About part](/en/about) and these FAQ are available, while the rest of the website is yet to be fully translated. However, both the text part and the source code are available as open source if you're interested in helping us translate. All the [data in the database](https://github.com/sledilnik) is already marked with English tags, so its international use (export) is also possible. 
+Grafiku është rregulluar në mënyrë kronologjike, nga 1 janari, nga vdekja e parë, dhe nga vdekja e parë në një milion, përkatësisht. Mund të ndryshoni pamjen e shfaqjeve të ndryshme kronologjike të krahasimeve të grupimeve të ndryshme të vendeve duke klikuar në skedat e duhura.
 
 </details>
 
 <details>
-  <summary id=are-you-paid>Are you paid for creating the dashboard (charts, tables, models)?</summary>
+  <summary id=english-translation>A është në dispozicion faqja juaj në gjuhën anglishte?</summary>
 
-Not at all. Sledilnik is a non-profit initiative created to support the ongoing compiling and editing of key data on the spread of the coronavirus in Slovenia. Our database is public and freely available, free of charge, and non-commercial, and will remain so. Please check [How can I obtain and use your database?](#data-usage)
+Aktualisht janë në dispozicion vetëm pjesa [Për neve ](/en/about) adhe këto pyetje më të shpeshta, ndërsa pjesa tjetër e faqes së internetit duhet të përkthehet plotësisht. Sidoqoftë, pjesa e tekstit dhe kodi burimor janë në dispozicion si burim i hapur nëse jeni të interesuar të na ndihmoni të përkthenim. Të gjitha  [të dhënat në bazën e të dhënave ](https://github.com/treker-mk) tashmë janë shënuar me etiketa në anglisht, kështu që përdorimi i tij ndërkombëtar (eksporti) është gjithashtu i mundur.
 
 </details>
 
 <details>
-  <summary id=tech-used>Which tools did you use to build the website/web app?</summary>
+  <summary id=are-you-paid>A jeni të paguar për krijimin e pultit (grafikët, tabelat, modelet)?</summary>
 
-The site is in JavaScript using Vue.js, the visualizations and graphs are made in F# using Highcharts libraries, and the project is open and available on [GitHub – Sledilnik](https://github.com/sledilnik).
+Aspak. Treker është një nismë jofitimprurëse e krijuar për të mbështetur përpilimin dhe redaktimin e vazhdueshëm të të dhënave kryesore për përhapjen e koronavirusit në Slloveni. Baza e të dhënave tona është publike dhe lirisht e disponueshme, falas, dhe jo-komerciale, dhe do të mbetet e tillë. Ju lutemi kontrolloni se [Si mund ta marr dhe ta përdor bazën tuaj e të dhënave?](#data-usage)
+
+</details>
+
+<details>
+  <summary id=tech-used>Cilat mjete keni përdorur për të ndërtuar faqen e internetit/aplikacionin në internet?</summary>
+
+-	Sajti është në JavaScript duke përdorur Vue.js, vizualizimet dhe grafikët bëhen në F# duke përdorur bibliotekat Highcharts, dhe projekti është i hapur dhe i disponueshëm në [GitHub – Treker](https://github.com/treker.
 
 </details>
 
