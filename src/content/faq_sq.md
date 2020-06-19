@@ -1,6 +1,7 @@
-<h1>Frequently Asked Questions *SQ</h1>
+<h1> Pyetjet më të shpeshta</h1>
 
-_The purpose of the Sledilnik project and all its statistical graphs and tables/presentations is to display all existing data about the COVID19 epidemic in Slovenia in an understandable fashion. We've compiled some of the most frequently asked questions. The FAQ list is not exhaustive at this moment, but it is updated frequently so keep checking back. In case of any questions, please contact us: info@slednik.org. (We also look forward to your compliments, feedback, or suggestions!)_
+_Qëllimi i projektit Treker dhe të gjitha grafikët statistikorë dhe tabelat/prezantimet e tij është që të shfaqen të gjitha të dhënat ekzistuese në lidhje me epideminë KOVID-19 në Maqedonia e Veriut në një mënyrë të kuptueshme. Ne kemi përpiluar disa nga pyetjet më të shpeshta. Lista e pyetjeve më të shpeshta nuk është përfundimtare në këtë moment, por azhurnohet shpesh, kështu që vazhdoni të kontrolloni përsëri. Në rast të ndonjë pyetjeje, ju lutemi na kontaktoni në: info@treker.mk. (Gjithashtu presim komplimentet, përshtypjet ose sugjerimet tuaja!)_
+
 
 ## General Information
 
