@@ -130,45 +130,34 @@ Spitalet jo gjithmonë raportojnë pranime ose shkarkime individuale nga të cil
 </details>
 
 <details>
-  <summary id=data-hospital-out>How do you obtain data on hospital discharges?</summary>
+  <summary id=data-hospital-out>Si i merrni të dhënat për shkarkimet nga spitali?</summary>
 
-The information on the discharged from hospitals is calculated from data daily obtained directly from hospitals, i.e. from a verified source. We mostly get the daily number of discharges for all hospitals, from which we can deduce the number of newly admitted. See also [How do you obtain data on hospital admissions?](#data-hospital-in)
-
-</details>
-
-<details>
-  <summary id=data-active-cases>Do you keep an Active Case counter and do you know how many people are currently infected?</summary>
-
-Yes, these indicators have been graphically displayed as **Confirmed Cases (active)** and **Recovered (total)** from the end of April.
- 
-
-These visualizations are not data from public sources; both indicators show the calculated value on the basis of official data, so they are indicated by a dashed line for easier distinguishing. The value of the confirmed cases (active) is calculated by simply subtracting the official data for the relevant category, the value of the Recovered (total) reflects the status of all confirmed cases three weeks ago (minus the dead). The number of recoveries is a simple estimate based on the value of all those confirmed infected in the past – based on the assumption that patients recover from the disease on average within 14 days (source: [the ECDC Report](https://www.ecdc.europa.eu/sites/default/files/documents/covid-19-rapid-risk-assessment-coronavirus-disease-2019-ninth-update-23-april-2020.pdf)); thus, the number of recoveries on a given day equals the number of all confirmed cases three weeks prior to a given date, from which the number of deaths by that day is deducted. This simplified estimation does not take into account the more serious cases of COVID-19 with longer recovery times.     
-
-*Note: The calculation of recoveries was changed on 9 May 2020. We now consider a patient has recovered in 14 days after their infection was confirmed (previously 21 days), so there was be a noticeable jump in the number of survivors. Please take this difference into account when estimating the number of survivors. A more detailed explanation of the changed calculation is available in the Medium article [Od potrjeno okuženih do prebolelih (From Confirmed Case to Recovery )](https://medium.com/@sledilnik/94c81674718e).*
-
-Value formula:
-- Recovered (total) = Confirmed cases (total) 21 days ago – Died (total) by the day of calculation
-
-- Confirmed cases (active) = Confirmed cases (total) - Recovered (total) - Died (total)
+Informacioni mbi shkarkimet nga spitalet llogaritet nga të dhënat e marra çdo ditë drejtpërdrejtë nga spitalet, d.m.th. nga një burim i verifikuar. Kryesisht marrim numrin ditor të shkarkimeve për të gjitha spitalet, nga të cilat mund të nxjerrim numrin e të sapo pranuaurve. Shihni gjithashtu [Si i merrni të dhënat për pranimet në spital?](#data-hospital-in)
 
 </details>
 
 <details>
-  <summary id=data-contribute>How can users get actively involved in data gathering? How can I participate?</summary>
+  <summary id=data-active-cases>TBD A mbani një numërator tëe rasteve aktive dhe a e dini se sa njerëz janë infektuar tani?</summary>
 
-You can voluntarily help by collecting and verifying data from the media (as well as from the field), with statistical and other analyzes, etc. Contact us at info@sledilnik.org if you’d like to participate.
+TBD 
+</details>
 
-Sledilnik does not collect users’ personal information nor information that individuals would like to share about their condition or hospital status.
+<details>
+  <summary id=data-contribute>Si mund të përfshihen përdoruesit në mbledhjen e të dhënave në mënyrë aktive? Si mund të marr pjesë?</summary>
+
+Ju mund të ndihmoni vullnetarisht duke mbledhur dhe verifikuar të dhënat nga media (si dhe nga terreni), me analiza statistikore dhe të tjera, etj. Mund të na kontaktoni në info@treker.mk inëse dëshironi të merrni pjesë.
+
+Treker nuk mbledh informacione personale të përdoruesve dhe as informacion që individët dëshirojnë të ndajnë në lidhje me gjendjen e tyre ose statusin e spitalit.
 
 
 </details>
 
 <details>
-  <summary id=data-usage>How can I obtain and use your database?</summary>
+  <summary id=data-usage>Si mund ta marr dhe ta përdor bazën e të dhënave tuaj?</summary>
 
-Our database is public and freely available in the form of  [**CSV**, **REST**, and **Google Sheet**](/en/datasources). Kindly let us know the purpose for which you will use the information and make sure you include Sledilnik as the source of your data.
+Baza e të dhënave e jonë është publike dhe lihet lirshëm në formën e  [**CSV**, **REST**, and **Google Sheet**](/sq/datasources). Ju lutemi na tregoni qëllimin për të cilin do të përdorni informacionin dhe sigurohuni që të përfshini Treker si burimin e të dhënave tuaja.
 
-Since all the data in the database is already marked with English tags (see also [Is your webpage available in English?](#english-translation)), their international use (export, display) is also possible.
+Meqenëse të gjitha të dhënat në bazën e të dhënave tashmë janë shënuar me etiketa në gjuhën anglishte (shiko gjithashtu  [A është në dispozicion faqja juaj në internet në gjuhën anglishte?](#english-translation)), përdorimi i tyre ndërkombëtar (eksporti, shfaqja) është gjithashtu i mundur.
 
 </details>
 
