@@ -70,39 +70,38 @@ Aspak. Treker është një nismë jofitimprurëse e krijuar për të mbështetur
 <details>
   <summary id=tech-used>Cilat mjete keni përdorur për të ndërtuar faqen e internetit/aplikacionin në internet?</summary>
 
--	Sajti është në JavaScript duke përdorur Vue.js, vizualizimet dhe grafikët bëhen në F# duke përdorur bibliotekat Highcharts, dhe projekti është i hapur dhe i disponueshëm në [GitHub – Treker](https://github.com/treker.
+Sajti është në JavaScript duke përdorur Vue.js, vizualizimet dhe grafikët bëhen në F# duke përdorur bibliotekat Highcharts, dhe projekti është i hapur dhe i disponueshëm në [GitHub – Treker](https://github.com/treker).
 
 </details>
 
-## Data
+## Të dhënat
 
 <details>
-  <summary id=data-reliability>Are your data and visualizations reliable?</summary>
+  <summary id=data-reliability>A janë të besueshme të dhënat dhe vizualizimet tuaja?</summary>
 
-Data is collected from verified public sources, which are listed in the [Resources tab](/en/sources). 
+Të dhënat grumbullohen nga burime publike të verifikuara, të cilat janë shënuar në skedën  [Burimet](/sq/sources). 
 
-Sledilnik receives official data on COVID-19 directly from the Ministry of Health, the NIJZ (National Institute for Public Health), and other national health institutions. The Sledilnik team does not guarantee the accuracy of the original data and publishes solely data obtained from official sources or the media, but we do cross-check if all data is correct and consistent with the given source.
+Treker merr të dhëna zyrtare për COVID-19 drejtëpërdrejtë nga Ministria e Shëndetësisë, IKSHP (Instituti Kombëtar i Shëndetit Publik) dhe institucionet e tjera shëndetësore. Ekipi i Treker nuk garanton saktësinë e të dhënave origjinale dhe boton vetëm të dhëna të marra nga burime zyrtare ose media, por ne bëjmë kontroll të kryqëzuar nëse të gjitha të dhënat janë të sakta dhe në përputhje me burimin e dhënë.
 
 </details>
 
 <details>
-  <summary id=data-collection>How do you collect and edit the data?</summary>
+  <summary id=data-collection>Si i grumbulloni dhe redaktoni të dhënat?</summary>
 
-[The database](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=0) is built from the NIJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=598557107).
+[Baza e të dhënave TBD](https://docs.google.com/spreadsheets/) është ndërtuar nga të dhënat e burimit IJZ (sipas kategorisë). Të dhënat sipas rajonit dhe moshës përpunohen me vonesë dhe më në fund azhurnohen pasi të njihen rezultatet e hulumtimit demografik në vazhdim. Komunat gjurmohen në tabelën [TBD (Komunat).](https://docs.google.com/spreadsheets/).
 
-Editing Hospital Care Data – [Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=918589010):
+ERedaktimi i të dhënave për kujdesin spitalor  – [Tabela Pacienti (Pacientët) TBD](https://docs.google.com/spreadsheets/):
 
-- We receive daily reports and monitor the announcements of all COVID-19 hospitals  (UKC Ljubljana, UKC Maribor, UK Golnik, SB Celje) – at around 8 am.
 
-- We monitor the number of hospitalizations: all wards, in ICUs, and on ventilators.
+- Ne e monitorojmë numrin e spitaleve: të gjitha repartet, në NjQV dhe ventilatorët.
 
-- We also record transitions (acceptance/dismissal) between individual stages of the disease (when detectable) from the obtained data.
+- Ne gjithashtu regjistrojmë tranzicione (pranim/lëshim) midis fazave individuale të sëmundjes (kur kjo është e zbulueshme) nga të dhënat e marra.
 
-- Where the transition (admission/dismissal) information is incomplete, the values are determined by inference (using a formula).
+- Kur informacioni i tranziimit (pranimit/largimit) është i paplotë, vlerat përcaktohen me përfundim (duke përdorur një formulë).
 
-- All sources and conclusions are recorded as a commentary in individual cells (checkable).
+- Të gjitha burimet dhe konkluzionet regjistrohen si koment në qelizat individuale (të kontrollueshme).
 
-- The data is compared with the summary data on hospitalized patients in ICU published by the Government of the Republic of Slovenia.
+- Të dhënat krahasohen me të dhënat përmbledhëse për pacientët që qëndrojnë në NjQV të publikuara nga Qeveria e Maqedonia e Veriut
   
   </details>
 
