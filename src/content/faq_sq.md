@@ -90,7 +90,7 @@ Treker merr të dhëna zyrtare për COVID-19 drejtëpërdrejtë nga Ministria e 
 
 [Baza e të dhënave TBD](https://docs.google.com/spreadsheets/) është ndërtuar nga të dhënat e burimit IJZ (sipas kategorisë). Të dhënat sipas rajonit dhe moshës përpunohen me vonesë dhe më në fund azhurnohen pasi të njihen rezultatet e hulumtimit demografik në vazhdim. Komunat gjurmohen në tabelën [TBD (Komunat).](https://docs.google.com/spreadsheets/).
 
-ERedaktimi i të dhënave për kujdesin spitalor  – [Tabela Pacienti (Pacientët) TBD](https://docs.google.com/spreadsheets/):
+Redaktimi i të dhënave për kujdesin spitalor  – [Tabela Pacienti (Pacientët) TBD](https://docs.google.com/spreadsheets/):
 
 
 - Ne e monitorojmë numrin e spitaleve: të gjitha repartet, në NjQV dhe ventilatorët.
