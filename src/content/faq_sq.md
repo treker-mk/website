@@ -6,7 +6,7 @@ _Qëllimi i projektit Treker dhe të gjitha grafikët statistikorë dhe tabelat/
 ## Informacion i pergjithshem
 
 <details>
-  <summary id=why-sledilnik>Pse Sledilnik?</summary>
+  <summary id=why-sledilnik>Pse Treker?</summary>
 
 Qëllimi ynë është të ndihmojmë të kuptohet përhapja e virusit dhe të ndihmojmë në rritjen e vetëdijës, reagimit dhe efektivitetit të masave të zbatuara për të frenuar virusin. Mund të mësoni më shumë rreth projektit në skedën [Për neve](/sq/about). 
 
