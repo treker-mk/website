@@ -106,25 +106,26 @@ Redaktimi i të dhënave për kujdesin spitalor  – [Tabela Pacienti (Pacientë
   </details>
 
 <details>
-  <summary id=data-publish-time>When do you publish the data? Why are the dates on the visualizations different?
+  <summary id=data-publish-time>TBD Kur i publikoni të dhënat? Pse datat në vizualizimet janë të ndryshme?
 </summary>
 
-Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by 9 am every day for all hospitals. **Our data is usually updated between 10.00 and 12.00.**
-When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we also report it on social networks ([Facebook](https://www.facebook.com/COVID19Sledilnik) and [Twitter](https://twitter.com/sledilnik)).
+Shumica e të dhënave për ditën e mëparshme grumbullohen në ora 11:59 (teste, raste të konfirmuara...), dhe të dhënat e spitaleve merren kryesisht në 9 të mëngjesit çdo ditë për të gjitha spitalet. **Our data is usually updated between TBD**
+Kur publikojmë të dhëna ditore të azhurnuara, ato janë të disponueshme në të gjitha kanalet tona të shpërndarjes (CSV, REST, faqen e internetit), dhe gjithashtu i raportojmë ato në rrjetet sociale  ([Facebook TBD](https://www.facebook.com/) dhe  [Twitter TBD](https://twitter.com/)).
 
 </details>
 
 <details>
-  <summary id=data-differences>Several portals display numbers of infected people that are different from yours. Why?</summary>
+  <summary id=data-differences>Disa portale shfaqin një numër personash të infektuar që janë të ndryshëm nga numrat e juaja. Pse?
+  </summary>
 
-Sledilnik uses only validated and official data reported daily by the National Institute of Public Health (NIJZ) and all Slovenian hospitals treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (4 March 2020). Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
+Treker përdor vetëm të dhëna të vlefshme dhe zyrtare të raportuara çdo ditë nga Instituti Kombëtar i Shëndetit Publik (IKSHP) dhe të gjitha spitaleve sllovene që trajtojnë KOVID-19. Të dhënat tona kështu vijnë drejtpërdrejtë nga burime të verifikuara, dhe ne gjithashtu kemi informacione të krahasuara që nga fillimi (TBD 4 Mars 2020). Dallimet zakonisht ndodhin sepse media dhe portale të ndryshme marrin të dhënat në periudha të ndryshme të ditës ose përdorin një metodologji të dyshimtë. Shih gjithashtu [A janë të besueshme të dhënat dhe vizualizimet e juaja?](#data-reliability) 
 
 </details>
 
 <details>
-  <summary id=data-hospital-in>How do you obtain data on hospital admissions?</summary>
+  <summary id=data-hospital-in>TBD Si i merrni të dhënat për pranimet në spital?</summary>
 
-Hospitals do not always report individual admissions or discharges from which we can obtain accurate data. The number of admissions is usually calculated from data on the currently hospitalized and from the difference compared to the previous day, to which we add the number of discharged and dead on a given day. We keep records of admissions and discharges in intensive care units and for connection and disconnection to/from ventilators in a similar way.
+Spitalet jo gjithmonë raportojnë pranime ose shkarkime individuale nga të cilat mund të marrim të dhëna të sakta. Numri i pranimeve zakonisht llogaritet nga të dhënat për spitalin aktual dhe aktualisht nga diferenca e krahasuar me ditën e më parme, për të cilën shtojmë numrin e të pushuarve dhe të vdekurve në një ditë të caktuar. Ne mbajmë shënime për pranimet dhe shkarkimet në njësitë e kujdesit intensiv dhe për lidhje dhe shkëputje në/nga ventilatorët në një mënyrë të ngjashme.
 
 </details>
 
