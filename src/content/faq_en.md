@@ -2,12 +2,12 @@
 
 ## TBD work in progress - all content below is  still linked to the "father" site sledilnik.org 
 
-_The purpose of the Sledilnik project and all its statistical graphs and tables/presentations is to display all existing data about the COVID19 epidemic in Slovenia in an understandable fashion. We've compiled some of the most frequently asked questions. The FAQ list is not exhaustive at this moment, but it is updated frequently so keep checking back. In case of any questions, please contact us: info@slednik.org. (We also look forward to your compliments, feedback, or suggestions!)_
+_The purpose of the Treker project and all its statistical graphs and tables/presentations is to display all existing data about the COVID19 epidemic in North Macedonia in an understandable fashion. We've compiled some of the most frequently asked questions. The FAQ list is not exhaustive at this moment, but it is updated frequently so keep checking back. In case of any questions, please contact us: info@treker.mk. (We also look forward to your compliments, feedback, or suggestions!)_
 
 ## General Information
 
 <details>
-  <summary id=why-sledilnik>Why Sledilnik?</summary>
+  <summary id=why-sledilnik>Why Treker?</summary>
 
 Our goal is to help understand the spread of the virus and to help raise awareness, responsiveness, and the effectiveness of the measures implemented to curb the virus. You can find more about the project in the [About tab](/en/about). 
 
@@ -25,7 +25,7 @@ Our goal is to help understand the spread of the virus and to help raise awarene
   <summary id=confirmed-cases>What is the difference between ‘new cases’ and ‘confirmed cases’?
 </summary>
 
-Terminology in use on Sledilnik is explained under [What does it mean](#chart-terminology). According to the WHO definition, a *confirmed case* is a person with laboratory confirmation of COVID-19 infection, irrespective of clinical signs and symptoms. Other terms, such as newly infected, may appear in the media but are not used in our graphs. All terms used by Sledilnik are explained in these FAQ. 
+Terminology in use on Treker is explained under [What does it mean](#chart-terminology). According to the WHO definition, a *confirmed case* is a person with laboratory confirmation of COVID-19 infection, irrespective of clinical signs and symptoms. Other terms, such as newly infected, may appear in the media but are not used in our graphs. All terms used by Treker are explained in these FAQ. 
 
 </details>
 
@@ -38,10 +38,10 @@ Unfortunately, this data is unavailable for now. There are several reasons: Prev
 </details>
 
 <details>
-  <summary id=other-countries>Where can I find a comparison between Slovenia and other countries?</summary>
+  <summary id=other-countries>Where can I find a comparison between North Macedonia and other countries?</summary>
 
-You can find [a comparison graph](/en/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between Slovenia and different clusters of countries in relation to the *number of deaths* caused by COVID-19 *per million inhabitants*. 
-The clusters of countries that are compared to Slovenia are as follows:
+You can find [a comparison graph](/en/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between North Macedonia and different clusters of countries in relation to the *number of deaths* caused by COVID-19 *per million inhabitants*. 
+The clusters of countries that are compared to North Macedonia are as follows:
 -   Neighboring countries (excluding Italy)
 -   Critical countries (EU)
 -   Critical countries (global)
@@ -63,14 +63,14 @@ Currently, only the [About part](/en/about) and these FAQ are available, while t
 <details>
   <summary id=are-you-paid>Are you paid for creating the dashboard (charts, tables, models)?</summary>
 
-Not at all. Sledilnik is a non-profit initiative created to support the ongoing compiling and editing of key data on the spread of the coronavirus in Slovenia. Our database is public and freely available, free of charge, and non-commercial, and will remain so. Please check [How can I obtain and use your database?](#data-usage)
+Not at all. Treker is a non-profit initiative created to support the ongoing compiling and editing of key data on the spread of the coronavirus in North Macedonia. Our database is public and freely available, free of charge, and non-commercial, and will remain so. Please check [How can I obtain and use your database?](#data-usage)
 
 </details>
 
 <details>
   <summary id=tech-used>Which tools did you use to build the website/web app?</summary>
 
-The site is in JavaScript using Vue.js, the visualizations and graphs are made in F# using Highcharts libraries, and the project is open and available on [GitHub – Sledilnik](https://github.com/sledilnik).
+The site is in JavaScript using Vue.js, the visualizations and graphs are made in F# using Highcharts libraries, and the project is open and available on [GitHub – Treker](https://github.com/treker).
 
 </details>
 
@@ -81,7 +81,7 @@ The site is in JavaScript using Vue.js, the visualizations and graphs are made i
 
 Data is collected from verified public sources, which are listed in the [Resources tab](/en/sources). 
 
-Sledilnik receives official data on COVID-19 directly from the Ministry of Health, the NIJZ (National Institute for Public Health), and other national health institutions. The Sledilnik team does not guarantee the accuracy of the original data and publishes solely data obtained from official sources or the media, but we do cross-check if all data is correct and consistent with the given source.
+Treker would like to receive official data on COVID-19 directly from the Ministry of Health, the NIJZ (National Institute for Public Health), and other national health institutions. The Treker team does not guarantee the accuracy of the original data and publishes solely data obtained from official sources or the media, but we do cross-check if all data is correct and consistent with the given source.
 
 </details>
 
@@ -102,7 +102,7 @@ Editing Hospital Care Data – [Table Pacienti (Patients)](https://docs.google.c
 
 - All sources and conclusions are recorded as a commentary in individual cells (checkable).
 
-- The data is compared with the summary data on hospitalized patients in ICU published by the Government of the Republic of Slovenia.
+- The data is compared with the summary data on hospitalized patients in ICU published by the Government of the Republic of North Macedonia.
   
   </details>
 
@@ -118,7 +118,7 @@ When we publish updated daily data, it is available on all our distribution chan
 <details>
   <summary id=data-differences>Several portals display numbers of infected people that are different from yours. Why?</summary>
 
-Sledilnik uses only validated and official data reported daily by the National Institute of Public Health (NIJZ) and all Slovenian hospitals treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (4 March 2020). Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
+Treker uses only validated and official data reported daily by the National Institute of Public Health (NIJZ) and all North Macedonian hospitals treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (TBD date. Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
 
 </details>
 
@@ -137,14 +137,10 @@ The information on the discharged from hospitals is calculated from data daily o
 </details>
 
 <details>
-  <summary id=data-recovered>Why did you replace the number of *cured* with the number of *recovered* patients?</summary>
+  <summary id=data-recovered>TBD Why did you replace the number of *cured* with the number of *recovered* patients?</summary>
 
-Sledilnik used to rely on official sources (Government of the Republic of Slovenia, media) for the number of cured people. Unfortunately, reports on when a person is totally cured from Covid-19 are scarce – for now, we only have few confirmed reports of "cured patients", and there is, as of yet, still no official definition of when a particular person is cured. A [COVID-19 national survey](https://covid19.biolab.si/) is currently underway at the *Institute of Microbiology and Immunology*, which will also, through voluntary sample testing, show how many people have already fallen ill and recovered from COVID-19. As it is not yet known what the potential consequences of COVID-19 could be (various studies are addressing this question and the results will not be known for a long time), and because health institutions are also talking about recovered rather than cured patients, we are thus changing both the terminology and the method of calculating the number of recoveries. See also [Do you keep an Active Case counter and do you know how many people are currently infected?](#data-active-cases)) 
+TBD
 
-On April 14, the Department of Health released [Priporočila za zaključek izolacije in vrnitev na delovno mesto (Recommendations for Discontinuing Isolation and Returning to Work)](https://www.zbornica-zveza.si/wp-content/uploads/2020/04/PRIPORO%C4%8CILO-Zaklju%C4%8Dek-izolacije-in-vrnitev-na-delovna-mesta-po-preboleli-bolezni-COVID-19.pdf) from which we can deduce when a person has recovered from the disease and can return to work. For people with symptoms, this is 14 days after the symptoms have subsided, and for healthcare professionals, a control swab is required after 14 days, which must be negative 2x in a row. The Government of the Republic of Slovenia regularly reports on discharges from the hospital, but we do not know if they have already recovered from the disease. The published recommendations indicate that these patients require two consecutive negative control swabs after discharge to home care in order to be considered able to return to work. [In its report](https://www.ecdc.europa.eu/sites/default/files/documents/covid-19-rapid-risk-assessment-coronavirus-disease-2019-ninth-update-23-april-2020.pdf) the ECDC stated that *The 14-day incidence of reported COVID-19 cases in the EU/EEA and UK, providing an estimate of the prevalence of active cases in the population...* – so we chose the 14-day period as the time when the average confirmed case can still be counted as an *active case*. 
-
-We noticed that the [Worldometer](https://www.worldometers.info/coronavirus/#countries) was reporting recovery numbers, but unfortunately we were unable to obtain data on where this information was coming from. Also, some other sources simply combine survivors with the number of discharged patients from hospitals. Since we believe that these two categories are interchangeable, we have decided to present them separately; these are the *Discharged from Hospital* and *Recovered* indicators.
- 
 *Note: The calculation of recoveries was changed on 9 May 2020. We now consider a patient has recovered in 14 days after their infection was confirmed (previously 21 days), so there was be a noticeable jump in the number of survivors. Please take this difference into account when estimating the number of survivors. A more detailed explanation of the changed calculation is available in the Medium article [Od potrjeno okuženih do prebolelih (From Confirmed Case to Recovery )](https://medium.com/@sledilnik/94c81674718e).*
 
 </details>
@@ -169,9 +165,9 @@ Value formula:
 <details>
   <summary id=data-contribute>How can users get actively involved in data gathering? How can I participate?</summary>
 
-You can voluntarily help by collecting and verifying data from the media (as well as from the field), with statistical and other analyzes, etc. Contact us at info@sledilnik.org if you’d like to participate.
+You can voluntarily help by collecting and verifying data from the media (as well as from the field), with statistical and other analyzes, etc. Contact us at info@treker.mk if you’d like to participate.
 
-Sledilnik does not collect users’ personal information nor information that individuals would like to share about their condition or hospital status.
+Treker does not collect users’ personal information nor information that individuals would like to share about their condition or hospital status.
 
 
 </details>
@@ -179,7 +175,7 @@ Sledilnik does not collect users’ personal information nor information that in
 <details>
   <summary id=data-usage>How can I obtain and use your database?</summary>
 
-Our database is public and freely available in the form of  [**CSV**, **REST**, and **Google Sheet**](/en/datasources). Kindly let us know the purpose for which you will use the information and make sure you include Sledilnik as the source of your data.
+Our database is public and freely available in the form of  [**CSV**, **REST**, and **Google Sheet**](/en/datasources). Kindly let us know the purpose for which you will use the information and make sure you include Treker as the source of your data.
 
 Since all the data in the database is already marked with English tags (see also [Is your webpage available in English?](#english-translation)), their international use (export, display) is also possible.
 
@@ -203,17 +199,17 @@ This is a percentage growth rate on a particular date in the number of newly con
 </details>
 
 <details>
-  <summary id=metrics-comparison-chart>What does the “COVID-19 Situation in Slovenia” graph mean?
+  <summary id=metrics-comparison-chart>What does the “COVID-19 Situation in North Macedonia” graph mean?
 </summary>
 
-The [graph](/en/stats#metrics-comparison-chart) shows the daily and overall dynamics of the spread of the infection from the beginning to the present. The indicators used (see [Which indicators does the “COVID-19 Situation in Slovenia” graph include?](#chart-metrics-included)) help us understand whether and how successfully we are controlling the spread of the virus. We can monitor the daily growth rate of newly confirmed cases and indirectly see if the measures work; information on the number of hospitalizations and the proportion of those in ICU shows how many people are seriously at risk from the disease, but at the same time, this data also shows us the real burden on the health system.
+The [graph](/en/stats#metrics-comparison-chart) shows the daily and overall dynamics of the spread of the infection from the beginning to the present. The indicators used (see [Which indicators does the “COVID-19 Situation in North Macedonia” graph include?](#chart-metrics-included)) help us understand whether and how successfully we are controlling the spread of the virus. We can monitor the daily growth rate of newly confirmed cases and indirectly see if the measures work; information on the number of hospitalizations and the proportion of those in ICU shows how many people are seriously at risk from the disease, but at the same time, this data also shows us the real burden on the health system.
 
 The breakpoints are indicated below, on the timeline: from the first confirmed case (March 4, 2020) to the measures (by keyword and date) taken to curb the spread and their relaxation. This helps us monitor the dynamics of the variables relative to the measures.
 
 </details>
 
 <details>
-  <summary id=chart-metrics-included>Which indicators does the “COVID-19 Situation in Slovenia” graph include?</summary>
+  <summary id=chart-metrics-included>Which indicators does the “COVID-19 Situation in North Macedonia” graph include?</summary>
 
 [Graf](/en/stats#metrics-comparison-chart) vključuje:
   
@@ -251,7 +247,7 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
   <summary id=chart-terminology>What does it mean?
 </summary>
   
-Sledilnik uses terminology which is consistent with the official directives of the WHO and ECDC (European Center for Disease Prevention and Control). We use the following tags in the displays:  
+Treker uses terminology which is consistent with the official directives of the WHO and ECDC (European Center for Disease Prevention and Control). We use the following tags in the displays:  
 * **Confirmed cases** = This is the number of people who tested positive for the SARS-CoV-2 virus. Since the number of confirmed cases depends solely on testing, the number of confirmed cases is significantly lower than the actual number of infected people.
 
 * **Hospitalized** = This is the number of confirmed cases such severe symptoms of COVID-19 that they have been admitted to hospital.
@@ -272,7 +268,7 @@ All confirmed cases are shown in the [Confirmed Cases graph](/en/stats#cases-cha
 **Closed cases**  are the sum of all confirmed cases who are no longer infected with the virus, that is, the recovered and the deceased.
 
 **Active cases** are all confirmed virus infections that still haven’t recovered (are still infected with the virus). See also
- [Which indicators does the “COVID-19 Situation in Slovenia” graph include?](#chart-metrics-included)
+ [Which indicators does the “COVID-19 Situation in North Macedonia” graph include?](#chart-metrics-included)
 
 </details>
 
@@ -284,19 +280,12 @@ The vertical lines divide the stages, delimited by the dates, when the authoriti
 
 The phases are shown because the change in testing methodology has also changed the importance of certain indicators by which the prevalence of infections can be judged.
 
-* **Phase 1 (March 4-12, 2020)**: The first cases of infection in Slovenia are recorded. All cases are followed, all contacts are tested.
+* **Phase 1 (TBD date)**: The first cases of infection in North Macedoa are recorded....
 
-* **Phase 2 (March 13-19, 2020)**: The testing methodology is changed, and self-isolation and social distancing measures are introduced.
+* **Phase 2 (TBD date)**: The testing methodology is changed, and self-isolation and social distancing measures are introduced.
 
-* **Phase 3 (March 20-April 7)**: The testing methodology is revised and a ban on gathering more than five people in public areas is put in place.
+* **...**: ...
 
-* **Phase 4 (April 8-15)**: New change in testing methodology – people with mild symptoms from households with more than one respiratory infections are also tested.
-
-* **Phase 5 (April 15-21)**: New change in testing methodology – re-testing, if possible, of **all suspected SARS-CoV-2 virus infections**.
-
-* ** Phase 6 (April 21–May 15**: New change in testing methodology – All persons **suspected of being infected with SARS-CoV-2** are tested again. A national survey of 3000 randomly sampled persons (additional testing, blood testing for the presence of antibodies) begins.
-
-* **Phase 7 (May 15–present)**: The Slovenian government called an official end to its coronavirus epidemic – a quarantine of at least 14 days will remain in place for people from non-EU states, except for some exemptions (diplomats, cargo). Citizens still have to follow basic rules to prevent a possible spread of infection.
 
 </details>
 
@@ -343,7 +332,7 @@ When reporting the number of tests performed, all tests (including repeated test
 
 The [graph](/en/stats#tests-chart) shows the total number of regular tests (the *Regular* display), and the national IMI survey tests (by selecting the *Survey* display). The columns show the number of negative and positive tests on a specific day, and the curve shows the daily percentage of positive tests.
 
-All important health organizations and institutions are aware of the fact that testing for coronavirus infection is one of the most important factors, as only through testing can we understand the course and extent of the pandemic and thus respond appropriately to the threat it poses. However, each country deals with the lack of testing capacities in its own way. On *March 14*, 2020, Slovenia changed the method of monitoring the spread of the infection. From that point on, people with a respiratory infection who did not require hospital care (the situation is therefore only assessed on the basis of the number of diseased patients) were no longer tested. However, all persons with a mild respiratory infection older than 60 years, persons with other confirmed diseases (hypertension, diabetes, and cardiovascular, lung, kidney, and severe liver diseases) and people with immune deficiencies (regardless of age) were tested. On *April 21*, 2020, the method of testing changed again as healthcare professionals were instructed to test all patients with suspected respiratory infection (including those with milder symptoms and regardless of their age).
+All important health organizations and institutions are aware of the fact that testing for coronavirus infection is one of the most important factors, as only through testing can we understand the course and extent of the pandemic and thus respond appropriately to the threat it poses. 
  
 </details>
 
@@ -403,7 +392,7 @@ Demographics can help us understand how the pandemic has spread and why it has d
 <details>
   <summary id=countries-chart>What does the “Comparison by Country” graph show?</summary>
 
-The [chart](/en/stats#countries-chart) shows a comparison between Slovenia and different groups of countries in terms of the number of deaths due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
+The [chart](/en/stats#countries-chart) shows a comparison between North Macedonia and different groups of countries in terms of the number of deaths due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
 
 </details>
 
@@ -419,16 +408,16 @@ However, the number of confirmed cases depends solely on testing. Since the majo
 ## About the project
 
 <details>
-  <summary id=what-is-sledilnik>What is Sledilnik?</summary>
+  <summary id=what-is-sledilnik>What is Treker?</summary>
 
-[Sledilnik je projekt](/en/about) is an open-data and open-sourced project that collects, analyzes and displays some of the most useful data to better understand the spread of the coronavirus pandemic and COVID-19 disease, along with its dynamics and scope. We want to make clear graphical and statistical visualizations of what current data and reviews tell us about the spread of the virus in Slovenia, and ensure that information on the magnitude and severity of the COVID-19 problem in Slovenia becomes accessible and comprehensible to all.
+[Treker](/en/about) is an open-data and open-sourced project that collects, analyzes and displays some of the most useful data to better understand the spread of the coronavirus pandemic and COVID-19 disease, along with its dynamics and scope. We want to make clear graphical and statistical visualizations of what current data and reviews tell us about the spread of the virus in North Macedonia, and ensure that information on the magnitude and severity of the COVID-19 problem in North Macedonia becomes accessible and comprehensible to all.
 
 </details>
 
 <details>
   <summary id=add-link>I would like to recommend a valuable source, which is not yet among your ‘Recommended Links’, but should be. Will you add it?</summary>
 
-Contact us at info@sledilnik.org – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/en/links).
+Contact us at info@treker.mk – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/en/links).
 
 If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/sledilnik/website/blob/master/src/content/links.md).
 
@@ -437,6 +426,6 @@ If you would like to go a step further and contribute to our common goal, submit
 <details>
   <summary id=how-to-help>I would like to help, where can I begin?</summary>
 
-Contact us at info@sledilnik.org and briefly describe who you are and how you can contribute to the project. Warmly welcome to help.
+Contact us at info@treker.mk and briefly describe who you are and how you can contribute to the project. Warmly welcome to help.
 
 </details>
