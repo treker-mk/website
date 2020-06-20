@@ -309,19 +309,17 @@ Rritja e punonjësve të kujdesit shëndetësor të infektuar nuk do të thotë 
 </details>
 
 <details>
-  <summary id=regions-chart>What does the “Confirmed Cases by Region” tell us?</summary>
+  <summary id=regions-chart>TBD Çfarë na tregon grafiku “Rastet e konfirmuara sipas rajonit”?</summary>
 
-The [graph](/en/stats#regions-chart) shows the dynamics of growth of confirmed cases by selected regions. Individual regions can be easily compared by selecting the ones you want shown on the graph by clicking on specific regions below the graph. From the curve, we can quickly see which regions have the most and which the least confirmed cases and how this number has changed over time.
-
+[Grafiku](/sq/stats#regions-chart) tregon dinamikën e rritjes së rasteve të konfirmuara nga rajone të zgjedhura. Rajonet individuale mund të krahasohen lehtësisht duke zgjedhur ato që dëshironi të tregohen në grafik duke klikuar në rajone specifike poshtë grafikut. Nga kurba, ne mund të shohim shpejt se cilat rajone kanë më së shumti dhe cilat kanë më pak raste të konfirmuara dhe si ka ndryshuar ky numër me kalimin e kohës.
 </details>
 
 <details>
-  <summary id=map-chart>What does the “Municipality Map” tell us?</summary>
+  <summary id=map-chart>TBD Çfarë na tregon “Harta komunale”?</summary>
 
-The [map](/en/stats#map-chart) shows us the epidemiological picture of individual municipalities, as it allows the display of *Confirmed Cases* (red shades) or the *Dead* (gray shades). When showing confirmed cases, we can see which municipalities are the most "healthy" (white) and which are currently the more "infected" (red shades) – if new cases are still appearing or not - and relative to the share of the population (Proportion of population is the default display). On the left, we can use the filter (7, 14 or 21 days) to determine for what period of time we view data on new confirmed cases or deaths. For those municipalities where new cases are still being confirmed, we can conclude that the epidemic is still active. (Of course, this does not necessarily mean that the virus is not present in municipalities without new confirmed cases, but it is an indicator of the "health" of a certain area.) More details are available in the Medium article [Kje so “zdrave” občine? (Where Are the ‘Healthy’ Municipalities?)](https://medium.com/sledilnik/kje-so-zdrave-ob%C4%8Dine-613afc42b023) 
+TBD [Harta](/sq/stats#map-chart) na tregon pasqyrën epidemiologjike të bashkive individuale, pasi lejon shfaqjen e *Rasteve të konfirmuara* (hije të kuqe) ose të  *Vdekur* (hije gri). Kur tregojmë raste të konfirmuara, mund të shohim se cilat komuna janë më "të shëndetshme" (të bardha) dhe cilat janë aktualisht më të "infektuara" (hije të kuqe) - nëse rastet e reja janë ende duke u shfaqur ose jo - dhe në lidhje me pjesën e popullatës (Përqindja e popullsisë është shfaqja e paracaktuar). Në të majtë, ne mund të përdorim filtrin (7, 14 ose 21 ditë) për të përcaktuar se në cilën periudhë kohore shohim të dhëna për raste të reja të konfirmuara ose vdekje. Për ato komuna ku ende janë konfirmuar raste të reja, mund të konkludojmë se epidemia është akoma aktive. (Sigurisht, kjo nuk do të thotë domosdoshmërisht që virusi nuk është i pranishëm në komuna pa raste të reja të konfirmuara, por është një tregues i "shëndetit" të një zone të caktuar.) Më shumë detaje janë në dispozicion në artikullin e mesëm [Kje so “zdrave” občine? (Kje so "zdrave" "Občine? (Ku janë komunat "të shëndetshme"?)](https://medium.com/sledilnik/kje-so-zdrave-ob%C4%8Dine-613afc42b023) 
 
-By clicking on *Absolute* in the upper right corner, we can change the display and see the total number of newly confirmed cases or deaths in a selected time frame (7, 14 or 21 days) in municipalities according to how they are painted.
-
+Duke klikuar në  *Absolute* në këndin e sipërm të djathtë, ne mund të ndryshojmë ekranin dhe të shohim numrin e përgjithshëm të rasteve ose vdekjeve të konfirmuara rishtazi në një kornizë kohore të zgjedhur (7, 14 ose 21 ditë) në komuna sipas mënyrës se si ato janë pikturuar.
 </details>
 
 <details>
