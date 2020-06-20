@@ -1,6 +1,6 @@
 <h1>Frequently Asked Questions </h1>
 
-## TBD work in progress - all content below is  still linked to the "father" site sledilnik.org 
+## TBD work in progress - all content below is  still linked to the "father" site .org 
 
 _The purpose of the Treker project and all its statistical graphs and tables/presentations is to display all existing data about the COVID19 epidemic in North Macedonia in an understandable fashion. We've compiled some of the most frequently asked questions. The FAQ list is not exhaustive at this moment, but it is updated frequently so keep checking back. In case of any questions, please contact us: info@treker.mk. (We also look forward to your compliments, feedback, or suggestions!)_
 
@@ -33,20 +33,20 @@ Terminology in use on Treker is explained under [What does it mean](#chart-termi
   <summary id=all-infected>Is it possible to get statistical information on all infected persons, even the asymptomatic cases?
 </summary>
 
-Unfortunately, this data is unavailable for now. There are several reasons: Previously, tests have only covered a certain proportion of the population (patients with signs and symptoms of acute respiratory infection who may need hospital treatment, healthcare professionals, retirement home residents with respiratory symptoms, and people above 60 if their doctor so requires). Even though now the testing guidance for COVID-19 is expanded to include anyone displaying symptoms of the disease, many might be carriers with no or only mild symptoms. For this reason, our statistics can cover only part of the population that clearly shows signs of infection. Thus, the younger and the untested populations are disproportionately represented. Data for asymptomatic patients who do not show symptoms and are not recorded anywhere can therefore not be obtained.
+Unfortunately, this data is unavailable for now. There are several reasons: Previously, tests have only covered a certain proportion of the population (patients with signs and symptoms of acute respiratory infection who may need hospital treatment, healthcare professionals, ...). Even though now the testing guidance for COVID-19 is expanded to include anyone displaying symptoms of the disease, many might be carriers with no or only mild symptoms. For this reason, our statistics can cover only part of the population that clearly shows signs of infection. Thus, the younger and the untested populations are disproportionately represented. Data for asymptomatic patients who do not show symptoms and are not recorded anywhere can therefore not be obtained.
 
 </details>
 
 <details>
-  <summary id=other-countries>Where can I find a comparison between North Macedonia and other countries?</summary>
+  <summary id=other-countries> TBD Where can I find a comparison between North Macedonia and other countries?</summary>
 
-You can find [a comparison graph](/en/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between North Macedonia and different clusters of countries in relation to the *number of deaths* caused by COVID-19 *per million inhabitants*. 
+You can find [a comparison graph](/en/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between North Macedonia and different clusters of countries in relation to the *number of deaths* and *TBD....* caused by COVID-19 *per million inhabitants*. 
 The clusters of countries that are compared to North Macedonia are as follows:
--   Neighboring countries (excluding Italy)
+-   Neighboring and countries in the region  
 -   Critical countries (EU)
 -   Critical countries (global)
 -   Nordic countries
--   ex-Yugoslavian countries
+-   TBD ex-Yugoslavian countries
 -   East Asian countries and Oceania
 
 The graph is arranged chronologically, from January 1, from the first death, and from the first death per million, respectively. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs.
@@ -56,7 +56,7 @@ The graph is arranged chronologically, from January 1, from the first death, and
 <details>
   <summary id=english-translation>Is your webpage available in English?</summary>
 
-Currently, only the [About part](/en/about) and these FAQ are available, while the rest of the website is yet to be fully translated. However, both the text part and the source code are available as open source if you're interested in helping us translate. All the [data in the database](https://github.com/sledilnik) is already marked with English tags, so its international use (export) is also possible. 
+Currently, only the [About part](/en/about) and these FAQ are available, while the rest of the website is yet to be fully translated. However, both the text part and the source code are available as open source if you're interested in helping us translate. All the [data in the database](https://github.com/treker-mk) is already marked with English tags, so its international use (export) is also possible. 
 
 </details>
 
@@ -111,7 +111,7 @@ Editing Hospital Care Data – [Table Pacienti (Patients)](https://docs.google.c
 </summary>
 
 Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by 9 am every day for all hospitals. **Our data is usually updated between 10.00 and 12.00.**
-When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we also report it on social networks ([Facebook](https://www.facebook.com/COVID19Sledilnik) and [Twitter](https://twitter.com/sledilnik)).
+When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we also report it on social networks ([Facebook](https://www.facebook.com/COVID19) and [Twitter](https://twitter.com/sledilnik)).
 
 </details>
 
@@ -419,7 +419,7 @@ However, the number of confirmed cases depends solely on testing. Since the majo
 
 Contact us at info@treker.mk – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/en/links).
 
-If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/sledilnik/website/blob/master/src/content/links.md).
+TBD If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/treker-mk/website/blob/master/src/content/links_en.md).
 
 </details>
 
