@@ -210,23 +210,23 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
 
 * **Confirmed cases (active)** = Confirmed cases (total) – Recovered (total) – Died (total)
 
-* **Recovered (total)** = Number of recoveries on a given day is a simple estimate equal to the number of all confirmed cases two weeks prior to a given date (assuming an average of 14 days needed to recover), from which the number of fatalities till that very date is subtracted. See also [Why did you replace the number of cured with the number of recovered patients?](#data-recovered)
+* **Recovered (total)** = Total number of all recovered cases by a given day. 
 
 * **Hospitalized (active)** = Current number of people in hospital care (either in the ordinary ward or in the ICU).
 
-* **Hospitalized (total) ** = Sum of hospital admissions by date.
+* **Hospitalized (total)** = Sum of hospital admissions by date.
 
 * **ICU (active)** = Current number of people in ICUs (intensive care units).
 
-* **On ventilator (active) ** = Current number of persons in need of a ventilator.
+* **On ventilator (active)** = Current number of persons in need of a ventilator.
 
 * **Discharged from a hospital (daily)** = Number of discharged from hospital on that day.
 
 * **Discharged from hospital (total)** = Sum of all discharged from a hospital up to this day.
 
-* **Deaths (per day) ** = Number of deaths due to COVID-19 on that day.
+* **Deaths (per day)** = Number of deaths due to COVID-19 on that day.
 
-* **Deaths (total) ** = Sum of all deaths to date.
+* **Deaths (total)** = Sum of all deaths to date.
   
 </details>
 
@@ -235,15 +235,15 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
 </summary>
   
 Treker uses terminology which is consistent with the official directives of the WHO and ECDC (European Center for Disease Prevention and Control). We use the following tags in the displays:  
-* **Confirmed cases** = This is the number of people who tested positive for the SARS-CoV-2 virus. Since the number of confirmed cases depends solely on testing, the number of confirmed cases is significantly lower than the actual number of infected people.
+* **Confirmed cases** = This is the number of people who tested positive for the SARS-CoV-2 virus. Since the number of confirmed cases depends solely on testing, the number of confirmed cases may be significantly lower than the actual number of infected people.
 
 * **Hospitalized** = This is the number of confirmed cases such severe symptoms of COVID-19 that they have been admitted to hospital.
 
-* **In ICU** = Indicates the number of hospitalized persons who are at risk of death because of the severe symptoms of COVID-19 and require placement in the intensive care unit. This is a subset of the *Hospitalized* category. 
+* **In ICU** = Indicates the number of hospitalized persons who are at risk of death because of the severe symptoms of COVID-19 and require placement in the intensive care unit.  This number is still **TBD** to be determined if it is a subset of the *Hospitalized* category. 
 
-* **On ventilator** = Indicates the number of hospitalized persons in the intensive care unit who require a ventilator to breathe. It is a subset of the *Intensive Care* and *Hospitalized* categories.
+* **On ventilator** = Indicates the number of hospitalized persons in the intensive care unit who require a ventilator to breathe. It is still **TBD** to be determined if it is a subset of the *Intensive Care* and *Hospitalized* categories.
 
-* **Recovered** = This is an estimate of the number confirmed cases that are expected to have recovered after 14 days. The number of recoveries is thus equal to the number of all confirmed cases two weeks prior – assuming that the disease should be overcome within 14 days – from which the number of deaths by that given day is subtracted. (See also the question [Why did you replace the number of cured with the number of recovered patients?](#data-recovered)
+* **Recovered** = This the number of reported recovered persons. 
   
 </details>
 
@@ -261,9 +261,9 @@ All confirmed cases are shown in the [Confirmed Cases graph](/en/stats#cases-cha
 
 
 <details>
-  <summary id=chart-phases>What do the different phases (phases 1-7) in the graph mean?</summary>
+  <summary id=chart-phases>TBD What do the different phases (phases 1-N) in the graph mean?</summary>
 
-The vertical lines divide the stages, delimited by the dates, when the authorities changed the way information about the spread of the infection was collected (the test method was changed, self-isolation interventions were introduced, bans on gathering and movement of persons, and mandatory basic protection were required).
+The vertical lines divide the stages, delimited by the dates, when the authorities changed the way information about the spread of the infection was collected (e.g. the test method was changed, self-isolation interventions were introduced, bans on gathering and movement of persons, mandatory basic protection were required...).
 
 The phases are shown because the change in testing methodology has also changed the importance of certain indicators by which the prevalence of infections can be judged.
 
@@ -277,37 +277,19 @@ The phases are shown because the change in testing methodology has also changed 
 </details>
 
 <details>
-  <summary id=patients-chart>What does the “Hospitalizations” graph tell us?</summary>
+  <summary id=patients-chart>TBD What does the “Hospitalizations” graph tell us?</summary>
 
 The [graph](/en/stats#patients-chart) in the default view *All Hospitals* shows us the whole picture of hospitalizations by date arranged by the condition of patients: columns with a positive value (those above the horizontal axis) show the number admitted to hospital, the number hospitalized, shades of red are used to demark individuals in ICUs, specifically depicting how many of these are in critical condition on the ventilators. Columns with a negative value (those below the horizontal axis) show the number of discharges and deaths that day. You can also select specific hospital and see only hospitalizations there. If you select the *By Hospitals* view below, you can see the number of people in hospital care by day for each of the COVID-19 hospitals.  
 The graph can offer a good insight into the workload of hospitals and can be the basis for assessing hospital capacity and planning their possible increase.
 
 </details>
 
-<!-- <details>
-  <summary id=ratios-chart>Kaj nam pove graf "Delež resnih primerov"?</summary>
-
-[Graf](/en/stats#ratios-chart) prikazuje deleže resnih primerov bolezni in smrtnosti v treh različnih prikazih. Vsi podatki so prikazani kot procent (%). 
-
-(*Resni primeri*) nam kaže hospitalizirane, v intenzivni enoti, na respiratorju in umrle kot delež vseh potrjeno okuženih. Iz tega je razvidno kako velik delež vseh potrjeno okuženih oseb ima težjo obliko bolezni, ki zahteva hospitalizacijo, sprejem v intenzivno enoto in uporabo respiratorja.
-
-(*Hospitalizirani*) nam kaže osebe v intenzivni enoti, na respiratorju in umrle v bolnišnici kot delež vseh hospitaliziranih. Ta prikaz ponazori na kakšnem oddelku in kakšno obravnavo potrebujejo hospitalizirani bolniki.
-
-(*Smrtnost*) nam pokaže delež smrti v bolnišnici glede na vse umrle in delež smrti v intenzivni enoti glede na vse umrle v bolnišnici - prikazano s polno črto. Prikaz nam tudi prikaže Smrtnost v bolnišnici (koliko oseb umre glede na vse hospitalizirane) in Smrtnost v intenzivni enoti (koliko oseb umre glede na vse sprejete v intenzivno enoto) - prikazano s črtkano črto. 
-
-Graf je uporaben za razumevanje obravnave bolnikov v Sloveniji in primerjave z ostalimi državami (glede na njihova poročila).
-
-</details> -->
-
 <details>
-  <summary id=hcenters-chart>What does the “Healthcare Center Treatment” graph mean?</summary>
+  <summary id=hcenters-chart>TBD What does the “Healthcare Center Treatment” graph mean?</summary>
 
-The [graph](/en/stats#hcenters-chart) shows the treatment of suspicions of COVID-19 in healthcare centers (primary health care level). You can show data for whole country or select specific region. Healthcare centers are the first entry point for taking swabs to be tested for the presence of the virus, so an increase in the number of suspicions and referrals to self-isolation may be an early indicator that new outbreaks have occurred.
+The [graph](/en/stats#hcenters-chart) shows the treatment of suspicions of COVID-19 in healthcare centers (primary health care level). You can show data for whole country or TBD select specific regins. Healthcare centers are the first entry point for taking swabs to be tested for the presence of the virus, so an increase in the number of suspicions and referrals to self-isolation may be an early indicator that new outbreaks have occurred.
 
-The graph thus shows the number of all emergency medical visits (also for other diseases) in healthcare centers (see notes below), the number of suspected cases of COVID-19 based on the number of examinations at the COVID-19 entry point, and all suspicions of infections based on telephone conversation with suspected infected patients. Some people may be recorded several times, first by telephone and then during the examination. We also show the total number of referrals to self-isolation.
-
-*Note 1: in some municipalities, the control point for COVID-19 is within the hospital premises (for example the Celje and Novo mesto General Hospitals). Data before 14.4. is not available for these general hospitals. 
-Note 2: the methodology for recording suspicions of inspections via telephone conversation has changed, so all suspicions were initially recorded. Since April 23, however, only those suspicions via telephone conversation have been recorded, where no examination and swabbing (testing) was ordered. Therefore it is possible that there are differences in how individual healthcare centers report this data and that this number is too high.*
+TBD The graph thus shows the number of all emergency medical visits (also for other diseases) in healthcare centers (see notes below), the number of suspected cases of COVID-19 based on the number of examinations at the COVID-19 entry point, and all suspicions of infections based on telephone conversation with suspected infected patients. Some people may be recorded several times, first by telephone and then during the examination. We also show the total number of referrals to self-isolation.
 
 When reporting the number of tests performed, all tests (including repeated tests) are recorded. The number of positive tests therefore includes all positive tests – the same person can be tested several times and counted as positive several times. The number of tests performed may therefore be greater than the number of positive tests reported by laboratories (there, each person is recorded only once). See also [What does the “Testing” graph tell us?](#test-charts) 
 
@@ -317,7 +299,7 @@ When reporting the number of tests performed, all tests (including repeated test
 <details>
   <summary id=tests-chart>What does the “Testing” graph tell us?</summary>
 
-The [graph](/en/stats#tests-chart) shows the total number of regular tests (the *Regular* display), and the national IMI survey tests (by selecting the *Survey* display). The columns show the number of negative and positive tests on a specific day, and the curve shows the daily percentage of positive tests.
+The [graph](/en/stats#tests-chart) shows the total number of regular tests (the *Regular* display), and the national survey tests (by selecting the *Survey* display). The columns show the number of negative and positive tests on a specific day, and the curve shows the daily percentage of positive tests.
 
 All important health organizations and institutions are aware of the fact that testing for coronavirus infection is one of the most important factors, as only through testing can we understand the course and extent of the pandemic and thus respond appropriately to the threat it poses. 
  
@@ -328,7 +310,7 @@ All important health organizations and institutions are aware of the fact that t
 
 The [graph](/en/stats#infections-chart)provides an insight into the daily share of confirmed cases from high-risk groups or employees in high-risk areas. Due to insufficiently accurate input data on confirmed infections, daily values (By days (average)) are shown as a moving average of 5 days. The sum of the values on a particular day, from 2 days prior, and 2 days after, is divided by 5. Therefore, the graph shows the situation three days before a specific day, and in this way we get a better idea of trends by individual groups. If we select the *Total* or *Relative* display, we will jump from the confirmed cases curve to the histogram, which shows the number of confirmed infected persons within each category on a given day.
 
-The increase in infected healthcare workers does not mean that they were discovered exactly on that day; they may have been positive before but information on their status was obtained subsequently. The *Retirement Home Employees* category includes healthcare workers, associates, and external assistance (health students), so the daily data on healthcare workers (blue curve or columns) are reduced accordingly. This means that the number of health professionals is a very conservative estimate.
+The increase in infected healthcare workers does not mean that they were discovered exactly on that day; they may have been positive before but information on their status was obtained subsequently. 
 
 </details>
 
@@ -340,14 +322,14 @@ The [graph](/en/stats#spread-chart) tells us how many new confirmed cases of inf
 </details>
 
 <details>
-  <summary id=regions-chart>What does the “Confirmed Cases by Region” tell us?</summary>
+  <summary id=regions-chart>TBD What does the “Confirmed Cases by Region” tell us?</summary>
 
-The [graph](/en/stats#regions-chart) shows the dynamics of growth of confirmed cases by selected regions. Individual regions can be easily compared by selecting the ones you want shown on the graph by clicking on specific regions below the graph. From the curve, we can quickly see which regions have the most and which the least confirmed cases and how this number has changed over time.
+TBD The [graph](/en/stats#regions-chart) shows the dynamics of growth of confirmed cases by selected regions. Individual regions can be easily compared by selecting the ones you want shown on the graph by clicking on specific regions below the graph. From the curve, we can quickly see which regions have the most and which the least confirmed cases and how this number has changed over time.
 
 </details>
 
 <details>
-  <summary id=map-chart>What does the “Municipality Map” tell us?</summary>
+  <summary id=map-chart>TBD What does the “Municipality Map” tell us?</summary>
 
 The [map](/en/stats#map-chart) shows us the epidemiological picture of individual municipalities, as it allows the display of *Confirmed Cases* (red shades) or the *Dead* (gray shades). When showing confirmed cases, we can see which municipalities are the most "healthy" (white) and which are currently the more "infected" (red shades) – if new cases are still appearing or not - and relative to the share of the population (Proportion of population is the default display). On the left, we can use the filter (7, 14 or 21 days) to determine for what period of time we view data on new confirmed cases or deaths. For those municipalities where new cases are still being confirmed, we can conclude that the epidemic is still active. (Of course, this does not necessarily mean that the virus is not present in municipalities without new confirmed cases, but it is an indicator of the "health" of a certain area.) More details are available in the Medium article [Kje so “zdrave” občine? (Where Are the ‘Healthy’ Municipalities?)](https://medium.com/sledilnik/kje-so-zdrave-ob%C4%8Dine-613afc42b023) 
 
@@ -356,7 +338,7 @@ By clicking on *Absolute* in the upper right corner, we can change the display a
 </details>
 
 <details>
-  <summary id=municipalities-chart>What does the chart “Cases by Municipalities” show us?</summary>
+  <summary id=municipalities-chart>TBD What does the chart “Cases by Municipalities” show us?</summary>
 
 The [chart](/en/stats#municipalities-chart) shows individual municipalities in columns in more detail with the number of confirmed cases by days, with active cases, recoveries (assessment) and deaths in each municipality. Below the municipality you can find the information about the time since the last confirmed case. Municipalities are classified according to when the last confirmed case was recorded there, from which we can conclude which municipalities are currently more “infected” and which are “healthier” than others.
 
@@ -364,10 +346,12 @@ The display can be changed by selecting different views above the graph: if you 
 
 *Note: the assessment of recoveries and active cases is done 14 days after the infection was confirmed, if and when the disease is in its mild form. However, if an individual is hospitalized, this recovery will last longer, but in this case the individual is not dangerous to the environment because he is in hospital. Since we do not take into account the hospitalized in the municipality presentation, it is possible that the sum of active cases by municipality does not match the estimate of the active cases for the whole country. See also [Do you keep an Active Case counter and do you know how many people are currently infected?](#data-active-cases)*
 
+TBD - smaller geographical units will be added to the 30 regional IJZ epidemiological centers. 
+
 </details>
 
 <details>
-  <summary id=age-groups-chart>What does the “Age Groups” graph show?</summary>
+  <summary id=age-groups-chart>TBD What does the “Age Groups” graph show?</summary>
 
 The [graph](/en/stats#age-groups-chart) shows the age structure of all confirmed coronavirus cases and deaths. The graph also displays demarcations by gender. The display shows absolute values and can be changed at the top right to the *Relative* display for a better insight into what the mortality rate from COVID-19 is relative to the general population throughout the epidemic period. In the Relative view, there are the options for different views below: by selecting *Proportion of confirmed cases*, the share of confirmed cases within a certain age group will be displayed. By selecting the *Death rate*, we will see the number of deaths per population size. By selecting *Deaths by no. of confirmed cases*, we can understand what the proportion of deaths in a particular age group was in relation to the number of confirmed cases.
 
@@ -377,9 +361,9 @@ Demographics can help us understand how the pandemic has spread and why it has d
 </details>
 
 <details>
-  <summary id=countries-chart>What does the “Comparison by Country” graph show?</summary>
+  <summary id=countries-chart>TBD What does the “Comparison by Country” graph show?</summary>
 
-The [chart](/en/stats#countries-chart) shows a comparison between North Macedonia and different groups of countries in terms of the number of deaths due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
+The [chart](/en/stats#countries-chart) shows a comparison between North Macedonia and different groups of countries in terms of the number of deaths **TBD** and other epidemiological outcome parameters due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
 
 </details>
 
