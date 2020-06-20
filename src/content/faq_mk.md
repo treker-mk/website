@@ -1,6 +1,6 @@
-<h1>Frequently Asked Questions *MK</h1>
+<h1>Често поставувани прашања</h1>
 
-_The purpose of the Sledilnik project and all its statistical graphs and tables/presentations is to display all existing data about the COVID19 epidemic in Slovenia in an understandable fashion. We've compiled some of the most frequently asked questions. The FAQ list is not exhaustive at this moment, but it is updated frequently so keep checking back. In case of any questions, please contact us: info@slednik.org. (We also look forward to your compliments, feedback, or suggestions!)_
+_Идејата на Трекер е да ги прикаже на едно место постоечките податоци во облик што секој може да го разбере. Без разлика на тоа се потребни одредени објаснувања. Тука ги собравме одговорите на некои најчести прашања. Листата на прашања ја прилагодуваме во зависност од тоа дали има нешто ново или за нешто се потребни подобри објаснувања. Доколку имате било какво прашање (или предлог за подобро објаснување) и тоа не постои во сегашниот FAQ, nратете ни го на info@treker.mk (Се радуваме на секакви критики, пофалби, повратни информации или предлози!)_
 
 ## General Information
 
