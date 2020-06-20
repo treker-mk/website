@@ -88,13 +88,13 @@ Treker would like to receive official data on COVID-19 directly from the Ministr
 <details>
   <summary id=data-collection>How do you collect and edit the data?</summary>
 
-[TBD The database](https://docs.google.com/spreadsheets/d/) is built from the IJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [TBD Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/....).
+[TBD The database](https://docs.google.com/spreadsheets/d/ TBD) is built from the IJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [TBD Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/ ...).
 
 Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/1):
 
-- We monitor the number of hospitalizations: all wards, in ICUs, and on ventilators.
+- We would like to monitor the number of hospitalizations: all wards, in ICUs, and on ventilators.
 
-- We also record transitions (acceptance/dismissal) between individual stages of the disease (when detectable) from the obtained data.
+- We record transitions (acceptance/dismissal) between individual stages of the disease (when detectable) from the obtained data.
 
 - Where the transition (admission/dismissal) information is incomplete, the values are determined by inference (using a formula).
 
@@ -109,52 +109,41 @@ Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.goog
 </summary>
 
 Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by TBD am every day for all hospitals. **Our data is usually updated between TBD and TBD oclock.**
-When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we also report it on social networks ([TBD Facebook](https://www.facebook.com/) and [TBD Twitter](https://twitter.com/)).
+When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we are also reporting it on social networks ([Facebook](https://www.facebook.com/Covid19TrekerMK) and [Twitter](https://twitter.com/Covid19TrekerMK)).
 
 </details>
 
 <details>
   <summary id=data-differences>Several portals display numbers of infected people that are different from yours. Why?</summary>
 
-Treker uses only validated and official data reported daily by the National Institute of Public Health (NIJZ) and all North Macedonian hospitals treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (TBD date. Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
+Treker uses only validated and official data reported daily by the Institute of Public Health (IJZ) and all North Macedonian hospitals treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (TBD date). Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
 
 </details>
 
 <details>
   <summary id=data-hospital-in>How do you obtain data on hospital admissions?</summary>
 
-Hospitals do not always report individual admissions or discharges from which we can obtain accurate data. The number of admissions is usually calculated from data on the currently hospitalized and from the difference compared to the previous day, to which we add the number of discharged and dead on a given day. We keep records of admissions and discharges in intensive care units and for connection and disconnection to/from ventilators in a similar way.
+Hospitals do not always report individual admissions or discharges from which we can obtain accurate data. The number of admissions is usually calculated from data on the currently hospitalized and from the difference compared to the previous day, to which we add the number of discharged and dead on a given day. We keep all available records of admissions and discharges in intensive care units and for connection and disconnection to/from ventilators in a similar way.
 
 </details>
 
 <details>
   <summary id=data-hospital-out>How do you obtain data on hospital discharges?</summary>
 
-The information on the discharged from hospitals is calculated from data daily obtained directly from hospitals, i.e. from a verified source. We mostly get the daily number of discharges for all hospitals, from which we can deduce the number of newly admitted. See also [How do you obtain data on hospital admissions?](#data-hospital-in)
-
-</details>
-
-<details>
-  <summary id=data-recovered>TBD Why did you replace the number of *cured* with the number of *recovered* patients?</summary>
-
-TBD
-
-*Note: The calculation of recoveries was changed on 9 May 2020. We now consider a patient has recovered in 14 days after their infection was confirmed (previously 21 days), so there was be a noticeable jump in the number of survivors. Please take this difference into account when estimating the number of survivors. A more detailed explanation of the changed calculation is available in the Medium article [Od potrjeno okuženih do prebolelih (From Confirmed Case to Recovery )](https://medium.com/@sledilnik/94c81674718e).*
+The information on the discharged from hospitals is calculated from data daily obtained directly from hospitals or the institutions they report to, i.e. from a verified source. We mostly get the daily number of discharges for all hospitals, from which we can deduce the number of newly admitted. See also [How do you obtain data on hospital admissions?](#data-hospital-in)
 
 </details>
 
 <details>
   <summary id=data-active-cases>Do you keep an Active Case counter and do you know how many people are currently infected?</summary>
 
-Yes, these indicators have been graphically displayed as **Confirmed Cases (active)** and **Recovered (total)** from the end of April.
- 
+Yes, these indicators have been graphically displayed as **Confirmed Cases (active)** and **Recovered (total)**.
+Republic of North Macedonia is one of the rare countrie that actually record all patients which are cured (2x negative tests after  home or hospital recovery)
 
-These visualizations are not data from public sources; both indicators show the calculated value on the basis of official data, so they are indicated by a dashed line for easier distinguishing. The value of the confirmed cases (active) is calculated by simply subtracting the official data for the relevant category, the value of the Recovered (total) reflects the status of all confirmed cases three weeks ago (minus the dead). The number of recoveries is a simple estimate based on the value of all those confirmed infected in the past – based on the assumption that patients recover from the disease on average within 14 days (source: [the ECDC Report](https://www.ecdc.europa.eu/sites/default/files/documents/covid-19-rapid-risk-assessment-coronavirus-disease-2019-ninth-update-23-april-2020.pdf)); thus, the number of recoveries on a given day equals the number of all confirmed cases three weeks prior to a given date, from which the number of deaths by that day is deducted. This simplified estimation does not take into account the more serious cases of COVID-19 with longer recovery times.     
-
-*Note: The calculation of recoveries was changed on 9 May 2020. We now consider a patient has recovered in 14 days after their infection was confirmed (previously 21 days), so there was be a noticeable jump in the number of survivors. Please take this difference into account when estimating the number of survivors. A more detailed explanation of the changed calculation is available in the Medium article [Od potrjeno okuženih do prebolelih (From Confirmed Case to Recovery )](https://medium.com/@sledilnik/94c81674718e).*
+In cases where there is no direct data on recoveries (e.g. smaller municipalities) we are using the ECDC methodology. The number of recoveries is a simple estimate based on the value of all those confirmed infected in the past – based on the assumption that patients recover from the disease on average within 14 days (source: [the ECDC Report](https://www.ecdc.europa.eu/sites/default/files/documents/covid-19-rapid-risk-assessment-coronavirus-disease-2019-ninth-update-23-april-2020.pdf))   
 
 Value formula:
-- Recovered (total) = Confirmed cases (total) 21 days ago – Died (total) by the day of calculation
+- Recovered (total) = Confirmed cases (total) 14 days ago – Died (total) by the day of calculation
 
 - Confirmed cases (active) = Confirmed cases (total) - Recovered (total) - Died (total)
 
