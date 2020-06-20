@@ -266,65 +266,45 @@ Linjat vertikale ndajnë fazat, të përcaktuara me datat, kur autoritetet ndrys
 </details>
 
 <details>
-  <summary id=patients-chart>What does the “Hospitalizations” graph tell us?</summary>
+  <summary id=patients-chart>TBD Çfarë na tregon grafiku “Hospitalizimet”?</summary>
 
-The [graph](/en/stats#patients-chart) in the default view *All Hospitals* shows us the whole picture of hospitalizations by date arranged by the condition of patients: columns with a positive value (those above the horizontal axis) show the number admitted to hospital, the number hospitalized, shades of red are used to demark individuals in ICUs, specifically depicting how many of these are in critical condition on the ventilators. Columns with a negative value (those below the horizontal axis) show the number of discharges and deaths that day. You can also select specific hospital and see only hospitalizations there. If you select the *By Hospitals* view below, you can see the number of people in hospital care by day for each of the COVID-19 hospitals.  
-The graph can offer a good insight into the workload of hospitals and can be the basis for assessing hospital capacity and planning their possible increase.
+TBD [Grafiku](/sq/stats#patients-chart) në pamjen e paracaktuar *Të gjitha spitalet* sna tregon tërë pamjen e qëndrimeve në spitale sipas datës të rregulluar nga gjendja e pacientëve: kolonat me një vlerë pozitive (ato mbi boshtin horizontal) tregojnë numrin e pranuar në spital, numrin e shtruar në spital, ngjyrat e kuqe janë përdorur për të demarkuar individët në NjQI, duke përshkruar në mënyrë specifike se sa prej tyre janë në gjendje kritike në ventilatorët. Kolonat me një vlerë negative (ato nën boshtin horizontal) tregojnë numrin e shkarkimeve dhe vdekjeve atë ditë. Ju gjithashtu mund të zgjidhni spital specifik dhe të shihni vetëm hospitalizimet atje. Nëse zgjidhni pamjen *Sipas spitalit* më poshtë, mund të shihni numrin e personave që janë në kujdesin spitalor për ditë për secilin nga spitalet KOVID-19.
+Grafiku mund të ofrojë një pasqyrë të mirë të ngarkesës së spitaleve dhe mund të jetë baza për vlerësimin e kapacitetit spitalor dhe planifikimin e rritjes së tyre të mundshme.
 
 </details>
 
-<!-- <details>
-  <summary id=ratios-chart>Kaj nam pove graf "Delež resnih primerov"?</summary>
-
-[Graf](/en/stats#ratios-chart) prikazuje deleže resnih primerov bolezni in smrtnosti v treh različnih prikazih. Vsi podatki so prikazani kot procent (%). 
-
-(*Resni primeri*) nam kaže hospitalizirane, v intenzivni enoti, na respiratorju in umrle kot delež vseh potrjeno okuženih. Iz tega je razvidno kako velik delež vseh potrjeno okuženih oseb ima težjo obliko bolezni, ki zahteva hospitalizacijo, sprejem v intenzivno enoto in uporabo respiratorja.
-
-(*Hospitalizirani*) nam kaže osebe v intenzivni enoti, na respiratorju in umrle v bolnišnici kot delež vseh hospitaliziranih. Ta prikaz ponazori na kakšnem oddelku in kakšno obravnavo potrebujejo hospitalizirani bolniki.
-
-(*Smrtnost*) nam pokaže delež smrti v bolnišnici glede na vse umrle in delež smrti v intenzivni enoti glede na vse umrle v bolnišnici - prikazano s polno črto. Prikaz nam tudi prikaže Smrtnost v bolnišnici (koliko oseb umre glede na vse hospitalizirane) in Smrtnost v intenzivni enoti (koliko oseb umre glede na vse sprejete v intenzivno enoto) - prikazano s črtkano črto. 
-
-Graf je uporaben za razumevanje obravnave bolnikov v Sloveniji in primerjave z ostalimi državami (glede na njihova poročila).
-
-</details> -->
-
 <details>
-  <summary id=hcenters-chart>What does the “Healthcare Center Treatment” graph mean?</summary>
+  <summary id=hcenters-chart>TBD Çfarë do të thotë grafiku "Trajtimi i qendrës shëndetësore"?</summary>
 
-The [graph](/en/stats#hcenters-chart) shows the treatment of suspicions of COVID-19 in healthcare centers (primary health care level). You can show data for whole country or select specific region. Healthcare centers are the first entry point for taking swabs to be tested for the presence of the virus, so an increase in the number of suspicions and referrals to self-isolation may be an early indicator that new outbreaks have occurred.
+TBD [Grafiku](/sq/stats#hcenters-chart) tregon trajtimin e dyshimeve të KOVID-19 në qendrat e kujdesit shëndetësor (niveli i kujdesit shëndetësor parësor). Ju mund të tregoni të dhëna për të gjithë vendin ose të zgjidhni një rajon specifik. Qendrat shëndetësore janë pika e parë e hyrjes për marrjen e shtupave që duhet të testohen për praninë e virusit, kështu që një rritje e numrit të dyshimeve dhe referimeve në vetë-izolim mund të jetë një tregues i hershëm se kanë ndodhur shpërthime të reja.
 
-The graph thus shows the number of all emergency medical visits (also for other diseases) in healthcare centers (see notes below), the number of suspected cases of COVID-19 based on the number of examinations at the COVID-19 entry point, and all suspicions of infections based on telephone conversation with suspected infected patients. Some people may be recorded several times, first by telephone and then during the examination. We also show the total number of referrals to self-isolation.
+Grafiku madje tregon kështu numrin e të gjitha vizitave urgjente mjekësore (gjithashtu për sëmundje të tjera) në qendrat e kujdesit shëndetësor (shiko shënimet më poshtë), numrin e rasteve të dyshuara të KOVID-19 bazuar në numrin e ekzaminimeve në pikën hyrëse të KOVID-19, dhe të gjitha dyshimet për infeksione të bazuara në bisedë telefonike me pacientë të dyshuar të infektuar. Disa njerëz mund të regjistrohen disa herë, së pari me telefon dhe pastaj gjatë testimit. Ne gjithashtu tregojmë numrin e përgjithshëm të referimeve për vetë-izolim.
 
-*Note 1: in some municipalities, the control point for COVID-19 is within the hospital premises (for example the Celje and Novo mesto General Hospitals). Data before 14.4. is not available for these general hospitals. 
-Note 2: the methodology for recording suspicions of inspections via telephone conversation has changed, so all suspicions were initially recorded. Since April 23, however, only those suspicions via telephone conversation have been recorded, where no examination and swabbing (testing) was ordered. Therefore it is possible that there are differences in how individual healthcare centers report this data and that this number is too high.*
-
-When reporting the number of tests performed, all tests (including repeated tests) are recorded. The number of positive tests therefore includes all positive tests – the same person can be tested several times and counted as positive several times. The number of tests performed may therefore be greater than the number of positive tests reported by laboratories (there, each person is recorded only once). See also [What does the “Testing” graph tell us?](#test-charts) 
+Kur raportoni numrin e testeve të kryera, regjistrohen të gjitha testet (përfshirë testet e përsëritura). Numri i testeve pozitive pra përfshin të gjitha testet pozitive - i njëjti person mund të testohet disa herë dhe të llogaritet si pozitiv disa herë. Prandaj, numri i testeve të kryera mund të jetë më i madh se numri i testeve pozitive të raportuara nga laboratorët (atje, secili person regjistrohet vetëm një herë). Shih gjithashtu [Çfarë na tregon grafiku “Testim"?](#test-charts) 
 
 </details>
 
 
 <details>
-  <summary id=tests-chart>What does the “Testing” graph tell us?</summary>
+  <summary id=tests-chart>TBD Çfarë na tregon grafiku “Testim”?</summary>
 
-The [graph](/en/stats#tests-chart) shows the total number of regular tests (the *Regular* display), and the national IMI survey tests (by selecting the *Survey* display). The columns show the number of negative and positive tests on a specific day, and the curve shows the daily percentage of positive tests.
-
-All important health organizations and institutions are aware of the fact that testing for coronavirus infection is one of the most important factors, as only through testing can we understand the course and extent of the pandemic and thus respond appropriately to the threat it poses. However, each country deals with the lack of testing capacities in its own way. On *March 14*, 2020, Slovenia changed the method of monitoring the spread of the infection. From that point on, people with a respiratory infection who did not require hospital care (the situation is therefore only assessed on the basis of the number of diseased patients) were no longer tested. However, all persons with a mild respiratory infection older than 60 years, persons with other confirmed diseases (hypertension, diabetes, and cardiovascular, lung, kidney, and severe liver diseases) and people with immune deficiencies (regardless of age) were tested. On *April 21*, 2020, the method of testing changed again as healthcare professionals were instructed to test all patients with suspected respiratory infection (including those with milder symptoms and regardless of their age).
+[Grafiku](/sq/stats#tests-chart) tregon numrin e përgjithshëm të testeve të rregullta (pasqyreja e Rregullt), dhe testet kombëtare të sondazhit IMI (duke zgjedhur pasqyren e *Anketës*). Kolonat tregojnë numrin e provave negative dhe pozitive në një ditë specifike, dhe kurba tregon përqindjen ditore të testeve pozitive.
  
 </details>
 
 <details>
-  <summary id=infections-chart>What does the “Structure of Confirmed Cases” graph tell us?</summary>
+  <summary id=infections-chart>TBD Çfarë na tregon grafiku "Struktura e rasteve të konfirmuara"?</summary>
 
-The [graph](/en/stats#infections-chart)provides an insight into the daily share of confirmed cases from high-risk groups or employees in high-risk areas. Due to insufficiently accurate input data on confirmed infections, daily values (By days (average)) are shown as a moving average of 5 days. The sum of the values on a particular day, from 2 days prior, and 2 days after, is divided by 5. Therefore, the graph shows the situation three days before a specific day, and in this way we get a better idea of trends by individual groups. If we select the *Total* or *Relative* display, we will jump from the confirmed cases curve to the histogram, which shows the number of confirmed infected persons within each category on a given day.
+[Grafiku](/sq/stats#infections-chart) ofron një pasqyrë në pjesën e përditshme të rasteve të konfirmuara nga grupe me rrezik të lartë ose punonjës në zona me rrezik të lartë. Për shkak të të dhënave jo mjaft të sakta për infeksionet e konfirmuara, vlerat ditore (sipas ditëve (mesatare)) tregohen si një mesatare lëvizëse prej 5 ditësh. Shuma e vlerave në një ditë të veçantë, nga 2 ditë para, dhe 2 ditë më pas, është e ndarë me 5. Prandaj, grafiku tregon situatën tre ditë para një dite specifike, dhe në këtë mënyrë marrim një ide më të mirë të tendencave nga grupe individuale. Nëse zgjedhim dritaren  *Total* ose  *Relativ* do të hidhemi nga kurba e rasteve të konfirmuara në histogram, që tregon numrin e personave të infektuar të konfirmuar brenda secilës kategori në një ditë të caktuar.
 
-The increase in infected healthcare workers does not mean that they were discovered exactly on that day; they may have been positive before but information on their status was obtained subsequently. The *Retirement Home Employees* category includes healthcare workers, associates, and external assistance (health students), so the daily data on healthcare workers (blue curve or columns) are reduced accordingly. This means that the number of health professionals is a very conservative estimate.
+Rritja e punonjësve të kujdesit shëndetësor të infektuar nuk do të thotë që ata u zbuluan pikërisht atë ditë; ato mund të kenë qenë pozitive më parë por informacionet për statusin e tyre u morën më vonë. 
 
 </details>
 
 <details>
-  <summary id=spread-chart>What does the “Growth of Confirmed Cases” graph mean?</summary>
+  <summary id=spread-chart>Çfarë na tregon grafiku “Rritja e rasteve të konfirmuara”?</summary>
 
-The [graph](/en/stats#spread-chart) tells us how many new confirmed cases of infections there were on a given day, where the WHO and the [ECDC definition](https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov) that confirmed cases are “persons with a lab confirmation of infection with COVID19” is followed. As the number of confirmed cases still depends on testing, the data in confirmed cases is estimated to be much smaller that the actual number of infected people.
+[Grafiku](/sq/stats#spread-chart) na tregon se sa raste të reja të konfirmuara të infeksioneve ka pasur në një ditë të caktuar, ku OBSH dhe [përcaktimi i ECDC](https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov) që konfirmuan raste janë "persona me konfirmim laboratorik të infeksionit me COVID19". Meqenëse numri i rasteve të konfirmuara varet nga testimi, të dhënat në raste të konfirmuara vlerësohet të jenë shumë më të vogla se numri aktual i personave të infektuar.
   
 </details>
 
