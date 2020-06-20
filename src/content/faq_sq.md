@@ -179,47 +179,48 @@ Kjo është një normë e përqindjes së rritjes në një datë të veçantë n
 </details>
 
 <details>
-  <summary id=metrics-comparison-chart>What does the “COVID-19 Situation in Slovenia” graph mean?
+  <summary id=metrics-comparison-chart>Çfarë do të thotë grafiku "Situata Kovid-19 në Maqedonia e Veriut"?
 </summary>
 
-The [graph](/en/stats#metrics-comparison-chart) shows the daily and overall dynamics of the spread of the infection from the beginning to the present. The indicators used (see [Which indicators does the “COVID-19 Situation in Slovenia” graph include?](#chart-metrics-included)) help us understand whether and how successfully we are controlling the spread of the virus. We can monitor the daily growth rate of newly confirmed cases and indirectly see if the measures work; information on the number of hospitalizations and the proportion of those in ICU shows how many people are seriously at risk from the disease, but at the same time, this data also shows us the real burden on the health system.
+[Grafiku](/sq/stats#metrics-comparison-chart) tregon dinamikën e përditshme dhe të përgjithshme të përhapjes së infeksionit nga fillimi deri në ditët e sotme. Treguesit e përdorur (shiko [Cilët tregues i përfshin grafiku "Situata me KOVID-19 në Maqedonia e Veriut?"](#chart-metrics-included)) na ndihmojnë të kuptojmë nëse dhe sa me sukses po kontrollojmë përhapjen e virusit. Ne mund të monitorojmë shkallën e rritjes ditore të rasteve të konfirmuara rishtazi dhe në mënyrë jodirekte të shohim nëse masat funksionojnë; informacioni për numrin e spitaleve dhe përqindjen e atyre në NjQI tregon se sa njerëz janë seriozisht të rrezikuar nga sëmundja, por në të njëjtën kohë, këto të dhëna na tregojnë edhe barrën e vërtetë për sistemin shëndetësor.
 
-The breakpoints are indicated below, on the timeline: from the first confirmed case (March 4, 2020) to the measures (by keyword and date) taken to curb the spread and their relaxation. This helps us monitor the dynamics of the variables relative to the measures.
+Pikat e zbërthimit tregohen më poshtë, në afatin kohor: nga rasti i parë i konfirmuar (TBD 2020) deri në masat (sipas fjalës dhe datës) të marra për të frenuar përhapjen dhe relaksimin e tyre. Kjo na ndihmon të monitorojmë dinamikën e variablave në lidhje me masat.
+
 
 </details>
 
 <details>
-  <summary id=chart-metrics-included>Which indicators does the “COVID-19 Situation in Slovenia” graph include?</summary>
+  <summary id=chart-metrics-included>TBD Cilët tregues i përfshin grafiku "Situata me KOVID-19 në Maqedonia e Veriut"?</summary>
 
-[Graf](/en/stats#metrics-comparison-chart) vključuje:
+[Grafiku](/sq/stats#metrics-comparison-chart) përfshin:
   
-* **Tests (per day)** = Number of tests for the presence of SARS-CoV-2 virus causing COVID-19 performed. In the first stages of the epidemic, this was an important indicator of the prevalence of the virus, but with the change in testing methodology, ie. of the tested sample, it turned into an indicator of the national health and diagnostics system’s capacity.
+* **Testet (në ditë)** = Numri i testeve të kryer për praninë e virusit SARS-CoV-2 që shkakton COVID-19. Në fazat e para të epidemisë, ky ishte një tregues i rëndësishëm i përhapjes së virusit, por me ndryshimin në metodologjinë e testimit, d.m.th. të mostrës së testuar, ajo u shndërrua në një tregues të aftësisë së sistemit kombëtar të shëndetit dhe diagnostikimit.
 
-* **Tests (total)** = Sum of tests up to; data is useful in terms of comparison or in terms of the proportion of the entire population tested, but it can be misleading as certain individuals can be tested several times (eg. health professionals, retirement home employees, etc.).
+* **Testet (gjithsej)** = Shuma e provave deri në; të dhënat janë të dobishme për sa i përket krahasimit ose për sa i përket proporcionit të tërë popullatës së testuar, por mund të jetë çorientuese pasi individë të caktuar mund të testohen disa herë (p.sh. profesionistë shëndetësorë, punonjës në qendrat e të moshuarve, etj.).
 
-* **Confirmed Cases (per day)** = Number of confirmed infected per day based on tests. This indicator does not reflect the actual dynamics of newly infected people in the population, as the tests do not sample the entire population but target the at-risk people and certain occupational groups.
+* **Rastet e konfirmuara (në ditë)** = Numri i infektuar të konfirmuar në ditë bazuar në teste. Ky tregues nuk pasqyron dinamikën aktuale të personave të infektuar rishtas në popullatë, pasi testet nuk e marrin si shembull tërë popullatën, por synojnë njerëzit në rrezik dhe grupe të caktuara profesionale.
 
-* **Confirmed cases (total)** = Total number of all confirmed cases by a given day.
+* **Rastet e konfirmuara (gjithsej)** = Numri total i të gjitha rasteve të konfirmuara brenda një dite të caktuar.
 
-* **Confirmed cases (active)** = Confirmed cases (total) – Recovered (total) – Died (total)
+* **Rastet e konfirmuara (aktive)** = Rastet e konfirmuara (gjithsej) - Të rikuperuar (gjithsej) - Të vdekur (gjithsej)
 
-* **Recovered (total)** = Number of recoveries on a given day is a simple estimate equal to the number of all confirmed cases two weeks prior to a given date (assuming an average of 14 days needed to recover), from which the number of fatalities till that very date is subtracted. See also [Why did you replace the number of cured with the number of recovered patients?](#data-recovered)
+* **Të rikuperuar (gjithsej)** = TBD
 
-* **Hospitalized (active)** = Current number of people in hospital care (either in the ordinary ward or in the ICU).
+* **Të hospitalizuar (aktiv)** = Numri aktual i njerëzve në kujdesin spitalor (qoftë në repartin e zakonshëm ose në NjQI).
 
-* **Hospitalized (total) ** = Sum of hospital admissions by date.
+* **Të hospitalizuar (total)** = Shuma e pranimeve në spital sipas datës.
 
-* **ICU (active)** = Current number of people in ICUs (intensive care units).
+* **NJQI (aktive)** = Numri aktual i njerëzve në NjQI (njësi të kujdesit intensiv).
 
-* **On ventilator (active) ** = Current number of persons in need of a ventilator.
+* **ONë ventilator (aktiv)** = Numri aktual i personave që kanë nevojë për një ventilator.
 
-* **Discharged from a hospital (daily)** = Number of discharged from hospital on that day.
+* **Të shkarkuar nga spitali (çdo ditë)** = Numri i shkarkimeve nga spitali atë ditë.
 
-* **Discharged from hospital (total)** = Sum of all discharged from a hospital up to this day.
+* **Të shkarkuar nga spitali (gjithsej)** = Shuma e të gjithë personave që janë larguar nga spitali deri më sot.
 
-* **Deaths (per day) ** = Number of deaths due to COVID-19 on that day.
+* **Vdekjet (në ditë)** = Numri i vdekjeve për shkak të KOVID-19 në atë ditë.
 
-* **Deaths (total) ** = Sum of all deaths to date.
+* **Vdekjet (gjithsej)** = Shuma e të gjitha vdekjeve deri më sot.
   
 </details>
 
