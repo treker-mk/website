@@ -225,20 +225,20 @@ Pikat e zbërthimit tregohen më poshtë, në afatin kohor: nga rasti i parë i 
 </details>
 
 <details>
-  <summary id=chart-terminology>What does it mean?
+  <summary id=chart-terminology>TBD Çfarë do the thotë kjo?
 </summary>
   
-Sledilnik uses terminology which is consistent with the official directives of the WHO and ECDC (European Center for Disease Prevention and Control). We use the following tags in the displays:  
-* **Confirmed cases** = This is the number of people who tested positive for the SARS-CoV-2 virus. Since the number of confirmed cases depends solely on testing, the number of confirmed cases is significantly lower than the actual number of infected people.
+Treker përdor terminologjinë e cila është në përputhje me direktivat zyrtare të OBSH dhe ECDC (Qendra Evropiane për Parandalimin dhe Kontrollin e Sëmundjeve). Ne i përdorim etiketat e mëposhtme në shpalljet:  
+* **Raste të konfirmuara** = Ky është numri i personave që testuan pozitivisht për virusin SARS-CoV-2. Meqenëse numri i rasteve të konfirmuara varet vetëm nga testimi, numri i rasteve të konfirmuara është dukshëm më i ulët se numri aktual i të infektuarve.
 
-* **Hospitalized** = This is the number of confirmed cases such severe symptoms of COVID-19 that they have been admitted to hospital.
+* **Të hospitalizuar** = Ky është numri i rasteve të konfirmuara simptoma kaq të rënda të COVID-19 sa janë pranuar në spital.
 
-* **In ICU** = Indicates the number of hospitalized persons who are at risk of death because of the severe symptoms of COVID-19 and require placement in the intensive care unit. This is a subset of the *Hospitalized* category. 
+* **Në NJQI** = Tregon numrin e personave të shtruar në spital, të cilët janë në rrezik vdekjeje për shkak të simptomave të rënda të KOVID-19 dhe kërkojnë vendosje në njësinë e kujdesit intensiv. Kjo është një nënbashkësi e kategorisë së *Të hospitalizuar*.
 
-* **On ventilator** = Indicates the number of hospitalized persons in the intensive care unit who require a ventilator to breathe. It is a subset of the *Intensive Care* and *Hospitalized* categories.
+* **ONë ventilator** = Tregon numrin e personave të shtruar në spital në njësinë e kujdesit intensiv, të cilët kërkojnë një ventilator për të marrë frymë. Është një pjesë e kategorive të Kujdesit Intensiv dhe Spitalit.
 
-* **Recovered** = This is an estimate of the number confirmed cases that are expected to have recovered after 14 days. The number of recoveries is thus equal to the number of all confirmed cases two weeks prior – assuming that the disease should be overcome within 14 days – from which the number of deaths by that given day is subtracted. (See also the question [Why did you replace the number of cured with the number of recovered patients?](#data-recovered)
-  
+* **Të rikuperuar** = TBD
+
 </details>
 
 <details>
