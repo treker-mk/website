@@ -1,6 +1,6 @@
 <h1>Frequently Asked Questions </h1>
 
-## TBD work in progress - all content below is  still linked to the "father" site .org 
+## TBD work in progress - some content below is  still linked to the "father" site .org 
 
 _The purpose of the Treker project and all its statistical graphs and tables/presentations is to display all existing data about the COVID19 epidemic in North Macedonia in an understandable fashion. We've compiled some of the most frequently asked questions. The FAQ list is not exhaustive at this moment, but it is updated frequently so keep checking back. In case of any questions, please contact us: info@treker.mk. (We also look forward to your compliments, feedback, or suggestions!)_
 
@@ -81,18 +81,16 @@ The site is in JavaScript using Vue.js, the visualizations and graphs are made i
 
 Data is collected from verified public sources, which are listed in the [Resources tab](/en/sources). 
 
-Treker would like to receive official data on COVID-19 directly from the Ministry of Health, the NIJZ (National Institute for Public Health), and other national health institutions. The Treker team does not guarantee the accuracy of the original data and publishes solely data obtained from official sources or the media, but we do cross-check if all data is correct and consistent with the given source.
+Treker would like to receive official data on COVID-19 directly from the Ministry of Health, the IJZ (Institute for Public Health of Macedonia), and other national health institutions. The Treker team does not guarantee the accuracy of the original data and publishes solely data obtained from official sources or the media, but we do cross-check if all data is correct and consistent with the given source.
 
 </details>
 
 <details>
   <summary id=data-collection>How do you collect and edit the data?</summary>
 
-[The database](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=0) is built from the NIJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=598557107).
+[TBD The database](https://docs.google.com/spreadsheets/d/) is built from the IJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [TBD Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/....).
 
-Editing Hospital Care Data – [Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=918589010):
-
-- We receive daily reports and monitor the announcements of all COVID-19 hospitals  (UKC Ljubljana, UKC Maribor, UK Golnik, SB Celje) – at around 8 am.
+Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/1):
 
 - We monitor the number of hospitalizations: all wards, in ICUs, and on ventilators.
 
@@ -102,7 +100,7 @@ Editing Hospital Care Data – [Table Pacienti (Patients)](https://docs.google.c
 
 - All sources and conclusions are recorded as a commentary in individual cells (checkable).
 
-- The data is compared with the summary data on hospitalized patients in ICU published by the Government of the Republic of North Macedonia.
+- The data is compared with the summary data on hospitalized patients in ICU published by the appropriate institutions of the Government of the Republic of North Macedonia.
   
   </details>
 
@@ -110,8 +108,8 @@ Editing Hospital Care Data – [Table Pacienti (Patients)](https://docs.google.c
   <summary id=data-publish-time>When do you publish the data? Why are the dates on the visualizations different?
 </summary>
 
-Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by 9 am every day for all hospitals. **Our data is usually updated between 10.00 and 12.00.**
-When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we also report it on social networks ([Facebook](https://www.facebook.com/COVID19) and [Twitter](https://twitter.com/sledilnik)).
+Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by TBD am every day for all hospitals. **Our data is usually updated between TBD and TBD oclock.**
+When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we also report it on social networks ([TBD Facebook](https://www.facebook.com/) and [TBD Twitter](https://twitter.com/)).
 
 </details>
 
