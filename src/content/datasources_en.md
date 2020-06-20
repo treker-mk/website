@@ -1,5 +1,7 @@
 ## GDocs preglednica *EN
 
+## TBD work in progress - all links bellow are still linked to the "father" site sledilnik.org 
+
 - [https://tinyurl.com/sledilnik-gdocs](https://tinyurl.com/sledilnik-gdocs)
 
 ## CSV
