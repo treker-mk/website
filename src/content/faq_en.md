@@ -1,5 +1,7 @@
 <h1>Frequently Asked Questions </h1>
 
+## TBD work in progress - all content below is  still linked to the "father" site sledilnik.org 
+
 _The purpose of the Sledilnik project and all its statistical graphs and tables/presentations is to display all existing data about the COVID19 epidemic in Slovenia in an understandable fashion. We've compiled some of the most frequently asked questions. The FAQ list is not exhaustive at this moment, but it is updated frequently so keep checking back. In case of any questions, please contact us: info@slednik.org. (We also look forward to your compliments, feedback, or suggestions!)_
 
 ## General Information
