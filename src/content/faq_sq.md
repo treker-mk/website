@@ -359,27 +359,27 @@ Sidoqoftë, numri i rasteve të konfirmuara varet vetëm nga testimi. Meqenëse 
 
 </details>
 
-## About the project
+## Rreth projektit
 
 <details>
-  <summary id=what-is-sledilnik>What is Sledilnik?</summary>
+  <summary id=what-is-sledilnik>Ç’është Treker?</summary>
 
-[Sledilnik je projekt](/en/about) is an open-data and open-sourced project that collects, analyzes and displays some of the most useful data to better understand the spread of the coronavirus pandemic and COVID-19 disease, along with its dynamics and scope. We want to make clear graphical and statistical visualizations of what current data and reviews tell us about the spread of the virus in Slovenia, and ensure that information on the magnitude and severity of the COVID-19 problem in Slovenia becomes accessible and comprehensible to all.
+[Treker](/sq/about) është një projekt me të dhëna të hapura dhe me burim të hapur që mbledh, analizon dhe shfaq disa nga të dhënat më të dobishme për të kuptuar më mirë përhapjen e pandemisë së koronavirusit dhe sëmundjes KOVID-19, së bashku me dinamikën dhe shtrirjen e saj. Ne duam të bëjmë vizualizime të qarta grafike dhe statistikore të asaj që të dhënat dhe rishikimet aktuale na tregojnë për përhapjen e virusit në Maqedonia e Veriut, dhe të sigurojmë që informacioni për madhësinë dhe ashpërsinë e problemit KOVID-19 në Maqedonia e Veriut të bëhet i arritshëm dhe i kuptueshëm për të gjithë.
 
 </details>
 
 <details>
-  <summary id=add-link>I would like to recommend a valuable source, which is not yet among your ‘Recommended Links’, but should be. Will you add it?</summary>
+  <summary id=add-link>Unë do të doja të rekomandoja një burim të vlefshëm i cili nuk është ende në "Linqet tuaja të rekomanduara", por duhet të jetë. Do ta shtoni?</summary>
 
-Contact us at info@sledilnik.org – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/en/links).
+Na kontaktoni në info@treker.mk – ne do të rishikojmë linkun e sugjeruar dhe, nëse faqja është e besueshme dhe e dobishme, do të jemi të lumtur ta përfshijmë atë në [Linqet](/sq/links) tona të rekomanduara.
 
-If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/sledilnik/website/blob/master/src/content/links.md).
+Nëse dëshironi të shkoni një hap më tej dhe të kontribuoni në qëllimin tonë të përbashkët, paraqisni një kërkesë tërheqje (PR) në  [GitHub](https://github.com/treker-mk/website/blob/master/src/content/links_sq.md).
 
 </details>
 
 <details>
-  <summary id=how-to-help>I would like to help, where can I begin?</summary>
+  <summary id=how-to-help>Do të doja të ndihmoja, ku mund të filloj?</summary>
 
-Contact us at info@sledilnik.org and briefly describe who you are and how you can contribute to the project. Warmly welcome to help.
+Kontaktoni me ne në info@treker.mk dhe përshkruani shkurtimisht se kush jeni dhe si mund të kontribuoni në projekt. Jeni të mirëseardhur për të ndihmuar.
 
 </details>
