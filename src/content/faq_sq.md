@@ -161,20 +161,20 @@ Meqenëse të gjitha të dhënat në bazën e të dhënave tashmë janë shënua
 
 </details>
 
-## About the calculations and graphs
+## Rreth llogaritjeve dhe grafikëve
 
 
 <details>
-  <summary id=chart-usage>Can I use your graphs on my website? How?</summary>
+  <summary id=chart-usage>A mund të përdor grafikët tuaj në faqen time të internetit dhe si?</summary>
 
-Sure! You can embed any graph or display on your site – citing the source, of course. [Click here](/en/embed) and select the graph you want to embed from the list. Please let us know about your use (info@slednik.org) and we will be happy to add your site to our collection of [recommended links](/en/links). 
+Sigurt! Ju mund të vendosni çdo grafik ose shpallje në faqen tuaj - duke përmendur burimin, natyrisht [Klikoni këtu](/sq/embed) dhe zgjidhni grafikun që dëshironi të futni nga lista. Ju lutemi na tregoni për përdorimin tuaj  (info@treker.mk) dhe ne do të jemi të lumtur të shtojmë faqen tuaj në koleksionin tonë të [linqeve të rekomanduara](/sq/links). 
 
 </details>
 
 <details>
-  <summary id=chart-infocard-percent>What do the percentages in the infocards at the top of the webpage mean?</summary>
+  <summary id=chart-infocard-percent>Çfarë do të thotë përqindja në infokardët në krye të faqes së internetit?</summary>
 
-This is a percentage growth rate on a particular date in the number of newly confirmed cases compared to the previous day. If, for example, there were 16 people in the intensive care unit yesterday and today they accepted four more, that is 25% more than yesterday's situation.
+Kjo është një normë e përqindjes së rritjes në një datë të veçantë në numrin e rasteve të konfirmuara rishtas në krahasim me një ditë më parë. Nëse për shembull, në njësinë e kujdesit intensiv ishin dje 16 veta dhe sot ata pranuan edhe katër, kjo është 25% më shumë se situata e djeshme.
 
 </details>
 
