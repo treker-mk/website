@@ -2,6 +2,8 @@
 
 - [https://tinyurl.com/sledilnik-gdocs](https://tinyurl.com/sledilnik-gdocs)
 
+## TBD work in progress - all links bellow are still linked to the "father" site sledilnik.org 
+
 ## CSV
 
 - [stats.csv](https://github.com/sledilnik/data/blob/master/csv/stats.csv)
