@@ -37,7 +37,7 @@ Fatkeqësisht, këto të dhëna tani nuk janë të disponueshme. Ekzistojnë dis
 </details>
 
 <details>
-  <summary id=other-countries>Ku mund të gjej një krahasim midis Maqedonia e Veriut dhe vendeve të tjera?</summary>
+  <summary id=other-countries>TBD Ku mund të gjej një krahasim midis Maqedonia e Veriut dhe vendeve të tjera?</summary>
 
 Ju mund të gjeni një  [grafik krahasimi ](/sq/stats#countries-chart) në pjesën e poshtme të pultit. Grafiku tregon një krahasim midis Maqedonia e Veriut dhe grupimeve të ndryshme të vendeve në lidhje me numrin e vdekjeve të shkaktuara nga KOVID-19 për një milion banorë. Grupimet e vendeve që krahasohen me Maqedonia e Veriut janë si në vijim:
 
