@@ -323,39 +323,39 @@ Duke klikuar në  *Absolute* në këndin e sipërm të djathtë, ne mund të ndr
 </details>
 
 <details>
-  <summary id=municipalities-chart>What does the chart “Cases by Municipalities” show us?</summary>
+  <summary id=municipalities-chart>TBD Çfarë na tregon grafiku "Rastet sipas komunave"?</summary>
 
-The [chart](/en/stats#municipalities-chart) shows individual municipalities in columns in more detail with the number of confirmed cases by days, with active cases, recoveries (assessment) and deaths in each municipality. Below the municipality you can find the information about the time since the last confirmed case. Municipalities are classified according to when the last confirmed case was recorded there, from which we can conclude which municipalities are currently more “infected” and which are “healthier” than others.
+TBD [Grafiku](/sq/stats#municipalities-chart) tregon komuna individuale në kolona më në detaje me numrin e çështjeve të konfirmuara sipas ditëve, me raste aktive, rikuperime (vlerësime) dhe vdekje në secilën komunë. Më poshtë bashkisë mund të gjeni informacione rreth kohës që nga rasti i fundit i konfirmuar. Komunat klasifikohen në bazë të rastit kur konfirmohet rasti i fundit i konfirmuar atje, nga i cili mund të konkludojmë se cilat komuna aktualisht janë më të "infektuara" dhe cilat janë "më të shëndetshme" se të tjerat.
 
-The display can be changed by selecting different views above the graph: if you select the *Active* display, the municipalities will be sorted according to the current assessment of active cases; or if you select *All*, then the municipalities will be arranged by the largest total number of confirmed cases. If you choose *All Regions* from the dropdown menu, then confirmed cases will be shown in the municipalities belonging to that region. You can also easily search for a municipality by entering its name in the *Find Municipality* browser.
+Ekrani mund të ndryshohet duke zgjedhur pamje të ndryshme mbi grafik: nëse zgjidhni ekranin *Aktiv*, komunat do të klasifikohen sipas vlerësimit aktual të rasteve aktive; ose nëse zgjidhni *Të gjitha*, atëherë komunat do të rregullohen nga numri më i madh i rasteve të konfirmuara. Nëse zgjidhni *Të gjitha rajonet* nga menyja rënëse, atëherë rastet e konfirmuara do të shfaqen në bashkitë që i përkasin këtij rajoni. Ju gjithashtu lehtë mund të kërkoni për një komunë duke futur emrin e saj në shfletuesin *Gjeje Komunën*.
 
-*Note: the assessment of recoveries and active cases is done 14 days after the infection was confirmed, if and when the disease is in its mild form. However, if an individual is hospitalized, this recovery will last longer, but in this case the individual is not dangerous to the environment because he is in hospital. Since we do not take into account the hospitalized in the municipality presentation, it is possible that the sum of active cases by municipality does not match the estimate of the active cases for the whole country. See also [Do you keep an Active Case counter and do you know how many people are currently infected?](#data-active-cases)*
-
-</details>
-
-<details>
-  <summary id=age-groups-chart>What does the “Age Groups” graph show?</summary>
-
-The [graph](/en/stats#age-groups-chart) shows the age structure of all confirmed coronavirus cases and deaths. The graph also displays demarcations by gender. The display shows absolute values and can be changed at the top right to the *Relative* display for a better insight into what the mortality rate from COVID-19 is relative to the general population throughout the epidemic period. In the Relative view, there are the options for different views below: by selecting *Proportion of confirmed cases*, the share of confirmed cases within a certain age group will be displayed. By selecting the *Death rate*, we will see the number of deaths per population size. By selecting *Deaths by no. of confirmed cases*, we can understand what the proportion of deaths in a particular age group was in relation to the number of confirmed cases.
-
-Demographics can help us understand how the pandemic has spread and why it has disproportionately affected certain age groups. According to currently known data, COVID-19 is more dangerous to the elderly and those with comorbidities, and according to some data, men are more exposed. However, in order to understand all the factors, we would need to obtain more data: what the comorbidities were, the socio-economic situation of the patients, the geographical area, etc.   
-*Note: Unlike other data that is published regularly for different categories, official sources obtain demographic data with a time lapse (age, municipality ...), so these are usually known with a one-day delay. This is also the reason that in the By Age Groups display, there may be some deviations from data in other displays, such as lower values of the number of confirmed cases and deaths.*
- 
-</details>
-
-<details>
-  <summary id=countries-chart>What does the “Comparison by Country” graph show?</summary>
-
-The [chart](/en/stats#countries-chart) shows a comparison between Slovenia and different groups of countries in terms of the number of deaths due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
 
 </details>
 
 <details>
-  <summary id=chart-reality>Do your graphs represent the real picture?</summary>
+  <summary id=age-groups-chart>TBD Çfarë na tregon grafiku “Grupat moshore”?</summary>
 
-Yes, as far as they can, given the limitations of the current displays and of the data itself: the graphs on this page only show what can be deduced from the information given. For example, the total number of tests represents the number of tests performed to date, but does not reflect the total number of people tested, as some people, such as healthcare professionals and people suspected of being infected, have been repeatedly tested.
+TBD [Grafiku](/sq/stats#age-groups-chart) tregon strukturën moshore të të gjitha rasteve të konfirmuara të koronavirusit dhe vdekjeve. Grafiku gjithashtu tregon demarkacionin sipas gjinisë. Ekrani tregon vlera absolute dhe mund të ndryshohet në të djathtën e sipërme në ekranin *Relativ* për një pasqyrë më të mirë se sa është shkalla e vdekshmërisë nga KOVID-19 në lidhje me popullsinë e përgjithshme gjatë gjithë periudhës së epidemisë. Sipas pamjes relative, ekzistojnë opsionet për pamje të ndryshme më poshtë: duke zgjedhur *Proporcionin e rasteve të konfirmuara*, do të shfaqet pjesa e rasteve të konfirmuara brenda një grupmoshë të caktuar. Duke zgjedhur shkallën e *Vdekjes*, ne do të shohim numrin e vdekjeve për nga madhësia e popullsisë. Duke zgjedhur *Vdekjet me numër të rasteve të konfirmuara*, ne mund të kuptojmë se cila ishte përqindja e vdekjeve në një grupmoshë të veçantë në lidhje me numrin e rasteve të konfirmuara.
 
-However, the number of confirmed cases depends solely on testing. Since the majority of infected people, who have mild or no symptoms, have not been tested for COVID-19 at all, the number of confirmed cases is significantly lower than the actual number of infected people.
+Demografia mund të na ndihmojë të kuptojmë se si është përhapur pandemia dhe pse ka prekur në mënyrë disproporcionale grupmosha të caktuara. Sipas të dhënave të njohura aktualisht, KOVID-19 është më e rrezikshme për të moshuarit dhe ata me komorbiditete, dhe sipas disa të dhënave, burrat janë më të ekspozuar. Sidoqoftë, për të kuptuar të gjithë faktorët, do të na duhej të siguronim më shumë të dhëna: cilat ishin komorbiditetet, gjendja socio-ekonomike e pacientëve, zona gjeografike, etj.
+
+*Vërejtje: Për dallim nga të dhënat e tjera që publikohen rregullisht për kategori të ndryshme, burimet zyrtare marrin të dhëna demografike me kohëzgjatje (mosha, bashkia ...), kështu që këto zakonisht njihen me një vonesë një-ditore. Kjo është edhe arsyeja që në ekranin e Grupeve moshore, mund të ketë disa devijime nga të dhënat në ekranet e tjera, siç janë vlerat më të ulëta të numrit të rasteve të konfirmuara dhe vdekjeve.*
+
+</details>
+
+<details>
+  <summary id=countries-chart>Çfarë na tregon grafiku “Krahasim mes shteteve”?</summary>
+
+[Grafiku](/sq/stats#countries-chart) tregon një krahasim midis Maqedonia e Veriutsë dhe grupeve të ndryshme të vendeve për sa i përket numrit të vdekjeve për shkak të KOVID-19 në një milion banorë. Grafiku është rregulluar në mënyrë kronologjike. Ju mund të ndryshoni pamjen e shfaqjeve të ndryshme kronologjike të krahasimeve të grupimeve të ndryshme të vendeve duke klikuar në skedat e duhura më poshtë.  
+
+</details>
+
+<details>
+  <summary id=chart-reality>A paraqesin grafikët tuaj pasqyren e vërtetë?</summary>
+
+Po, aq sa munden, duke pasur parasysh kufizimet e pasqyreve aktuale dhe të vetë të dhënave: grafikët në këtë faqe tregojnë vetëm atë që mund të nxirret nga informacioni i dhënë. Për shembull, numri i përgjithshëm i testeve përfaqëson numrin e testeve të kryera deri më sot, por nuk pasqyron numrin e përgjithshëm të personave të testuar, pasi disa njerëz, siç janë profesionistë të kujdesit shëndetësor dhe njerëz të dyshuar se janë infektuar, janë testuar vazhdimisht.
+
+Sidoqoftë, numri i rasteve të konfirmuara varet vetëm nga testimi. Meqenëse shumica e personave të infektuar, të cilët kanë simptoma të buta ose pa asnjë, nuk janë testuar fare për KOVID-19, numri i rasteve të konfirmuara është dukshëm më i ulët se numri aktual i të infektuarve.
 
 </details>
 
