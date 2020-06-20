@@ -242,38 +242,26 @@ Treker përdor terminologjinë e cila është në përputhje me direktivat zyrta
 </details>
 
 <details>
-  <summary id=cases-chart>What are the Closed cases and what are the Active cases?</summary>
+  <summary id=cases-chart>Cilat janë rastet e mbyllura dhe cilat janë rastet aktive?</summary>
 
-All confirmed cases are shown in the [Confirmed Cases graph](/en/stats#cases-chart). In order to be able to monitor the epidemic, it is important to know how many are still infected. For this reason, we use the following terminology:
+ATë gjitha rastet e konfirmuara tregohen në [grafikun e rasteve të konfirmuara](/sq/stats#cases-chart). Në mënyrë që të jeni në gjendje të monitoroni epideminë, është e rëndësishme të dini se sa janë akoma të infektuar. Për këtë arsye, ne përdorim terminologjinë e mëposhtme:
 
-**Closed cases**  are the sum of all confirmed cases who are no longer infected with the virus, that is, the recovered and the deceased.
+**Rastet e mbyllura** janë shuma e të gjitha rasteve të konfirmuara që nuk janë më të infektuar me virus, domethënë të rikuperuarit dhe të ndjerit.
 
-**Active cases** are all confirmed virus infections that still haven’t recovered (are still infected with the virus). See also
- [Which indicators does the “COVID-19 Situation in Slovenia” graph include?](#chart-metrics-included)
-
+**Rastet aktive** janë infeksione të konfirmuara të virusit që ende nuk janë rikuperuar (akoma janë të infektuar me virusin). 
 </details>
 
 
 <details>
-  <summary id=chart-phases>What do the different phases (phases 1-7) in the graph mean?</summary>
+  <summary id=chart-phases>TBD Çfarë kuptojnë fazat e ndryshme (fazat 1-N) në grafik?</summary>
 
-The vertical lines divide the stages, delimited by the dates, when the authorities changed the way information about the spread of the infection was collected (the test method was changed, self-isolation interventions were introduced, bans on gathering and movement of persons, and mandatory basic protection were required).
+Linjat vertikale ndajnë fazat, të përcaktuara me datat, kur autoritetet ndryshuan mënyrën e grumbullimit të informacionit për përhapjen e infeksionit (u futën ndërhyrjet vetë-izoluese, ndalimet për grumbullimin dhe lëvizjen e personave, dhe kërkohej mbrojtje themelore e detyrueshme).
 
-The phases are shown because the change in testing methodology has also changed the importance of certain indicators by which the prevalence of infections can be judged.
+* **Faza 1 (TBD date)**: ...
 
-* **Phase 1 (March 4-12, 2020)**: The first cases of infection in Slovenia are recorded. All cases are followed, all contacts are tested.
+* **Faza 2 (TBD date)**: ...
 
-* **Phase 2 (March 13-19, 2020)**: The testing methodology is changed, and self-isolation and social distancing measures are introduced.
-
-* **Phase 3 (March 20-April 7)**: The testing methodology is revised and a ban on gathering more than five people in public areas is put in place.
-
-* **Phase 4 (April 8-15)**: New change in testing methodology – people with mild symptoms from households with more than one respiratory infections are also tested.
-
-* **Phase 5 (April 15-21)**: New change in testing methodology – re-testing, if possible, of **all suspected SARS-CoV-2 virus infections**.
-
-* ** Phase 6 (April 21–May 15**: New change in testing methodology – All persons **suspected of being infected with SARS-CoV-2** are tested again. A national survey of 3000 randomly sampled persons (additional testing, blood testing for the presence of antibodies) begins.
-
-* **Phase 7 (May 15–present)**: The Slovenian government called an official end to its coronavirus epidemic – a quarantine of at least 14 days will remain in place for people from non-EU states, except for some exemptions (diplomats, cargo). Citizens still have to follow basic rules to prevent a possible spread of infection.
+* **...**: ...
 
 </details>
 
