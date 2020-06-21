@@ -48,21 +48,21 @@ export default {
           text: this.$t('charts.cases.title'),
           dimensions: [1140, 630]
         },
-        "Patients": {
-          value: "Patients",
-          text: this.$t('charts.patients.title'),
-          dimensions: [1140, 720]
-        },
-        "Ratios": {
-          value: "Ratios",
-          text: this.$t('charts.ratios.title'),
-          dimensions: [1140, 720]
-        },
-        "HCenters": {
-          value: "HCenters",
-          text: this.$t('charts.hCenters.title'),
-          dimensions: [1140, 720]
-        },
+        //"Patients": {
+        //  value: "Patients",
+        //  text: this.$t('charts.patients.title'),
+        //  dimensions: [1140, 720]
+        //},
+        //"Ratios": {
+        //  value: "Ratios",
+        //  text: this.$t('charts.ratios.title'),
+        //  dimensions: [1140, 720]
+        //},
+        //"HCenters": {
+        //  value: "HCenters",
+        //  text: this.$t('charts.hCenters.title'),
+        //  dimensions: [1140, 720]
+        //},
         "Tests": {
           value: "Tests",
           text: this.$t('charts.tests.title'),
