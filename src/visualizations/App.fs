@@ -87,22 +87,22 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView CasesChart.casesChart {| data = data |} }
-          { VisualizationType = Patients
-            ClassName = "patients-chart"
-            Label = I18N.t "charts.patients.title"
-            Explicit = false
-            Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
-          { VisualizationType = Ratios
-            ClassName = "ratios-chart"
-            Label = I18N.t "charts.ratios.title"
-            Explicit = false
-            Renderer =
-                fun state ->
-                    match state.StatsData with
-                    | NotAsked -> Html.none
-                    | Loading -> Utils.renderLoading
-                    | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView RatiosChart.ratiosChart {| data = data |} }
+        //   { VisualizationType = Patients
+        //     ClassName = "patients-chart"
+        //     Label = I18N.t "charts.patients.title"
+        //     Explicit = false
+        //     Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
+        //   { VisualizationType = Ratios
+        //     ClassName = "ratios-chart"
+        //     Label = I18N.t "charts.ratios.title"
+        //     Explicit = false
+        //     Renderer =
+        //         fun state ->
+        //             match state.StatsData with
+        //             | NotAsked -> Html.none
+        //             | Loading -> Utils.renderLoading
+        //             | Failure error -> Utils.renderErrorLoading error
+        //             | Success data -> lazyView RatiosChart.ratiosChart {| data = data |} }
           { VisualizationType = Tests
             ClassName = "tests-chart"
             Label = I18N.t "charts.tests.title"
@@ -114,11 +114,11 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView TestsChart.testsChart {| data = data |} }
-          { VisualizationType = HCenters
-            ClassName = "hcenters-chart"
-            Label = I18N.t "charts.hCenters.title"
-            Explicit = false
-            Renderer = fun _ -> lazyView HCentersChart.hCentersChart () }
+        //   { VisualizationType = HCenters
+        //     ClassName = "hcenters-chart"
+        //     Label = I18N.t "charts.hCenters.title"
+        //     Explicit = false
+        //     Renderer = fun _ -> lazyView HCentersChart.hCentersChart () }
           { VisualizationType = Infections
             ClassName = "infections-chart"
             Label = I18N.t "charts.infections.title"
