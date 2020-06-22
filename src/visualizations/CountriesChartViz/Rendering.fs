@@ -14,7 +14,7 @@ open Types
 
 let countriesDisplaySets = [|
     { Label = "groupNeighbouring"                               // SLO-spec - changed for Macedonia
-      CountriesCodes = [| "BOL"; "GRE"; "ALB"; "SRB"; "RKS" |]  // SLO-spec - changed for Macedonia
+      CountriesCodes = [| "BGR"; "GRC"; "ALB"; "SRB"; "BIH"; "ROU"; "TUR"; "MNE"; "SVN"; "HRV"; "HUN" |]  // SLO-spec  
     }
     { Label = "groupCriticalEU"
       CountriesCodes = [| "BEL"; "ESP"; "FRA"; "GBR"; "ITA"; "SWE" |]

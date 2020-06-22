@@ -553,6 +553,7 @@
         "SRB": "Serbia",
         "SGP": "Singapore",
         "RUS": "Russia",
+        "ROU": "Romania",
         "RKS": "Kosovo",
         "PER": "Peru",
         "NOR": "Norway",
@@ -567,6 +568,7 @@
         "IRN": "Iran",
         "HUN": "Hungary",
         "HRV": "Croatia",
+        "GRC": "Greece",
         "GBR": "United Kingdom",
         "FRA": "France",
         "FIN": "Finland",
@@ -582,11 +584,11 @@
         "BIH": "Bosnia and Herzegovina",
         "BEL": "Belgium",
         "BRA": "Brazil",
-        "BOL": "Bolgaria",
+        "BGR": "Bulgaria",
         "AUT": "Austria",
         "AUS": "Australia",
-        "ALB": "Albania",
-        "ARG": "Argentina"
+        "ARG": "Argentina",
+        "ALB": "Albania"
     },
     "pageNotFound": {
         "notFound": "404: page not found",
