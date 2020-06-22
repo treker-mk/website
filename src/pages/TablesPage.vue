@@ -3,9 +3,12 @@
     <div class="table-container">
       <div class="table-wrapper">
         <h1>{{ $t("tables.title") }}</h1>
+<!--  SLO-spec
         <b-tabs>
           <b-tab :title="$t('tables.tabSummary')" active>
+-->        
             <tests-infections-table :tableHeight="tableHeight"></tests-infections-table>
+<!--  SLO-spec
           </b-tab>
           <b-tab :title="$t('tables.tabByRegion')">
             <regional-overview-table :tableHeight="tableHeight"></regional-overview-table>
@@ -17,6 +20,7 @@
             <age-groups-females-table :table-height="tableHeight"></age-groups-females-table>
           </b-tab>
         </b-tabs>
+-->        
         <div class="footnote">
           {{ $t("tables.source") }}:
           <router-link to="datasources">{{ $t("tables.sourceLink") }}</router-link>
@@ -28,17 +32,17 @@
 
 <script>
 import TestsInfectionsTable from '../components/tables/TestsInfections';
-import RegionalOverviewTable from '../components/tables/RegionalOverview';
-import AgeGroupsMalesTable from '../components/tables/AgeGroupsMales';
-import AgeGroupsFemalesTable from '../components/tables/AgeGroupsFemales';
+// SLO-spec import RegionalOverviewTable from '../components/tables/RegionalOverview';
+// SLO-spec import AgeGroupsMalesTable from '../components/tables/AgeGroupsMales';
+// SLO-spec import AgeGroupsFemalesTable from '../components/tables/AgeGroupsFemales';
 
 import { mapGetters } from 'vuex';
 export default {
   components: {
     TestsInfectionsTable,
-    RegionalOverviewTable,
-    AgeGroupsMalesTable,
-    AgeGroupsFemalesTable,
+    // SLO-spec RegionalOverviewTable,
+    // SLO-spec AgeGroupsMalesTable,
+    // SLO-spec AgeGroupsFemalesTable,
   },
   data: function() {
     return {
