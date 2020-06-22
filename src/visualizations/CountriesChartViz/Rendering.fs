@@ -13,8 +13,8 @@ open Highcharts
 open Types
 
 let countriesDisplaySets = [|
-    { Label = "groupNeighbouringWoItaly"
-      CountriesCodes = [| "AUT"; "CZE"; "DEU"; "HRV"; "HUN"; "SVK" |]
+    { Label = "groupNeighbouring"
+      CountriesCodes = [| "BOL"; "GRE"; "ALB"; "SRB"; "RKS" |]
     }
     { Label = "groupCriticalEU"
       CountriesCodes = [| "BEL"; "ESP"; "FRA"; "GBR"; "ITA"; "SWE" |]

@@ -337,6 +337,7 @@
             "groupNordic": "Nordic countries",
             "groupCriticalWorld": "Critical countries (World)",
             "groupCriticalEU": "Critical countries (EU)",
+            "groupNeighbouring": "Surroundings",
             "groupNeighbouringWoItaly": "Surroundings (excluding Italy)"
         },
         "hospitals": {
@@ -581,8 +582,10 @@
         "BIH": "Bosnia and Herzegovina",
         "BEL": "Belgium",
         "BRA": "Brazil",
+        "BOL": "Bolgaria",
         "AUT": "Austria",
         "AUS": "Australia",
+        "ALB": "Albania",
         "ARG": "Argentina"
     },
     "pageNotFound": {
