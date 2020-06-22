@@ -301,8 +301,6 @@ The [graph](/mk/stats#hcenters-chart) shows the treatment of suspicions of COVID
 
 The graph thus shows the number of all emergency medical visits (also for other diseases) in healthcare centers (see notes below), the number of suspected cases of COVID-19 based on the number of examinations at the COVID-19 entry point, and all suspicions of infections based on telephone conversation with suspected infected patients. Some people may be recorded several times, first by telephone and then during the examination. We also show the total number of referrals to self-isolation.
 
-*Note 1: in some municipalities, the control point for COVID-19 is within the hospital premises (for example the Celje and Novo mesto General Hospitals). Data before 14.4. is not available for these general hospitals. 
-Note 2: the methodology for recording suspicions of inspections via telephone conversation has changed, so all suspicions were initially recorded. Since April 23, however, only those suspicions via telephone conversation have been recorded, where no examination and swabbing (testing) was ordered. Therefore it is possible that there are differences in how individual healthcare centers report this data and that this number is too high.*
 
 When reporting the number of tests performed, all tests (including repeated tests) are recorded. The number of positive tests therefore includes all positive tests – the same person can be tested several times and counted as positive several times. The number of tests performed may therefore be greater than the number of positive tests reported by laboratories (there, each person is recorded only once). See also [What does the “Testing” graph tell us?](#test-charts) 
 
@@ -321,7 +319,7 @@ The [graph](/mk/stats#tests-chart) shows the total number of regular tests (the 
 
 The [graph](/mk/stats#infections-chart)provides an insight into the daily share of confirmed cases from high-risk groups or employees in high-risk areas. Due to insufficiently accurate input data on confirmed infections, daily values (By days (average)) are shown as a moving average of 5 days. The sum of the values on a particular day, from 2 days prior, and 2 days after, is divided by 5. Therefore, the graph shows the situation three days before a specific day, and in this way we get a better idea of trends by individual groups. If we select the *Total* or *Relative* display, we will jump from the confirmed cases curve to the histogram, which shows the number of confirmed infected persons within each category on a given day.
 
-The increase in infected healthcare workers does not mean that they were discovered exactly on that day; they may have been positive before but information on their status was obtained subsequently. The *Retirement Home Employees* category includes healthcare workers, associates, and external assistance (health students), so the daily data on healthcare workers (blue curve or columns) are reduced accordingly. This means that the number of health professionals is a very conservative estimate.
+The increase in infected healthcare workers does not mean that they were discovered exactly on that day; they may have been positive before but information on their status was obtained subsequently.
 
 </details>
 
@@ -340,7 +338,7 @@ The [graph](/mk/stats#regions-chart) shows the dynamics of growth of confirmed c
 </details>
 
 <details>
-  <summary id=map-chart>What does the “Municipality Map” tell us?</summary>
+  <summary id=map-chart>TBD What does the “Municipality Map” tell us?</summary>
 
 The [map](/mk/stats#map-chart) shows us the epidemiological picture of individual municipalities, as it allows the display of *Confirmed Cases* (red shades) or the *Dead* (gray shades). When showing confirmed cases, we can see which municipalities are the most "healthy" (white) and which are currently the more "infected" (red shades) – if new cases are still appearing or not - and relative to the share of the population (Proportion of population is the default display). On the left, we can use the filter (7, 14 or 21 days) to determine for what period of time we view data on new confirmed cases or deaths. For those municipalities where new cases are still being confirmed, we can conclude that the epidemic is still active. (Of course, this does not necessarily mean that the virus is not present in municipalities without new confirmed cases, but it is an indicator of the "health" of a certain area.) More details are available in the Medium article [Kje so “zdrave” občine? (Where Are the ‘Healthy’ Municipalities?)](https://medium.com/sledilnik/kje-so-zdrave-ob%C4%8Dine-613afc42b023) 
 
@@ -349,7 +347,7 @@ By clicking on *Absolute* in the upper right corner, we can change the display a
 </details>
 
 <details>
-  <summary id=municipalities-chart>What does the chart “Cases by Municipalities” show us?</summary>
+  <summary id=municipalities-chart>TBD What does the chart “Cases by Municipalities” show us?</summary>
 
 The [chart](/mk/stats#municipalities-chart) shows individual municipalities in columns in more detail with the number of confirmed cases by days, with active cases, recoveries (assessment) and deaths in each municipality. Below the municipality you can find the information about the time since the last confirmed case. Municipalities are classified according to when the last confirmed case was recorded there, from which we can conclude which municipalities are currently more “infected” and which are “healthier” than others.
 
@@ -360,7 +358,7 @@ The display can be changed by selecting different views above the graph: if you 
 </details>
 
 <details>
-  <summary id=age-groups-chart>What does the “Age Groups” graph show?</summary>
+  <summary id=age-groups-chart>TBD What does the “Age Groups” graph show?</summary>
 
 The [graph](/mk/stats#age-groups-chart) shows the age structure of all confirmed coronavirus cases and deaths. The graph also displays demarcations by gender. The display shows absolute values and can be changed at the top right to the *Relative* display for a better insight into what the mortality rate from COVID-19 is relative to the general population throughout the epidemic period. In the Relative view, there are the options for different views below: by selecting *Proportion of confirmed cases*, the share of confirmed cases within a certain age group will be displayed. By selecting the *Death rate*, we will see the number of deaths per population size. By selecting *Deaths by no. of confirmed cases*, we can understand what the proportion of deaths in a particular age group was in relation to the number of confirmed cases.
 
