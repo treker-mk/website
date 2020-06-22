@@ -33,20 +33,20 @@ Terminology in use on Treker is explained under [What does it mean](#chart-termi
   <summary id=all-infected>Is it possible to get statistical information on all infected persons, even the asymptomatic cases?
 </summary>
 
-Unfortunately, this data is unavailable for now. There are several reasons: Previously, tests have only covered a certain proportion of the population (patients with signs and symptoms of acute respiratory infection who may need hospital treatment, healthcare professionals, ...). Even though now the testing guidance for COVID-19 is expanded to include anyone displaying symptoms of the disease, many might be carriers with no or only mild symptoms. For this reason, our statistics can cover only part of the population that clearly shows signs of infection. Thus, the younger and the untested populations are disproportionately represented. Data for asymptomatic patients who do not show symptoms and are not recorded anywhere can therefore not be obtained.
+Unfortunately, this data is unavailable for now. There are several reasons: Previously, tests have only covered a certain proportion of the population (patients with signs and symptoms of acute respiratory infection who may need hospital treatment, healthcare professionals...). Even though now the testing guidance for COVID-19 is expanded to include anyone displaying symptoms of the disease, many might be carriers with no or only mild symptoms. For this reason, our statistics can cover only part of the population that clearly shows signs of infection. Thus, the younger and the untested populations are disproportionately represented. Data for asymptomatic patients who do not show symptoms and are not recorded anywhere can therefore not be obtained.
 
 </details>
 
 <details>
-  <summary id=other-countries> TBD Where can I find a comparison between North Macedonia and other countries?</summary>
+  <summary id=other-countries>Where can I find a comparison between North Macedonia and other countries?</summary>
 
-You can find [a comparison graph](/en/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between North Macedonia and different clusters of countries in relation to the *number of deaths* and *TBD....* caused by COVID-19 *per million inhabitants*. 
+You can find [a comparison graph](/en/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between North Macedonia and different clusters of countries in relation to the *number of deaths* caused by COVID-19 *per million inhabitants*. 
 The clusters of countries that are compared to North Macedonia are as follows:
--   Neighboring and countries in the region  
+-   Neighboring region
 -   Critical countries (EU)
 -   Critical countries (global)
 -   Nordic countries
--   TBD ex-Yugoslavian countries
+-   ex-Yugoslavian countries
 -   East Asian countries and Oceania
 
 The graph is arranged chronologically, from January 1, from the first death, and from the first death per million, respectively. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs.
@@ -56,7 +56,7 @@ The graph is arranged chronologically, from January 1, from the first death, and
 <details>
   <summary id=english-translation>Is your webpage available in English?</summary>
 
-Currently, only the [About part](/en/about) and these FAQ are available, while the rest of the website is yet to be fully translated. However, both the text part and the source code are available as open source if you're interested in helping us translate. All the [data in the database](https://github.com/treker-mk) is already marked with English tags, so its international use (export) is also possible. 
+Currently, only the [About part](/en/about) and these FAQ are available, while the rest of the website is yet to be fully translated. However, both the text part and the source code are available as open source if you're interested in helping us translate. All the [data in the database](https://github.com/sledilnik) is already marked with English tags, so its international use (export) is also possible. 
 
 </details>
 
@@ -70,7 +70,7 @@ Not at all. Treker is a non-profit initiative created to support the ongoing com
 <details>
   <summary id=tech-used>Which tools did you use to build the website/web app?</summary>
 
-The site is in JavaScript using Vue.js, the visualizations and graphs are made in F# using Highcharts libraries, and the project is open and available on [GitHub – Treker](https://github.com/treker).
+The site is in JavaScript using Vue.js, the visualizations and graphs are made in F# using Highcharts libraries, and the project is open and available on [GitHub – Treker](https://github.com/treker-mk).
 
 </details>
 
@@ -81,26 +81,28 @@ The site is in JavaScript using Vue.js, the visualizations and graphs are made i
 
 Data is collected from verified public sources, which are listed in the [Resources tab](/en/sources). 
 
-Treker would like to receive official data on COVID-19 directly from the Ministry of Health, the IJZ (Institute for Public Health of Macedonia), and other national health institutions. The Treker team does not guarantee the accuracy of the original data and publishes solely data obtained from official sources or the media, but we do cross-check if all data is correct and consistent with the given source.
+Treker receives official data on COVID-19 directly from the Ministry of Health, the IJZ (Institute for Public Health), and other national health institutions. The Treker team does not guarantee the accuracy of the original data and publishes solely data obtained from official sources or the media, but we do cross-check if all data is correct and consistent with the given source.
 
 </details>
 
 <details>
-  <summary id=data-collection>How do you collect and edit the data?</summary>
+  <summary id=data-collection>TBD How do you collect and edit the data?</summary>
 
-[TBD The database](https://docs.google.com/spreadsheets/d/ TBD) is built from the IJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [TBD Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/ ...).
+[The database](https://docs.google.com/spreadsheets/d/ TBD) is built from the IJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [TBD Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/ TBD).
 
-Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/1):
+Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/):
 
-- We would like to monitor the number of hospitalizations: all wards, in ICUs, and on ventilators.
+- We receive daily reports and monitor the announcements of all COVID-19 hospitals  (TBD) – at around TBD o'clock.
 
-- We record transitions (acceptance/dismissal) between individual stages of the disease (when detectable) from the obtained data.
+- We monitor the number of hospitalizations: all wards, in ICUs, and on ventilators.
+
+- We also record transitions (acceptance/dismissal) between individual stages of the disease (when detectable) from the obtained data.
 
 - Where the transition (admission/dismissal) information is incomplete, the values are determined by inference (using a formula).
 
 - All sources and conclusions are recorded as a commentary in individual cells (checkable).
 
-- The data is compared with the summary data on hospitalized patients in ICU published by the appropriate institutions of the Government of the Republic of North Macedonia.
+- The data is compared with the summary data on hospitalized patients in ICU published by the institutions of the Government of the Republic of North Macedonia.
   
   </details>
 
@@ -108,39 +110,49 @@ Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.goog
   <summary id=data-publish-time>When do you publish the data? Why are the dates on the visualizations different?
 </summary>
 
-Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by TBD am every day for all hospitals. **Our data is usually updated between TBD and TBD oclock.**
-When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we are also reporting it on social networks ([Facebook](https://www.facebook.com/Covid19TrekerMK) and [Twitter](https://twitter.com/Covid19TrekerMK)).
+Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by 9 am every day for all hospitals. **Our data is usually updated between 10.00 and 12.00.**
+When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we also report it on social networks ([Facebook](https://www.facebook.com/Covid19TrekerMK) and [Twitter](https://twitter.com/Covid19TrekerMK)).
 
 </details>
 
 <details>
   <summary id=data-differences>Several portals display numbers of infected people that are different from yours. Why?</summary>
 
-Treker uses only validated and official data reported daily by the Institute of Public Health (IJZ) and all North Macedonian hospitals treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (TBD date). Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
+Treker uses only validated and official data reported daily by the nstitute of Public Health (IJZ) and all hospitals in North Macedonia treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (TBD date). Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
 
 </details>
 
 <details>
-  <summary id=data-hospital-in>How do you obtain data on hospital admissions?</summary>
+  <summary id=data-hospital-in> TBD How do you obtain data on hospital admissions?</summary>
 
-Hospitals do not always report individual admissions or discharges from which we can obtain accurate data. The number of admissions is usually calculated from data on the currently hospitalized and from the difference compared to the previous day, to which we add the number of discharged and dead on a given day. We keep all available records of admissions and discharges in intensive care units and for connection and disconnection to/from ventilators in a similar way.
+Hospitals do not always report individual admissions or discharges from which we can obtain accurate data. The number of admissions is usually calculated from data on the currently hospitalized and from the difference compared to the previous day, to which we add the number of discharged and dead on a given day. We keep records of admissions and discharges in intensive care units and for connection and disconnection to/from ventilators in a similar way.
 
 </details>
 
 <details>
   <summary id=data-hospital-out>How do you obtain data on hospital discharges?</summary>
 
-The information on the discharged from hospitals is calculated from data daily obtained directly from hospitals or the institutions they report to, i.e. from a verified source. We mostly get the daily number of discharges for all hospitals, from which we can deduce the number of newly admitted. See also [How do you obtain data on hospital admissions?](#data-hospital-in)
+The information on the discharged from hospitals is calculated from data daily obtained directly from hospitals, i.e. from a verified source. We mostly get the daily number of discharges for all hospitals, from which we can deduce the number of newly admitted. See also [How do you obtain data on hospital admissions?](#data-hospital-in)
+
+</details>
+
+<details>
+  <summary id=data-recovered>Why did you replace the number of *cured* with the number of *recovered* patients?</summary>
+
+Treker used to rely on official sources (Institutions of the Government of the Republic of North Macedonia, media) for the number of cured people. North Macedonia is one of the rare countries worldwide that tests also mild cases, after 14 days from the first positive tests and treat them in same manner like discharged patients from hospitals. 
+
 
 </details>
 
 <details>
   <summary id=data-active-cases>Do you keep an Active Case counter and do you know how many people are currently infected?</summary>
 
-Yes, these indicators have been graphically displayed as **Confirmed Cases (active)** and **Recovered (total)**.
-Republic of North Macedonia is one of the rare countrie that actually record all patients which are cured (2x negative tests after  home or hospital recovery)
+Yes, these indicators have been graphically displayed as **Confirmed Cases (active)** and **Recovered (total)** from the end of April.
+ 
 
-In cases where there is no direct data on recoveries (e.g. smaller municipalities) we are using the ECDC methodology. The number of recoveries is a simple estimate based on the value of all those confirmed infected in the past – based on the assumption that patients recover from the disease on average within 14 days (source: [the ECDC Report](https://www.ecdc.europa.eu/sites/default/files/documents/covid-19-rapid-risk-assessment-coronavirus-disease-2019-ninth-update-23-april-2020.pdf))   
+These visualizations are not data from public sources; both indicators show the calculated value on the basis of official data, so they are indicated by a dashed line for easier distinguishing. 
+
+*Note: In some cases when the government is not reporting such cases within smaller clusters, like municipalities,  ee now consider a patient has recovered in 14 days after their infection was confirmed as per ECDC formulas of calculating recovered cases. 
 
 Value formula:
 - Recovered (total) = Confirmed cases (total) 14 days ago – Died (total) by the day of calculation
@@ -186,19 +198,19 @@ This is a percentage growth rate on a particular date in the number of newly con
 </details>
 
 <details>
-  <summary id=metrics-comparison-chart>What does the “COVID-19 Situation in North Macedonia” graph mean?
+  <summary id=metrics-comparison-chart>TBD What does the “COVID-19 Situation in North Macedonia” graph mean?
 </summary>
 
 The [graph](/en/stats#metrics-comparison-chart) shows the daily and overall dynamics of the spread of the infection from the beginning to the present. The indicators used (see [Which indicators does the “COVID-19 Situation in North Macedonia” graph include?](#chart-metrics-included)) help us understand whether and how successfully we are controlling the spread of the virus. We can monitor the daily growth rate of newly confirmed cases and indirectly see if the measures work; information on the number of hospitalizations and the proportion of those in ICU shows how many people are seriously at risk from the disease, but at the same time, this data also shows us the real burden on the health system.
 
-The breakpoints are indicated below, on the timeline: from the first confirmed case (March 4, 2020) to the measures (by keyword and date) taken to curb the spread and their relaxation. This helps us monitor the dynamics of the variables relative to the measures.
+The breakpoints are indicated below, on the timeline: from the first confirmed case (TBD date) to the measures (by keyword and date) taken to curb the spread and their relaxation. This helps us monitor the dynamics of the variables relative to the measures.
 
 </details>
 
 <details>
   <summary id=chart-metrics-included>Which indicators does the “COVID-19 Situation in North Macedonia” graph include?</summary>
 
-[Graf](/en/stats#metrics-comparison-chart) vključuje:
+[Graph](/en/stats#metrics-comparison-chart) includes:
   
 * **Tests (per day)** = Number of tests for the presence of SARS-CoV-2 virus causing COVID-19 performed. In the first stages of the epidemic, this was an important indicator of the prevalence of the virus, but with the change in testing methodology, ie. of the tested sample, it turned into an indicator of the national health and diagnostics system’s capacity.
 
@@ -210,7 +222,7 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
 
 * **Confirmed cases (active)** = Confirmed cases (total) – Recovered (total) – Died (total)
 
-* **Recovered (total)** = Total number of all recovered cases by a given day. 
+* **Recovered (total)** = Total number of ecoveries on a given day. (#data-recovered)
 
 * **Hospitalized (active)** = Current number of people in hospital care (either in the ordinary ward or in the ICU).
 
@@ -235,15 +247,15 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
 </summary>
   
 Treker uses terminology which is consistent with the official directives of the WHO and ECDC (European Center for Disease Prevention and Control). We use the following tags in the displays:  
-* **Confirmed cases** = This is the number of people who tested positive for the SARS-CoV-2 virus. Since the number of confirmed cases depends solely on testing, the number of confirmed cases may be significantly lower than the actual number of infected people.
+* **Confirmed cases** = This is the number of people who tested positive for the SARS-CoV-2 virus. Since the number of confirmed cases depends solely on testing, the number of confirmed cases is significantly lower than the actual number of infected people.
 
 * **Hospitalized** = This is the number of confirmed cases such severe symptoms of COVID-19 that they have been admitted to hospital.
 
-* **In ICU** = Indicates the number of hospitalized persons who are at risk of death because of the severe symptoms of COVID-19 and require placement in the intensive care unit.  This number is still **TBD** to be determined if it is a subset of the *Hospitalized* category. 
+* **In ICU** = Indicates the number of hospitalized persons who are at risk of death because of the severe symptoms of COVID-19 and require placement in the intensive care unit. This is a subset of the *Hospitalized* category. 
 
-* **On ventilator** = Indicates the number of hospitalized persons in the intensive care unit who require a ventilator to breathe. It is still **TBD** to be determined if it is a subset of the *Intensive Care* and *Hospitalized* categories.
+* **On ventilator** = Indicates the number of hospitalized persons in the intensive care unit who require a ventilator to breathe. It should be a subset of the *Intensive Care* and *Hospitalized* categories.
 
-* **Recovered** = This the number of reported recovered persons. 
+* **Recovered** = This is the number of recovered cases. (#data-recovered)
   
 </details>
 
@@ -261,18 +273,17 @@ All confirmed cases are shown in the [Confirmed Cases graph](/en/stats#cases-cha
 
 
 <details>
-  <summary id=chart-phases>TBD What do the different phases (phases 1-N) in the graph mean?</summary>
+  <summary id=chart-phases>What do the different phases (phases 1-N) in the graph mean?</summary>
 
-The vertical lines divide the stages, delimited by the dates, when the authorities changed the way information about the spread of the infection was collected (e.g. the test method was changed, self-isolation interventions were introduced, bans on gathering and movement of persons, mandatory basic protection were required...).
+The vertical lines divide the stages, delimited by the dates, when the authorities changed the way information about the spread of the infection was collected (the test method was changed, self-isolation interventions were introduced, bans on gathering and movement of persons, and mandatory basic protection were required).
 
 The phases are shown because the change in testing methodology has also changed the importance of certain indicators by which the prevalence of infections can be judged.
 
-* **Phase 1 (TBD date)**: The first cases of infection in North Macedoa are recorded....
+* **Phase 1 (TBD, 2020)**: The first cases of infection in Noth Macedonia are recorded. All cases are followed, all contacts are tested.
 
-* **Phase 2 (TBD date)**: The testing methodology is changed, and self-isolation and social distancing measures are introduced.
+* **Phase 2 TBD date)**: ...
 
 * **...**: ...
-
 
 </details>
 
@@ -285,11 +296,12 @@ The graph can offer a good insight into the workload of hospitals and can be the
 </details>
 
 <details>
-  <summary id=hcenters-chart>TBD What does the “Healthcare Center Treatment” graph mean?</summary>
+  <summary id=hcenters-chart>What does the “Healthcare Center Treatment” graph mean?</summary>
 
-The [graph](/en/stats#hcenters-chart) shows the treatment of suspicions of COVID-19 in healthcare centers (primary health care level). You can show data for whole country or TBD select specific regins. Healthcare centers are the first entry point for taking swabs to be tested for the presence of the virus, so an increase in the number of suspicions and referrals to self-isolation may be an early indicator that new outbreaks have occurred.
+The [graph](/en/stats#hcenters-chart) shows the treatment of suspicions of COVID-19 in healthcare centers (primary health care level). You can show data for whole country or select specific region. Healthcare centers are the first entry point for taking swabs to be tested for the presence of the virus, so an increase in the number of suspicions and referrals to self-isolation may be an early indicator that new outbreaks have occurred.
 
-TBD The graph thus shows the number of all emergency medical visits (also for other diseases) in healthcare centers (see notes below), the number of suspected cases of COVID-19 based on the number of examinations at the COVID-19 entry point, and all suspicions of infections based on telephone conversation with suspected infected patients. Some people may be recorded several times, first by telephone and then during the examination. We also show the total number of referrals to self-isolation.
+The graph thus shows the number of all emergency medical visits (also for other diseases) in healthcare centers (see notes below), the number of suspected cases of COVID-19 based on the number of examinations at the COVID-19 entry point, and all suspicions of infections based on telephone conversation with suspected infected patients. Some people may be recorded several times, first by telephone and then during the examination. We also show the total number of referrals to self-isolation.
+
 
 When reporting the number of tests performed, all tests (including repeated tests) are recorded. The number of positive tests therefore includes all positive tests – the same person can be tested several times and counted as positive several times. The number of tests performed may therefore be greater than the number of positive tests reported by laboratories (there, each person is recorded only once). See also [What does the “Testing” graph tell us?](#test-charts) 
 
@@ -299,9 +311,7 @@ When reporting the number of tests performed, all tests (including repeated test
 <details>
   <summary id=tests-chart>What does the “Testing” graph tell us?</summary>
 
-The [graph](/en/stats#tests-chart) shows the total number of regular tests (the *Regular* display), and the national survey tests (by selecting the *Survey* display). The columns show the number of negative and positive tests on a specific day, and the curve shows the daily percentage of positive tests.
-
-All important health organizations and institutions are aware of the fact that testing for coronavirus infection is one of the most important factors, as only through testing can we understand the course and extent of the pandemic and thus respond appropriately to the threat it poses. 
+The [graph](/en/stats#tests-chart) shows the total number of regular tests (the *Regular* display), and the nationalsurvey tests (by selecting the *Survey* display). The columns show the number of negative and positive tests on a specific day, and the curve shows the daily percentage of positive tests.
  
 </details>
 
@@ -310,7 +320,7 @@ All important health organizations and institutions are aware of the fact that t
 
 The [graph](/en/stats#infections-chart)provides an insight into the daily share of confirmed cases from high-risk groups or employees in high-risk areas. Due to insufficiently accurate input data on confirmed infections, daily values (By days (average)) are shown as a moving average of 5 days. The sum of the values on a particular day, from 2 days prior, and 2 days after, is divided by 5. Therefore, the graph shows the situation three days before a specific day, and in this way we get a better idea of trends by individual groups. If we select the *Total* or *Relative* display, we will jump from the confirmed cases curve to the histogram, which shows the number of confirmed infected persons within each category on a given day.
 
-The increase in infected healthcare workers does not mean that they were discovered exactly on that day; they may have been positive before but information on their status was obtained subsequently. 
+The increase in infected healthcare workers does not mean that they were discovered exactly on that day; they may have been positive before but information on their status was obtained subsequently.
 
 </details>
 
@@ -322,9 +332,9 @@ The [graph](/en/stats#spread-chart) tells us how many new confirmed cases of inf
 </details>
 
 <details>
-  <summary id=regions-chart>TBD What does the “Confirmed Cases by Region” tell us?</summary>
+  <summary id=regions-chart>What does the “Confirmed Cases by Region” tell us?</summary>
 
-TBD The [graph](/en/stats#regions-chart) shows the dynamics of growth of confirmed cases by selected regions. Individual regions can be easily compared by selecting the ones you want shown on the graph by clicking on specific regions below the graph. From the curve, we can quickly see which regions have the most and which the least confirmed cases and how this number has changed over time.
+The [graph](/en/stats#regions-chart) shows the dynamics of growth of confirmed cases by selected regions. Individual regions can be easily compared by selecting the ones you want shown on the graph by clicking on specific regions below the graph. From the curve, we can quickly see which regions have the most and which the least confirmed cases and how this number has changed over time.
 
 </details>
 
@@ -346,8 +356,6 @@ The display can be changed by selecting different views above the graph: if you 
 
 *Note: the assessment of recoveries and active cases is done 14 days after the infection was confirmed, if and when the disease is in its mild form. However, if an individual is hospitalized, this recovery will last longer, but in this case the individual is not dangerous to the environment because he is in hospital. Since we do not take into account the hospitalized in the municipality presentation, it is possible that the sum of active cases by municipality does not match the estimate of the active cases for the whole country. See also [Do you keep an Active Case counter and do you know how many people are currently infected?](#data-active-cases)*
 
-TBD - smaller geographical units will be added to the 30 regional IJZ epidemiological centers. 
-
 </details>
 
 <details>
@@ -361,9 +369,9 @@ Demographics can help us understand how the pandemic has spread and why it has d
 </details>
 
 <details>
-  <summary id=countries-chart>TBD What does the “Comparison by Country” graph show?</summary>
+  <summary id=countries-chart>What does the “Comparison by Country” graph show?</summary>
 
-The [chart](/en/stats#countries-chart) shows a comparison between North Macedonia and different groups of countries in terms of the number of deaths **TBD** and other epidemiological outcome parameters due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
+The [chart](/en/stats#countries-chart) shows a comparison between North Macedonia and different groups of countries in terms of the number of deaths due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
 
 </details>
 
@@ -390,7 +398,7 @@ However, the number of confirmed cases depends solely on testing. Since the majo
 
 Contact us at info@treker.mk – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/en/links).
 
-TBD If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/treker-mk/website/blob/master/src/content/links_en.md).
+If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/sledilnik/website/blob/master/src/content/links.md).
 
 </details>
 
