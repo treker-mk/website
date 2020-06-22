@@ -37,8 +37,8 @@ module Metrics  =
         { Metric=AllConfirmed;      Color="#bda506"; Id="allConfirmed" }
         { Metric=OtherPeople;       Color="#FFDBA3"; Id="otherPersons" }
         { Metric=HospitalStaff;     Color="#73ccd5"; Id="hcStaff" }
-        { Metric=RestHomeStaff;     Color="#20b16d"; Id="rhStaff" }
-        { Metric=RestHomeOccupant;  Color="#bf5747"; Id="rhOccupant" }
+        // SLO-spec { Metric=RestHomeStaff;     Color="#20b16d"; Id="rhStaff" }
+        // SLO-spec { Metric=RestHomeOccupant;  Color="#bf5747"; Id="rhOccupant" }
     ]
 
     let metricsToDisplay filter =
@@ -192,6 +192,7 @@ let renderChartOptions displayType (data : StatsData) =
                 marker = pojo {| enabled = false |}
                 |}
 
+(* SLO-spec: TODO: add back when you have MK specific flags 
         let allDates =
             allMetricsData
             |> Seq.map (fun (_, metricData) ->
@@ -202,8 +203,8 @@ let renderChartOptions displayType (data : StatsData) =
 
         if displayType.ShowPhases then
             yield addContainmentMeasuresFlags startDate endDate |> pojo
+*)   
     ]
-   
     let className = "covid19-infections"
     let baseOptions = Highcharts.basicChartOptions ScaleType.Linear className
 

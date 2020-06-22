@@ -74,7 +74,7 @@ let renderChartOptions (state : State) =
             labels = pojo {| format = "{value}%" |}
             opposite = false
             visible = true
-            max = Some 9
+            max = Some 50 // SLO-spec
         |}
     |]
 

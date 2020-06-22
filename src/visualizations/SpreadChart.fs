@@ -179,8 +179,10 @@ let renderChartOptions scaleType (data : StatsData) =
                     |> Seq.map chartCfg.dataKey
                     |> Seq.toArray
             |}
+(* SLO-spec: TODO: add back when you have MK specific flags 
         if Highcharts.showExpGrowthFeatures then
             yield addContainmentMeasuresFlags startTime None |> pojo 
+*)
     |]
 
     // return highcharts options

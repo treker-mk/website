@@ -46,9 +46,9 @@ module Metrics  =
         { Metric=InHospitalToDate;     Color="#de9a5a"; Visible=false; Line=Dot;    Id="hospitalizedToDate" }
         { Metric=InHospital;           Color="#be7A2a"; Visible=true;  Line=Solid;  Id="hospitalized" }
         { Metric=InICU;                Color="#d99a91"; Visible=true;  Line=Solid;  Id="icu" }
-        { Metric=OnVentilator;         Color="#bf5747"; Visible=false; Line=Solid;  Id="ventilator" }
-        { Metric=OutOfHospital;        Color="#20b16d"; Visible=false; Line=Solid;  Id="discharged" }
-        { Metric=OutOfHospitalToDate;  Color="#57c491"; Visible=false; Line=Dot;    Id="dischargedToDate" }
+        // SLO-spec { Metric=OnVentilator;         Color="#bf5747"; Visible=false; Line=Solid;  Id="ventilator" }
+        // SLO-spec { Metric=OutOfHospital;        Color="#20b16d"; Visible=false; Line=Solid;  Id="discharged" }
+        // SLO-spec { Metric=OutOfHospitalToDate;  Color="#57c491"; Visible=false; Line=Dot;    Id="dischargedToDate" }
         { Metric=Deceased;             Color="#000000"; Visible=false; Line=Solid;  Id="deceased" }
         { Metric=DeceasedToDate;       Color="#666666"; Visible=true;  Line=Dot;    Id="deceasedToDate" }
     ]
@@ -123,7 +123,9 @@ let renderChartOptions (scaleType: ScaleType) (data : StatsData) (metrics : Metr
                             value.IsNone)
                         |> Seq.toArray
                 |}
-        yield addContainmentMeasuresFlags startTime None |> pojo
+(* SLO-spec: TODO: add back when you have MK specific flags 
+       yield addContainmentMeasuresFlags startTime None |> pojo
+*)
     ]
 
     let baseOptions = basicChartOptions scaleType "covid19-metrics-comparison"
