@@ -88,6 +88,7 @@ let addContainmentMeasuresFlags
     (endDate: JsTimestamp option) =
     let events = [|
     // day, mo, color,    i18n
+    // SLO-spec - TODO: replace these below with MK specific, then uncomment next block
         4,  3, "#FFFFFF", "firstCase"
         6,  3, "#FFe6e6", "retirementHomes"
         8,  3, "#FFFFFF", "checkpoints"
@@ -112,6 +113,7 @@ let addContainmentMeasuresFlags
         1,  6, "#ebfaeb", "liftSchools4to5"
     |]
     {|
+(* SLO-spec
         ``type`` = "flags"
         shape = "flag"
         showInLegend = false
@@ -131,7 +133,8 @@ let addContainmentMeasuresFlags
                     Some {| x=ts; fillColor=color; title=I18N.t title; text=I18N.t text |}
                 else None
             )
-    |}
+ *)
+     |}
 
 (* Trigger document event for iframe resizing *)
 let onLoadEvent (name : String) =
