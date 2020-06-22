@@ -80,7 +80,7 @@ let renderChartOptions (state : State) dispatch =
             labels = pojo {| format = "{value}%"; align = "center"; x = 10; reserveSpace = false; |}
             opposite = false
             visible = true
-            max = Some 9
+            max = Some 50 // SLO-spec
         |}
     |]
 
