@@ -13,8 +13,8 @@ open Highcharts
 open Types
 
 let countriesDisplaySets = [|
-    { Label = "groupNeighbouring"
-      CountriesCodes = [| "BOL"; "GRE"; "ALB"; "SRB"; "RKS" |]
+    { Label = "groupNeighbouring"                               // SLO-spec - changed for Macedonia
+      CountriesCodes = [| "BOL"; "GRE"; "ALB"; "SRB"; "RKS" |]  // SLO-spec - changed for Macedonia
     }
     { Label = "groupCriticalEU"
       CountriesCodes = [| "BEL"; "ESP"; "FRA"; "GBR"; "ITA"; "SWE" |]
