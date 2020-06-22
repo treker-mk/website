@@ -10,15 +10,17 @@
         </a>
       </div>
       <div class="social">
-        <a href="https://fb.me/COVID19Treker" target="_blank">
+        <a href="https://fb.me/Covid19TrekerMK" target="_blank">
           <img src="../assets/svg/fb-icon.svg" alt="Facebook" />
         </a>
-        <a href="https://twitter.com/treker" target="_blank">
+        <a href="https://twitter.com/Covid19TrekerMK" target="_blank">
           <img src="../assets/svg/tw-icon.svg" alt="Twitter" />
         </a>
+<!--  SLO-spec
         <a href="https://medium.com/treker" target="_blank">
           <img src="../assets/svg/medium-icon.svg" alt="Medium" />
         </a>
+-->
         <a href="https://github.com/treker-mk" target="_blank">
           <img src="../assets/svg/gh-icon.svg" alt="GitHub" class="gh-icon" />
         </a>
