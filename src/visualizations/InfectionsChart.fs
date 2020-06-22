@@ -37,8 +37,8 @@ module Metrics  =
         { Metric=AllConfirmed;      Color="#bda506"; Id="allConfirmed" }
         { Metric=OtherPeople;       Color="#FFDBA3"; Id="otherPersons" }
         { Metric=HospitalStaff;     Color="#73ccd5"; Id="hcStaff" }
-        { Metric=RestHomeStaff;     Color="#20b16d"; Id="rhStaff" }
-        { Metric=RestHomeOccupant;  Color="#bf5747"; Id="rhOccupant" }
+        // SLO-spec { Metric=RestHomeStaff;     Color="#20b16d"; Id="rhStaff" }
+        // SLO-spec { Metric=RestHomeOccupant;  Color="#bf5747"; Id="rhOccupant" }
     ]
 
     let metricsToDisplay filter =
