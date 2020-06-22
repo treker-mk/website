@@ -171,14 +171,24 @@ let basicChartOptions (scaleType:ScaleType) (className:string)=
                 labels = pojo {| align = "center"; y = 30; reserveSpace = true; distance = -20; |} // style = pojo {| marginBottom = "-30px" |}
                 //labels = {| rotation= -45 |}
                 plotLines=[|
+(* SLO-spec 
                     {| value=jsTime <| DateTime(2020,3,13); label=Some {| text=I18N.t "phase.2.description"; rotation=270; align="right"; x=12 |} |}
                     {| value=jsTime <| DateTime(2020,3,20); label=Some {| text=I18N.t "phase.3.description"; rotation=270; align="right"; x=12 |} |}
                     {| value=jsTime <| DateTime(2020,4,8);  label=Some {| text=I18N.t "phase.4.description"; rotation=270; align="right"; x=12 |} |}
                     {| value=jsTime <| DateTime(2020,4,15); label=Some {| text=I18N.t "phase.5.description"; rotation=270; align="right"; x=12 |} |}
                     {| value=jsTime <| DateTime(2020,4,21); label=Some {| text=I18N.t "phase.6.description"; rotation=270; align="right"; x=12 |} |}
                     {| value=jsTime <| DateTime(2020,5,15); label=Some {| text=I18N.t "phase.7.description"; rotation=270; align="right"; x=12 |} |}
+*)
                 |]
+
                 plotBands=[|
+                    // SLO-spec - TODO: this is just placeholder/hack until you have MK phases 
+                    {| ``from``=jsTime <| DateTime(2020,2,29);
+                       ``to``=jsTime <| DateTime(2020,3,13);
+                       color="transparent"
+                       label=Some {| align="center"; text="" |}
+                    |}
+(* SLO-spec 
                     {| ``from``=jsTime <| DateTime(2020,2,29);
                        ``to``=jsTime <| DateTime(2020,3,13);
                        color="transparent"
@@ -214,6 +224,7 @@ let basicChartOptions (scaleType:ScaleType) (className:string)=
                        color="transparent"
                        label=Some {| align="center"; text=I18N.t "phase.7.title" |}
                     |}
+*)
                     yield! shadedWeekendPlotBands
                 |]
             |}
