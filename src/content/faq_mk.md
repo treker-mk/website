@@ -32,7 +32,7 @@ Terminology in use on Treker is explained under [What does it mean](#chart-termi
   <summary id=all-infected>Is it possible to get statistical information on all infected persons, even the asymptomatic cases?
 </summary>
 
-Unfortunately, this data is unavailable for now. There are several reasons: Previously, tests have only covered a certain proportion of the population (patients with signs and symptoms of acute respiratory infection who may need hospital treatment, healthcare professionals, retirement home residents with respiratory symptoms, and people above 60 if their doctor so requires). Even though now the testing guidance for COVID-19 is expanded to include anyone displaying symptoms of the disease, many might be carriers with no or only mild symptoms. For this reason, our statistics can cover only part of the population that clearly shows signs of infection. Thus, the younger and the untested populations are disproportionately represented. Data for asymptomatic patients who do not show symptoms and are not recorded anywhere can therefore not be obtained.
+Unfortunately, this data is unavailable for now. There are several reasons: Previously, tests have only covered a certain proportion of the population (patients with signs and symptoms of acute respiratory infection who may need hospital treatment, healthcare professionals...). Even though now the testing guidance for COVID-19 is expanded to include anyone displaying symptoms of the disease, many might be carriers with no or only mild symptoms. For this reason, our statistics can cover only part of the population that clearly shows signs of infection. Thus, the younger and the untested populations are disproportionately represented. Data for asymptomatic patients who do not show symptoms and are not recorded anywhere can therefore not be obtained.
 
 </details>
 
@@ -41,7 +41,7 @@ Unfortunately, this data is unavailable for now. There are several reasons: Prev
 
 You can find [a comparison graph](/mk/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between North Macedonia and different clusters of countries in relation to the *number of deaths* caused by COVID-19 *per million inhabitants*. 
 The clusters of countries that are compared to North Macedonia are as follows:
--   Neighboring countries (excluding Italy)
+-   Neighboring region
 -   Critical countries (EU)
 -   Critical countries (global)
 -   Nordic countries
@@ -85,13 +85,13 @@ Treker receives official data on COVID-19 directly from the Ministry of Health, 
 </details>
 
 <details>
-  <summary id=data-collection>How do you collect and edit the data?</summary>
+  <summary id=data-collection>TBD How do you collect and edit the data?</summary>
 
-[The database](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=0) is built from the NIJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=598557107).
+[The database](https://docs.google.com/spreadsheets/d/ TBD) is built from the IJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [TBD Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/ TBD).
 
-Editing Hospital Care Data – [Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/1N1qLMoWyi3WFGhIpPFzKsFmVE0IwNP3elb_c18t2DwY/edit#gid=918589010):
+Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/):
 
-- We receive daily reports and monitor the announcements of all COVID-19 hospitals  (UKC Ljubljana, UKC Maribor, UK Golnik, SB Celje) – at around 8 am.
+- We receive daily reports and monitor the announcements of all COVID-19 hospitals  (TBD) – at around TBD o'clock.
 
 - We monitor the number of hospitalizations: all wards, in ICUs, and on ventilators.
 
@@ -117,12 +117,12 @@ When we publish updated daily data, it is available on all our distribution chan
 <details>
   <summary id=data-differences>Several portals display numbers of infected people that are different from yours. Why?</summary>
 
-Treker uses only validated and official data reported daily by the National Institute of Public Health (NIJZ) and all hospitals in North Macedonia treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (4 March 2020). Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
+Treker uses only validated and official data reported daily by the nstitute of Public Health (IJZ) and all hospitals in North Macedonia treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (TBD date). Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
 
 </details>
 
 <details>
-  <summary id=data-hospital-in>How do you obtain data on hospital admissions?</summary>
+  <summary id=data-hospital-in> TBD How do you obtain data on hospital admissions?</summary>
 
 Hospitals do not always report individual admissions or discharges from which we can obtain accurate data. The number of admissions is usually calculated from data on the currently hospitalized and from the difference compared to the previous day, to which we add the number of discharged and dead on a given day. We keep records of admissions and discharges in intensive care units and for connection and disconnection to/from ventilators in a similar way.
 
@@ -138,12 +138,8 @@ The information on the discharged from hospitals is calculated from data daily o
 <details>
   <summary id=data-recovered>Why did you replace the number of *cured* with the number of *recovered* patients?</summary>
 
-Treker used to rely on official sources (Institutions of the Government of the Republic of North Macedonia, media) for the number of cured people. Unfortunately, reports on when a person is totally cured from Covid-19 are scarce – for now, we only have few confirmed reports of "cured patients", and there is, as of yet, still no official definition of when a particular person is cured. A [COVID-19 national survey](https://covid19.biolab.si/) is currently underway at the *Institute of Microbiology and Immunology*, which will also, through voluntary sample testing, show how many people have already fallen ill and recovered from COVID-19. As it is not yet known what the potential consequences of COVID-19 could be (various studies are addressing this question and the results will not be known for a long time), and because health institutions are also talking about recovered rather than cured patients, we are thus changing both the terminology and the method of calculating the number of recoveries. See also [Do you keep an Active Case counter and do you know how many people are currently infected?](#data-active-cases)) 
+Treker used to rely on official sources (Institutions of the Government of the Republic of North Macedonia, media) for the number of cured people. North Macedonia is one of the rare countries worldwide that tests also mild cases, after 14 days from the first positive tests and treat them in same manner like discharged patients from hospitals. 
 
-
-We noticed that the [Worldometer](https://www.worldometers.info/coronavirus/#countries) was reporting recovery numbers, but unfortunately we were unable to obtain data on where this information was coming from. Also, some other sources simply combine survivors with the number of discharged patients from hospitals. Since we believe that these two categories are interchangeable, we have decided to present them separately; these are the *Discharged from Hospital* and *Recovered* indicators.
- 
-*Note: The calculation of recoveries was changed on 9 May 2020. We now consider a patient has recovered in 14 days after their infection was confirmed (previously 21 days), so there was be a noticeable jump in the number of survivors. Please take this difference into account when estimating the number of survivors. A more detailed explanation of the changed calculation is available in the Medium article [Od potrjeno okuženih do prebolelih (From Confirmed Case to Recovery )](https://medium.com/@sledilnik/94c81674718e).*
 
 </details>
 
@@ -153,12 +149,12 @@ We noticed that the [Worldometer](https://www.worldometers.info/coronavirus/#cou
 Yes, these indicators have been graphically displayed as **Confirmed Cases (active)** and **Recovered (total)** from the end of April.
  
 
-These visualizations are not data from public sources; both indicators show the calculated value on the basis of official data, so they are indicated by a dashed line for easier distinguishing. The value of the confirmed cases (active) is calculated by simply subtracting the official data for the relevant category, the value of the Recovered (total) reflects the status of all confirmed cases three weeks ago (minus the dead). The number of recoveries is a simple estimate based on the value of all those confirmed infected in the past – based on the assumption that patients recover from the disease on average within 14 days (source: [the ECDC Report](https://www.ecdc.europa.eu/sites/default/files/documents/covid-19-rapid-risk-assessment-coronavirus-disease-2019-ninth-update-23-april-2020.pdf)); thus, the number of recoveries on a given day equals the number of all confirmed cases three weeks prior to a given date, from which the number of deaths by that day is deducted. This simplified estimation does not take into account the more serious cases of COVID-19 with longer recovery times.     
+These visualizations are not data from public sources; both indicators show the calculated value on the basis of official data, so they are indicated by a dashed line for easier distinguishing. 
 
-*Note: The calculation of recoveries was changed on 9 May 2020. We now consider a patient has recovered in 14 days after their infection was confirmed (previously 21 days), so there was be a noticeable jump in the number of survivors. Please take this difference into account when estimating the number of survivors. A more detailed explanation of the changed calculation is available in the Medium article [Od potrjeno okuženih do prebolelih (From Confirmed Case to Recovery )](https://medium.com/@sledilnik/94c81674718e).*
+*Note: In some cases when the government is not reporting such cases within smaller clusters, like municipalities,  ee now consider a patient has recovered in 14 days after their infection was confirmed as per ECDC formulas of calculating recovered cases. 
 
 Value formula:
-- Recovered (total) = Confirmed cases (total) 21 days ago – Died (total) by the day of calculation
+- Recovered (total) = Confirmed cases (total) 14 days ago – Died (total) by the day of calculation
 
 - Confirmed cases (active) = Confirmed cases (total) - Recovered (total) - Died (total)
 
@@ -167,7 +163,7 @@ Value formula:
 <details>
   <summary id=data-contribute>How can users get actively involved in data gathering? How can I participate?</summary>
 
-You can voluntarily help by collecting and verifying data from the media (as well as from the field), with statistical and other analyzes, etc. Contact us at info@sledilnik.org if you’d like to participate.
+You can voluntarily help by collecting and verifying data from the media (as well as from the field), with statistical and other analyzes, etc. Contact us at info@treker.mk if you’d like to participate.
 
 Treker does not collect users’ personal information nor information that individuals would like to share about their condition or hospital status.
 
@@ -401,7 +397,7 @@ However, the number of confirmed cases depends solely on testing. Since the majo
 <details>
   <summary id=add-link>I would like to recommend a valuable source, which is not yet among your ‘Recommended Links’, but should be. Will you add it?</summary>
 
-Contact us at info@sledilnik.org – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/mk/links).
+Contact us at info@treker.mk – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/mk/links).
 
 If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/sledilnik/website/blob/master/src/content/links.md).
 
@@ -410,6 +406,6 @@ If you would like to go a step further and contribute to our common goal, submit
 <details>
   <summary id=how-to-help>I would like to help, where can I begin?</summary>
 
-Contact us at info@sledilnik.org and briefly describe who you are and how you can contribute to the project. Warmly welcome to help.
+Contact us at info@treker.mk and briefly describe who you are and how you can contribute to the project. Warmly welcome to help.
 
 </details>
