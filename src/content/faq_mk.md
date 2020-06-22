@@ -7,9 +7,8 @@ _Идејата на Трекер е да ги прикаже на едно ме
 ## General Information
 
 <details>
-  <summary id=why-sledilnik>Why Sledilnik?</summary>
-
-Our goal is to help understand the spread of the virus and to help raise awareness, responsiveness, and the effectiveness of the measures implemented to curb the virus. You can find more about the project in the [About tab](/en/about). 
+  <summary id=why-sledilnik>Зошто Трекер?</summary>
+Нашата цел е да помогнеме да го разбереме подобро ширењето на вирусот и да ја подигнеме свеста, одговорноста и ефикасноста на мерките за спречување на вирусот. Повеќе за иницијативата може да најдете во [About tab](/mk/about).
 
 </details>
 
