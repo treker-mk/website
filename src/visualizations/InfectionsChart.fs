@@ -192,6 +192,7 @@ let renderChartOptions displayType (data : StatsData) =
                 marker = pojo {| enabled = false |}
                 |}
 
+(* SLO-spec: TODO: add back when you have MK specific flags 
         let allDates =
             allMetricsData
             |> Seq.map (fun (_, metricData) ->
@@ -202,8 +203,8 @@ let renderChartOptions displayType (data : StatsData) =
 
         if displayType.ShowPhases then
             yield addContainmentMeasuresFlags startDate endDate |> pojo
+*)   
     ]
-   
     let className = "covid19-infections"
     let baseOptions = Highcharts.basicChartOptions ScaleType.Linear className
 

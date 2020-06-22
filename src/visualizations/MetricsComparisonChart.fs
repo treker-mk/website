@@ -123,7 +123,9 @@ let renderChartOptions (scaleType: ScaleType) (data : StatsData) (metrics : Metr
                             value.IsNone)
                         |> Seq.toArray
                 |}
-        yield addContainmentMeasuresFlags startTime None |> pojo
+(* SLO-spec: TODO: add back when you have MK specific flags 
+       yield addContainmentMeasuresFlags startTime None |> pojo
+*)
     ]
 
     let baseOptions = basicChartOptions scaleType "covid19-metrics-comparison"
