@@ -90,12 +90,12 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Patients
             ClassName = "patients-chart"
             Label = I18N.t "charts.patients.title"
-            Explicit = false
+            Explicit = true
             Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
           { VisualizationType = Ratios
             ClassName = "ratios-chart"
             Label = I18N.t "charts.ratios.title"
-            Explicit = false
+            Explicit = true
             Renderer =
                 fun state ->
                     match state.StatsData with
@@ -117,7 +117,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = HCenters
             ClassName = "hcenters-chart"
             Label = I18N.t "charts.hCenters.title"
-            Explicit = false
+            Explicit = true
             Renderer = fun _ -> lazyView HCentersChart.hCentersChart () }
           { VisualizationType = Infections
             ClassName = "infections-chart"
@@ -144,7 +144,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Regions
             ClassName = "regions-chart"
             Label = I18N.t "charts.regions.title"
-            Explicit = false
+            Explicit = true
             Renderer =
                 fun state ->
                     match state.RegionsData with
@@ -155,7 +155,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Map
             ClassName = "map-chart"
             Label = I18N.t "charts.map.title"
-            Explicit = false
+            Explicit = true
             Renderer =
                 fun state ->
                     match state.RegionsData with
@@ -178,7 +178,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = AgeGroups
             ClassName = "age-groups-chart"
             Label = I18N.t "charts.ageGroups.title"
-            Explicit = false
+            Explicit = true
             Renderer =
                 fun state ->
                     match state.StatsData with
