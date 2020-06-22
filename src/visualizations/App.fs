@@ -166,7 +166,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Municipalities
             ClassName = "municipalities-chart"
             Label = I18N.t "charts.municipalities.title"
-            Explicit = false
+            Explicit = true
             Renderer =
                 fun state ->
                     match state.RegionsData with
