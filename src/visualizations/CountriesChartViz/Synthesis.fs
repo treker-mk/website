@@ -109,12 +109,12 @@ let prepareChartData
     : ChartData option =
 
     /// <summary>
-    /// Ensures Slovenia is über alles ;-).
+    /// Ensures Macedonia is über alles ;-). -- SLO-Spec
     /// </summary>
     let countriesComparer (a, countryNameA: string) (b, countryNameB: string) =
         match a.IsoCode, b.IsoCode with
-        | "SVN", _ -> -1
-        | _, "SVN" -> 1
+        | "MKD", _ -> -1    // SLO-spec
+        | _, "MKD" -> 1     // SLO-spec
         | _ -> countryNameA.CompareTo countryNameB
 
     let aggregated =
