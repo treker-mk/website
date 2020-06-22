@@ -20,13 +20,13 @@ type ChartState = {
 }
 
 let ColorPalette =
-    [ "#ffa600"
+    [ "#f95d6a"  // SLO-spec: redish color for Macedonia
+      "#ffa600"
       "#dba51d"
       "#afa53f"
       "#777c29"
       "#70a471"
       "#457844"
-      "#f95d6a"
       "#d45087"
       "#a05195"
       "#665191"
