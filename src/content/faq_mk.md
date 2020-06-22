@@ -197,19 +197,19 @@ This is a percentage growth rate on a particular date in the number of newly con
 </details>
 
 <details>
-  <summary id=metrics-comparison-chart>What does the “COVID-19 Situation in North Macedonia” graph mean?
+  <summary id=metrics-comparison-chart>TBD What does the “COVID-19 Situation in North Macedonia” graph mean?
 </summary>
 
 The [graph](/mk/stats#metrics-comparison-chart) shows the daily and overall dynamics of the spread of the infection from the beginning to the present. The indicators used (see [Which indicators does the “COVID-19 Situation in North Macedonia” graph include?](#chart-metrics-included)) help us understand whether and how successfully we are controlling the spread of the virus. We can monitor the daily growth rate of newly confirmed cases and indirectly see if the measures work; information on the number of hospitalizations and the proportion of those in ICU shows how many people are seriously at risk from the disease, but at the same time, this data also shows us the real burden on the health system.
 
-The breakpoints are indicated below, on the timeline: from the first confirmed case (March 4, 2020) to the measures (by keyword and date) taken to curb the spread and their relaxation. This helps us monitor the dynamics of the variables relative to the measures.
+The breakpoints are indicated below, on the timeline: from the first confirmed case (TBD date) to the measures (by keyword and date) taken to curb the spread and their relaxation. This helps us monitor the dynamics of the variables relative to the measures.
 
 </details>
 
 <details>
   <summary id=chart-metrics-included>Which indicators does the “COVID-19 Situation in North Macedonia” graph include?</summary>
 
-[Graf](/mk/stats#metrics-comparison-chart) vključuje:
+[Graph](/mk/stats#metrics-comparison-chart) includes:
   
 * **Tests (per day)** = Number of tests for the presence of SARS-CoV-2 virus causing COVID-19 performed. In the first stages of the epidemic, this was an important indicator of the prevalence of the virus, but with the change in testing methodology, ie. of the tested sample, it turned into an indicator of the national health and diagnostics system’s capacity.
 
@@ -221,23 +221,23 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
 
 * **Confirmed cases (active)** = Confirmed cases (total) – Recovered (total) – Died (total)
 
-* **Recovered (total)** = Number of recoveries on a given day is a simple estimate equal to the number of all confirmed cases two weeks prior to a given date (assuming an average of 14 days needed to recover), from which the number of fatalities till that very date is subtracted. See also [Why did you replace the number of cured with the number of recovered patients?](#data-recovered)
+* **Recovered (total)** = Total number of ecoveries on a given day. (#data-recovered)
 
 * **Hospitalized (active)** = Current number of people in hospital care (either in the ordinary ward or in the ICU).
 
-* **Hospitalized (total) ** = Sum of hospital admissions by date.
+* **Hospitalized (total)** = Sum of hospital admissions by date.
 
 * **ICU (active)** = Current number of people in ICUs (intensive care units).
 
-* **On ventilator (active) ** = Current number of persons in need of a ventilator.
+* **On ventilator (active)** = Current number of persons in need of a ventilator.
 
 * **Discharged from a hospital (daily)** = Number of discharged from hospital on that day.
 
 * **Discharged from hospital (total)** = Sum of all discharged from a hospital up to this day.
 
-* **Deaths (per day) ** = Number of deaths due to COVID-19 on that day.
+* **Deaths (per day)** = Number of deaths due to COVID-19 on that day.
 
-* **Deaths (total) ** = Sum of all deaths to date.
+* **Deaths (total)** = Sum of all deaths to date.
   
 </details>
 
@@ -252,9 +252,9 @@ Treker uses terminology which is consistent with the official directives of the 
 
 * **In ICU** = Indicates the number of hospitalized persons who are at risk of death because of the severe symptoms of COVID-19 and require placement in the intensive care unit. This is a subset of the *Hospitalized* category. 
 
-* **On ventilator** = Indicates the number of hospitalized persons in the intensive care unit who require a ventilator to breathe. It is a subset of the *Intensive Care* and *Hospitalized* categories.
+* **On ventilator** = Indicates the number of hospitalized persons in the intensive care unit who require a ventilator to breathe. It should be a subset of the *Intensive Care* and *Hospitalized* categories.
 
-* **Recovered** = This is an estimate of the number confirmed cases that are expected to have recovered after 14 days. The number of recoveries is thus equal to the number of all confirmed cases two weeks prior – assuming that the disease should be overcome within 14 days – from which the number of deaths by that given day is subtracted. (See also the question [Why did you replace the number of cured with the number of recovered patients?](#data-recovered)
+* **Recovered** = This is the number of recovered cases. (#data-recovered)
   
 </details>
 
@@ -272,7 +272,7 @@ All confirmed cases are shown in the [Confirmed Cases graph](/mk/stats#cases-cha
 
 
 <details>
-  <summary id=chart-phases>What do the different phases (phases 1-7) in the graph mean?</summary>
+  <summary id=chart-phases>What do the different phases (phases 1-N) in the graph mean?</summary>
 
 The vertical lines divide the stages, delimited by the dates, when the authorities changed the way information about the spread of the infection was collected (the test method was changed, self-isolation interventions were introduced, bans on gathering and movement of persons, and mandatory basic protection were required).
 
@@ -287,7 +287,7 @@ The phases are shown because the change in testing methodology has also changed 
 </details>
 
 <details>
-  <summary id=patients-chart>What does the “Hospitalizations” graph tell us?</summary>
+  <summary id=patients-chart>TBD What does the “Hospitalizations” graph tell us?</summary>
 
 The [graph](/mk/stats#patients-chart) in the default view *All Hospitals* shows us the whole picture of hospitalizations by date arranged by the condition of patients: columns with a positive value (those above the horizontal axis) show the number admitted to hospital, the number hospitalized, shades of red are used to demark individuals in ICUs, specifically depicting how many of these are in critical condition on the ventilators. Columns with a negative value (those below the horizontal axis) show the number of discharges and deaths that day. You can also select specific hospital and see only hospitalizations there. If you select the *By Hospitals* view below, you can see the number of people in hospital care by day for each of the COVID-19 hospitals.  
 The graph can offer a good insight into the workload of hospitals and can be the basis for assessing hospital capacity and planning their possible increase.
