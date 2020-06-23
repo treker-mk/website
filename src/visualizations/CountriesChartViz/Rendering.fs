@@ -13,14 +13,14 @@ open Highcharts
 open Types
 
 let countriesDisplaySets = [|
-    { Label = "groupNeighbouring"                               // SLO-spec - changed for Macedonia
-      CountriesCodes = [| "BGR"; "GRC"; "ALB"; "SRB"; "BIH"; "ROU"; "TUR"; "MNE"; "SVN"; "HRV"; "HUN" |]  // SLO-spec  
-    }
     { Label = "groupCriticalEU"
       CountriesCodes = [| "BEL"; "ESP"; "FRA"; "GBR"; "ITA"; "SWE" |]
     }
     { Label = "groupCriticalWorld"
       CountriesCodes = [| "BRA"; "ECU"; "ITA"; "RUS"; "SWE"; "USA" |]
+    }
+    { Label = "groupNeighbouring"                               // SLO-spec - changed for Macedonia
+      CountriesCodes = [| "BGR"; "GRC"; "ALB"; "SRB"; "BIH"; "ROU"; "TUR"; "MNE"; "SVN"; "HRV"; "HUN" |]  // SLO-spec  
     }
     { Label = "groupNordic"
       CountriesCodes = [| "DNK"; "FIN"; "ISL"; "NOR"; "SWE" |]
