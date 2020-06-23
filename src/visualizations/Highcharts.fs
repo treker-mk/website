@@ -290,7 +290,7 @@ let basicChartOptions
                 // TODO: https://www.highcharts.com/forum/viewtopic.php?t=17715
                 // inputEditDateFormat = I18N.t "charts.common.numDateFormat"
                 inputBoxBorderColor = "#ced4da"
-                buttonTheme = pojo {| r = 6; states = pojo {| select = pojo {| fill = "#ffd922" |} |} |}
+                buttonTheme = pojo {| r = 6; states = pojo {| select = pojo {| fill = "#f50000" |} |} |}
                 buttons =
                     [|
                         {|
