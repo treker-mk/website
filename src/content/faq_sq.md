@@ -41,11 +41,10 @@ Fatkeqësisht, këto të dhëna tani nuk janë të disponueshme. Ekzistojnë dis
 
 Ju mund të gjeni një  [grafik krahasimi ](/sq/stats#countries-chart) në pjesën e poshtme të pultit. Grafiku tregon një krahasim midis Maqedonia e Veriut dhe grupimeve të ndryshme të vendeve në lidhje me numrin e vdekjeve të shkaktuara nga KOVID-19 për një milion banorë. Grupimet e vendeve që krahasohen me Maqedonia e Veriut janë si në vijim:
 
--   Vendet fqinje (me përjashtim të Italisë)
 -   Vendet kritike (BE)
 -   Vendet kritike (globale)
+-   Vendet fqinje
 -   Vendet Nordike
--   Vendet e ish-Jugosllavisë
 -   Vendet e Azisë Lindore dhe Oqeanisë
 
 
