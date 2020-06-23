@@ -4,7 +4,7 @@ _Идејата на Трекер е да ги прикаже на едно ме
 
 ## TBD work in progress - содржината што следи сеуште се преведува и прилагодува. Таа му припаѓа на оригиналниот сајт, sledilnik.org 
 
-## General Information
+## Општо за страната
 
 <details>
   <summary id=why-sledilnik>Зошто Трекер?</summary>
@@ -13,9 +13,9 @@ _Идејата на Трекер е да ги прикаже на едно ме
 </details>
 
 <details>
-  <summary id=virus-vs-disease>What is the difference between SARS-CoV-2 and COVID-19?</summary>
+  <summary id=virus-vs-disease>Koja e разликата помеѓу SARS-CoV-2 и КОВИД-19?</summary>
 
-**SARS-CoV-2** is the abbreviation for ‘Severe Acute Respiratory Syndrome Coronavirus 2’ – it is the internationally accepted name of the virus that causes the disease named **COVID-19**. The latter name is also an acronym, coined from the words COrona VIrus Disease, and 2019, the year when the disease first erupted.
+**SARS-CoV-2** е кратенка од ‘Тежок акутен респираторен (дишен) синдром коронавирус 2’ –  и е интернационално прифатен назив за вирусот кој ја предизвикува болеста **КОВИД-19**. Вториот назив е исто така кратенка, образувана од зборовите КОрона ВИрус и годината кога за прв пат се појавува - 2019.
 
 
 </details>
