@@ -21,34 +21,34 @@ _Идејата на Трекер е да ги прикаже на едно ме
 </details>
 
 <details>
-  <summary id=confirmed-cases>What is the difference between ‘new cases’ and ‘confirmed cases’?
+  <summary id=confirmed-cases>Која е разликата помеѓу ‘новоинфицирани’ и ‘потврдени случаи’?
 </summary>
-
-Terminology in use on Treker is explained under [What does it mean](#chart-terminology). According to the WHO definition, a *confirmed case* is a person with laboratory confirmation of COVID-19 infection, irrespective of clinical signs and symptoms. Other terms, such as newly infected, may appear in the media but are not used in our graphs. All terms used by Treker are explained in these FAQ. 
+Терминологијата која се користи на Treker е објаснета во делот [Што значи](#chart-terminology). Според дефиницијата на Светската Здравствена Организација, за *потврден случај* се смета оној кај кој КОВИД-19 е потврден лабораториски, без оглед на клиничките знаци и симптоми. Други термини како ‘новоинфицирани’ може да се појават во медиумите, но не се користат во нашите графикони. Сите термини кои ги користи Трекер се објаснети во овие ЧПП. 
 
 </details>
 
 <details>
-  <summary id=all-infected>Is it possible to get statistical information on all infected persons, even the asymptomatic cases?
-</summary>
+  <summary id=all-infected>Дали може да се добијат статистички податоци за сите сите инфицирани лица, дури и за асимптоматските случаи? </summary>
 
-Unfortunately, this data is unavailable for now. There are several reasons: Previously, tests have only covered a certain proportion of the population (patients with signs and symptoms of acute respiratory infection who may need hospital treatment, healthcare professionals...). Even though now the testing guidance for COVID-19 is expanded to include anyone displaying symptoms of the disease, many might be carriers with no or only mild symptoms. For this reason, our statistics can cover only part of the population that clearly shows signs of infection. Thus, the younger and the untested populations are disproportionately represented. Data for asymptomatic patients who do not show symptoms and are not recorded anywhere can therefore not be obtained.
+Засега, овие податоци се недостапни. Постојат и причини за тоа: Досега, тестовите вклучуваа само одреден процент на популација (пациенти со знаци и симптоми на акутна респираторна инфекција кои имаа потреба од клиничко лекување, медицински професионалци... ) Иако сега препораките за тестирање на КОВИД-19 се проширени и ги вклучуваат сите оние кои покажуваат знаци на болеста, многумина може да бидат носители, без или со благи симптоми.
+Поради овие причини, нашата статистика може да покрие само одреден дел од популацијата кај која јасно се гледаат знаци на инфекција. Така, младата популација и оние кои не се тестирани  се непропорционално претставени. Податоци за асимптоматски пациенти не се заведени никаде и не можат да бидат обезбедени.
+
 
 </details>
 
 <details>
-  <summary id=other-countries>Where can I find a comparison between North Macedonia and other countries?</summary>
+  <summary id=other-countries>Каде можам да најдам споредба меѓу Северна Македонија и други држави?</summary>
 
-You can find [a comparison graph](/mk/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between North Macedonia and different clusters of countries in relation to the *number of deaths* caused by COVID-19 *per million inhabitants*. 
-The clusters of countries that are compared to North Macedonia are as follows:
--   Neighboring region
--   Critical countries (EU)
--   Critical countries (global)
--   Nordic countries
--   ex-Yugoslavian countries
--   East Asian countries and Oceania
+Можете да го најдете [графиконот за споредба](/mk/stats#countries-chart) во долниот дел на контролната табла. Тој ја преставува споредбата помеѓу Северна Македонија и други држави, т.е *бројот на смртни случаи* како последица на КОВИД-19, *на милион жители*. Групите од држави кои се споредени со Северна Македонија се: 
+-   Критични земји (ЕУ)
+-   Критични земји на глобално ниво
+-   Државите од соседниот регион
+-   Нордиските држави
+-   Земјите од поранешна Југославија
+-   Источно – Азиските земји и Океанија
 
-The graph is arranged chronologically, from January 1, from the first death, and from the first death per million, respectively. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs.
+Графиконот е хронолошки подреден, од 1 Јануари, од првиот смртен случај и од бројот на смртни случаи на милион жители, редоследно. Можете да го смените начинот на хронолошко претставување на споредбите меѓу групи од различни држави, со кликање на соодветното јазиче. 
+
 
 </details>
 
