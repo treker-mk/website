@@ -21,10 +21,18 @@
           field="cases.confirmedToDate"
           series-type="state"
         />
+<!--  
         <Info-card
           :title="$t('infocard.recoveredToDate')"
           field="cases.recoveredToDate"
           good-trend="up"
+          series-type="state"
+        />
+-->
+        <Info-card
+          :title="$t('infocard.active')"
+          field="cases.active"
+          good-trend="down"
           series-type="state"
         />
         <Info-card
