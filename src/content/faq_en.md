@@ -42,11 +42,10 @@ Unfortunately, this data is unavailable for now. There are several reasons: Prev
 
 You can find [a comparison graph](/en/stats#countries-chart) at the very bottom of the dashboard. The graph displays a comparison between North Macedonia and different clusters of countries in relation to the *number of deaths* caused by COVID-19 *per million inhabitants*. 
 The clusters of countries that are compared to North Macedonia are as follows:
--   Neighboring region
 -   Critical countries (EU)
 -   Critical countries (global)
+-   Neighboring region
 -   Nordic countries
--   ex-Yugoslavian countries
 -   East Asian countries and Oceania
 
 The graph is arranged chronologically, from January 1, from the first death, and from the first death per million, respectively. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs.
