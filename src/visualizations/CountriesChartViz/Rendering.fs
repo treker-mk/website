@@ -25,9 +25,9 @@ let countriesDisplaySets = [|
     { Label = "groupNordic"
       CountriesCodes = [| "DNK"; "FIN"; "ISL"; "NOR"; "SWE" |]
     }
-    { Label = "groupExYu"
-      CountriesCodes = [| "BIH"; "HRV"; "SVN"; "MNE"; "RKS"; "SRB" |]
-    }
+    //{ Label = "groupExYu"
+    //  CountriesCodes = [| "BIH"; "HRV"; "SVN"; "MNE"; "RKS"; "SRB" |] // SLO-spec removed for mk for the time being
+    //}
     { Label = "groupEastAsiaOceania"
       CountriesCodes = [| "AUS"; "CHN"; "JPN"; "KOR"; "NZL"; "SGP"; "TWN" |]
     }
