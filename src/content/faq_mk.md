@@ -359,28 +359,30 @@ The increase in infected healthcare workers does not mean that they were discove
 </details>
 
 <details>
-  <summary id=age-groups-chart>TBD What does the “Age Groups” graph show?</summary>
+  <summary id=age-groups-chart>TBD Што прикажува графиконот ‘Возрасни групи’?</summary>
 
-The [graph](/mk/stats#age-groups-chart) shows the age structure of all confirmed coronavirus cases and deaths. The graph also displays demarcations by gender. The display shows absolute values and can be changed at the top right to the *Relative* display for a better insight into what the mortality rate from COVID-19 is relative to the general population throughout the epidemic period. In the Relative view, there are the options for different views below: by selecting *Proportion of confirmed cases*, the share of confirmed cases within a certain age group will be displayed. By selecting the *Death rate*, we will see the number of deaths per population size. By selecting *Deaths by no. of confirmed cases*, we can understand what the proportion of deaths in a particular age group was in relation to the number of confirmed cases.
+[Графиконот](/mk/stats#age-groups-chart) ја прикажана старосната структура на сите потврдени случаи со коронавирус и смртни случаи. Графиконот исто така прикажува поделба според пол. Приказот покажува апсолутни вредности и може да се смени во горниот десен агол на *Релативниот* приказ за подобар увид во тоа како е стапката на смртност од КOVID-19 релативна на општата популација во текот на целото времетраење на епидемијата. Кај Релативен приказ, подолу има опции за различни прикази: со избирање на *Сооднос на потврдени случаи*, ќе се прикаже уделот на потврдени случаи во одредена возрасна група. Со избирање на *Стапка на смртност*, ќе го видиме бројот на смртни случаи по големината на населението. Со избирање на *Смртни случаи* по бр. на потврдени случаи, можеме да разбереме каков бил соодносот на смртни случаи во одредена возрасна група во однос на бројот на потврдени случаи.
 
-Demographics can help us understand how the pandemic has spread and why it has disproportionately affected certain age groups. According to currently known data, COVID-19 is more dangerous to the elderly and those with comorbidities, and according to some data, men are more exposed. However, in order to understand all the factors, we would need to obtain more data: what the comorbidities were, the socio-economic situation of the patients, the geographical area, etc.   
-*Note: Unlike other data that is published regularly for different categories, official sources obtain demographic data with a time lapse (age, municipality ...), so these are usually known with a one-day delay. This is also the reason that in the By Age Groups display, there may be some deviations from data in other displays, such as lower values of the number of confirmed cases and deaths.*
+Демографијата може да ни помогне да разбереме како се ширела пандемијата и зошто непропорционално влијае на одредени возрасни групи. Според досега познати податоци, КОВИД-19 е поопасен за постарите лица и лица со коморбидитет, а според некои податоци машките се поизложени. Меѓутоа, за да ги разбереме сите фактори, треба да добиеме повеќе податоци: какви коморбидитети биле, социо-економската состојба на пациентите, географската област и сл. 
+
+*Забелешка: За разлика од другите податоци што се објавуваат редовно според различни категории, официјалните извори добиваат демографски податоци со задоцнување (возраст, општина...), така што овие обично се знаат со еднодневно одложување. Ова е исто така причина што на приказот според Возрасни групи може да има некои отстапувања од податоците на други прикази, како што се пониски вредности на бројот на потврдени случаи и смртни случаи.*
  
 </details>
 
 <details>
-  <summary id=countries-chart>What does the “Comparison by Country” graph show?</summary>
+  <summary id=countries-chart>Што прикажува графиконот ‘Споредба по држава’?</summary>
 
-The [chart](/mk/stats#countries-chart) shows a comparison between North Macedonia and different groups of countries in terms of the number of deaths due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
+[Графиконот](/mk/stats#countries-chart) прикажува споредба меѓу Северна Македонија и различни групи на земји во однос на бројот на починати како резултата на КОВИД-19 за милион жители. Графиконот е хронолошки уреден. Можете да го промените изгледот на различните хронолошки прикази на различните групи на земји со притискање на соодветните картички подолу. 
 
 </details>
 
 <details>
-  <summary id=chart-reality>Do your graphs represent the real picture?</summary>
+  <summary id=chart-reality>Дали вашите графикони ја прикажуваат реалната слика?</summary>
 
-Yes, as far as they can, given the limitations of the current displays and of the data itself: the graphs on this page only show what can be deduced from the information given. For example, the total number of tests represents the number of tests performed to date, but does not reflect the total number of people tested, as some people, such as healthcare professionals and people suspected of being infected, have been repeatedly tested.
+Да, колку што е тоа возможно, со оглед на ограничувањата на тековните прикази и на самите податоци: графиконите на оваа страница го прикажуваат само она што може да се заклучи од дадената информација. На пример, вкупниот број на тестови го претставува бројот на извршени тестирања до денес, но не го одразува вкупниот број тестирани лица, бидејќи некои лица, како што се здравствените работници и лица за кои постои сомневање дека се заразени, биле тестирани во повеќе наврати.
 
-However, the number of confirmed cases depends solely on testing. Since the majority of infected people, who have mild or no symptoms, have not been tested for COVID-19 at all, the number of confirmed cases is significantly lower than the actual number of infected people.
+Како и да е, бројот на потврдени случаи зависи исклучиво од тестирањето. Бидејќи поголемиот број од заразените лица, кои имаат лесни или немаат никакви симптоми, воопшто не биле тестирани за КОВИД-19, бројот на потврдени случаи е значително помал од вистинскиот број заразени лица.
+
 
 </details>
 
