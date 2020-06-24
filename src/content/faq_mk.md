@@ -324,25 +324,25 @@ The increase in infected healthcare workers does not mean that they were discove
 </details>
 
 <details>
-  <summary id=spread-chart>What does the “Growth of Confirmed Cases” graph mean?</summary>
+  <summary id=spread-chart>Што значи графиконот „Пораст на потврдени случаи“?</summary>
 
-The [graph](/mk/stats#spread-chart) tells us how many new confirmed cases of infections there were on a given day, where the WHO and the [ECDC definition](https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov) that confirmed cases are “persons with a lab confirmation of infection with COVID19” is followed. As the number of confirmed cases still depends on testing, the data in confirmed cases is estimated to be much smaller that the actual number of infected people.
+[Графиконот](/mk/stats#spread-chart) ни прикажува колку нови потврдени случаи на заразени лица има во одреден ден, каде следи дефиницијата на СЗО и [ECDC](https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov) според која потврдени случаи се „лица со лабораториска потврда за зараза со КОВИД-19“. Поради тоа што бројот на потврдени случаи сè уште зависи од тестирањето, податоците на потврдени случаи се проценува дека се многу помали од реалниот број на заразени лица.
   
 </details>
 
 <details>
-  <summary id=regions-chart>What does the “Confirmed Cases by Region” tell us?</summary>
+  <summary id=regions-chart>Што ни кажува „Потврдени случаи по региони“?</summary>
 
-The [graph](/mk/stats#regions-chart) shows the dynamics of growth of confirmed cases by selected regions. Individual regions can be easily compared by selecting the ones you want shown on the graph by clicking on specific regions below the graph. From the curve, we can quickly see which regions have the most and which the least confirmed cases and how this number has changed over time.
+[Графиконот ](/mk/stats#regions-chart) ни ја прикажува динамиката на раст на потврдени случаи по избраните региони. Поединечните региони можат лесно да се споредат со избирање на оние што сакате да бидат прикажани на графиконот со притискање на одредени региони под графиконот. Од кривата, можеме брзо да видиме кои региони имаат најмногу и кои најмалку потврдени случаи и како овој број се менувал со тек на време.
 
 </details>
 
 <details>
-  <summary id=map-chart>TBD What does the “Municipality Map” tell us?</summary>
+  <summary id=map-chart>TBD Што ни покажува ‘Карта на општини’?</summary>
 
-The [map](/mk/stats#map-chart) shows us the epidemiological picture of individual municipalities, as it allows the display of *Confirmed Cases* (red shades) or the *Dead* (gray shades). When showing confirmed cases, we can see which municipalities are the most "healthy" (white) and which are currently the more "infected" (red shades) – if new cases are still appearing or not - and relative to the share of the population (Proportion of population is the default display). On the left, we can use the filter (7, 14 or 21 days) to determine for what period of time we view data on new confirmed cases or deaths. For those municipalities where new cases are still being confirmed, we can conclude that the epidemic is still active. (Of course, this does not necessarily mean that the virus is not present in municipalities without new confirmed cases, but it is an indicator of the "health" of a certain area.) More details are available in the Medium article [Kje so “zdrave” občine? (Where Are the ‘Healthy’ Municipalities?)](https://medium.com/sledilnik/kje-so-zdrave-ob%C4%8Dine-613afc42b023) 
+[Картата](/mk/stats#map-chart) ни ја покажува епидемиолошката слика на одделни општини, бидејќи овозможува прикажување на *Потврдени случаи* (црвени нијанси) или *Смртни случаи* (сиви нијанси). При покажуваме на потврдени случаи, можеме да видиме кои општини се „најздрави“ (бели) и кои во моментот се „најзаразени“ (црвени нијанси) - дали уште се појавуваат нови случаи или не - и во однос на учеството на населението (Пропорцијата/уделот на населението е стандарден приказ). На левата страна, можеме да го користиме филтерот (7, 14 или 21 денови) за да одредиме во кој временски период гледаме податоци за нови потврдени случаи или смртни случаи. За оние општини каде сè уште се потврдуваат нови случаи, можеме да заклучиме дека епидемијата е сè уште активна. (Се разбира, тоа не мора да значи дека вирусот не е присутен во општините без нови потврдени случаи, но тој е индикатор за „здравјето“ во одредена област.) Повеќе детали се достапни во статијата [Kje so “zdrave” občine? (Where Are the ‘Healthy’ Municipalities?)](https://medium.com/sledilnik/kje-so-zdrave-ob%C4%8Dine-613afc42b023) 
 
-By clicking on *Absolute* in the upper right corner, we can change the display and see the total number of newly confirmed cases or deaths in a selected time frame (7, 14 or 21 days) in municipalities according to how they are painted.
+Со притискање на *Апсолутно* во горниот десен агол, можеме да го промениме приказот и да го видиме вкупниот број на новопотврдени случаи или смртни случаи во избрана временска рамка (7, 14 или 21 денови) во општините според тоа како се обоени.
 
 </details>
 
@@ -383,27 +383,27 @@ However, the number of confirmed cases depends solely on testing. Since the majo
 
 </details>
 
-## About the project
+## За проектот
 
 <details>
-  <summary id=what-is-sledilnik>What is Treker?</summary>
+  <summary id=what-is-sledilnik>Што е Трекер?</summary>
 
-[Treker](/mk/about) is an open-data and open-sourced project that collects, analyzes and displays some of the most useful data to better understand the spread of the coronavirus pandemic and COVID-19 disease, along with its dynamics and scope. We want to make clear graphical and statistical visualizations of what current data and reviews tell us about the spread of the virus in North Macedonia, and ensure that information on the magnitude and severity of the COVID-19 problem in North Macedonia becomes accessible and comprehensible to all.
+[Трекер](/mk/about) е проект со отворени податоци и извори кој собира, анализира и прикажува некои од најкорисните податоци, за да полесно се разбере ширењето на пандемијата на коронавирусот и болеста КОВИД-19, заедно со нејзината динамика и обем. Целта ни е да направиме јасни графички и статистички визуелизации/прикази во врска со тоа што ни го кажуваат тековните податоци и анализи за ширењето на вирусот во Северна Македонија и да се осигуриме дека информациите за големината и сериозноста на проблемот КОВИД-19 во Северна Македонија бидат достапни и разбирливи за сите.
 
 </details>
 
 <details>
-  <summary id=add-link>I would like to recommend a valuable source, which is not yet among your ‘Recommended Links’, but should be. Will you add it?</summary>
+  <summary id=add-link>Би сакал/а да препорачам корисен линк, кој не е сеуште меѓу вашите ‘Препорачани линкови’, но би требало да биде. Дали ќе го додадете?</summary>
 
-Contact us at info@treker.mk – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/mk/links).
+Контактирајте не на info@treker.mk – ние ќе го разгледаме предложениот линк и ако е веродостоен и корисен, ќе ни биде драго да го вклучиме во нашите препорачани  [линкови](/mk/links).
 
-If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/sledilnik/website/blob/master/src/content/links.md).
+IАко би сакале да одите чекор напред и да придонесете кон нашата заедничка цел, поднесете Pull-Request (PR) на [GitHub](https://github.com/treker-mk/website/blob/master/src/content/links_mk.md).
 
 </details>
 
 <details>
-  <summary id=how-to-help>I would like to help, where can I begin?</summary>
+  <summary id=how-to-help>Би сакал/а да помогнам, каде може да започнам?</summary>
 
-Contact us at info@treker.mk and briefly describe who you are and how you can contribute to the project. Warmly welcome to help.
+Контактирајте не на info@treker.mk и објаснете накратко кои сте и како може да придонесете кон проектот. Помошта е добредојдена.
 
 </details>
