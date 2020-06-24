@@ -347,13 +347,14 @@ The increase in infected healthcare workers does not mean that they were discove
 </details>
 
 <details>
-  <summary id=municipalities-chart>TBD What does the chart “Cases by Municipalities” show us?</summary>
+  <summary id=municipalities-chart>TBD Што ни покажува графиконот ‘Случаи по општини’?</summary>
 
-The [chart](/mk/stats#municipalities-chart) shows individual municipalities in columns in more detail with the number of confirmed cases by days, with active cases, recoveries (assessment) and deaths in each municipality. Below the municipality you can find the information about the time since the last confirmed case. Municipalities are classified according to when the last confirmed case was recorded there, from which we can conclude which municipalities are currently more “infected” and which are “healthier” than others.
+[Графиконот](/mk/stats#municipalities-chart) прикажува во повеќе детали поединечни општини во колони со број на потврдени случаи по денови, со активни случаи, оздравувања (проценка) и смртни случаи во секоја општина. Под општината можете да ги најдете информациите за времето од последниот потврден случај. Општините се класифицираат според тоа кога е регистриран последниот потврден случај, од каде можеме да заклучиме кои општини во моментот се ‘позаразени’ и кои се „поздрави“ од другите.
 
-The display can be changed by selecting different views above the graph: if you select the *Active* display, the municipalities will be sorted according to the current assessment of active cases; or if you select *All*, then the municipalities will be arranged by the largest total number of confirmed cases. If you choose *All Regions* from the dropdown menu, then confirmed cases will be shown in the municipalities belonging to that region. You can also easily search for a municipality by entering its name in the *Find Municipality* browser.
+Приказот може да се смени со избирање на различни прикази над графиконот: ако изберете *Активен* приказ, општините ќе бидат подредени според тековната проценка на активните случаи; или ако изберете *Сите*, тогаш општините ќе бидат уредени според најголемиот вкупен број на потврдени случаи. Ако ги изберете *Сите региони* од паѓачкото мени, тогаш потврдените случаи ќе бидат прикажани во општините кои припаѓаат на тој регион. Можете исто така лесно да пребарувате општина со внесување на името во прелистувачот *Пронајди општина*.
 
-*Note: the assessment of recoveries and active cases is done 14 days after the infection was confirmed, if and when the disease is in its mild form. However, if an individual is hospitalized, this recovery will last longer, but in this case the individual is not dangerous to the environment because he is in hospital. Since we do not take into account the hospitalized in the municipality presentation, it is possible that the sum of active cases by municipality does not match the estimate of the active cases for the whole country. See also [Do you keep an Active Case counter and do you know how many people are currently infected?](#data-active-cases)*
+*Забелешка: проценката на оздравените лица и активните случаи се врши 14 дена по потврдување на заразувањето, доколку и кога болеста има лесна форма. Меѓутоа, ако некое лице е хоспитализирано, ова оздравување ќе трае подолго, но во овој случај лицето не е опасно за околината затоа што е во болница. Поради фактот дека во општинската презентација не ги земаме предвид хоспитализираните, можно е збирот на активни случаи по општина да не одговара на проценката на активните случаи за целата држава. Погледнете исто така, [Дали имате бројач на активни случаи и дали знаете колку луѓе се заразени во моментот?](#data-active-cases)*
+
 
 </details>
 
