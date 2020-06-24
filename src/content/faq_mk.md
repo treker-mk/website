@@ -383,27 +383,27 @@ However, the number of confirmed cases depends solely on testing. Since the majo
 
 </details>
 
-## About the project
+## За проектот
 
 <details>
-  <summary id=what-is-sledilnik>What is Treker?</summary>
+  <summary id=what-is-sledilnik>Што е Трекер?</summary>
 
-[Treker](/mk/about) is an open-data and open-sourced project that collects, analyzes and displays some of the most useful data to better understand the spread of the coronavirus pandemic and COVID-19 disease, along with its dynamics and scope. We want to make clear graphical and statistical visualizations of what current data and reviews tell us about the spread of the virus in North Macedonia, and ensure that information on the magnitude and severity of the COVID-19 problem in North Macedonia becomes accessible and comprehensible to all.
+[Трекер](/mk/about) е проект со отворени податоци и извори кој собира, анализира и прикажува некои од најкорисните податоци, за да полесно се разбере ширењето на пандемијата на коронавирусот и болеста КОВИД-19, заедно со нејзината динамика и обем. Целта ни е да направиме јасни графички и статистички визуелизации/прикази во врска со тоа што ни го кажуваат тековните податоци и анализи за ширењето на вирусот во Северна Македонија и да се осигуриме дека информациите за големината и сериозноста на проблемот КОВИД-19 во Северна Македонија бидат достапни и разбирливи за сите.
 
 </details>
 
 <details>
-  <summary id=add-link>I would like to recommend a valuable source, which is not yet among your ‘Recommended Links’, but should be. Will you add it?</summary>
+  <summary id=add-link>Би сакал/а да препорачам корисен линк, кој не е сеуште меѓу вашите ‘Препорачани линкови’, но би требало да биде. Дали ќе го додадете?</summary>
 
-Contact us at info@treker.mk – we will review the suggested link and, if the site is credible and useful, will be happy to include it among our recommended [Links](/mk/links).
+Контактирајте не на info@treker.mk – ние ќе го разгледаме предложениот линк и ако е веродостоен и корисен, ќе ни биде драго да го вклучиме во нашите препорачани  [линкови](/mk/links).
 
-If you would like to go a step further and contribute to our common goal, submit a Pull-Request (PR) on [GitHub](https://github.com/sledilnik/website/blob/master/src/content/links.md).
+IАко би сакале да одите чекор напред и да придонесете кон нашата заедничка цел, поднесете Pull-Request (PR) на [GitHub](https://github.com/treker-mk/website/blob/master/src/content/links_mk.md).
 
 </details>
 
 <details>
-  <summary id=how-to-help>I would like to help, where can I begin?</summary>
+  <summary id=how-to-help>Би сакал/а да помогнам, каде може да започнам?</summary>
 
-Contact us at info@treker.mk and briefly describe who you are and how you can contribute to the project. Warmly welcome to help.
+Контактирајте не на info@treker.mk и објаснете накратко кои сте и како може да придонесете кон проектот. Помошта е добредојдена.
 
 </details>
