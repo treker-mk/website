@@ -60,53 +60,52 @@ Currently, only the [About part](/mk/about) and these FAQ are available, while t
 </details>
 
 <details>
-  <summary id=are-you-paid>Are you paid for creating the dashboard (charts, tables, models)?</summary>
+  <summary id=are-you-paid>Дали сте платени за креирање на овие графикони, табели, мапи?</summary>
 
-Not at all. Treker is a non-profit initiative created to support the ongoing compiling and editing of key data on the spread of the coronavirus in North Macedonia. Our database is public and freely available, free of charge, and non-commercial, and will remain so. Please check [How can I obtain and use your database?](#data-usage)
-
-</details>
-
-<details>
-  <summary id=tech-used>Which tools did you use to build the website/web app?</summary>
-
-The site is in JavaScript using Vue.js, the visualizations and graphs are made in F# using Highcharts libraries, and the project is open and available on [GitHub – Treker](https://github.com/treker-mk).
-
-</details>
-
-## Data
-
-<details>
-  <summary id=data-reliability>Are your data and visualizations reliable?</summary>
-
-Data is collected from verified public sources, which are listed in the [Resources tab](/mk/sources). 
-
-Treker receives official data on COVID-19 directly from the Ministry of Health, the IJZ (Institute for Public Health), and other national health institutions. The Treker team does not guarantee the accuracy of the original data and publishes solely data obtained from official sources or the media, but we do cross-check if all data is correct and consistent with the given source.
+Не. Treker претставува непрофитна иницијатива, создадена да ги поддржи тековните случувања и клучните податоци за ширењето на коронавирусот во Северна Македонија. Нашата база на податоци е јавна и достапна, бесплатна и некомерцијална, и како таква ќе остане. проверете [Како можам да пристапам и да ја користам вашата база на податоци?](#data-usage)
 
 </details>
 
 <details>
-  <summary id=data-collection>TBD How do you collect and edit the data?</summary>
+  <summary id=tech-used>Кои алатки се користени за изработка на веб страницата/ веб апликацијата?</summary>
 
-[The database](https://docs.google.com/spreadsheets/d/ TBD) is built from the IJZ source data (by category). Data by region and age is processed with delay and is finally updated once the ongoing epidemiological demographic research results are known. The municipalities are tracked in the [TBD Kraji (Municipalities) table](https://docs.google.com/spreadsheets/d/ TBD).
+Веб странаta е изработена во JavaScrıpt со користење на Vue.js, визуелизацијата и графиконите се создадени во F# со користење на Highcharts libraries, a проектот е отворен и достапен на  [GitHub – Treker](https://github.com/treker-mk).
 
-Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.google.com/spreadsheets/d/):
+</details>
 
-- We receive daily reports and monitor the announcements of all COVID-19 hospitals  (TBD) – at around TBD o'clock.
+## Податоци
 
-- We monitor the number of hospitalizations: all wards, in ICUs, and on ventilators.
+<details>
+  <summary id=data-reliability>TBD Дали вашите податоци и визуелизација се веродостојни?</summary>
 
-- We also record transitions (acceptance/dismissal) between individual stages of the disease (when detectable) from the obtained data.
+TBD Data is collected from verified public sources, which are listed in the [Resources tab](/mk/sources). 
 
-- Where the transition (admission/dismissal) information is incomplete, the values are determined by inference (using a formula).
+Трекер моментално собира официјални податоци за КОВИД-19 директно од Министерството за Здравство, Институтот за Јавно Здравје и останатите државни здравствени институции. Тимот на Treker не ја гарантира веродостојноста на оригиналните податоци и ги објавува само оние податоци добиени од официјални извори или медиуми, но секако дека правиме повторна проверка доколку податокот е точен и се усогласува со дадениот извор. 
+</details>
 
-- All sources and conclusions are recorded as a commentary in individual cells (checkable).
+<details>
+  <summary id=data-collection>TBD На кој начин ги добивате и обработувате податоците?</summary>
 
-- The data is compared with the summary data on hospitalized patients in ICU published by the institutions of the Government of the Republic of North Macedonia.
+[Базата на податоци](https://docs.google.com/spreadsheets/d/) TBD iе изградена врз основа на податоците од Институтот за Јавно Здравје (по категории). Податоците по региони и возраст се обработувааат со одложување и се поставуваат на страната само кога резултатите од тековните епидемиолошки истражувања се веќе ажурирани. Застапеноста по општини може да се следи на [TBD Kraji (места) табелата](https://docs.google.com/spreadsheets/d/)TBD.
+
+Обработка на податоците добиени од болниците – [TBD Табела Pacienti (Patients)](https://docs.google.com/spreadsheets/d/):
+
+- Би сакале да добиваме дневни извештаи, а ги следиме објавите на сите КОВИД-19 центри.
+
+- Го следиме бројот на хоспитализации: сите хоспитализирани, бројот на тие кои се на интензивна нега и бројот на пациенти кои се на респиратори. 
+
+- Ги документираме индивидуалните промени во фазите на болеста (тогаш кога е можно да се детектираат)
+
+- Кога информацијата за промената е некомплетна, вредностите се одредуваат со формула.
+
+- Се трудиме сите извори и заклучоци да се документирани и да може да се проверат.  
+
+- Податоците се споредени со оние податоци кои се добиени од пациентите  хоспитализирани на Интензивна нега и се објавени од страна на институциите на Владата на Република Северна Македонија. 
   
   </details>
 
 <details>
-  <summary id=data-publish-time>When do you publish the data? Why are the dates on the visualizations different?
+  <summary id=data-publish-time>TBD When do you publish the data? Why are the dates on the visualizations different?
 </summary>
 
 Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by 9 am every day for all hospitals. **Our data is usually updated between 10.00 and 12.00.**
