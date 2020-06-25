@@ -333,7 +333,7 @@ The increase in infected healthcare workers does not mean that they were discove
 [Графиконот](/mk/stats#spread-chart) ни прикажува колку нови потврдени случаи на заразени лица има во одреден ден, каде следи дефиницијата на СЗО и [ECDC](https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov) според која потврдени случаи се „лица со лабораториска потврда за зараза со КОВИД-19“. Поради тоа што бројот на потврдени случаи сè уште зависи од тестирањето, податоците на потврдени случаи се проценува дека се многу помали од реалниот број на заразени лица.
   
 </details>
-
+<!--COMMENTING SOME FAQ FOR THE FIRST VERSION
 <details>
   <summary id=regions-chart>Што ни кажува „Потврдени случаи по региони“?</summary>
 
@@ -349,6 +349,7 @@ The increase in infected healthcare workers does not mean that they were discove
 Со притискање на *Апсолутно* во горниот десен агол, можеме да го промениме приказот и да го видиме вкупниот број на новопотврдени случаи или смртни случаи во избрана временска рамка (7, 14 или 21 денови) во општините според тоа како се обоени.
 
 </details>
+-------END OF COMMENTS-->
 
 <details>
   <summary id=municipalities-chart>TBD Што ни покажува графиконот ‘Случаи по општини’?</summary>
