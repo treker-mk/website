@@ -105,27 +105,27 @@ TBD Data is collected from verified public sources, which are listed in the [Res
   </details>
 
 <details>
-  <summary id=data-publish-time>TBD When do you publish the data? Why are the dates on the visualizations different?
+  <summary id=data-publish-time>TBD Кога ги објавувате податоците? Зошто датумите на визуелизациите се различни?
 </summary>
 
-Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by 9 am every day for all hospitals. **Our data is usually updated between 10.00 and 12.00.**
-When we publish updated daily data, it is available on all our distribution channels (CSV, REST, website), and we also report it on social networks ([Facebook](https://www.facebook.com/Covid19TrekerMK) and [Twitter](https://twitter.com/Covid19TrekerMK)).
+Повеќето податоци добиени претходниот ден ги обработуваме до 23ч. и 59мин. (тестови, потврдени случаи...). **Нашите податоци најчесто се ажурираат помеѓу ХХХч и ХХХч**
+WКога ги објавуваме дневните податоци, тие се достапни на нашите канали за дистрибуција (CSV, REST, веб страниците), а исто така известуваме и на социјалните мрежи ([Facebook](https://www.facebook.com/Covid19TrekerMK) и [Twitter](https://twitter.com/Covid19TrekerMK)).
 
 </details>
 
 <details>
-  <summary id=data-differences>Several portals display numbers of infected people that are different from yours. Why?</summary>
+  <summary id=data-differences>Други портали објавуваат број на заразени, различен од вашиот. Зошто е тоа така??</summary>
 
-Treker uses only validated and official data reported daily by the nstitute of Public Health (IJZ) and all hospitals in North Macedonia treating COVID-19. Our data thus comes directly from verified sources, and we have also cross-compared information from the very beginning (TBD date). Differences usually occur because different media and portals obtain the data at different times of the day or use dubious methodology. See also [Are your data and visualizations reliable?](#data-reliability) 
+Treker објавува само потврдени и официјални податоци од Институтот за Јавно Здравје и сите КОВИД-19 центри ширум Северна Македонија. На тој начин нашите податоци доаѓаат од сигурни извори, а располагаме и со проверени податоци од самиот почеток на епидемијата. Разликите најчесто се појавуаат затоа што различни портали објавуваат податоци во различен период од денот или користат поинаква методологија. Погледни  [Дали вашите податоци и мапи се веродостојни? ](#data-reliability) 
 
 </details>
 
 <!--COMENT TEMPORARRTILY
 
 <details>
-  <summary id=data-hospital-in> TBD How do you obtain data on hospital admissions?</summary>
+  <summary id=data-hospital-in> TBD 6.	Како добивате податоци за хоспитализација на пациентите (болни од КОВИД-19)?</summary>
 
-Hospitals do not always report individual admissions or discharges from which we can obtain accurate data. The number of admissions is usually calculated from data on the currently hospitalized and from the difference compared to the previous day, to which we add the number of discharged and dead on a given day. We keep records of admissions and discharges in intensive care units and for connection and disconnection to/from ventilators in a similar way.
+Болниците не секогаш известуваат за точниот број на прием и отпуст за да можеме да добиеме прецизни податоци. Бројот на новохоспитализирани вообичаено се пресметува од бројот на веќе хоспитализираните и од разликата споредена со претходниот ден, на која и го додаваме бројот на отпуштени и бројот на починати од дадениот ден. Ажурираме податоци за прием и отпуст на пациенти на интензивна нега и за приклучување и исклучување на/од механичка  вентилација, кои се пресметуваат на сличен начин.
 
 </details>
 
@@ -137,9 +137,9 @@ The information on the discharged from hospitals is calculated from data daily o
 </details>
 
 <details>
-  <summary id=data-recovered>Why did you replace the number of *cured* with the number of *recovered* patients?</summary>
+  <summary id=data-recovered>Зошто бројот на *излечени* се заменува со број на *оздравени*?</summary>
 
-Treker used to rely on official sources (Institutions of the Government of the Republic of North Macedonia, media) for the number of cured people. North Macedonia is one of the rare countries worldwide that tests also mild cases, after 14 days from the first positive tests and treat them in same manner like discharged patients from hospitals. 
+Во врска со бројот на излечени, податоците кои беа презентирани на Treker се засновуваа само на официјални извори (Владини институции на Република Македонија, медиуми). Република Северна Македонија е една од ретките земји во светски рамки каде се тестираат и пациентите со благо изразени симптоми, 14 дена по првиот позитивен тест и се третирани исто како отпуштените пациенти.  
 
 
 </details>
