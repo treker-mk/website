@@ -255,7 +255,7 @@ Të gjithë rastet e konfirmuar tregohen në [grafikun e rasteve të konfirmuara
 **Rastet aktive** janë infeksione të konfirmuara të virusit që ende nuk janë shëruar (akoma janë të infektuar me virusin). 
 </details>
 
-
+<!--COMMENTING SOME FAQ FOR THE FIRST VERSION
 <details>
   <summary id=chart-phases>TBD Çfarë domethënie kanë fazat e ndryshme (fazat 1-N) në grafik?</summary>
 
@@ -288,7 +288,7 @@ Kur raportoni numrin e testeve të kryera, regjistrohen të gjitha testet (përf
 
 </details>
 
-
+END OF COMMENTS-->
 <details>
   <summary id=tests-chart>TBD Çfarë na tregon grafiku “Testim”?</summary>
 
