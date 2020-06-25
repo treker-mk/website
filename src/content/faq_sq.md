@@ -76,7 +76,7 @@ Faqja është në JavaScript duke përdorur Vue.js, vizualizimet dhe grafikët b
 ## Të dhënat
 
 <details>
-  <summary id=data-reliability>A janë të besueshme të dhënat dhe vizualizimet tuaja?</summary>
+  <summary id=data-reliability>TBD A janë të besueshme të dhënat dhe vizualizimet tuaja?</summary>
 
 Të dhënat grumbullohen nga burime publike të verifikuara, të cilat janë shënuar në skedën  [Burimet](/sq/sources). 
 
@@ -85,7 +85,7 @@ Treker merr të dhëna zyrtare për KOVID-19 drejtëpërdrejtë nga Ministria e 
 </details>
 
 <details>
-  <summary id=data-collection>Si i grumbulloni dhe redaktoni të dhënat?</summary>
+  <summary id=data-collection>TBD Si i grumbulloni dhe redaktoni të dhënat?</summary>
 
 [Baza e të dhënave TBD](https://docs.google.com/spreadsheets/) është ndërtuar nga të dhënat e burimit IJZ (sipas kategorisë). Të dhënat sipas rajonit dhe moshës përpunohen me vonesë dhe më në fund përditësohen pasi të njihen rezultatet e hulumtimit demografik në vazhdim. Komunat gjurmohen në tabelën [TBD (Komunat).](https://docs.google.com/spreadsheets/).
 
