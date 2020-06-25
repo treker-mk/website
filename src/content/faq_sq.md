@@ -311,7 +311,7 @@ Rritja e numrit të punonjësve të kujdesit shëndetësor të infektuar nuk do 
 [Grafiku](/sq/stats#spread-chart) na tregon se sa raste të reja të konfirmuara të infeksioneve ka pasur në një ditë të caktuar, ku OBSH dhe [ECDC përkufizuan](https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov) se raste të konfirmuara janë "persona me konfirmim laboratorik të infeksionit me KOVID 19". Meqenëse numri i rasteve të konfirmuara varet nga testimi, të dhënat për raste të konfirmuara vlerësohet të jenë shumë më të vogla se numri aktual i personave të infektuar.
   
 </details>
-
+<!--COMMENTING SOME FAQ FOR THE FIRST VERSION
 <details>
   <summary id=regions-chart>TBD Çfarë na tregon grafiku “Rastet e konfirmuara sipas rajonit”?</summary>
 
@@ -325,7 +325,7 @@ TBD [Harta](/sq/stats#map-chart) na tregon pasqyrën epidemiologjike të komunav
 
 Duke klikuar në  *Absolute* në këndin e sipërm të djathtë, ne mund të ndryshojmë ekranin dhe të shohim numrin e përgjithshëm të rasteve ose vdekjeve të konfirmuara rishtazi në një kornizë kohore të zgjedhur (7, 14 ose 21 ditë) në komuna sipas mënyrës se si ato janë pikturuar.
 </details>
-
+END OF COMMENTS-->
 <details>
   <summary id=municipalities-chart>TBD Çfarë na tregon grafiku "Rastet sipas komunave"?</summary>
 
