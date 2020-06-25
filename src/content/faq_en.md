@@ -121,6 +121,8 @@ Treker uses only validated and official data reported daily by the nstitute of P
 
 </details>
 
+<!--COMENT TEMPORARRTILY
+
 <details>
   <summary id=data-hospital-in> TBD How do you obtain data on hospital admissions?</summary>
 
@@ -167,6 +169,7 @@ You can voluntarily help by collecting and verifying data from the media (as wel
 
 Treker does not collect users’ personal information nor information that individuals would like to share about their condition or hospital status.
 
+------------ END COMMENT-->
 
 </details>
 
