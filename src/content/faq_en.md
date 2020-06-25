@@ -333,7 +333,7 @@ The increase in infected healthcare workers does not mean that they were discove
 The [graph](/en/stats#spread-chart) tells us how many new confirmed cases of infections there were on a given day, where the WHO and the [ECDC definition](https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov) that confirmed cases are “persons with a lab confirmation of infection with COVID19” is followed. As the number of confirmed cases still depends on testing, the data in confirmed cases is estimated to be much smaller that the actual number of infected people.
   
 </details>
-
+<!--COMMENTING SOME FAQ FOR THE FIRST VERSION
 <details>
   <summary id=regions-chart>What does the “Confirmed Cases by Region” tell us?</summary>
 
@@ -349,7 +349,7 @@ The [map](/en/stats#map-chart) shows us the epidemiological picture of individua
 By clicking on *Absolute* in the upper right corner, we can change the display and see the total number of newly confirmed cases or deaths in a selected time frame (7, 14 or 21 days) in municipalities according to how they are painted.
 
 </details>
-
+END OF COMMENTS-->
 <details>
   <summary id=municipalities-chart>TBD What does the chart “Cases by Municipalities” show us?</summary>
 
