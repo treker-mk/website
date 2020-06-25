@@ -360,7 +360,7 @@ The display can be changed by selecting different views above the graph: if you 
 *Note: the assessment of recoveries and active cases is done 14 days after the infection was confirmed, if and when the disease is in its mild form. However, if an individual is hospitalized, this recovery will last longer, but in this case the individual is not dangerous to the environment because he is in hospital. Since we do not take into account the hospitalized in the municipality presentation, it is possible that the sum of active cases by municipality does not match the estimate of the active cases for the whole country. See also [Do you keep an Active Case counter and do you know how many people are currently infected?](#data-active-cases)*
 
 </details>
-
+<!--COMMENTINT OUT
 <details>
   <summary id=age-groups-chart>TBD What does the “Age Groups” graph show?</summary>
 
@@ -377,7 +377,7 @@ Demographics can help us understand how the pandemic has spread and why it has d
 The [chart](/en/stats#countries-chart) shows a comparison between North Macedonia and different groups of countries in terms of the number of deaths due to COVID-19 per million inhabitants. The graph is arranged chronologically. You can change the view of different chronological displays of comparisons of different clusters of countries by clicking on the appropriate tabs below.   
 
 </details>
-
+----------------- END OF COMMENT-->
 <details>
   <summary id=chart-reality>Do your graphs represent the real picture?</summary>
 
