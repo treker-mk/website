@@ -273,7 +273,7 @@ All confirmed cases are shown in the [Confirmed Cases graph](/en/stats#cases-cha
 
 </details>
 
-
+<!--COMMENTING SOME FAQ FOR THE FIRST VERSION
 <details>
   <summary id=chart-phases>What do the different phases (phases 1-N) in the graph mean?</summary>
 
@@ -309,6 +309,7 @@ When reporting the number of tests performed, all tests (including repeated test
 
 </details>
 
+END OF COMMENTS-->
 
 <details>
   <summary id=tests-chart>What does the “Testing” graph tell us?</summary>
