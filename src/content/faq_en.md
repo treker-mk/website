@@ -106,7 +106,7 @@ Editing Hospital Care Data – [TBD Table Pacienti (Patients)](https://docs.goog
   </details>
 
 <details>
-  <summary id=data-publish-time>When do you publish the data? Why are the dates on the visualizations different?
+  <summary id=data-publish-time>TBD When do you publish the data? Why are the dates on the visualizations different?
 </summary>
 
 Most data for the previous day is collected at 11:59 pm (tests, confirmed cases ...), and hospitalization data is mostly obtained by 9 am every day for all hospitals. **Our data is usually updated between 10.00 and 12.00.**
