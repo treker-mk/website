@@ -121,6 +121,8 @@ Treker përdor vetëm të dhëna të vlefshme dhe zyrtare të raportuara çdo di
 
 </details>
 
+<!--COMENT TEMPORARRTILY
+
 <details>
   <summary id=data-hospital-in>TBD Si i merrni të dhënat për pranimet në spital?</summary>
 
@@ -151,6 +153,8 @@ Treker nuk mbledh informacione personale të përdoruesve dhe as informacion që
 
 </details>
 
+------------ END COMMENT-->
+
 <details>
   <summary id=data-usage>Si mund ta marr dhe ta përdor bazën e të dhënave tuaj?</summary>
 
@@ -169,6 +173,7 @@ Meqenëse të gjitha të dhënat në bazën e të dhënave tashmë janë shënua
 Sigurisht! Ju mund të inkuadroni çdo grafik ose shpallje në faqen tuaj - duke përmendur burimin, natyrisht [Klikoni këtu](/sq/embed) dhe zgjidhni grafikun që dëshironi të inkuadroni nga lista. Ju lutemi na tregoni për përdorimin tuaj  (info@treker.mk) dhe ne do të jemi të lumtur të shtojmë faqen tuaj në koleksionin tonë të [linqeve të rekomanduara](/sq/links). 
 
 </details>
+
 
 <details>
   <summary id=chart-infocard-percent>Çfarë do të thotë përqindja në infokartat në krye të faqes së internetit?</summary>
