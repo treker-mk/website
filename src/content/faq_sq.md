@@ -336,6 +336,8 @@ Ekrani mund të ndryshohet duke zgjedhur pamje të ndryshme mbi grafik: nëse zg
 
 </details>
 
+<!--COMMENTINT OUT
+
 <details>
   <summary id=age-groups-chart>TBD Çfarë na tregon grafiku “Grupmoshat”?</summary>
 
@@ -353,7 +355,7 @@ Demografia mund të na ndihmojë të kuptojmë se si është përhapur pandemia 
 [Grafiku](/sq/stats#countries-chart) tregon një krahasim midis Maqedonisë së Veriut dhe grupeve të ndryshme të vendeve për sa i përket numrit të vdekjeve për shkak të KOVID-19 në një milion banorë. Grafiku është rregulluar në mënyrë kronologjike. Ju mund të ndryshoni pamjen e shfaqjeve të ndryshme kronologjike të krahasimeve të grupimeve të ndryshme të vendeve duke klikuar në skedat e duhura më poshtë.  
 
 </details>
-
+----------------- END OF COMMENT-->
 <details>
   <summary id=chart-reality>A paraqesin grafikët tuaj pasqyren e vërtetë?</summary>
 
