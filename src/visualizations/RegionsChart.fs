@@ -123,7 +123,7 @@ let renderChartOptions (state : State) dispatch =
             {|
                 visible = metric.Visible
                 color = metric.Color
-                name = I18N.tt "region" metric.Key
+                name = I18N.tt "mk.region" metric.Key // SLO-spec
                 data = state.Data |> Seq.map renderPoint |> Array.ofSeq
             |}
             |> pojo
@@ -172,7 +172,7 @@ let renderMetricSelector (metric : Metric) dispatch =
         prop.onClick (fun _ -> ToggleRegionVisible metric.Key |> dispatch)
         prop.className [ true, "btn  btn-sm metric-selector"; metric.Visible, "metric-selector--selected" ]
         prop.style style
-        prop.text (I18N.tt "region" metric.Key) ]
+        prop.text (I18N.tt "mk.region" metric.Key) ] // SLO-spec
 
 let renderMetricsSelectors metrics dispatch =
     Html.div [

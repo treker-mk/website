@@ -91,7 +91,7 @@ let init (queryObj : obj) (data : RegionsData) : State * Cmd<Msg> =
     let regions =
         lastDataPoint.Regions
         |> List.filter (fun region -> Set.contains region.Name Utils.Dictionaries.excludedRegions |> not)
-        |> List.map (fun reg -> { Key = reg.Name ; Name = I18N.tt "region" reg.Name })
+        |> List.map (fun reg -> { Key = reg.Name ; Name = I18N.tt "mk.region" reg.Name }) // SLO-spec
         |> List.sortBy (fun region -> region.Name)
 
     let query = Query(queryObj, regions)
