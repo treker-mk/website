@@ -262,14 +262,13 @@ Treker uses terminology which is consistent with the official directives of the 
 </details>
 
 <details>
-  <summary id=cases-chart>What are the Closed cases and what are the Active cases?</summary>
+  <summary id=cases-chart>Што се Заклучени, а што Активни случаи?</summary>
 
-All confirmed cases are shown in the [Confirmed Cases graph](/mk/stats#cases-chart). In order to be able to monitor the epidemic, it is important to know how many are still infected. For this reason, we use the following terminology:
+Сите потврдени случаи се прикажани во [графиконот на потврдени случаи](/mk/stats#cases-chart). За да подобро ја следиме епидемијата, е од голема важност да се знае уште колку луѓе се сеуште заразни за другите. Заради тоа ја воведуваме следната терминологија:
 
-**Closed cases**  are the sum of all confirmed cases who are no longer infected with the virus, that is, the recovered and the deceased.
+**Заклучени случаи** се збир на сите потврдени случаи што не се веке инфицирани со вирусот, значи сите оздравени и починати. 
 
-**Active cases** are all confirmed virus infections that still haven’t recovered (are still infected with the virus). See also
- [Which indicators does the “COVID-19 Situation in North Macedonia” graph include?](#chart-metrics-included)
+**Активни случаи** се сите потврдени случаи што уште не оздравеле. Погледајте уште [Кои индикатори ги содржи графиконот “Состојба со COVID-19 во Република Северна Македонија”?](#chart-metrics-included)
 
 </details>
 
