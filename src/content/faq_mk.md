@@ -53,9 +53,10 @@ _Идејата на Трекер е да ги прикаже на едно ме
 </details>
 
 <details>
-  <summary id=english-translation>Is your webpage available in English?</summary>
+  <summary id=english-translation>Дали веб страната постои и на англиски јазик?</summary>
 
-Currently, only the [About part](/mk/about) and these FAQ are available, while the rest of the website is yet to be fully translated. However, both the text part and the source code are available as open source if you're interested in helping us translate. All the [data in the database](https://github.com/sledilnik) is already marked with English tags, so its international use (export) is also possible. 
+Моментално, само [За проектот](/mk/about) и овие ЧПП страници се преведени. Другите се во план. Во секој случај и програмската кода и текстот се open source и ако ве интересира да помогнете во преводт тоа моќе да го направите. Сите [податоци](https://github.com/treker-mk) зе означени со ознаки (tag) на аглиски јазик, така да меѓународната употребата на сајтот е исто можна. 
+ 
 
 </details>
 
