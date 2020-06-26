@@ -246,19 +246,20 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
 </details>
 
 <details>
-  <summary id=chart-terminology>What does it mean?
+  <summary id=chart-terminology>Што тие значат?
 </summary>
-  
-Treker uses terminology which is consistent with the official directives of the WHO and ECDC (European Center for Disease Prevention and Control). We use the following tags in the displays:  
-* **Confirmed cases** = This is the number of people who tested positive for the SARS-CoV-2 virus. Since the number of confirmed cases depends solely on testing, the number of confirmed cases is significantly lower than the actual number of infected people.
 
-* **Hospitalized** = This is the number of confirmed cases such severe symptoms of COVID-19 that they have been admitted to hospital.
+Трекер користи терминологија што е конзистентна со директивите на WHO и ECDC (European Center for Disease Prevention and Control). Ги употребуваме следните ознаки при прикажувњето:
 
-* **In ICU** = Indicates the number of hospitalized persons who are at risk of death because of the severe symptoms of COVID-19 and require placement in the intensive care unit. This is a subset of the *Hospitalized* category. 
+* **Потврдени случаи** = Ова е бројот на луѓе кои биле позитивни на тестот за SARS-CoV-2 вирусот. Бројот на потврдени случаи секако е зависен од бројот на тестовите и за тоа може да се случи да е бројот на потврдените случаи значително помал од вистинскиот број на заразени луѓе.
 
-* **On ventilator** = Indicates the number of hospitalized persons in the intensive care unit who require a ventilator to breathe. It should be a subset of the *Intensive Care* and *Hospitalized* categories.
+* **Хоспитализирани** = го представува бројот на луѓе со потешка слика или ризик за компликации од COVID-19, за која е потребен прием и  лечење во болница. 
 
-* **Recovered** = This is the number of recovered cases. (#data-recovered)
+* **На оддел за интензивна нега (анг. ICU)** = го прикажува бројот на пациенти каде што постои уште потешка слика и поголем ризик од смрт од COVID-19. Заради тоа е потребна интензивна нега, меѓу другото, со различни типови на кислородна подршка. Овие пациенти се подмножество на категоријата **Хоспитализирани** 
+
+* **На респиоратор/вентилација** = ова се пациенти од интензивната нега на кои им е потреба механичка (со помош на пумпа) вентилација, бидејќи сами не се способни да дишат иако добиваат обична кислородна подршка. Тие се обично подмножество на пациентите што се на **Инетнзивна нега** и **Хоспитализирани**
+
+* **Оздравени** = го представува бројот на пациенти што не се веќе болни од COVID-19 и нивните последни тестови биле негативни. (#data-recovered)
   
 </details>
 
