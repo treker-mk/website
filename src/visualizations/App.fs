@@ -14,6 +14,7 @@ let init (query: obj) (visualization: string option) =
             | Some viz ->
                 match viz with
                 | "Map" -> Some Map
+                | "EuropeMap" -> Some EuropeMap
                 | "MetricsComparison" -> Some MetricsComparison
                 | "Patients" -> Some Patients
                 | "Ratios" -> Some Ratios
@@ -76,9 +77,9 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView MetricsComparisonChart.metricsComparisonChart {| data = data |} }
-          { VisualizationType = Cases
-            ClassName = "cases-chart"
-            Label = I18N.t "charts.cases.title"
+          { VisualizationType = Spread
+            ClassName = "spread-chart"
+            Label = I18N.t "charts.spread.title"
             Explicit = false
             Renderer =
                 fun state ->
@@ -98,11 +99,12 @@ let render (state: State) (_: Msg -> unit) =
             Explicit = true
             Renderer =
                 fun state ->
-                    match state.StatsData with
+                    match state.RegionsData with
                     | NotAsked -> Html.none
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView RatiosChart.ratiosChart {| data = data |} }
+                    | Success data ->
+                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; data = data |} }
           { VisualizationType = Tests
             ClassName = "tests-chart"
             Label = I18N.t "charts.tests.title"
@@ -130,9 +132,9 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView InfectionsChart.infectionsChart {| data = data |} }
-          { VisualizationType = Spread
-            ClassName = "spread-chart"
-            Label = I18N.t "charts.spread.title"
+          { VisualizationType = Cases
+            ClassName = "cases-chart"
+            Label = I18N.t "charts.cases.title"
             Explicit = false
             Renderer =
                 fun state ->
@@ -180,12 +182,12 @@ let render (state: State) (_: Msg -> unit) =
             Label = I18N.t "charts.ageGroups.title"
             Explicit = true
             Renderer =
-                fun state ->
-                    match state.StatsData with
-                    | NotAsked -> Html.none
-                    | Loading -> Utils.renderLoading
-                    | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView AgeGroupsChart.renderChart {| data = data |} }
+               fun state ->
+                   match state.StatsData with
+                   | NotAsked -> Html.none
+                   | Loading -> Utils.renderLoading
+                   | Failure error -> Utils.renderErrorLoading error
+                   | Success data -> lazyView EuropeMap.mapChart {| data = data |} }
           { VisualizationType = Countries
             ClassName = "countries-chart"
             Label = I18N.t "charts.countries.title"
