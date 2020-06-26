@@ -319,11 +319,11 @@ The [graph](/mk/stats#tests-chart) shows the total number of regular tests (the 
 </details>
 
 <details>
-  <summary id=infections-chart>What does the “Structure of Confirmed Cases” graph tell us?</summary>
+  <summary id=infections-chart>Што ни покажува графиконот „Структура на  потврдените случаи“?</summary>
 
-The [graph](/mk/stats#infections-chart)provides an insight into the daily share of confirmed cases from high-risk groups or employees in high-risk areas. Due to insufficiently accurate input data on confirmed infections, daily values (By days (average)) are shown as a moving average of 5 days. The sum of the values on a particular day, from 2 days prior, and 2 days after, is divided by 5. Therefore, the graph shows the situation three days before a specific day, and in this way we get a better idea of trends by individual groups. If we select the *Total* or *Relative* display, we will jump from the confirmed cases curve to the histogram, which shows the number of confirmed infected persons within each category on a given day.
+[Графиконот](/mk/stats#infections-chart) ни овозможува да го погледаме уделот во потврдените случаи на група на вработени во ризичните струки.  Бидејќи прецизноста на потврдените инфекции не е најдобра, дневните вредности се покажани како просек од 5 дена. Збирот на вредностите за одреден ден, со два дена пред и два дена по тој ден, се делат со 5. Со тоа полесно се следи трендот на одредените групи. Ако избереме *Вкупно* или *Релативно*, ќе добиеме графикон со хистограми, наместо со криви. Тие хистограми ни го покажуваат односот на различните категории на одреден ден. 
 
-The increase in infected healthcare workers does not mean that they were discovered exactly on that day; they may have been positive before but information on their status was obtained subsequently.
+Порастот на заразени здравствени работници не значи дека тие биле одкриени токму тој ден; тие може да биле и позитивни на тестовите и пред тоа, бидејќи здравствените работници се тестираат редовно. 
 
 </details>
 
