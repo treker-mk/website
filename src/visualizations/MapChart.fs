@@ -12,7 +12,10 @@ open Browser
 
 open Types
 
+(* SLO-spec 
 let geoJsonUrl = "/maps/municipalities-gurs-simplified-3857.geojson"
+*)
+let geoJsonUrl = "/maps/new_31_Cities_MKD.json"
 
 let excludedMunicipalities = Set.ofList ["kraj" ; "tujina"]
 
@@ -233,7 +236,10 @@ let seriesData (state : State) =
                             | 0 -> 0.
                             | x -> float x + Math.E |> Math.Log
                         scaled, (renderLabel municipalityData.Municipality.Population absolute totalConfirmed.Value)
+(* SLO-spec 
             {| isoid = municipalityData.Municipality.Code ; value = value ; label = label |}
+*)
+            {| Name4_E = municipalityData.Municipality.Code ; value = value ; label = label |}
     } |> Seq.toArray
 
 let renderMap (state : State) =
@@ -249,8 +255,12 @@ let renderMap (state : State) =
             {| visible = true
                mapData = geoJson
                data = data
+(* SLO-spec 
                keys = [| "isoid" ; "value" |]
                joinBy = "isoid"
+*)
+               keys = [| "Name4_E" ; "value" |]
+               joinBy = "Name4_E"
                nullColor = "white"
                borderColor = "#888"
                borderWidth = 0.5
