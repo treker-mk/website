@@ -210,26 +210,26 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
 </details>
 
 <details>
-  <summary id=chart-metrics-included>Which indicators does the “COVID-19 Situation in North Macedonia” graph include?</summary>
+  <summary id=chart-metrics-included>Кои индикатори ги содржи графиконот “Состојба со COVID-19 во Република Северна Македонија”?</summary>
 
-[Graph](/mk/stats#metrics-comparison-chart) includes:
+[Графиконот](/mk/stats#metrics-comparison-chart) содржи:
   
-* **Tests (per day)** = Number of tests for the presence of SARS-CoV-2 virus causing COVID-19 performed. In the first stages of the epidemic, this was an important indicator of the prevalence of the virus, but with the change in testing methodology, ie. of the tested sample, it turned into an indicator of the national health and diagnostics system’s capacity.
+* **Тестови (дневно)** = се изведуваат голем број на тестови за SARS-CoV-2 вируот што предизвикува COVID-19. Во првите фази на епидемијата, е ова важен инидкатор што може да покажува на раширеност на вирусот во популацијата. 
 
-* **Tests (total)** = Sum of tests up to; data is useful in terms of comparison or in terms of the proportion of the entire population tested, but it can be misleading as certain individuals can be tested several times (eg. health professionals, retirement home employees, etc.).
+* **Тестови (вкупно)** = Се сума на сите тестови изведени до тој датум. Овој број треба да се земе со резерва, бидејќи некои луѓе се тестираат повеќе пати (пр. оздравените, здравствените рабоници, ...)
 
-* **Confirmed Cases (per day)** = Number of confirmed infected per day based on tests. This indicator does not reflect the actual dynamics of newly infected people in the population, as the tests do not sample the entire population but target the at-risk people and certain occupational groups.
+* **Позитивни случаи (дневно)** = Бројот на потврдени случаи на двена база. Овој показател не ја отсликува актуелната динамика на новозаразените луѓе во целата популацијата, бидејќи добар дел од тестовите се усмерени на одредени популации. Дали заради тоа што тоа им го бара професијата или дали заради тоа што веќе биле во контакт со заразени.  
 
-* **Confirmed cases (total)** = Total number of all confirmed cases by a given day.
+* **Позитивни случаи (вкупно)** = Вкупен број на потврдени случаи до тој ден.
 
-* **Confirmed cases (active)** = Confirmed cases (total) – Recovered (total) – Died (total)
+* **Потврдени случаи (активни)** = Потврдени случаи (вкупно) – Оздравени (вкупно) – Починати вкупно)
 
-* **Recovered (total)** = Total number of ecoveries on a given day. (#data-recovered)
+* **Оздравени(вкупно)** = Сите оздравени до тој ден. (#data-recovered)
 
-* **Hospitalized (active)** = Current number of people in hospital care (either in the ordinary ward or in the ICU).
+* **Хоспитализирани (активни)** = Моменталниот број на луѓе во болница (заедно со тие што се на интензивна нега).
 
-* **Hospitalized (total)** = Sum of hospital admissions by date.
-
+* **Хоспитализирани (вкупно)** = Сите хоспитализирани до тој ден.
+<!--COMMENT OUT
 * **ICU (active)** = Current number of people in ICUs (intensive care units).
 
 * **On ventilator (active)** = Current number of persons in need of a ventilator.
@@ -237,11 +237,11 @@ The breakpoints are indicated below, on the timeline: from the first confirmed c
 * **Discharged from a hospital (daily)** = Number of discharged from hospital on that day.
 
 * **Discharged from hospital (total)** = Sum of all discharged from a hospital up to this day.
+----COMMENT OUT END-->
+* **Починати (дневно)** = Починати пациенти со COVID-19 на тој датум.
 
-* **Deaths (per day)** = Number of deaths due to COVID-19 on that day.
+* **Починати (вкупно)** = Сите починати до тој ден од COVID-19.
 
-* **Deaths (total)** = Sum of all deaths to date.
-  
 </details>
 
 <details>
