@@ -312,10 +312,11 @@ When reporting the number of tests performed, all tests (including repeated test
 END OF COMMENTS-->
 
 <details>
-  <summary id=tests-chart>What does the “Testing” graph tell us?</summary>
+  <summary id=tests-chart>Што ни прикажува графиконот “Тестирање”?</summary>
 
-The [graph](/mk/stats#tests-chart) shows the total number of regular tests (the *Regular* display), and the nationalsurvey tests (by selecting the *Survey* display). The columns show the number of negative and positive tests on a specific day, and the curve shows the daily percentage of positive tests.
- 
+[Графиконот](/mk/stats#tests-chart) ни го покажува бројот на сите редовни тестарања (избрано *Редовно*) со тестовите од истражувањата/скрининзите (со избор на *Истражување* приказ). Колоните во хистограмот ги прикажуваат позитивните и негативните тестови во одреден ден, а кривата го прикажува процентот на позитивни тестови. 
+
+
 </details>
 
 <details>
