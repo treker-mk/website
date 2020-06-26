@@ -146,7 +146,7 @@ module Dictionaries =
           "po", Some 319586
           "si", Some 166589
           "sk", Some 617647 ]
-        |> List.map (fun (key, population) -> key,  { Key = key ; Name = key ; Population = population }) // TODO I18N
+        |> List.map (fun (key, population) -> key,  { Key = key ; Name = key ; Population = population }) 
         |> Map.ofList
 
     type Municipality = {

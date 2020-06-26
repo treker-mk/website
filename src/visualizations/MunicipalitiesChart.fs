@@ -137,7 +137,7 @@ let init (queryObj : obj) (data : RegionsData) : State * Cmd<Msg> =
                 | None, Some last -> Some last
                 | _ -> None
             { Key = municipalityKey
-              Name = (Utils.Dictionaries.municipalities.TryFind municipalityKey) |> Option.map (fun municipality -> municipality.Name)
+              Name = Some (I18N.tt "mk.municipality" municipalityKey) // SLO-spec
               RegionKey = (dp |> Seq.last).RegionKey
               DoublingTime = doublingTime
               NewCases = newCases
