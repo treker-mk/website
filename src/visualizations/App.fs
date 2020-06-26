@@ -87,73 +87,7 @@ let render (state: State) (_: Msg -> unit) =
                     | NotAsked -> Html.none
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView CasesChart.casesChart {| data = data |} }
-          { VisualizationType = Patients
-            ClassName = "patients-chart"
-            Label = I18N.t "charts.patients.title"
-            Explicit = true
-            Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
-          { VisualizationType = Ratios
-            ClassName = "ratios-chart"
-            Label = I18N.t "charts.ratios.title"
-            Explicit = true
-            Renderer =
-                fun state ->
-                    match state.RegionsData with
-                    | NotAsked -> Html.none
-                    | Loading -> Utils.renderLoading
-                    | Failure error -> Utils.renderErrorLoading error
-                    | Success data ->
-                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; data = data |} }
-          { VisualizationType = Tests
-            ClassName = "tests-chart"
-            Label = I18N.t "charts.tests.title"
-            Explicit = false
-            Renderer =
-                fun state ->
-                    match state.StatsData with
-                    | NotAsked -> Html.none
-                    | Loading -> Utils.renderLoading
-                    | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView TestsChart.testsChart {| data = data |} }
-          { VisualizationType = HCenters
-            ClassName = "hcenters-chart"
-            Label = I18N.t "charts.hCenters.title"
-            Explicit = true
-            Renderer = fun _ -> lazyView HCentersChart.hCentersChart () }
-          { VisualizationType = Infections
-            ClassName = "infections-chart"
-            Label = I18N.t "charts.infections.title"
-            Explicit = false
-            Renderer =
-                fun state ->
-                    match state.StatsData with
-                    | NotAsked -> Html.none
-                    | Loading -> Utils.renderLoading
-                    | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView InfectionsChart.infectionsChart {| data = data |} }
-          { VisualizationType = Cases
-            ClassName = "cases-chart"
-            Label = I18N.t "charts.cases.title"
-            Explicit = false
-            Renderer =
-                fun state ->
-                    match state.StatsData with
-                    | NotAsked -> Html.none
-                    | Loading -> Utils.renderLoading
-                    | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView SpreadChart.spreadChart {| data = data |} }
-          { VisualizationType = Regions
-            ClassName = "regions-chart"
-            Label = I18N.t "charts.regions.title"
-            Explicit = true
-            Renderer =
-                fun state ->
-                    match state.RegionsData with
-                    | NotAsked -> Html.none
-                    | Loading -> Utils.renderLoading
-                    | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView RegionsChart.regionsChart {| data = data |} }
           { VisualizationType = Map
             ClassName = "map-chart"
             Label = I18N.t "charts.map.title"
@@ -177,9 +111,85 @@ let render (state: State) (_: Msg -> unit) =
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data ->
                         lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; data = data |} }
+          { VisualizationType = Tests
+            ClassName = "tests-chart"
+            Label = I18N.t "charts.tests.title"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView TestsChart.testsChart {| data = data |} }
+          { VisualizationType = HCenters
+            ClassName = "hcenters-chart"
+            Label = I18N.t "charts.hCenters.title"
+            Explicit = true // SLO-spec
+            Renderer = fun _ -> lazyView HCentersChart.hCentersChart () }
+          { VisualizationType = Infections
+            ClassName = "infections-chart"
+            Label = I18N.t "charts.infections.title"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView InfectionsChart.infectionsChart {| data = data |} }
+          { VisualizationType = Cases
+            ClassName = "cases-chart"
+            Label = I18N.t "charts.cases.title"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView CasesChart.casesChart {| data = data |} }
+          { VisualizationType = Patients
+            ClassName = "patients-chart"
+            Label = I18N.t "charts.patients.title"
+            Explicit = true // SLO-spec
+            Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
+          { VisualizationType = Ratios
+            ClassName = "ratios-chart"
+            Label = I18N.t "charts.ratios.title"
+            Explicit = true // SLO-spec
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView RatiosChart.ratiosChart {| data = data |} }
           { VisualizationType = AgeGroups
             ClassName = "age-groups-chart"
             Label = I18N.t "charts.ageGroups.title"
+            Explicit = true // SLO-spec
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView AgeGroupsChart.renderChart {| data = data |} }
+          { VisualizationType = Regions
+            ClassName = "regions-chart"
+            Label = I18N.t "charts.regions.title"
+            Explicit = true // SLO-spec
+            Renderer =
+                fun state ->
+                    match state.RegionsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView RegionsChart.regionsChart {| data = data |} }
+          { VisualizationType = EuropeMap
+            ClassName = "europe-chart"
+            Label = I18N.t "charts.europe.title"
             Explicit = true
             Renderer =
                fun state ->
@@ -191,7 +201,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Countries
             ClassName = "countries-chart"
             Label = I18N.t "charts.countries.title"
-            Explicit = true
+            Explicit = false
             Renderer =
                 fun state ->
                     match state.StatsData with
