@@ -155,7 +155,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Map
             ClassName = "map-chart"
             Label = I18N.t "charts.map.title"
-            Explicit = true
+            Explicit = false
             Renderer =
                 fun state ->
                     match state.RegionsData with
@@ -166,7 +166,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Municipalities
             ClassName = "municipalities-chart"
             Label = I18N.t "charts.municipalities.title"
-            Explicit = true
+            Explicit = false
             Renderer =
                 fun state ->
                     match state.RegionsData with
