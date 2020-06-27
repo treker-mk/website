@@ -196,9 +196,9 @@ Treker does not collect users’ personal information nor information that indiv
 </details>
 
 <details>
-  <summary id=chart-infocard-percent>What do the percentages in the infocards at the top of the webpage mean?</summary>
+  <summary id=chart-infocard-percent>Што значат процентите vo infocards на горниот дел од веб страната?</summary>
 
-This is a percentage growth rate on a particular date in the number of newly confirmed cases compared to the previous day. If, for example, there were 16 people in the intensive care unit yesterday and today they accepted four more, that is 25% more than yesterday's situation.
+Ова е процент на пораст на новопотврдени случаи на одреден датум во споредба со претходниот ден. Ако, на пример претходниот ден на интезивна нега биле 16 пациенти и денес се, на пример 4 повеќе, тоа изнесува 25% повеќе од вчерашната ситуација. 
 
 </details>
 
