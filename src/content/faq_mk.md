@@ -204,12 +204,12 @@ Treker does not collect users’ personal information nor information that indiv
 </details>
 
 <details>
-  <summary id=metrics-comparison-chart>TBD What does the “COVID-19 Situation in North Macedonia” graph mean?
+  <summary id=metrics-comparison-chart>TBD Што претставува  “графиконот “Состојба со COVID-19 во Република Северна Македонија”?
 </summary>
 
-The [graph](/mk/stats#metrics-comparison-chart) shows the daily and overall dynamics of the spread of the infection from the beginning to the present. The indicators used (see [Which indicators does the “COVID-19 Situation in North Macedonia” graph include?](#chart-metrics-included)) help us understand whether and how successfully we are controlling the spread of the virus. We can monitor the daily growth rate of newly confirmed cases and indirectly see if the measures work; information on the number of hospitalizations and the proportion of those in ICU shows how many people are seriously at risk from the disease, but at the same time, this data also shows us the real burden on the health system.
+[Графиконот](/mk/stats#metrics-comparison-chart) ја прикажува дневната и целосна динамика на ширењето на вирусот од првиот ден до денес. Индикаторите (види [Кои индикатори ги содржи графиконот “Состојба со COVID-19 во Република Северна Македонија”?](#chart-metrics-included)) ни помагаат да разбереме дали ширењето на вирусот е под контрола. Може да ги следиме дневните стапки на раст на новозаразени и да провериме дали некоја од мерките функционира;  информациите за бројот на хоспитализирани и односот на истите со тие на интензивна нега ни кажува колку од пациентите се сериозно болни, во исто време овие податоци покажуваат колку е оптоварен нашиот здравствен систем. 
 
-The breakpoints are indicated below, on the timeline: from the first confirmed case (TBD date) to the measures (by keyword and date) taken to curb the spread and their relaxation. This helps us monitor the dynamics of the variables relative to the measures.
+Знаменцата и вертикалните линии ни ги прикажуваат периодите (фазите) и случките на временската оска. Тие помагаат да разбереме подобро дали и како некои од тие случки влијаеле на развојот на епидемијата (динамиката да претставените податоци). 
 
 </details>
 
