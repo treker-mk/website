@@ -176,21 +176,22 @@ Treker does not collect users’ personal information nor information that indiv
 
 
 <details>
-  <summary id=data-usage>How can I obtain and use your database?</summary>
+  <summary id=data-usage>Како можам да пристапам до вашите податоци?</summary>
 
-Our database is public and freely available in the form of  [**CSV**, **REST**, and **Google Sheet**](/mk/datasources). Kindly let us know the purpose for which you will use the information and make sure you include Treker as the source of your data.
+Нашата база на податоци е јавна и достапна во  [**CSV**, **REST**, и **Google Sheet**](/mk/datasources). Слободно известете нé за намената на податоците кои би ги користеле и додајте го Трекер како извор на податоците. 
 
-Since all the data in the database is already marked with English tags (see also [Is your webpage available in English?](#english-translation)), their international use (export, display) is also possible.
+
+Со оглед на тоа што податоците се веќе обележани со англиски, знаци (ознаки) (види [Дали вашата страна е достапна на англиски јазик?](#english-translation)), tнивната интернационална употреба е исто така можна.
 
 </details>
 
-## About the calculations and graphs
+## Во врска со калкулациите и графиконите
 
 
 <details>
-  <summary id=chart-usage>Can I use your graphs on my website? How?</summary>
+  <summary id=chart-usage>Може ли да ги користам вашите графикони на мојата веб страна и како?</summary>
 
-Sure! You can embed any graph or display on your site – citing the source, of course. [Click here](/mk/embed) and select the graph you want to embed from the list. Please let us know about your use (info@slednik.org) and we will be happy to add your site to our collection of [recommended links](/mk/links). 
+Секако!Можете да ги вметнете било кој графикон или приказ на вашата страна- наведувајќи го изворот. [Кликнете овде ](/mk/embed) и изберете го графиконот што  би сакале да го додадете. Ве молиме извесетете нé за тоа (info@treker.mk) и ние со задоволство би го додале вашиот сајт во нашата колекција на [препорачани линкови](/mk/links). 
 
 </details>
 
