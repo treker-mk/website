@@ -1,4 +1,5 @@
 <template>
+<!-- SLO SPEC
   <div class="container">
 <!--  comment out  -->
     <a
@@ -15,6 +16,7 @@
       </div>
     </a>
   </div>
+  -->
 </template>
 
 <style scoped lang="scss">

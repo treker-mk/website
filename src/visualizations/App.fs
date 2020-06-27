@@ -152,7 +152,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Patients
             ClassName = "patients-chart"
             Label = I18N.t "charts.patients.title"
-            Explicit = true // SLO-spec
+            Explicit = false
             Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
           { VisualizationType = Ratios
             ClassName = "ratios-chart"
@@ -201,7 +201,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Countries
             ClassName = "countries-chart"
             Label = I18N.t "charts.countries.title"
-            Explicit = false
+            Explicit = true // SLO-spec
             Renderer =
                 fun state ->
                     match state.StatsData with
