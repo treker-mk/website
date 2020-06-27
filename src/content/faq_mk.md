@@ -2,7 +2,7 @@
 
 _Идејата на Трекер е да ги прикаже на едно место постоечките податоци во облик што секој може да го разбере. Без разлика на тоа се потребни одредени објаснувања. Тука ги собравме одговорите на некои најчести прашања. Листата на прашања ја прилагодуваме во зависност од тоа дали има нешто ново или за нешто се потребни подобри објаснувања. Доколку имате било какво прашање (или предлог за подобро објаснување) и тоа не постои во сегашниот FAQ, nратете ни го на info@treker.mk (Се радуваме на секакви критики, пофалби, повратни информации или предлози!)_
 
-## TBD work in progress - содржината што следи сеуште се преведува и прилагодува. Таа му припаѓа на оригиналниот сајт, sledilnik.org 
+## Дел од одржината што следи сеуште се преведува и прилагодува од норигиналниот сајт, sledilnik.org 
 
 ## Општо за страната
 
@@ -176,28 +176,29 @@ Treker does not collect users’ personal information nor information that indiv
 
 
 <details>
-  <summary id=data-usage>How can I obtain and use your database?</summary>
+  <summary id=data-usage>Како можам да пристапам до вашите податоци?</summary>
 
-Our database is public and freely available in the form of  [**CSV**, **REST**, and **Google Sheet**](/mk/datasources). Kindly let us know the purpose for which you will use the information and make sure you include Treker as the source of your data.
-
-Since all the data in the database is already marked with English tags (see also [Is your webpage available in English?](#english-translation)), their international use (export, display) is also possible.
-
-</details>
-
-## About the calculations and graphs
+Нашата база на податоци е јавна и достапна во  [**CSV**, **REST**, и **Google Sheet**](/mk/datasources). Слободно известете нé за намената на податоците кои би ги користеле и додајте го Трекер како извор на податоците. 
 
 
-<details>
-  <summary id=chart-usage>Can I use your graphs on my website? How?</summary>
-
-Sure! You can embed any graph or display on your site – citing the source, of course. [Click here](/mk/embed) and select the graph you want to embed from the list. Please let us know about your use (info@slednik.org) and we will be happy to add your site to our collection of [recommended links](/mk/links). 
+Со оглед на тоа што податоците се веќе обележани со англиски, знаци (ознаки) (види [Дали вашата страна е достапна на англиски јазик?](#english-translation)), tнивната интернационална употреба е исто така можна.
 
 </details>
 
-<details>
-  <summary id=chart-infocard-percent>What do the percentages in the infocards at the top of the webpage mean?</summary>
+## Во врска со калкулациите и графиконите
 
-This is a percentage growth rate on a particular date in the number of newly confirmed cases compared to the previous day. If, for example, there were 16 people in the intensive care unit yesterday and today they accepted four more, that is 25% more than yesterday's situation.
+
+<details>
+  <summary id=chart-usage>Може ли да ги користам вашите графикони на мојата веб страна и како?</summary>
+
+Секако!Можете да ги вметнете било кој графикон или приказ на вашата страна- наведувајќи го изворот. [Кликнете овде ](/mk/embed) и изберете го графиконот што  би сакале да го додадете. Ве молиме извесетете нé за тоа (info@treker.mk) и ние со задоволство би го додале вашиот сајт во нашата колекција на [препорачани линкови](/mk/links). 
+
+</details>
+
+<details>
+  <summary id=chart-infocard-percent>Што значат процентите vo infocards на горниот дел од веб страната?</summary>
+
+Ова е процент на пораст на новопотврдени случаи на одреден датум во споредба со претходниот ден. Ако, на пример претходниот ден на интезивна нега биле 16 пациенти и денес се, на пример 4 повеќе, тоа изнесува 25% повеќе од вчерашната ситуација. 
 
 </details>
 
