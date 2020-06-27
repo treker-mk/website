@@ -24,8 +24,8 @@
         "at": "at {{ date, HH:mm }}"
     },
     "notice": {
-        "news001": "Number of confirmed cases is growing #whatisgoingon?",
-        "news002": "Read more on Medium..."
+        "news001": "Sledilnik 3.0 - change is constant",
+        "news002": "Read more on Medium…"
     },
     "infocard": {
         "tests": "Tests Today",
@@ -252,7 +252,7 @@
             "oneMonth": "One month",
             "oneWeek": "One week",
             "oneDay": "One day",
-            "everageSouthKorea": "South Korea's average in recent days",
+            "averageSouthKorea": "South Korea's average in recent days",
             "relativeTitle": "Daily Growth of Infected",
             "confirmedCases": "confirmed cases",
             "timesAsMany": "- times as much",
@@ -267,11 +267,15 @@
             "absolute": "Absolute Daily Growth"
         },
         "regions": {
-            "title": "Confirmed Cases by Region"
+            "title": "Cases by Region",
+            "activeCases": "Active Cases",
+            "confirmedCases": "Confirmed Cases",
+            "deceased": "Deaths"
         },
         "map": {
             "title": "Municipality Map",
             "mortalityOfConfirmedCases": "Mortality of Confirmed Cases",
+            "yesterday": "Yesterday",
             "all": "All",
             "populationShare": "Population Share",
             "populationC": "Population",
@@ -283,13 +287,18 @@
             "deceased": "Deaths",
             "confirmedCases": "Confirmed Cases"
         },
+        "europe": {
+            "title": "COVID-19 Situation in Europe",
+            "twoWeekIncidence": "14 days incidence per million",
+            "restrictions": "Restrictions"
+        },
         "municipalities": {
             "title": "Cases by Municipalities",
-            "sortLast": "Last",
-            "sortDoublingTime": "Doubling time",
-            "sortTotal": "All",
-            "sortActive": "Active",
-            "sortBy": "Sort by:",
+            "viewLast": "Last",
+            "viewDoublingTime": "Doubling time",
+            "viewTotal": "All",
+            "viewActive": "Active",
+            "view": "Show:",
             "allRegions": "All regions",
             "search": "Search municipality",
             "showAll": "Show All",
@@ -595,5 +604,59 @@
         "somethingWentWrong": "oops… something went wrong :(",
         "back": "Back",
         "imageDescription": "two traffic cones connected by yellow tape"
+    },
+    "mk": {
+        "region": {
+            "va": "Vardarski",
+            "is": "Istočen",
+            "jz": "Jugozapaden",
+            "ji": "Jugoistočen",
+            "pe": "Pelagoniski",
+            "po": "Pološki",
+            "si": "Severoistočen",
+            "sk": "Skopski"
+        },
+        "municipality": {
+            "berovo": "Berovo",
+            "bitola": "Bitola",
+            "valandovo": "Valandovo",
+            "veles": "Veles",
+            "vinica": "Vinica",
+            "gevgelija": "Gevgelija",
+            "gostivar": "Gostivar",
+            "debar": "Debar",
+            "delcevo": "Delčevo",
+            "demir_hisar": "Demir Hisar",
+            "kavadarci": "Kavadarci",
+            "kicevo": "Kičevo",
+            "kocani": "Kočani",
+            "kratovo": "Kratovo",
+            "kriva_palanka": "Kriva Palanka",
+            "krusevo": "Kruševo",
+            "kumanovo": "Kumanovo",
+            "makedonski_brod": "Makedonski Brod",
+            "negotino": "Negotino",
+            "ohrid": "Ohrid",
+            "pehcevo": "Pehčevo",
+            "prilep": "Prilep",
+            "probistip": "Probištip",
+            "radovis": "Radoviš",
+            "resen": "Resen",
+            "sveti_nikole": "Sveti Nikole",
+            "skopje": "Skopje",
+            "struga": "Struga",
+            "strumica": "Strumica",
+            "tetovo": "Tetovo",
+            "stip": "Štip"
+        },
+        "hospital": {
+            "iksk": "Infektivna Klinika",
+            "mksk": "Montažna Bolnica",
+            "kozle": "Kozle",
+            "gob8sep": "GOB 8mi septemvri",
+            "bitola": "Bitola",
+            "stip": "Štip",
+            "infdrugi": "Infektivni oddelenija vo Tetovo, Ohrid, Veles, Kumanovo i Prilep"
+        }
     }
 }
