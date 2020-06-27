@@ -1,8 +1,6 @@
 <template>
-<div/>
-<!-- SLO SPEC
   <div class="container">
-<!--  comment out  -->
+<!--  comment out SLO SPEC
     <a
       class="notice-link"
       href="https://medium.com/sledilnik/sledilnik-3-0-658c56433e0d"
@@ -16,8 +14,8 @@
         </div>
       </div>
     </a>
+    --> 
   </div>
-  -->
 </template>
 
 <style scoped lang="scss">
