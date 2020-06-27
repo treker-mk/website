@@ -1,4 +1,5 @@
 <template>
+<div/>
 <!-- SLO SPEC
   <div class="container">
 <!--  comment out  -->
