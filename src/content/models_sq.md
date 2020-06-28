@@ -1,6 +1,6 @@
 # Modele
 
-## SEIR model
+## SEIR modeli
 
 Modeli është adoptuar nga modeli slloven SEIR (Susceptible, Exposed, Infected, and Recovered), që është përdorur për modelimin e dinamikës COVID-19 në Slloveni dhe është tërësisht funksional në faqen [Sledilnik](https://covid-19.sledilnik.org/) Modeli është ndërtuar nga [prof. Janez Žibert](https://pacs.zf.uni-lj.si/janez-zibert/) nga Fakulteti i Shkencave Mjekësore dhe Fakulteti i Shkencave Kompjuterike dhe Informatike në Universitetin e Lubjanës, Slloveni.
 
