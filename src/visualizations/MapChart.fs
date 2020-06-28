@@ -239,7 +239,10 @@ let seriesData (state : State) =
 (* SLO-spec 
             {| isoid = municipalityData.Municipality.Code ; value = value ; label = label |}
 *)
-            {| Name4_E = municipalityData.Municipality.Code ; value = value ; label = label |}
+            {| Name4_E = municipalityData.Municipality.Code 
+               value = value 
+               // MK-spec: hack to add localized name to tooltip header
+               label = (sprintf "<b>%s</b><br>%s" (I18N.tt "mk.municipality" municipalityData.Municipality.Key) label) |}
     } |> Seq.toArray
 
 let renderMap (state : State) =
