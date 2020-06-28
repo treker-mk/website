@@ -63,7 +63,7 @@ let loadGeoJson =
 let init (regionsData : StatsData) : State * Cmd<Msg> =
     let cmdGeoJson = Cmd.ofMsg GeoJsonRequested
     let cmdOwdData = Cmd.ofMsg OwdDataRequested
-    { GeoJson = NotAsked ; OwdData = NotAsked ; ChartType = Restrictions }, (cmdGeoJson @ cmdOwdData)
+    { GeoJson = NotAsked ; OwdData = NotAsked ; ChartType = (* SLO-spec Restrictions *) TwoWeekIncidence }, (cmdGeoJson @ cmdOwdData)
 
 let update (msg : Msg) (state : State) : State * Cmd<Msg> =
     match msg with
@@ -213,7 +213,7 @@ let renderChartTypeSelectors (activeChartType: ChartType) dispatch =
         ]
 
     let chartTypeSelectors =
-        [ Restrictions; TwoWeekIncidence ]
+        [ (* SLO-spec Restrictions; *) TwoWeekIncidence ]
         |> List.map renderChartSelector
 
     Html.div [
