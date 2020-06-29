@@ -137,15 +137,15 @@ module Dictionaries =
     let excludedRegions = Set.ofList ["mk"]
 
     let regions =
-        [ "mk", Some 2069009
-          "va", Some 153205
-          "is", Some 186795
-          "jz", Some 220064
-          "ji", Some 173633
-          "pe", Some 231490
-          "po", Some 319586
-          "si", Some 166589
-          "sk", Some 617647 ]
+        [ "mk", Some 2076255
+          "va", Some 151492
+          "is", Some 182785
+          "jz", Some 219180
+          "ji", Some 172824
+          "pe", Some 226837
+          "po", Some 322872
+          "si", Some 166992
+          "sk", Some 633273]
         |> List.map (fun (key, population) -> key,  { Key = key ; Name = key ; Population = population }) 
         |> Map.ofList
 
@@ -157,37 +157,37 @@ module Dictionaries =
 
 (* SLO-spec - replaced for MK *)
     let municipalities =
-        [ "berovo", 12987, "Berovo"
-          "bitola", 66256, "Bitola"
-          "valandovo", 11858, "Valandovo"
-          "veles", 66256, "Veles"
-          "vinica", 19481, "Vinitsa"
-          "gevgelija", 34364, "Gevgelija"
-          "gostivar", 119792, "Gostivar"
-          "debar", 27759, "Debar"
-          "delcevo", 23810, "Delchevo"
-          "demir_hisar", 8403, "Demir Hisar"
-          "kavadarci", 42969, "Kavadartsi"
-          "kicevo", 57143, "Kichevo"
-          "kocani", 47988, "Kochani"
-          "kratovo", 9569, "Kratovo"
-          "kriva_palanka", 23904, "Kriva Palanka"
-          "krusevo", 9524, "Krushevo"
-          "kumanovo", 142685, "Kumanovo"
-          "makedonski_brod", 11194, "Makedonski Brod"
-          "negotino", 23474, "Negotino"
-          "ohrid", 56109, "Ohrid"
-          "pehcevo", 4995, "Pehchevo"
-          "prilep", 95314, "Prilep"
-          "probistip", 15294, "Probishtip"
-          "radovis", 32520, "Radovish"
-          "resen", 16353, "Resen"
-          "sveti_nikole", 20507, "Sveti Nikole"
-          "skopje", 617647, "Skopje"
-          "struga", 67860, "Struga"
-          "strumica", 94891, "Strumitsa"
-          "tetovo", 199794, "Tetovo"
-          "stip", 52672, "Shtip" ]    
+        [ "berovo", "", 12493, "Berovo"
+          "bitola", "", 99873, "Bitola"
+          "valandovo", "", 11621, "Valandovo"
+          "veles", "", 65749, "Veles"
+          "vinica", "", 19207, "Vinitsa"
+          "gevgelija", "", 33860, "Gevgelija"
+          "gostivar", "", 120348, "Gostivar"
+          "debar", "", 28181, "Debar"
+          "delcevo", "", 23057, "Delchevo"
+          "demir_hisar", "", 7873, "Demir Hisar"
+          "kavadarci", "", 42703, "Kavadartsi"
+          "kicevo", "", 56487, "Kichevo"
+          "kocani", "", 46960, "Kochani"
+          "kratovo", "", 8981, "Kratovo"
+          "kriva_palanka", "", 23245, "Kriva Palanka"
+          "krusevo", "", 9255, "Krushevo"
+          "kumanovo", "", 143747, "Kumanovo"
+          "makedonski_brod", "", 10961, "Makedonski Brod"
+          "negotino", "", 23141, "Negotino"
+          "ohrid", "", 55030, "Ohrid"
+          "pehcevo", "", 4722, "Pehchevo"
+          "prilep", "", 93678, "Prilep"
+          "probistip", "", 14771, "Probishtip"
+          "radovis", "", 32609, "Radovish"
+          "resen", "", 16158, "Resen"
+          "sveti_nikole", "", 19899, "Sveti Nikole"
+          "skopje", "", 633273, "Skopje"
+          "struga", "", 68521, "Struga"
+          "strumica", "", 94734, "Strumitsa"
+          "tetovo", "", 202524, "Tetovo"
+          "stip", "", 52594, "Shtip" ]    
         |> List.map (fun (key, population, code) -> key,  { Key = key ; Name = key ; Population = population ; Code = code })
         |> Map.ofList
 
