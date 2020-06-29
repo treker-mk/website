@@ -15,7 +15,7 @@ open Types
 (* SLO-spec 
 let geoJsonUrl = "/maps/municipalities-gurs-simplified-3857.geojson"
 *)
-let geoJsonUrl = "/maps/new_31_Cities_MKD.json"
+let geoJsonUrl = "/maps/new_31_Cities_MKD-3857.json"
 
 let excludedMunicipalities = Set.ofList ["kraj" ; "tujina"]
 
