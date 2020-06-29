@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-<!--  comment out SLO SPEC --> 
+<!--  comment out SLO SPEC 
     <a
       class="notice-link"
       href="#europe-chart"
@@ -15,6 +15,7 @@
         </div>
       </div>
     </a>
+    --> 
   </div>
 </template>
 
