@@ -145,7 +145,7 @@ module Dictionaries =
           "pe", Some 226837
           "po", Some 322872
           "si", Some 166992
-          "sk", Some 633273]
+          "sk", Some 633273 ]
         |> List.map (fun (key, population) -> key,  { Key = key ; Name = key ; Population = population }) 
         |> Map.ofList
 
@@ -157,37 +157,37 @@ module Dictionaries =
 
 (* SLO-spec - replaced for MK *)
     let municipalities =
-        [ "berovo", "", 12493, "Berovo"
-          "bitola", "", 99873, "Bitola"
-          "valandovo", "", 11621, "Valandovo"
-          "veles", "", 65749, "Veles"
-          "vinica", "", 19207, "Vinitsa"
-          "gevgelija", "", 33860, "Gevgelija"
-          "gostivar", "", 120348, "Gostivar"
-          "debar", "", 28181, "Debar"
-          "delcevo", "", 23057, "Delchevo"
-          "demir_hisar", "", 7873, "Demir Hisar"
-          "kavadarci", "", 42703, "Kavadartsi"
-          "kicevo", "", 56487, "Kichevo"
-          "kocani", "", 46960, "Kochani"
-          "kratovo", "", 8981, "Kratovo"
-          "kriva_palanka", "", 23245, "Kriva Palanka"
-          "krusevo", "", 9255, "Krushevo"
-          "kumanovo", "", 143747, "Kumanovo"
-          "makedonski_brod", "", 10961, "Makedonski Brod"
-          "negotino", "", 23141, "Negotino"
-          "ohrid", "", 55030, "Ohrid"
-          "pehcevo", "", 4722, "Pehchevo"
-          "prilep", "", 93678, "Prilep"
-          "probistip", "", 14771, "Probishtip"
-          "radovis", "", 32609, "Radovish"
-          "resen", "", 16158, "Resen"
-          "sveti_nikole", "", 19899, "Sveti Nikole"
-          "skopje", "", 633273, "Skopje"
-          "struga", "", 68521, "Struga"
-          "strumica", "", 94734, "Strumitsa"
-          "tetovo", "", 202524, "Tetovo"
-          "stip", "", 52594, "Shtip" ]    
+        [ "berovo", 12493, "Berovo"
+          "bitola", 99873, "Bitola"
+          "valandovo", 11621, "Valandovo"
+          "veles", 65749, "Veles"
+          "vinica", 19207, "Vinitsa"
+          "gevgelija", 33860, "Gevgelija"
+          "gostivar", 120348, "Gostivar"
+          "debar", 28181, "Debar"
+          "delcevo", 23057, "Delchevo"
+          "demir_hisar", 7873, "Demir Hisar"
+          "kavadarci", 42703, "Kavadartsi"
+          "kicevo", 56487, "Kichevo"
+          "kocani", 46960, "Kochani"
+          "kratovo", 8981, "Kratovo"
+          "kriva_palanka", 23245, "Kriva Palanka"
+          "krusevo", 9255, "Krushevo"
+          "kumanovo", 143747, "Kumanovo"
+          "makedonski_brod", 10961, "Makedonski Brod"
+          "negotino", 23141, "Negotino"
+          "ohrid", 55030, "Ohrid"
+          "pehcevo", 4722, "Pehchevo"
+          "prilep", 93678, "Prilep"
+          "probistip", 14771, "Probishtip"
+          "radovis", 32609, "Radovish"
+          "resen", 16158, "Resen"
+          "sveti_nikole", 19899, "Sveti Nikole"
+          "skopje", 633273, "Skopje"
+          "struga", 68521, "Struga"
+          "strumica", 94734, "Strumitsa"
+          "tetovo", 202524, "Tetovo"
+          "stip", 52594, "Shtip" ]    
         |> List.map (fun (key, population, code) -> key,  { Key = key ; Name = key ; Population = population ; Code = code })
         |> Map.ofList
 
