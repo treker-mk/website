@@ -3,7 +3,7 @@
 Në grupin tonë bashkëpunojnë edhe ekspertë për modelime statistikore dhe simulime kompjuterike.
 Në këtë faqe do t’i publikojmë linqet e disa prej punimeve të tyre, që i kanë bërë me ndihmën e të dhënave të grumbulluara nga [COVID-19 Treker](https://covid-19.treker.mk).
 Modelet i marrin  parasysh të gjithë informacionet e njohura për përhapjen e virusit në vend, por prapëseprapë **nuk mund të ofrojnë parashikimet më të sakta** për rrjedhën e ardhshme të epidemisë dhe **për këtë arsye ka nevojë të lexohen me kujdes të gjithë supozimet e modelit**.
-
+ 
 ## SEIR modeli
 
 Modeli është adoptuar nga modeli slloven SEIR (Susceptible, Exposed, Infected, and Recovered), që është përdorur për modelimin e dinamikës COVID-19 në Slloveni dhe është tërësisht funksional në faqen [Sledilnik](https://covid-19.sledilnik.org/) Modeli është ndërtuar nga [prof. Janez Žibert](https://pacs.zf.uni-lj.si/janez-zibert/) nga Fakulteti i Shkencave Mjekësore dhe Fakulteti i Shkencave Kompjuterike dhe Informatike në Universitetin e Lubjanës, Slloveni.
