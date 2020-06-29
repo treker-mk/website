@@ -1,4 +1,8 @@
-# Modele
+# Modelet dhe parashikimet e tyre
+
+Në grupin tonë bashkëpunojnë edhe ekspertë për modelime statistikore dhe simulime kompjuterike.
+Në këtë faqe do t’i publikojmë linqet e disa prej punimeve të tyre, që i kanë bërë me ndihmën e të dhënave të grumbulluara nga [COVID-19 Treker](https://covid-19.treker.mk).
+Modelet i marrin  parasysh të gjithë informacionet e njohura për përhapjen e virusit në vend, por prapëseprapë **nuk mund të ofrojnë parashikimet më të sakta** për rrjedhën e ardhshme të epidemisë dhe **për këtë arsye ka nevojë të lexohen me kujdes të gjithë supozimet e modelit**.
 
 ## SEIR modeli
 
