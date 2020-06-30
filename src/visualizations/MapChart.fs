@@ -300,7 +300,8 @@ let renderMap (state : State) =
                             (I18N.t "charts.common.dsMZ")
                     mapTextFull = ""
                     mapText = ""
-                    href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+                    // SLO-spec href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+                    href = "http://www.iph.mk"
                     position = {| align = "right" ; verticalAlign = "bottom" ; x = -10 ; y = -5 |}
                     style = {| color = "#999999" ; cursor = "pointer" ; fontSize = "9px" |}
                 |}

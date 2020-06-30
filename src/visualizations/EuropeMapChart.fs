@@ -229,7 +229,8 @@ let renderRestrictionsMap state geoJson =
                         (I18N.tOptions "days.date" {| date = importedDate |})
                 mapTextFull = ""
                 mapText = ""
-                href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+                //SLO-spec href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+                href = "http://www.iph.mk"
             |}
     |}
     |> Highcharts.map
