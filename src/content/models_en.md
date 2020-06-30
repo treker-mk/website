@@ -1,6 +1,5 @@
 # Models
 
-
 ## SEIR model
 
 The model is adopted from the Slovenian model SEIR (Susceptible, Exposed, Infected, and Recovered), that is used for modelling COVID-19 dynamics in Slovenia and is fully operational at the website [Sledilnik](https://covid-19.sledilnik.org/). The model was built by [prof. Janez Žibert](https://pacs.zf.uni-lj.si/janez-zibert/) from Faculty of Health Sciences and Faculty of Computer and Information Science at University of Ljubljana, Slovenia. 
