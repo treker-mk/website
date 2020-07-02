@@ -8,7 +8,7 @@ Më shumë për [aspektet e modelimeve](https://content.sciendo.com/view/journal
 
 ## Modeli SIR
 
-Modeli është version i përshtatur i modelit SIR të Sllovenisë (Susceptible, Infected, and Recovered) i cili është shfrytëzuar për të modeluar dinamikën e COVID-19 në Slloveni dhe për të prognozuar datën e numrit maksimal të rasteve aktive. Modeli është dizajnuar nga prof. Ljupço Todorovski, Nikolla Simixhievski dhe Matej Petkoviq nga Instituti Jozhef Stefan në Lubjanë, Slloveni.
+Modeli është version i përshtatur i modelit SIR të Sllovenisë (Susceptible, Infected, and Recovered) i cili është shfrytëzuar për të modeluar dinamikën e COVID-19 në Slloveni dhe për të prognozuar datën e numrit maksimal të rasteve aktive. Modeli është dizajnuar nga [prof. Ljupčo Todorovski]( http://kt.ijs.si/~ljupco/),  [Nikola Simidjievski](https://simidjievskin.github.io/) dhe Matej Petkoviq nga Instituti Jozhef Stefan në Lubjanë, Slloveni.
 Bëhet fjalë për model elementar SIR, i kalibruar vetëm për të dhënat e rasteve aktive nga [Treker](https://covid-19.treker.mk/). Modeli kalibrohet rregullisht. Rezultatet dhe parashikimet e ardhshme mund të gjenden në [linkun](http://kt.ijs.si/~ljupco/covid-19-sir.mk/report.nb.html).
 
 <a href="http://kt.ijs.si/~ljupco/covid-19-sir.mk/daily_report.png" class="img-link">
