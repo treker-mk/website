@@ -127,7 +127,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = AgeGroupsTimeline
             ClassName = "age-groups-trends-chart"
             Label = I18N.t "charts.ageGroupsTimeline.title"
-            Explicit = false
+            Explicit = true // SLO-spec
             Renderer =
                 fun state ->
                     match state.StatsData with
@@ -151,7 +151,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = HCenters
             ClassName = "hcenters-chart"
             Label = I18N.t "charts.hCenters.title"
-            Explicit = false
+            Explicit = true // SLO-spec
             Renderer = fun _ -> lazyView HCentersChart.hCentersChart () }
           { VisualizationType = Infections
             ClassName = "infections-chart"
@@ -178,12 +178,12 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Patients
             ClassName = "patients-chart"
             Label = I18N.t "charts.patients.title"
-            Explicit = false
+            Explicit = true // SLO-spec
             Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
           { VisualizationType = Ratios
             ClassName = "ratios-chart"
             Label = I18N.t "charts.ratios.title"
-            Explicit = false
+            Explicit = true // SLO-spec
             Renderer =
                 fun state ->
                     match state.StatsData with
@@ -194,7 +194,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = AgeGroups
             ClassName = "age-groups-chart"
             Label = I18N.t "charts.ageGroups.title"
-            Explicit = false
+            Explicit = true // SLO-spec
             Renderer =
                 fun state ->
                     match state.StatsData with
@@ -205,7 +205,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Regions
             ClassName = "regions-chart"
             Label = I18N.t "charts.regions.title"
-            Explicit = false
+            Explicit = true // SLO-spec
             Renderer =
                 fun state ->
                     match state.RegionsData with
@@ -216,7 +216,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Countries
             ClassName = "countries-chart"
             Label = I18N.t "charts.countries.title"
-            Explicit = false
+            Explicit = true // SLO-spec
             Renderer =
                 fun state ->
                     match state.StatsData with
@@ -246,7 +246,7 @@ let render (state: State) (_: Msg -> unit) =
             Html.a
                 [ prop.className "brand-link"
                   prop.target "_blank"
-                  prop.href "https://covid-19.sledilnik.org/"
+                  prop.href "https://covid-19.treker.mk/" // SLO-spec
                   prop.text (I18N.t "meta.title") ]
 
 
