@@ -24,6 +24,7 @@ let init (query: obj) (visualization: string option) =
                 | "Regions" -> Some Regions
                 | "Municipalities" -> Some Municipalities
                 | "AgeGroups" -> Some AgeGroups
+                | "AgeGroupsTimeline" -> Some AgeGroupsTimeline
                 | "HCenters" -> Some HCenters
                 | "Hospitals" -> Some Hospitals
                 | "Infections" -> Some Infections
@@ -61,7 +62,8 @@ open Elmish.React
 
 let render (state: State) (_: Msg -> unit) =
     let allVisualizations: Visualization list =
-        [ { VisualizationType = Hospitals
+        [
+          { VisualizationType = Hospitals
             ClassName = "hospitals-chart"
             Label = I18N.t "charts.hospitals.title"
             Explicit = true
@@ -122,6 +124,19 @@ let render (state: State) (_: Msg -> unit) =
                    | Loading -> Utils.renderLoading
                    | Failure error -> Utils.renderErrorLoading error
                    | Success data -> lazyView EuropeMap.mapChart {| data = data |} }
+          { VisualizationType = AgeGroupsTimeline
+            ClassName = "age-groups-trends-chart"
+            Label = I18N.t "charts.ageGroupsTimeline.title"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data ->
+                        lazyView AgeGroupsTimelineViz.Rendering.renderChart
+                            {| data = data |} }
           { VisualizationType = Tests
             ClassName = "tests-chart"
             Label = I18N.t "charts.tests.title"
@@ -136,7 +151,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = HCenters
             ClassName = "hcenters-chart"
             Label = I18N.t "charts.hCenters.title"
-            Explicit = true // SLO-spec
+            Explicit = false
             Renderer = fun _ -> lazyView HCentersChart.hCentersChart () }
           { VisualizationType = Infections
             ClassName = "infections-chart"
@@ -163,12 +178,12 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Patients
             ClassName = "patients-chart"
             Label = I18N.t "charts.patients.title"
-            Explicit = true // SLO-spec
+            Explicit = false
             Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
           { VisualizationType = Ratios
             ClassName = "ratios-chart"
             Label = I18N.t "charts.ratios.title"
-            Explicit = true // SLO-spec
+            Explicit = false
             Renderer =
                 fun state ->
                     match state.StatsData with
@@ -179,7 +194,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = AgeGroups
             ClassName = "age-groups-chart"
             Label = I18N.t "charts.ageGroups.title"
-            Explicit = true // SLO-spec
+            Explicit = false
             Renderer =
                 fun state ->
                     match state.StatsData with
@@ -190,7 +205,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Regions
             ClassName = "regions-chart"
             Label = I18N.t "charts.regions.title"
-            Explicit = true // SLO-spec
+            Explicit = false
             Renderer =
                 fun state ->
                     match state.RegionsData with
@@ -201,7 +216,7 @@ let render (state: State) (_: Msg -> unit) =
           { VisualizationType = Countries
             ClassName = "countries-chart"
             Label = I18N.t "charts.countries.title"
-            Explicit = true // SLO-spec
+            Explicit = false
             Renderer =
                 fun state ->
                     match state.StatsData with
@@ -231,7 +246,7 @@ let render (state: State) (_: Msg -> unit) =
             Html.a
                 [ prop.className "brand-link"
                   prop.target "_blank"
-                  prop.href "https://covid-19.treker.mk/"
+                  prop.href "https://covid-19.sledilnik.org/"
                   prop.text (I18N.t "meta.title") ]
 
 

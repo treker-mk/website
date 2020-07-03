@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "COVID-19 Tracking",
-        "description": "COVID-19 North Macedonia Tracking - collected, verified, updated, analyzed and reviewed COVID-19 data for North Macedonia."
+        "description": "COVID-19 Slovenia Tracking - collected, verified, updated, analyzed and reviewed COVID-19 data for Slovenia."
     },
     "navbar": {
         "menu": "Menu",
@@ -24,8 +24,8 @@
         "at": "at {{ date, HH:mm }}"
     },
     "notice": {
-        "news001": "New map:",
-        "news002": "COVID-19 Situation in Europe - restrictions, imported cases..."
+        "news001": "Treker MK 🇲🇰:",
+        "news002": "Sledilnik gets younger brother..."
     },
     "infocard": {
         "tests": "Tests Today",
@@ -132,7 +132,7 @@
             "dsMZ": "Ministry of Health",
             "dsOWD": "Our World in Data",
             "loading": "Loading data…",
-            "from": "",
+            "from": " ",
             "to": "-",
             "zoom": "Zoom",
             "resetZoom": "Reset zoom",
@@ -160,7 +160,7 @@
             "shortDateFormat": "%b %e"
         },
         "metricsComparison": {
-            "title": "COVID-19 Situation in North Macedonia",
+            "title": "COVID-19 Situation in Slovenia",
             "tests": "Tests (daily)",
             "testsToDate": "Tests (to date)",
             "confirmed": "Confirmed Cases (daily)",
@@ -339,6 +339,9 @@
             "age": "Age",
             "deceased": "Deaths",
             "confirmedCases": "Confirmed Cases"
+        },
+        "ageGroupsTimeline": {
+            "title": "Confirmed Cases by Age Groups"
         },
         "countries": {
             "title": "Comparison by Country",
@@ -537,6 +540,10 @@
         "quarantineStrict": {
             "title": "Quarantine",
             "description": "A tighter mandatory 14-day quarantine for all entrants from critical countries.<br>(red zone BIH, Serbia, Kosovo)"
+        },
+        "gatherings50": {
+            "title": "Up to 50",
+            "description": "Gathering up to 50 people, up to 500 if approved by NIJZ"
         }
     },
     "days": {
