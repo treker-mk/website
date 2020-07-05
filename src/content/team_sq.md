@@ -12,7 +12,7 @@ Nëse mund të ndani disa orë në ditë, na shkruani dhe do t’ju përfshijmë
 Treker jemi:
 
 -   [Andrazh Vrhovec](https://github.com/overlordtm) - migrim i teknologjive
--   [Aleksandra Vasilevska]() - përkthime
+-   [Aleksandra Vasillevska](https://www.facebook.com/alexandra.laktinski) - përkthime
 -   [Arben Imeri]() - përkthime
 -   [Behare Kasami](https://www.facebook.com/be.ka.319) - përkthime, komunikim me publikun
 -   [Dino Gramatikov]() - përmirësim i përvojës
