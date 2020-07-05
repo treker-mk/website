@@ -18,7 +18,7 @@ Treker jemi:
 -   [Dino Gramatikov]() - përmirësim i përvojës
 -   [Elisaveta Jasna Stikova]() - këshilltare
 -   [Gjorgi Kocev]() - programim
--   [Haris Babaçiq]() - modelim
+-   [Haris Babaçiq](https://www.linkedin.com/in/harisbabacic/) - modelim
 -   [Igor Vojnoski]() - përmirësim i përvojës
 -   [Ivo Neshkoviq](http://linkedin.com/in/ivoneskovic) - programim, migrim i teknologjive
 -   [Janez Zhibert](https://pacs.zf.uni-lj.si/janez-zibert/) - modelim
