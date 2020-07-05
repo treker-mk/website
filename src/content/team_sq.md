@@ -20,7 +20,7 @@ Treker jemi:
 -   [Gjorgi Kocev]() - programim
 -   [Haris Babaçiq]() - modelim
 -   [Igor Vojnoski]() - përmirësim i përvojës
--   [Ivo Neshkoviq]() - programim, migrim i teknologjive
+-   [Ivo Neshkoviq](http://linkedin.com/in/ivoneskovic) - programim, migrim i teknologjive
 -   [Janez Zhibert](https://pacs.zf.uni-lj.si/janez-zibert/) - modelim
 -   [Kristijan Jankov](https://www.linkedin.com/mwlite/in/kristijanjankov) - të dhëna, analiza e të dhënave
 -   [Ljupço Todorovski](http://kt.ijs.si/~ljupco/) - modelim
