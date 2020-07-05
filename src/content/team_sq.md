@@ -32,7 +32,7 @@ Treker jemi:
 -   [Nikolla Stikov]() - këshilltar
 -   [Petrit Saraçini]() - përkthime
 -   [Toni Popovski](https://www.linkedin.com/in/toni-popovski-28842612/) - këshilltar
--   [Vlladimir Trajkoviq]() - këshilltar
+-   [Vlladimir Trajkoviq](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - këshilltar
 -   [Vekosllav Stefanovski]() - programim, përgatitje e të dhënave
 -   [Vlladimir Neskoviq](https://www.linkedin.com/in/k35m4/) -  të dhëna, koordinim
 -   [Zharko Vasiljeviq]() - përkthime
