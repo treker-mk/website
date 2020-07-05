@@ -31,7 +31,7 @@ Treker jemi:
 -   [Sofija]() - përmirësim i përvojës
 -   [Nikolla Stikov]() - këshilltar
 -   [Petrit Saraçini]() - përkthime
--   [Toni Popovski]() - këshilltar
+-   [Toni Popovski](https://www.linkedin.com/in/toni-popovski-28842612/) - këshilltar
 -   [Vlladimir Trajkoviq]() - këshilltar
 -   [Vekosllav Stefanovski]() - programim, përgatitje e të dhënave
 -   [Vlladimir Neskoviq](https://www.linkedin.com/in/k35m4/) -  të dhëna, koordinim
