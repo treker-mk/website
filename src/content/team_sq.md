@@ -27,7 +27,7 @@ Treker jemi:
 -   [Lluka Renko](https://twitter.com/lukarenko) - migrim i platformës, koordinim
 -   [Nikolla Nikollov](https://www.linkedin.com/in/nikolovnikola) - të dhëna, analiza e të dhënave
 -   [Nikolla Simixhievski](https://simidjievskin.github.io/) - modelim
--   [Slobodan Jaqoski](https://www.linkedin.com/in/slobodanjakoski/) - komunikim me publikun
+-   [Slobodan Jaqoski](https://www.linkedin.com/in/slobodanjakoski) - komunikim me publikun
 -   [Sofija]() - përmirësim i përvojës
 -   [Nikolla Stikov]() - këshilltar
 -   [Petrit Saraçini]() - përkthime
