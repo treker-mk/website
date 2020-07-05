@@ -20,11 +20,11 @@ Treker jemi:
 -   [Gjorgi Kocev]() - programim
 -   [Haris Babaçiq]() - modelim
 -   [Igor Vojnoski]() - përmirësim i përvojës
--   [Ivo Neshkoviç]() - programim, migrim i teknologjive
+-   [Ivo Neshkoviq]() - programim, migrim i teknologjive
 -   [Janez Zhibert](https://pacs.zf.uni-lj.si/janez-zibert/) - modelim
--   [Kristijan Jankovski](https://www.linkedin.com/mwlite/in/kristijanjankov) - të dhëna, analiza e të dhënave
--   [Ljupco Todorovski](http://kt.ijs.si/~ljupco/) - modelim
--   [Lluka Renko ](https://twitter.com/lukarenko) - migrim i platformës, koordinim
+-   [Kristijan Jankov](https://www.linkedin.com/mwlite/in/kristijanjankov) - të dhëna, analiza e të dhënave
+-   [Ljupço Todorovski](http://kt.ijs.si/~ljupco/) - modelim
+-   [Lluka Renko](https://twitter.com/lukarenko) - migrim i platformës, koordinim
 -   [Nikolla Nikollov](https://www.linkedin.com/in/nikolovnikola) - të dhëna, analiza e të dhënave
 -   [Nikolla Simixhievski](https://simidjievskin.github.io/) - modelim
 -   [Slobodan Jaqoski]() - komunikim me publikun
@@ -32,8 +32,8 @@ Treker jemi:
 -   [Nikolla Stikov]() - këshilltar
 -   [Petrit Saraçini]() - përkthime
 -   [Toni Popovski]() - këshilltar
--   [Vlladimir Trajkoviç]() - këshilltar
+-   [Vlladimir Trajkoviq]() - këshilltar
 -   [Vekosllav Stefanovski]() - programim, përgatitje e të dhënave
--   [Vlladimir Neskoviç](https://www.linkedin.com/in/k35m4/) -  të dhëna, koordinim
--   [Zharko Vasiljeviç]() - përkthime
+-   [Vlladimir Neskoviq](https://www.linkedin.com/in/k35m4/) -  të dhëna, koordinim
+-   [Zharko Vasiljeviq]() - përkthime
 -   [Shtefan Bebler](https://www.linkedin.com/in/stefanbaebler/) - lokalizim në maqedonisht dhe shqip
