@@ -25,7 +25,7 @@
 -   [Лука Ренко](https://twitter.com/lukarenko) - миграција на платформата, координација
 -   [Никола Николов](https://www.linkedin.com/in/nikolovnikola) - податоци, анализа на податоците
 -   [Никола Симиџиевски](https://simidjievskin.github.io/) - моделирање
--   [Слободан Јаќоски](https://www.linkedin.com/in/slobodanjakoski/) - комуникација со јавноста
+-   [Слободан Јаќоски](https://www.linkedin.com/in/slobodanjakoski) - комуникација со јавноста
 -   [Софија]() - подобрување на искуството
 -   [Никола Стиков]() - советник
 -   [Петрит Сарачини]() - преводи
