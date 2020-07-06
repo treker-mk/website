@@ -1,12 +1,10 @@
-# TBD Tracking data on the COVID-19 spread in North Macedonia *MK
+# Следење на податоци за ширењето на COVID-19 во Северна Македонија 
 
-*The **"Covid-19 Tracker North Macednia"** project collects, analyses and publishes data on the spread of the SARS-CoV-2 coronavirus, the cause of COVID-19, in North Macedonia. We wish to give the public a better overview of the magnitude of the issue and a proper assessment of the risk.*
+*Проектот  **"Covid-19 Трекер Северна Македонија"** собира, анализира и објавува податоци за ширењето на SARS-CoV-2 коронавирусот, предизвикувачот на COVID-19 заболувањето, во Северна Македонија. Целта е да и дадеме на јавноста подобар преглед на важноста на проблемот и соодветна процена на ризик.*
 
-## Why are we collecting this data?
+## Зошто ги собираме овие податоци?
 
-In the experience of those countries where the spread of the virus has been most effectively curbed, correctly collected, up-to-date and transparently published data is vital for the effective response of public healthcare systems. 
-Only then the published data can stand as the basis for understanding of what is happening, for the active self-protective behaviour of people and for accepting the urgency of the safety measures taken.
-Data is collected from various publicly avalilable sources, and since TBD, we are trying to establish a direct connection with healthcare institutions and the  Institute of Public Health ([IJZ](https://www.iph.mk)). We would like to have shared with us structured data, which is then validated and shaped into a format suitable for visualization to be presented to the public as well as for further work in model development and forecasting. As data published in the media and certain other sources may sometimes be vague and inconsistent, the table also includes notes on sources and deductions based on incomplete data.
+Врз основа на искуствата на земјите кои најефективно го сузбиле ширењето на вирусот, точно собрани, навремени и транспарентно објавени податоци се клучни за ефективен одговор на јавно-здравствените системи. Објавените податоци со таков квалитет можат да бидат основа на разбирањето на состојбата, за да луѓето спроведуваат активна самозаштита и да ја прифатат итноста на преземените мерки на заштита од властите. Податоците се собираат од различни јавно-достапни извори и се обидуваме да воспоставиме директна соработка со здравствените институции и Институтот за Јавно Здравје  ([ИЈЗ](https://www.iph.mk)). Би сакале да имаме структурирани податоци кои би ги потврдиле и оформиле во формат соодветен за визуелизација, достапен за јавноста а и за понатамошна работа во развивање на математички модели и прогнозирање. Бидејќи податоците објавени во медиумите и од одредени извори можат некогаш да бидат нејасни и неконзистентни, табелата на податоци вклучува и белешки за изворите и заклучоците изведени од нецелосни податоци.
 
 ## TBD What data are we collecting?
 
