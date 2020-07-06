@@ -36,5 +36,5 @@ Treker jemi:
 -   [Vlladimir Trajkoviq](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - këshilltar
 -   [Vekosllav Stefanovski](https://mk.linkedin.com/in/swekster) - programim, përgatitje e të dhënave
 -   [Vlladimir Neskoviq](https://www.linkedin.com/in/k35m4/) -  të dhëna, koordinim
--   [Zharko Vasiljeviq]() - përkthime
+-   [Zharko Vasiljeviq](www.linkedin.com/in/zarko-vasiljevic-b067407) - përkthime
 -   [Shtefan Bebler](https://www.linkedin.com/in/stefanbaebler/) - lokalizim në maqedonisht dhe shqip
