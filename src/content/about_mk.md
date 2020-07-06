@@ -59,12 +59,10 @@
 
 </details>
 
-## Lend a helping hand – to us, yourself and others
+## Помогнете ни нам, на себе и останатите
 
-The project was initiated by [Luka Renko](https://twitter.com/LukaRenko) in Slovenia, for Republic of Slovenia. He began collecting data in the begining of COVID-19 epidemiy and has grown steadily into a team of 20 to 45 volunteers and active participants due to increasing need for data input and verification, as well as programming. It is a crowdsourcing project, supported by massive voluntary participation, where everyone can contribute with their resources or data to the best of their ability. Join in and lend a helping hand. Treker.mk which is a clone of sledilnik.org was initiated by Luka Renko and Vladimir Nešković (also citizen of Republic of North Macedonia) living in Slovenia and part of the Sledilnik team in Slovenia. 
-The team in North MAcedonia is slowly growing, now at a number of 5-10 active participants.
+Овој проект е инициран од  [Лука Ренко](https://twitter.com/LukaRenko) во Словенија за Република Словенија. Тој започна да собира податоци на почетокот на COVID-19 пандемијата, за да постепено иницијативата прерасне во тим од 20 до 45 волонтери и активни учесници, поради растечката потреба за внесување податоци, верификација и програмирање. Ова е crowdsourcing проект, подржан од волонтерско учество, каде секој, согласно со способноста, може да допринесе со своите ресурси или податоци. Придружете ни се и подадете рака. Treker.mk, кој е клон на sledilnik.org е инициран од Лука Ренко и Владимир Нешковиќ граѓанин на Република Северна Македонија, кој живее во Словенија и е дел од словенскиот тим Sledilnik. Тимот во Северна Македонија полека расте и засега има 5-10 активни учесници.
 
-## Terms of use
+## Услови на употреба
 
-Use and collaboration are desired: the data is collected from sources in the public domain and can be freely used, edited, processed or incorporated into any non-marketable content if citing the source – covid-19.treker.mk.
-To export data to other formats, or use for visualization use please contact us at info@treker.mk
+Ги охрабруваме сите да ги користат податоците и да соработуваат со нас: податоците се собрани од јавно-достапни извори и можат слободно да се користат, уредуваат, обработуваат или инкорпорираат во било каква непрофитна содржина, доколку се цитира изворот – covid-19.treker.mk. За да ги симнете податоците во други формати или да ги користите за визуелизација, контактирајте нѐ на info@treker.mk
