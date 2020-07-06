@@ -1,4 +1,4 @@
-# Следење на податоци за ширењето на COVID-19 во Северна Македонија 
+# Следење на податоци за ширењето на COVID-19 во Северна Македонија (страната е во изработка - TBD)
 
 *Проектот  **"Covid-19 Трекер Северна Македонија"** собира, анализира и објавува податоци за ширењето на SARS-CoV-2 коронавирусот, предизвикувачот на COVID-19 заболувањето, во Северна Македонија. Целта е да и дадеме на јавноста подобар преглед на важноста на проблемот и соодветна процена на ризик.*
 
@@ -53,7 +53,7 @@
 Нашите податоци се јавно достапни и се користат од други портали и проекти -  можете да ги најдете на оваа страна [Линкови](/mk/links).
 
 <details>
-  <summary>Disclaimer of responsibility (click for more)</summary>
+  <summary>TBD Disclaimer of responsibility (click for more) TBD</summary>
 
 **Please note: The information published on our site, including links to models and other sites to which we are not directly connected, is prepared with the utmost care, using available sources of data, knowledge, methodologies and technologies, in accordance with scientific standards. We believe that the visualizations and models can help explain the various factors behind the spread of the virus, including the impact of the safety measures taken and of possible future measures. Through this, we wish to emphasize that we all play an important role in this pandemic. Nonetheless, we cannot fully guarantee the accuracy, completeness or usefulness of the information on these sites, and we explicitly disclaim any responsibility for further interpretations and simulations which cite our visualizations as a source.*
 
