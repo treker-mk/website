@@ -34,5 +34,5 @@
 -   [Владимир Трајковиќ](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - советник
 -   [Векослав Стефановски](https://mk.linkedin.com/in/swekster) - програмирање, подготовка на податоците
 -   [Владимир Нешковиќ](https://www.linkedin.com/in/k35m4/) -  податоци, координација
--   [Жарко Васиљевиќ]() - преводи, подобрување на искуството
+-   [Жарко Васиљевиќ](www.linkedin.com/in/zarko-vasiljevic-b067407) - преводи, подобрување на искуството
 -   [Штефан Беблер](https://www.linkedin.com/in/stefanbaebler/) - локализација на македонски и албански
