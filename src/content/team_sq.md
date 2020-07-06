@@ -15,7 +15,7 @@ Treker jemi:
 -   [Aleksandra Vasillevska](https://www.facebook.com/alexandra.laktinski) - përkthime
 -   [Arben Imeri]() - përkthime
 -   [Behare Kasami](https://www.facebook.com/be.ka.319) - përkthime, komunikim me publikun
--   [Dino Gramatikov]() - përmirësim i përvojës
+-   [Dino Gramatikov](https://www.linkedin.com/in/dino-gramatikov-0901183/) - përmirësim i përvojës
 -   [Elisaveta Jasna Stikova]() - këshilltare
 -   [Gjorgi Kocev]() - programim
 -   [Haris Babaçiq](https://www.linkedin.com/in/harisbabacic/) - modelim
@@ -33,7 +33,7 @@ Treker jemi:
 -   [Petrit Saraçini]() - përkthime
 -   [Toni Popovski](https://www.linkedin.com/in/toni-popovski-28842612/) - këshilltar
 -   [Vlladimir Trajkoviq](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - këshilltar
--   [Vekosllav Stefanovski]() - programim, përgatitje e të dhënave
+-   [Vekosllav Stefanovski](https://mk.linkedin.com/in/swekster) - programim, përgatitje e të dhënave
 -   [Vlladimir Neskoviq](https://www.linkedin.com/in/k35m4/) -  të dhëna, koordinim
 -   [Zharko Vasiljeviq]() - përkthime
 -   [Shtefan Bebler](https://www.linkedin.com/in/stefanbaebler/) - lokalizim në maqedonisht dhe shqip
