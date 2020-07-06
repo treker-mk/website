@@ -53,9 +53,9 @@
 Нашите податоци се јавно достапни и се користат од други портали и проекти -  можете да ги најдете на оваа страна [Линкови](/mk/links).
 
 <details>
-  <summary>TBD Disclaimer of responsibility (click for more) TBD</summary>
+  <summary>TBD Одрекување од одговорност ž(кликнете за повеќе) TBD</summary>
 
-**Please note: The information published on our site, including links to models and other sites to which we are not directly connected, is prepared with the utmost care, using available sources of data, knowledge, methodologies and technologies, in accordance with scientific standards. We believe that the visualizations and models can help explain the various factors behind the spread of the virus, including the impact of the safety measures taken and of possible future measures. Through this, we wish to emphasize that we all play an important role in this pandemic. Nonetheless, we cannot fully guarantee the accuracy, completeness or usefulness of the information on these sites, and we explicitly disclaim any responsibility for further interpretations and simulations which cite our visualizations as a source.*
+**Важно: Информациите објавени на нашиот сајт, вклучувајќи ги и линковите до моделите и други места со кои не сме директно поврзани е подготвено со максимална внимателност, користејќи достапни извори на податоци, знаење, методологија и технологија, согласно со научните стандарди. Веруваме дека визуелизациите и моделите можат да помогнат да се објаснат разните фактори кои влијаат на ширењето на вирусот, вклучувајќи го и ефектот на преземените заштитни мерки и можни мерки во иднина. Преку ова би сакале да потенцираме дека сите ние имаме важна улога во оваа пандемија. Сепак, не можеме целосно да гарантираме за точноста, целосноста или корисноста на информациите на овие веб страни и експлицитно се одрекуваме од одговорност за било какви понатамошни интерпретации и симулации кои ги цитираат нашите податоци и/или визуелизации како извор*
 
 </details>
 
