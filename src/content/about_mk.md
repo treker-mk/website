@@ -6,51 +6,51 @@
 
 Врз основа на искуствата на земјите кои најефективно го сузбиле ширењето на вирусот, точно собрани, навремени и транспарентно објавени податоци се клучни за ефективен одговор на јавно-здравствените системи. Објавените податоци со таков квалитет можат да бидат основа на разбирањето на состојбата, за да луѓето спроведуваат активна самозаштита и да ја прифатат итноста на преземените мерки на заштита од властите. Податоците се собираат од различни јавно-достапни извори и се обидуваме да воспоставиме директна соработка со здравствените институции и Институтот за Јавно Здравје  ([ИЈЗ](https://www.iph.mk)). Би сакале да имаме структурирани податоци кои би ги потврдиле и оформиле во формат соодветен за визуелизација, достапен за јавноста а и за понатамошна работа во развивање на математички модели и прогнозирање. Бидејќи податоците објавени во медиумите и од одредени извори можат некогаш да бидат нејасни и неконзистентни, табелата на податоци вклучува и белешки за изворите и заклучоците изведени од нецелосни податоци.
 
-## TBD What data are we collecting?
+## TBD Кои податоци ги собираме?
 
-The following data from the IJZ and various public sources is included in database on a daily basis (with history):
+Следниве податоци од ИЈЗ и разни јавни извори би сакале да вклучени во датабазата, на дневна основа (со  архива):):
 
--   number of tests performed and number of confirmed infections
-    
--   number of confirmed infections by category: by age, gender, region and municipality
-    
--   hospital records for patients with COVID-19: hospitalized, in the intensive care unit (ICU), in critical condition, discharged from hospital care, recovered
-    
--   monitoring of individual cases, particularly those in critical activities: working in healthcare, senior citizens’ homes, civil protection
-    
--   healthcare system capacity: number of beds, intensive care units, respirators for ventilation...
-    
-    We are also constantly striving to add new important categories.
-    All data is collected and available in form of [GSheets, CSV or via REST API.](/en/datasources)
+-   број на изработени тестови и број на потврдени инфекции
+
+-   број на потврдени инфекции по категорија: возраст, пол, регион и општина
+
+-   болнички записи за пациентите со COVID-19: хоспитализирани, на единица за интензивно лекување (ЕИЛ), во критична состојба, отпишани од болница, опоравен
+
+-   мониторирање на засебни случаи, особено оние лица со ризични активности: здравствени работници, лица во старечки домови, цивилна заштита
+
+-   капацитет на здравствениот систем: број на кревети, број на единици за интензивно лекување, респиратори за вентилација...
+
+Постојано тежнееме кон тоа да додадеме нови важни категории. 
+Сите податоци се собрани и достапни во овие формати: [GSheets, CSV or via REST API.](/mk/datasources)
     
 
 <details>
-  <summary>How is the data edited and verified?</summary>
+  <summary>Како се уредени и верифицирани податоците? </summary>
 
-The database is updated with the IJZ data (by category). The data by region and age is sometimes updated subsequently and cross-checked as the data may change as a result of epidemiological research.
+Датабазата е ажурирана со податоци од ИЈЗ (по категорија). Податоците по региони и возрасни групи се понекогаш дополнително додадени и вкрстено проверени бидејќи овие податоци можно е да се сменат следствено на епидемиолошки истражувања. 
 
-TBD Municipalities are tracked in [TBD the Places table](https://docs.google.com/spreadsheets/.
-Updating the hospital care data – the Patients table process:
+Општините се следени во  [TBD табела со општини](https://docs.google.com/spreadsheets/.
+Жечбата ни е да стигнеме до оваква процедура на ажурирање на податоци за пациенти на болничка нега. Моментално зависна од достапот до податоците: 
+    
+-   Се следат сите болнички објави за COVID-19 преку целиот ден.
 
--   All hospital announcements for COVID-19 are monitored (TBD) – around TBD oClock.
-    
--   The number of hospitalizations monitored: all departments, hospitalizations in intensive care units, and patients in critical condition.
-    
--   Transitions (admissions/discharges) between individual conditions are also recorded (when detectable from the data).
-    
--   Where the transition data (admission/discharge) is incomplete, the values are determined by means of deduction (using a formula).
-    
--   All sources and deductions are recorded as comments in individual cells (possibility of verification).
-    
--   The data is compared with the summary data on hospitalized patients and patients in intensive care published daily by the TBD at TBD pm.
-    
+-   Бројот на хоспитализации се следи по: цели оддели, единици за интензивно лекување и пациенти во критична состојба.
+
+-   Каде што е можно, се следи преминот од една во друга болничка состојба (прием/отпуст).
+
+-   Каде не е можно да се следи, преминот од една во друга болничка состојба (прием/отпуст) се изведува по формула.
+
+-   Сите извори и изведувања на заклучоци се анотирани како коментари во засебни ќелии (отворена можност за верификација).
+
+-   Податоците се споредуваат со сумираните податоци за хоспитализирани пациенти и пациентите на интензивно лекување, објавувани дневно од TBD во TBD pm.
+
 
 </details>
 
-## Use of the data
+## Употреба на податоците
 
-The data is used for various visualizations and statistics, such as [charts, infographics and maps with information on confirmed infections and hospitalized patients](/en/stats) on our own website. 
-Our data is also freely avaliable and hence used by some other portals and projects - you can find them on the [Links](/en/links) page.
+Податоците се користат за разни визуелизации и статистика, како што се [графикони, инфографици и мапи со податоци за потврдени случаи и хоспитализирани пациенти ](/mk/stats) на нашиот веб сајт. 
+Нашите податоци се јавно достапни и се користат од други портали и проекти -  можете да ги најдете на оваа страна [Линкови](/mk/links).
 
 <details>
   <summary>Disclaimer of responsibility (click for more)</summary>
