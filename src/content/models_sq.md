@@ -44,7 +44,8 @@ Kur Rt mbahet mbi 1 për një periudhë të caktuar, epidemia përhapet, dhe e k
 **Grafikë Rt.** Numri riprodhues sipas ditëve (Rt) në Maqedoni. Pikat dhe vijat e tregojnë lëvizjen e Rt-së së vlerësuar me kalimin e kohës. Hijet me ngjyrë të kaltër të zbehtë i tregojnë 95% intervalet e besueshmërisë, d.m.th. tregojnë prej ku deri ku mund të jetë Rt i vërtetë dhe pasqyrojnë pasigurinë në Rt-në e vlerësuar. 
 
 
-1.       Wallinga J, Teunis P. Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures. Am J Epidemiol. 2004;160(6):509-516. doi:10.1093/aje/kwh255
-2.       Ferretti L, Wymant C, Kendall M, et al. Quantifying SARS-CoV-2 transmission suggests epidemic control with digital contact tracing. Science. March 2020. doi:10.1126/science.abb6936
+*1.       Wallinga J, Teunis P. Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures. Am J Epidemiol. 2004;160(6):509-516. doi:10.1093/aje/kwh255*
+
+*2.       Ferretti L, Wymant C, Kendall M, et al. Quantifying SARS-CoV-2 transmission suggests epidemic control with digital contact tracing. Science. March 2020. doi:10.1126/science.abb6936*
 
 
