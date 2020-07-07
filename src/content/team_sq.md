@@ -29,7 +29,7 @@ Treker jemi:
 -   [Nikolla Nikollov](https://www.linkedin.com/in/nikolovnikola) - të dhëna, analiza e të dhënave
 -   [Nikolla Simixhievski](https://simidjievskin.github.io/) - modelim
 -   [Slobodan Jaqoski](https://www.linkedin.com/in/slobodanjakoski) - komunikim me publikun
--   [Sofija]() - përmirësim i përvojës
+-   [Sofija Spirovska]() - përmirësim i përvojës
 -   [Nikolla Stikov]() - këshilltar
 -   [Petrit Saraçini]() - përkthime
 -   [Toni Popovski](https://www.linkedin.com/in/toni-popovski-28842612/) - këshilltar
