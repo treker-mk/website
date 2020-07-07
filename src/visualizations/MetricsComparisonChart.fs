@@ -130,7 +130,7 @@ let renderChartOptions state dispatch =
                             value.IsNone)
                         |> Seq.toArray
                 |}
-       yield addContainmentMeasuresFlags startTime None |> pojo
+        yield addContainmentMeasuresFlags startTime None |> pojo
     ]
 
     let onRangeSelectorButtonClick(buttonIndex: int) =
