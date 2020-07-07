@@ -192,60 +192,51 @@ let basicChartOptions
                 labels = pojo {| align = "center"; y = 30; reserveSpace = true; distance = -20; |} // style = pojo {| marginBottom = "-30px" |}
                 //labels = {| rotation= -45 |}
                 plotLines=[|
-(* SLO-spec 
-                    {| value=jsTime <| DateTime(2020,3,13); label=Some {| text=I18N.t "phase.2.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,3,20); label=Some {| text=I18N.t "phase.3.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,4,8);  label=Some {| text=I18N.t "phase.4.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,4,15); label=Some {| text=I18N.t "phase.5.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,4,21); label=Some {| text=I18N.t "phase.6.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,5,15); label=Some {| text=I18N.t "phase.7.description"; rotation=270; align="right"; x=12 |} |}
-*)
+                    {| value=jsTime <| DateTime(2020,3,18); label=Some {| text=I18N.t "mk.phase.1.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,3,22); label=Some {| text=I18N.t "mk.phase.2.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,3,30); label=Some {| text=I18N.t "mk.phase.3.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,4,3);  label=Some {| text=I18N.t "mk.phase.4.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,5,29); label=Some {| text=I18N.t "mk.phase.5.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,5,30); label=Some {| text=I18N.t "mk.phase.6.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,6,21); label=Some {| text=I18N.t "mk.phase.7.description"; rotation=270; align="right"; x=12 |} |}
                 |]
 
                 plotBands=[|
-                    // SLO-spec - TODO: this is just placeholder/hack until you have MK phases 
                     {| ``from``=jsTime <| DateTime(2020,2,29);
-                       ``to``=jsTime <| DateTime(2020,3,13);
+                       ``to``=jsTime <| DateTime(2020,3,18);
                        color="transparent"
-                       label=Some {| align="center"; text="" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.1.title" |}
                     |}
-(* SLO-spec 
-                    {| ``from``=jsTime <| DateTime(2020,2,29);
-                       ``to``=jsTime <| DateTime(2020,3,13);
+                    {| ``from``=jsTime <| DateTime(2020,3,18);
+                       ``to``=jsTime <| DateTime(2020,3,22);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "phase.1.title" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.2.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,3,13);
-                       ``to``=jsTime <| DateTime(2020,3,20);
+                    {| ``from``=jsTime <| DateTime(2020,3,22);
+                       ``to``=jsTime <| DateTime(2020,3,30);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "phase.2.title" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.3.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,3,20);
-                       ``to``=jsTime <| DateTime(2020,4,8);
+                    {| ``from``=jsTime <| DateTime(2020,3,30);
+                       ``to``=jsTime <| DateTime(2020,4,3);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "phase.3.title" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.4.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,4,8);
-                       ``to``=jsTime <| DateTime(2020,4,15);
+                    {| ``from``=jsTime <| DateTime(2020,4,3);
+                       ``to``=jsTime <| DateTime(2020,5,29);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "phase.4.title" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.5.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,4,15);
-                       ``to``=jsTime <| DateTime(2020,4,21);
+                    {| ``from``=jsTime <| DateTime(2020,5,29);
+                       ``to``=jsTime <| DateTime(2020,5,30);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "phase.5.title" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.6.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,4,21);
-                       ``to``=jsTime <| DateTime(2020,5,15);
-                       color="transparent"
-                       label=Some {| align="center"; text=I18N.t "phase.6.title" |}
-                    |}
-                    {| ``from``=jsTime <| DateTime(2020,5,15);
+                    {| ``from``=jsTime <| DateTime(2020,5,30);
                        ``to``=jsTime <| DateTime.Today;
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "phase.7.title" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.7.title" |}
                     |}
-*)
                     yield! shadedWeekendPlotBands
                 |]
                 // https://api.highcharts.com/highcharts/xAxis.dateTimeLabelFormats
