@@ -18,7 +18,7 @@
 -   [Елисавета Јасна Стикова]() - советничка
 -   [Ѓорѓи Ќосев](https://twitter.com/spion) - програмирање
 -   [Харис Бабачиќ](https://www.linkedin.com/in/harisbabacic/) - моделирање
--   [Игор Војноски]() - подобрување на искуството
+-   [Игор Војноски](https://www.facebook.com/jiggymkd) - подобрување на искуството
 -   [Иво Нешковиќ](http://linkedin.com/in/ivoneskovic) - програмирање, миграција на технологиите
 -   [Јанез Жиберт](https://pacs.zf.uni-lj.si/janez-zibert/) - моделирање
 -   [Кристијан Јанков](https://www.linkedin.com/mwlite/in/kristijanjankov) - податоци, анализа на податоците
