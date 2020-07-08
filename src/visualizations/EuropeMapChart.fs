@@ -213,7 +213,7 @@ let init (regionsData: StatsData): State * Cmd<Msg> =
     { GeoJson = NotAsked
       OwdData = NotAsked
       CountryData = Map.empty
-      ChartType = Restrictions },
+      ChartType = (* SLO-spec Restrictions *) TwoWeekIncidence },
     (cmdGeoJson @ cmdOwdData)
 
 let prepareCountryData (data: Data.OurWorldInData.DataPoint list) =
@@ -482,7 +482,7 @@ let renderChartTypeSelectors (activeChartType: ChartType) dispatch =
         [ prop.className "chart-display-property-selector"
           prop.children
               [ Html.text (I18N.t "charts.common.view")
-                renderChartSelector Restrictions
+                // SLO-spec renderChartSelector Restrictions
                 renderChartSelector TwoWeekIncidence ] ]
 
 
