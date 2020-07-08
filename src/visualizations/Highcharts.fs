@@ -173,45 +173,60 @@ let basicChartOptions
                 labels = pojo {| align = "center"; y = 30; reserveSpace = true; distance = -20; |} // style = pojo {| marginBottom = "-30px" |}
                 //labels = {| rotation= -45 |}
                 plotLines=[|
-                    {| value=jsTime <| DateTime(2020,3,18); label=Some {| text=I18N.t "mk.phase.1.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,3,22); label=Some {| text=I18N.t "mk.phase.2.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,3,30); label=Some {| text=I18N.t "mk.phase.3.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,4,3);  label=Some {| text=I18N.t "mk.phase.4.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,5,30); label=Some {| text=I18N.t "mk.phase.5.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,6,21); label=Some {| text=I18N.t "mk.phase.6.description"; rotation=270; align="right"; x=12 |} |}
+(* SLO-spec 
+                    {| value=jsTime <| DateTime(2020,3,13); label=Some {| text=I18N.t "phase.2.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,3,20); label=Some {| text=I18N.t "phase.3.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,4,8);  label=Some {| text=I18N.t "phase.4.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,4,15); label=Some {| text=I18N.t "phase.5.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,4,21); label=Some {| text=I18N.t "phase.6.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,5,15); label=Some {| text=I18N.t "phase.7.description"; rotation=270; align="right"; x=12 |} |}
+*)
                 |]
 
                 plotBands=[|
+                    // SLO-spec - TODO: this is just placeholder/hack until you have MK phases 
                     {| ``from``=jsTime <| DateTime(2020,2,29);
-                       ``to``=jsTime <| DateTime(2020,3,18);
+                       ``to``=jsTime <| DateTime(2020,3,13);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.1.title" |}
+                       label=Some {| align="center"; text="" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,3,18);
-                       ``to``=jsTime <| DateTime(2020,3,22);
+(* SLO-spec 
+                    {| ``from``=jsTime <| DateTime(2020,2,29);
+                       ``to``=jsTime <| DateTime(2020,3,13);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.2.title" |}
+                       label=Some {| align="center"; text=I18N.t "phase.1.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,3,22);
-                       ``to``=jsTime <| DateTime(2020,3,30);
+                    {| ``from``=jsTime <| DateTime(2020,3,13);
+                       ``to``=jsTime <| DateTime(2020,3,20);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.3.title" |}
+                       label=Some {| align="center"; text=I18N.t "phase.2.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,3,30);
-                       ``to``=jsTime <| DateTime(2020,4,3);
+                    {| ``from``=jsTime <| DateTime(2020,3,20);
+                       ``to``=jsTime <| DateTime(2020,4,8);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.4.title" |}
+                       label=Some {| align="center"; text=I18N.t "phase.3.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,4,3);
-                       ``to``=jsTime <| DateTime(2020,5,30);
+                    {| ``from``=jsTime <| DateTime(2020,4,8);
+                       ``to``=jsTime <| DateTime(2020,4,15);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.5.title" |}
+                       label=Some {| align="center"; text=I18N.t "phase.4.title" |}
                     |}
-                    {| ``from``=jsTime <| DateTime(2020,5,30);
+                    {| ``from``=jsTime <| DateTime(2020,4,15);
+                       ``to``=jsTime <| DateTime(2020,4,21);
+                       color="transparent"
+                       label=Some {| align="center"; text=I18N.t "phase.5.title" |}
+                    |}
+                    {| ``from``=jsTime <| DateTime(2020,4,21);
+                       ``to``=jsTime <| DateTime(2020,5,15);
+                       color="transparent"
+                       label=Some {| align="center"; text=I18N.t "phase.6.title" |}
+                    |}
+                    {| ``from``=jsTime <| DateTime(2020,5,15);
                        ``to``=jsTime <| DateTime.Today;
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.6.title" |}
+                       label=Some {| align="center"; text=I18N.t "phase.7.title" |}
                     |}
+*)
                     yield! shadedWeekendPlotBands
                 |]
                 // https://api.highcharts.com/highcharts/xAxis.dateTimeLabelFormats
