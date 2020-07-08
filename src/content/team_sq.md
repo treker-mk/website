@@ -17,7 +17,7 @@ Treker jemi:
 -   [Behare Kasami](https://www.facebook.com/be.ka.319) - përkthime, komunikim me publikun
 -   [Viktor Krallevski](https://www.linkedin.com/in/viktor-kralevski-8950789) - të dhëna, analiza e të dhënave
 -   [Dino Gramatikov](https://www.linkedin.com/in/dino-gramatikov-0901183/) - përmirësim i përvojës
--   [Elisaveta Jasna Stikova]() - këshilltare
+-   [Elisaveta Jasna Stikova](https://www.linkedin.com/in/elisaveta-stikova-a27b573/) - këshilltare
 -   [Gjorgi Qosev]() - programim
 -   [Haris Babaçiq](https://www.linkedin.com/in/harisbabacic/) - modelim
 -   [Igor Vojnoski](https://www.facebook.com/jiggymkd) - përmirësim i përvojës
