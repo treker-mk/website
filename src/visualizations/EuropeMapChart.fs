@@ -400,8 +400,10 @@ let renderMap state geoJson owdData =
 
         let textHtml =
             sprintf "<b>%s</b><br/>
+            (* SLO-spec this is connected to the bottom SLO-spec about the imported cases
             %s: <b>%s</b><br/>
             %s: <b>%s</b> (%s)<br/><br/>
+            *)
             %s: <b>%s</b><br/>
             %s: <b>%s</b> (%s)<br/>"
                 country
