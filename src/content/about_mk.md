@@ -1,72 +1,68 @@
-# TBD Tracking data on the COVID-19 spread in North Macedonia *MK
+# Следење на податоци за ширењето на COVID-19 во Северна Македонија (страната е во изработка - TBD)
 
-*The **"Covid-19 Tracker North Macednia"** project collects, analyses and publishes data on the spread of the SARS-CoV-2 coronavirus, the cause of COVID-19, in North Macedonia. We wish to give the public a better overview of the magnitude of the issue and a proper assessment of the risk.*
+*Проектот  **"Covid-19 Трекер Северна Македонија"** собира, анализира и објавува податоци за ширењето на SARS-CoV-2 коронавирусот, предизвикувачот на COVID-19 заболувањето, во Северна Македонија. Целта е да и дадеме на јавноста подобар преглед на важноста на проблемот и соодветна процена на ризик.*
 
-## Why are we collecting this data?
+## Зошто ги собираме овие податоци?
 
-In the experience of those countries where the spread of the virus has been most effectively curbed, correctly collected, up-to-date and transparently published data is vital for the effective response of public healthcare systems. 
-Only then the published data can stand as the basis for understanding of what is happening, for the active self-protective behaviour of people and for accepting the urgency of the safety measures taken.
-Data is collected from various publicly avalilable sources, and since TBD, we are trying to establish a direct connection with healthcare institutions and the  Institute of Public Health ([IJZ](https://www.iph.mk)). We would like to have shared with us structured data, which is then validated and shaped into a format suitable for visualization to be presented to the public as well as for further work in model development and forecasting. As data published in the media and certain other sources may sometimes be vague and inconsistent, the table also includes notes on sources and deductions based on incomplete data.
+Врз основа на искуствата на земјите кои најефективно го сузбиле ширењето на вирусот, точно собрани, навремени и транспарентно објавени податоци се клучни за ефективен одговор на јавно-здравствените системи. Објавените податоци со таков квалитет можат да бидат основа на разбирањето на состојбата, за да луѓето спроведуваат активна самозаштита и да ја прифатат итноста на преземените мерки на заштита од властите. Податоците се собираат од различни јавно-достапни извори и се обидуваме да воспоставиме директна соработка со здравствените институции и Институтот за Јавно Здравје  ([ИЈЗ](https://www.iph.mk)). Би сакале да имаме структурирани податоци кои би ги потврдиле и оформиле во формат соодветен за визуелизација, достапен за јавноста а и за понатамошна работа во развивање на математички модели и прогнозирање. Бидејќи податоците објавени во медиумите и од одредени извори можат некогаш да бидат нејасни и неконзистентни, табелата на податоци вклучува и белешки за изворите и заклучоците изведени од нецелосни податоци.
 
-## TBD What data are we collecting?
+## TBD Кои податоци ги собираме?
 
-The following data from the IJZ and various public sources is included in database on a daily basis (with history):
+Следниве податоци од ИЈЗ и разни јавни извори би сакале да вклучени во датабазата, на дневна основа (со  архива):):
 
--   number of tests performed and number of confirmed infections
-    
--   number of confirmed infections by category: by age, gender, region and municipality
-    
--   hospital records for patients with COVID-19: hospitalized, in the intensive care unit (ICU), in critical condition, discharged from hospital care, recovered
-    
--   monitoring of individual cases, particularly those in critical activities: working in healthcare, senior citizens’ homes, civil protection
-    
--   healthcare system capacity: number of beds, intensive care units, respirators for ventilation...
-    
-    We are also constantly striving to add new important categories.
-    All data is collected and available in form of [GSheets, CSV or via REST API.](/en/datasources)
+-   број на изработени тестови и број на потврдени инфекции
+
+-   број на потврдени инфекции по категорија: возраст, пол, регион и општина
+
+-   болнички записи за пациентите со COVID-19: хоспитализирани, на единица за интензивно лекување (ЕИЛ), во критична состојба, отпишани од болница, опоравен
+
+-   мониторирање на засебни случаи, особено оние лица со ризични активности: здравствени работници, лица во старечки домови, цивилна заштита
+
+-   капацитет на здравствениот систем: број на кревети, број на единици за интензивно лекување, респиратори за вентилација...
+
+Постојано тежнееме кон тоа да додадеме нови важни категории. 
+Сите податоци се собрани и достапни во овие формати: [GSheets, CSV or via REST API.](/mk/datasources)
     
 
 <details>
-  <summary>How is the data edited and verified?</summary>
+  <summary>Како се уредени и верифицирани податоците? </summary>
 
-The database is updated with the IJZ data (by category). The data by region and age is sometimes updated subsequently and cross-checked as the data may change as a result of epidemiological research.
+Датабазата е ажурирана со податоци од ИЈЗ (по категорија). Податоците по региони и возрасни групи се понекогаш дополнително додадени и вкрстено проверени бидејќи овие податоци можно е да се сменат следствено на епидемиолошки истражувања. 
 
-TBD Municipalities are tracked in [TBD the Places table](https://docs.google.com/spreadsheets/.
-Updating the hospital care data – the Patients table process:
+Општините се следени во  [TBD табела со општини](https://docs.google.com/spreadsheets/.
+Желбата ни е да стигнеме до оваква процедура на ажурирање на податоци за пациенти на болничка нега. Моментално зависна од достапот до податоците: 
+    
+-   Се следат сите болнички објави за COVID-19 преку целиот ден.
 
--   All hospital announcements for COVID-19 are monitored (TBD) – around TBD oClock.
-    
--   The number of hospitalizations monitored: all departments, hospitalizations in intensive care units, and patients in critical condition.
-    
--   Transitions (admissions/discharges) between individual conditions are also recorded (when detectable from the data).
-    
--   Where the transition data (admission/discharge) is incomplete, the values are determined by means of deduction (using a formula).
-    
--   All sources and deductions are recorded as comments in individual cells (possibility of verification).
-    
--   The data is compared with the summary data on hospitalized patients and patients in intensive care published daily by the TBD at TBD pm.
-    
+-   Бројот на хоспитализации се следи по: цели оддели, единици за интензивно лекување и пациенти во критична состојба.
+
+-   Каде што е можно, се следи преминот од една во друга болничка состојба (прием/отпуст).
+
+-   Каде не е можно да се следи, преминот од една во друга болничка состојба (прием/отпуст) се изведува по формула.
+
+-   Сите извори и изведувања на заклучоци се анотирани како коментари во засебни ќелии (отворена можност за верификација).
+
+-   Податоците се споредуваат со сумираните податоци за хоспитализирани пациенти и пациентите на интензивно лекување, објавувани дневно од TBD во TBD pm.
+
 
 </details>
 
-## Use of the data
+## Употреба на податоците
 
-The data is used for various visualizations and statistics, such as [charts, infographics and maps with information on confirmed infections and hospitalized patients](/en/stats) on our own website. 
-Our data is also freely avaliable and hence used by some other portals and projects - you can find them on the [Links](/en/links) page.
+Податоците се користат за разни визуелизации и статистика, како што се [графикони, инфографици и мапи со податоци за потврдени случаи и хоспитализирани пациенти ](/mk/stats) на нашиот веб сајт. 
+Нашите податоци се јавно достапни и се користат од други портали и проекти -  можете да ги најдете на оваа страна [Линкови](/mk/links).
 
 <details>
-  <summary>Disclaimer of responsibility (click for more)</summary>
+  <summary>TBD Одрекување од одговорност (кликнете за повеќе) TBD</summary>
 
-**Please note: The information published on our site, including links to models and other sites to which we are not directly connected, is prepared with the utmost care, using available sources of data, knowledge, methodologies and technologies, in accordance with scientific standards. We believe that the visualizations and models can help explain the various factors behind the spread of the virus, including the impact of the safety measures taken and of possible future measures. Through this, we wish to emphasize that we all play an important role in this pandemic. Nonetheless, we cannot fully guarantee the accuracy, completeness or usefulness of the information on these sites, and we explicitly disclaim any responsibility for further interpretations and simulations which cite our visualizations as a source.*
+**Важно: Информациите објавени на нашиот сајт, вклучувајќи ги и линковите до моделите и други места со кои не сме директно поврзани е подготвено со максимална внимателност, користејќи достапни извори на податоци, знаење, методологија и технологија, согласно со научните стандарди. Веруваме дека визуелизациите и моделите можат да помогнат да се објаснат разните фактори кои влијаат на ширењето на вирусот, вклучувајќи го и ефектот на преземените заштитни мерки и можни мерки во иднина. Преку ова би сакале да потенцираме дека сите ние имаме важна улога во оваа пандемија. Сепак, не можеме целосно да гарантираме за точноста, целосноста или корисноста на информациите на овие веб страни и експлицитно се одрекуваме од одговорност за било какви понатамошни интерпретации и симулации кои ги цитираат нашите податоци и/или визуелизации како извор*
 
 </details>
 
-## Lend a helping hand – to us, yourself and others
+## Помогнете ни нам, на себе и останатите
 
-The project was initiated by [Luka Renko](https://twitter.com/LukaRenko) in Slovenia, for Republic of Slovenia. He began collecting data in the begining of COVID-19 epidemiy and has grown steadily into a team of 20 to 45 volunteers and active participants due to increasing need for data input and verification, as well as programming. It is a crowdsourcing project, supported by massive voluntary participation, where everyone can contribute with their resources or data to the best of their ability. Join in and lend a helping hand. Treker.mk which is a clone of sledilnik.org was initiated by Luka Renko and Vladimir Nešković (also citizen of Republic of North Macedonia) living in Slovenia and part of the Sledilnik team in Slovenia. 
-The team in North MAcedonia is slowly growing, now at a number of 5-10 active participants.
+Овој проект е инициран од  [Лука Ренко](https://twitter.com/LukaRenko) во Словенија за Република Словенија. Тој започна да собира податоци на почетокот на COVID-19 пандемијата, за да постепено иницијативата прерасне во тим од 20 до 45 волонтери и активни учесници, поради растечката потреба за внесување податоци, верификација и програмирање. Ова е crowdsourcing проект, подржан од волонтерско учество, каде секој, согласно со способноста, може да допринесе со своите ресурси или податоци. Придружете ни се и подадете рака. Treker.mk, кој е клон на sledilnik.org е инициран од Лука Ренко и Владимир Нешковиќ граѓанин на Република Северна Македонија, кој живее во Словенија и е дел од словенскиот тим Sledilnik. Тимот во Северна Македонија полека расте и засега има 5-10 активни учесници.
 
-## Terms of use
+## Услови на употреба
 
-Use and collaboration are desired: the data is collected from sources in the public domain and can be freely used, edited, processed or incorporated into any non-marketable content if citing the source – covid-19.treker.mk.
-To export data to other formats, or use for visualization use please contact us at info@treker.mk
+Ги охрабруваме сите да ги користат податоците и да соработуваат со нас: податоците се собрани од јавно-достапни извори и можат слободно да се користат, уредуваат, обработуваат или инкорпорираат во било каква непрофитна содржина, доколку се цитира изворот – covid-19.treker.mk. За да ги симнете податоците во други формати или да ги користите за визуелизација, контактирајте нѐ на info@treker.mk

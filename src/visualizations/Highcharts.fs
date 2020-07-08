@@ -113,6 +113,7 @@ let addContainmentMeasuresFlags
         1,  6, "#ebfaeb", "liftSchools4to5"
         15, 6, "#ebfaeb", "liftGatherings500"
         19, 6, "#FFe6e6", "quarantineStrict"
+        30, 6, "#FFe6e6", "gatherings50"
     |]
     {|
 (* SLO-spec
@@ -152,6 +153,18 @@ let optionsWithOnLoadEvent (className : string) =
             {| load = onLoadEvent(className) |}
         |}
     |}
+
+let defaultCredits =
+    {|
+        enabled = true
+        text =
+            sprintf "%s: %s, %s"
+                (I18N.t "charts.common.dataSource")
+                (I18N.t "charts.common.dsNIJZ")
+                (I18N.t "charts.common.dsMZ")
+        // SLO-spec href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+        href = "http://www.iph.mk"
+    |} |> pojo
 
 let basicChartOptions
     (scaleType:ScaleType)
@@ -256,6 +269,7 @@ let basicChartOptions
                 tickInterval = if scaleType=Linear then None else Some 0.25
                 gridZIndex = -1
                 plotLines = [| {| value = 0; color = "black" |} |]
+                crosshair = true
             |}
         |]
 
@@ -289,6 +303,8 @@ let basicChartOptions
                 inputDateFormat = I18N.t "charts.common.numDateFormat"
                 // TODO: https://www.highcharts.com/forum/viewtopic.php?t=17715
                 // inputEditDateFormat = I18N.t "charts.common.numDateFormat"
+                inputPosition = pojo {| x = 0 |}
+                x = 0
                 inputBoxBorderColor = "#ced4da"
                 buttonTheme = pojo {| r = 6; states = pojo {| select = pojo {| fill = "#ffd922" |} |} |}
                 buttons =
@@ -321,8 +337,8 @@ let basicChartOptions
                         condition = {| maxWidth = 768 |}
                         chartOptions =
                             {|
-                                // legend = {| enabled = false |}
                                 yAxis = [| {| labels = pojo {| enabled = false |} |} |]
+                                rangeSelector = pojo {| x = 8 ; inputPosition = pojo {| x = -25 |} |}
                             |}
                     |} |]
             |}
@@ -337,5 +353,5 @@ let basicChartOptions
                     |}
             |}
 
-        credits = pojo {| enabled = false |}
+        credits = defaultCredits
     |}

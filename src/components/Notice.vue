@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-<!--  comment out SLO SPEC
+<!--  comment out SLO SPEC 
     <a
       class="notice-link"
-      href="https://medium.com/sledilnik/sledilnik-3-0-658c56433e0d"
+      href="#europe-chart"
+      v-scroll-to="{ el: '#europe-chart', offset: -115 }"
     >
       <div class="notice">
         <span>

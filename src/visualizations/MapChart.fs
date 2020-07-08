@@ -15,7 +15,7 @@ open Types
 (* SLO-spec 
 let geoJsonUrl = "/maps/municipalities-gurs-simplified-3857.geojson"
 *)
-let geoJsonUrl = "/maps/new_31_Cities_MKD.json"
+let geoJsonUrl = "/maps/new_31_Cities_MKD-3857.json"
 
 let excludedMunicipalities = Set.ofList ["kraj" ; "tujina"]
 
@@ -60,7 +60,7 @@ type DataTimeInterval =
         match this with
         | Complete -> I18N.t "charts.map.all"
         | LastDays 1 -> I18N.t "charts.map.yesterday"
-        | LastDays days -> I18N.tOptions "charts.map.last_x_days" {| count = days |} 
+        | LastDays days -> I18N.tOptions "charts.map.last_x_days" {| count = days |}
 
 let dataTimeIntervals =
     [ LastDays 1
@@ -144,7 +144,7 @@ let init (regionsData : RegionsData) : State * Cmd<Msg> =
     { GeoJson = NotAsked
       Data = data
       DataTimeInterval = dataTimeInterval
-      ContentType = ConfirmedCases 
+      ContentType = ConfirmedCases
       DisplayType = AbsoluteValues
     }, Cmd.ofMsg GeoJsonRequested
 
@@ -239,7 +239,10 @@ let seriesData (state : State) =
 (* SLO-spec 
             {| isoid = municipalityData.Municipality.Code ; value = value ; label = label |}
 *)
-            {| Name4_E = municipalityData.Municipality.Code ; value = value ; label = label |}
+            {| Name4_E = municipalityData.Municipality.Code 
+               value = value 
+               // MK-spec: hack to add localized name to tooltip header
+               label = (sprintf "<b>%s</b><br>%s" (I18N.tt "mk.municipality" municipalityData.Municipality.Key) label) |}
     } |> Seq.toArray
 
 let renderMap (state : State) =
@@ -287,15 +290,30 @@ let renderMap (state : State) =
             series = [| series geoJson |]
             legend = {| enabled = false |}
             colorAxis = {| minColor = "white" ; maxColor = maxColor |}
+            credits =
+                {|
+                    enabled = true
+                    text =
+                        sprintf "%s: %s, %s"
+                            (I18N.t "charts.common.dataSource")
+                            (I18N.t "charts.common.dsNIJZ")
+                            (I18N.t "charts.common.dsMZ")
+                    mapTextFull = ""
+                    mapText = ""
+                    // SLO-spec href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+                    href = "http://www.iph.mk"
+                    position = {| align = "right" ; verticalAlign = "bottom" ; x = -10 ; y = -5 |}
+                    style = {| color = "#999999" ; cursor = "pointer" ; fontSize = "9px" |}
+                |}
         |}
         |> Highcharts.map
 
 let renderSelector option currentOption dispatch =
     let defaultProps =
         [ prop.text (option.ToString())
-          prop.className [
-              true, "chart-display-property-selector__item"
-              option = currentOption, "selected" ] ]
+          Utils.classes
+              [(true, "chart-display-property-selector__item")
+               (option = currentOption, "selected") ] ]
     if option = currentOption
     then Html.div defaultProps
     else Html.div ((prop.onClick (fun _ -> dispatch option)) :: defaultProps)
@@ -308,7 +326,7 @@ let renderSelectors options currentOption dispatch =
 let renderDisplayTypeSelector currentDisplayType dispatch =
     Html.div [
         prop.className "chart-display-property-selector"
-        prop.children (Html.text (I18N.t "charts.map.view") :: renderSelectors [ AbsoluteValues; RegionPopulationWeightedValues ] currentDisplayType dispatch)
+        prop.children (Html.text (I18N.t "charts.common.view") :: renderSelectors [ AbsoluteValues; RegionPopulationWeightedValues ] currentDisplayType dispatch)
     ]
 
 let renderDataTimeIntervalSelector currentDataTimeInterval dispatch =
