@@ -15,7 +15,7 @@
 -   [Бехаре Касами](https://www.facebook.com/be.ka.319) - преводи, комуникација со јавноста
 -   [Виктор Кралевски](https://www.linkedin.com/in/viktor-kralevski-8950789) - податоци, анализа на податоците
 -   [Дино Граматиков](https://www.linkedin.com/in/dino-gramatikov-0901183/) - подобрување на искуството
--   [Елисавета Јасна Стикова]() - советничка
+-   [Елисавета Јасна Стикова](https://www.linkedin.com/in/elisaveta-stikova-a27b573/) - советничка
 -   [Ѓорѓи Ќосев](https://twitter.com/spion) - програмирање
 -   [Харис Бабачиќ](https://www.linkedin.com/in/harisbabacic/) - моделирање
 -   [Игор Војноски](https://www.facebook.com/jiggymkd) - подобрување на искуството
@@ -28,11 +28,11 @@
 -   [Никола Симиџиевски](https://simidjievskin.github.io/) - моделирање
 -   [Слободан Јаќоски](https://www.linkedin.com/in/slobodanjakoski) - комуникација со јавноста
 -   [Софија Спировска]() - подобрување на искуството
--   [Никола Стиков]() - советник
+-   [Никола Стиков](https://www.neuro.polymtl.ca/people/nikola_stikov) - советник
 -   [Петрит Сарачини]() - преводи
 -   [Тони Поповски](https://www.linkedin.com/in/toni-popovski-28842612/) - советник
 -   [Владимир Трајковиќ](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - советник
 -   [Векослав Стефановски](https://mk.linkedin.com/in/swekster) - програмирање, подготовка на податоците
 -   [Владимир Нешковиќ](https://www.linkedin.com/in/k35m4/) -  податоци, координација
--   [Жарко Васиљевиќ](www.linkedin.com/in/zarko-vasiljevic-b067407) - преводи, подобрување на искуството
+-   [Жарко Васиљевиќ](https://www.linkedin.com/in/zarko-vasiljevic-b067407) - преводи, подобрување на искуството
 -   [Штефан Беблер](https://www.linkedin.com/in/stefanbaebler/) - локализација на македонски и албански

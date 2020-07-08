@@ -240,6 +240,7 @@ let basicChartOptions
                 tickInterval = if scaleType=Linear then None else Some 0.25
                 gridZIndex = -1
                 plotLines = [| {| value = 0; color = "black" |} |]
+                crosshair = true
             |}
         |]
 
@@ -323,5 +324,5 @@ let basicChartOptions
                     |}
             |}
 
-        credits = defaultCredits 
+        credits = defaultCredits
     |}

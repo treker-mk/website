@@ -17,8 +17,8 @@ Treker jemi:
 -   [Behare Kasami](https://www.facebook.com/be.ka.319) - përkthime, komunikim me publikun
 -   [Viktor Krallevski](https://www.linkedin.com/in/viktor-kralevski-8950789) - të dhëna, analiza e të dhënave
 -   [Dino Gramatikov](https://www.linkedin.com/in/dino-gramatikov-0901183/) - përmirësim i përvojës
--   [Elisaveta Jasna Stikova]() - këshilltare
--   [Gjorgi Qosev]() - programim
+-   [Elisaveta Jasna Stikova](https://www.linkedin.com/in/elisaveta-stikova-a27b573/) - këshilltare
+-   [Gjorgi Qosev](https://twitter.com/spion) - programim
 -   [Haris Babaçiq](https://www.linkedin.com/in/harisbabacic/) - modelim
 -   [Igor Vojnoski](https://www.facebook.com/jiggymkd) - përmirësim i përvojës
 -   [Ivo Neshkoviq](http://linkedin.com/in/ivoneskovic) - programim, migrim i teknologjive
@@ -30,11 +30,11 @@ Treker jemi:
 -   [Nikolla Simixhievski](https://simidjievskin.github.io/) - modelim
 -   [Slobodan Jaqoski](https://www.linkedin.com/in/slobodanjakoski) - komunikim me publikun
 -   [Sofija Spirovska]() - përmirësim i përvojës
--   [Nikolla Stikov]() - këshilltar
+-   [Nikolla Stikov](https://www.neuro.polymtl.ca/people/nikola_stikov) - këshilltar
 -   [Petrit Saraçini]() - përkthime
 -   [Toni Popovski](https://www.linkedin.com/in/toni-popovski-28842612/) - këshilltar
 -   [Vlladimir Trajkoviq](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - këshilltar
 -   [Vekosllav Stefanovski](https://mk.linkedin.com/in/swekster) - programim, përgatitje e të dhënave
 -   [Vlladimir Neskoviq](https://www.linkedin.com/in/k35m4/) -  të dhëna, koordinim
--   [Zharko Vasiljeviq](www.linkedin.com/in/zarko-vasiljevic-b067407) - përkthime
+-   [Zharko Vasiljeviq](https://www.linkedin.com/in/zarko-vasiljevic-b067407) - përkthime
 -   [Shtefan Bebler](https://www.linkedin.com/in/stefanbaebler/) - lokalizim në maqedonisht dhe shqip
