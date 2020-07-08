@@ -15,7 +15,7 @@
 -   [Бехаре Касами](https://www.facebook.com/be.ka.319) - преводи, комуникација со јавноста
 -   [Виктор Кралевски](https://www.linkedin.com/in/viktor-kralevski-8950789) - податоци, анализа на податоците
 -   [Дино Граматиков](https://www.linkedin.com/in/dino-gramatikov-0901183/) - подобрување на искуството
--   [Елисавета Јасна Стикова]() - советничка
+-   [Елисавета Јасна Стикова](https://www.linkedin.com/in/elisaveta-stikova-a27b573/) - советничка
 -   [Ѓорѓи Ќосев](https://twitter.com/spion) - програмирање
 -   [Харис Бабачиќ](https://www.linkedin.com/in/harisbabacic/) - моделирање
 -   [Игор Војноски](https://www.facebook.com/jiggymkd) - подобрување на искуството
