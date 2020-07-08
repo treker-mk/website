@@ -30,7 +30,7 @@ Treker jemi:
 -   [Nikolla Simixhievski](https://simidjievskin.github.io/) - modelim
 -   [Slobodan Jaqoski](https://www.linkedin.com/in/slobodanjakoski) - komunikim me publikun
 -   [Sofija Spirovska]() - përmirësim i përvojës
--   [Nikolla Stikov]() - këshilltar
+-   [Nikolla Stikov](https://www.neuro.polymtl.ca/people/nikola_stikov) - këshilltar
 -   [Petrit Saraçini]() - përkthime
 -   [Toni Popovski](https://www.linkedin.com/in/toni-popovski-28842612/) - këshilltar
 -   [Vlladimir Trajkoviq](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - këshilltar
