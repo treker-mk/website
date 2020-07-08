@@ -177,9 +177,8 @@ let basicChartOptions
                     {| value=jsTime <| DateTime(2020,3,22); label=Some {| text=I18N.t "mk.phase.2.description"; rotation=270; align="right"; x=12 |} |}
                     {| value=jsTime <| DateTime(2020,3,30); label=Some {| text=I18N.t "mk.phase.3.description"; rotation=270; align="right"; x=12 |} |}
                     {| value=jsTime <| DateTime(2020,4,3);  label=Some {| text=I18N.t "mk.phase.4.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,5,29); label=Some {| text=I18N.t "mk.phase.5.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,5,30); label=Some {| text=I18N.t "mk.phase.6.description"; rotation=270; align="right"; x=12 |} |}
-                    {| value=jsTime <| DateTime(2020,6,21); label=Some {| text=I18N.t "mk.phase.7.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,5,30); label=Some {| text=I18N.t "mk.phase.5.description"; rotation=270; align="right"; x=12 |} |}
+                    {| value=jsTime <| DateTime(2020,6,21); label=Some {| text=I18N.t "mk.phase.6.description"; rotation=270; align="right"; x=12 |} |}
                 |]
 
                 plotBands=[|
