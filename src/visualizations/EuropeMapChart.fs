@@ -400,20 +400,26 @@ let renderMap state geoJson owdData =
 
         let textHtml =
             sprintf "<b>%s</b><br/>
-            (* SLO-spec this is connected to the bottom SLO-spec about the imported cases
-            %s: <b>%s</b><br/>
-            %s: <b>%s</b> (%s)<br/><br/>
-            *)
             %s: <b>%s</b><br/>
             %s: <b>%s</b> (%s)<br/>"
                 country
-                (* SLO-spec 
-                (I18N.t "charts.europe.countryStatus") rType
-                (I18N.t "charts.europe.importedCases") imported impDate
-                *)
                 (I18N.t "charts.europe.incidence1M") incidence1M
                 (I18N.t "charts.europe.newCases") newCases ncDate
-
+                
+        (* SLO-spec
+        let textHtml =
+            sprintf "<b>%s</b><br/>
+            %s: <b>%s</b><br/>
+            %s: <b>%s</b> (%s)<br/><br/>
+            %s: <b>%s</b><br/>
+            %s: <b>%s</b> (%s)<br/>"
+                country
+                (I18N.t "charts.europe.countryStatus") rType
+                (I18N.t "charts.europe.importedCases") imported impDate
+                (I18N.t "charts.europe.incidence1M") incidence1M
+                (I18N.t "charts.europe.newCases") newCases ncDate
+        *)
+         
         s.Append textHtml |> ignore
 
         s.Append "<div class='bars'>" |> ignore
