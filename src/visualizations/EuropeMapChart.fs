@@ -405,8 +405,10 @@ let renderMap state geoJson owdData =
             %s: <b>%s</b><br/>
             %s: <b>%s</b> (%s)<br/>"
                 country
+                (* SLO-spec 
                 (I18N.t "charts.europe.countryStatus") rType
                 (I18N.t "charts.europe.importedCases") imported impDate
+                *)
                 (I18N.t "charts.europe.incidence1M") incidence1M
                 (I18N.t "charts.europe.newCases") newCases ncDate
 
