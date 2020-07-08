@@ -263,6 +263,7 @@ let basicChartOptions
                 max = None
                 //floor = if scaleType=Linear then None else Some 1.0
                 opposite = true // right side
+                maxPadding = if scaleType = Linear then None else Some 0.25
                 title = {| text = null |} // "oseb" |}
                 showFirstLabel = None
                 tickInterval = if scaleType=Linear then None else Some 0.4
