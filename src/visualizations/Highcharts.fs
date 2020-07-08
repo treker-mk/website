@@ -203,19 +203,14 @@ let basicChartOptions
                        label=Some {| align="center"; text=I18N.t "mk.phase.4.title" |}
                     |}
                     {| ``from``=jsTime <| DateTime(2020,4,3);
-                       ``to``=jsTime <| DateTime(2020,5,29);
-                       color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.5.title" |}
-                    |}
-                    {| ``from``=jsTime <| DateTime(2020,5,29);
                        ``to``=jsTime <| DateTime(2020,5,30);
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.6.title" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.5.title" |}
                     |}
                     {| ``from``=jsTime <| DateTime(2020,5,30);
                        ``to``=jsTime <| DateTime.Today;
                        color="transparent"
-                       label=Some {| align="center"; text=I18N.t "mk.phase.7.title" |}
+                       label=Some {| align="center"; text=I18N.t "mk.phase.6.title" |}
                     |}
                     yield! shadedWeekendPlotBands
                 |]
