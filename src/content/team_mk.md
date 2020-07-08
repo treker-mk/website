@@ -28,7 +28,7 @@
 -   [Никола Симиџиевски](https://simidjievskin.github.io/) - моделирање
 -   [Слободан Јаќоски](https://www.linkedin.com/in/slobodanjakoski) - комуникација со јавноста
 -   [Софија Спировска]() - подобрување на искуството
--   [Никола Стиков]() - советник
+-   [Никола Стиков](https://www.neuro.polymtl.ca/people/nikola_stikov) - советник
 -   [Петрит Сарачини]() - преводи
 -   [Тони Поповски](https://www.linkedin.com/in/toni-popovski-28842612/) - советник
 -   [Владимир Трајковиќ](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - советник
