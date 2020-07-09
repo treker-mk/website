@@ -196,7 +196,6 @@ let renderChartOptions state dispatch =
                 marker = pojo {| enabled = false |}
                 |}
 
-(* SLO-spec: TODO: add back when you have MK specific flags 
         let allDates =
             allMetricsData
             |> Seq.map (fun (_, metricData) ->
@@ -207,7 +206,6 @@ let renderChartOptions state dispatch =
 
         if state.DisplayType.ShowPhases then
             yield addContainmentMeasuresFlags startDate endDate |> pojo
-*)   
     ]
 
     let onRangeSelectorButtonClick(buttonIndex: int) =

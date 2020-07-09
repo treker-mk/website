@@ -130,9 +130,7 @@ let renderChartOptions state dispatch =
                             value.IsNone)
                         |> Seq.toArray
                 |}
-(* SLO-spec: TODO: add back when you have MK specific flags 
-       yield addContainmentMeasuresFlags startTime None |> pojo
-*)
+        yield addContainmentMeasuresFlags startTime None |> pojo
     ]
 
     let onRangeSelectorButtonClick(buttonIndex: int) =
