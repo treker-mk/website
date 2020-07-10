@@ -67,7 +67,7 @@ let facilitySeriesInfo : FacilityCode -> (string option * string) = function
     | "ukclj" -> Some "#10829a", "UKC Ljubljana"
     | "ukcmb" -> Some "#003f5c", "UKC Maribor"
     | "ukg"   -> Some "#7B7226", "UK Golnik"
-    | other   -> None          , other
+    | other   -> None          , I18N.t "mk.hospitals." + other
 
 
 type FacilityAssets = {
