@@ -13,6 +13,9 @@
     <div class="nav-links">
       <div class="nav-heading">{{ $t("navbar.menu") }}</div>
       <router-link to="stats" class="router-link"><span>{{ $t("navbar.home") }}</span></router-link>
+      <!-- SLO-spec
+      <router-link to="world" class="router-link"><span>{{ $t("navbar.world") }}</span></router-link>
+      -->
       <router-link to="tables" class="router-link"><span>{{ $t("navbar.tables") }}</span></router-link>
       <router-link to="models" class="router-link"><span>{{ $t("navbar.models") }}</span></router-link>
       <router-link to="faq" class="router-link"><span>{{ $t("navbar.faq") }}</span></router-link>
@@ -20,20 +23,41 @@
       <router-link to="team" class="router-link"><span>{{ $t("navbar.team") }}</span></router-link>
       <router-link to="sources" class="router-link"><span>{{ $t("navbar.sources") }}</span></router-link>
       <router-link to="links" class="router-link"><span>{{ $t("navbar.links") }}</span></router-link>
-      <a href="https://github.com/treker-mk" target="_blank" class="router-link router-link-icon">
+      <a v-if="!isMobile" href="https://github.com/treker-mk" target="_blank" class="router-link router-link-icon">
         <img src="../assets/svg/gh-icon.svg" :alt="$t('navbar.github')" />
         <span>{{ $t("navbar.github") }}</span>
       </a>
-      <div class="router-link">
-        <span v-for="(lang, index) in languages" :key="index">
+      <div v-if="!isMobile" class="router-link router-link-icon lang-switcher">
+        <div class="lang" @click="toggleDropdown">
+          <font-awesome-icon icon="globe" />
+          <span class="lang-selected">{{ selectedLanguage.toUpperCase() }}</span>
+          &nbsp;<font-awesome-icon icon="caret-down" />
+        </div>
+        <transition name="slide">
+          <ul v-if="dropdownVisible" class="lang-list" v-on-clickaway="hideDropdown">
+            <li v-for="(lang, index) in languages" :key="index" class="lang-list-item">
+              <a :href="`/${lang}/${$route.path.slice(4).toLowerCase().replace(/\/$/, '')}`"
+                  :hreflang="lang"
+                  class="router-link-anchor"
+                  :class="{ active: $i18n.i18next.language === lang }"
+                  @click.prevent="changeLanguage(lang)">
+                {{ $t('navbar.language.' + lang, { lng: lang }) }}
+              </a>
+            </li>
+          </ul>
+        </transition>
+      </div>
+      <div v-else class="lang-switcher-mobile">
+        <div v-for="(lang, index) in languages" :key="index">
           <a :href="`/${lang}/${$route.path.slice(4).toLowerCase().replace(/\/$/, '')}`"
              :hreflang="lang"
-             class="router-link-anchor"
+             class="router-link router-link-anchor"
              :class="{ active: $i18n.i18next.language === lang }"
-             @click.prevent="changeLanguage(lang)">{{ lang.toUpperCase() }}</a>
-          <span v-if="index !== languages.length - 1"
-                class="divider">/</span>
-        </span>
+             @click.prevent="changeLanguage(lang)">
+              <font-awesome-icon icon="globe" />
+              <span>{{ $t('navbar.language.' + lang, { lng: lang }) }}</span>
+             </a>
+        </div>
       </div>
     </div>
   </div>
@@ -42,24 +66,34 @@
 <script>
 import moment from 'moment'
 import i18next from 'i18next'
+import { mixin as clickaway } from 'vue-clickaway'
 
 export default {
+  mixins: [clickaway],
   name: 'Navbar',
-  props: {
-    msg: String,
-  },
   data() {
     return {
       scrollPosition: '',
       menuOpened: false,
       closingMenu: false,
-      languages: i18next.languages
+      dropdownVisible: false,
+      isMobile: false,
+      languages: i18next.languages.sort(),
+      selectedLanguage: i18next.language,
     };
   },
   created() {
     window.addEventListener('scroll', this.handleScroll);
   },
-
+  mounted () {
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
+  },
+  beforeDestroy () {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.onResize, { passive: true })
+    }
+  },
   methods: {
     handleScroll() {
       this.scrollPosition = window.scrollY;
@@ -78,13 +112,24 @@ export default {
         this.closingMenu = false;
       }, 650);
     },
+    onResize () {
+      this.isMobile = window.innerWidth < 992
+    },
+    toggleDropdown() {
+      this.dropdownVisible = !this.dropdownVisible
+    },
+    hideDropdown() {
+      this.dropdownVisible = false
+    },
     changeLanguage(lang) {
       if (this.$route.params.lang === lang) return
       this.$i18n.i18next.changeLanguage(lang, (err, t) => {
-        if (err) return console.log('something went wrong loading', err);
-        this.$router.push({ name: this.$route.name, params: { lang } });
-        moment.locale(lang);
-      });
+        if (err) return console.log('something went wrong loading', err)
+        this.selectedLanguage = lang
+        this.dropdownVisible = false
+        this.$router.push({ name: this.$route.name, params: { lang } })
+        moment.locale(lang)
+      })
     },
   },
   watch: {
@@ -280,6 +325,10 @@ export default {
   transition: all 0.4s ease-in-out;
   will-change: transform;
 
+  @include nav-break {
+    overflow: visible;
+  }
+
   .scrolled & {
     padding: 11px 0 0 15px;
 
@@ -299,10 +348,17 @@ export default {
   }
 
   .menuOpen & {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     transform: translate3d(0, 0 0);
     animation: menu-transition 0.65s;
     will-change: transform;
+
+    @include nav-break {
+      flex-direction: row;
+      align-items: center;
+    }
 
     @keyframes menu-transition {
       0% {
@@ -451,7 +507,7 @@ export default {
     margin: 16px auto;
 
     @include nav-break {
-      margin: 0 0 0 32px;
+      margin: 0 0 0 22px;
     }
 
     span {
@@ -486,10 +542,38 @@ export default {
     &:hover {
       color: rgb(0, 0, 0);
     }
+  }
 
-    ~ .divider {
-      margin: 0 3.5px;
-    }
+  &.lang-switcher {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.lang-switcher-mobile {
+  margin-top: auto;
+
+  span {
+    margin-left: 6px;
+  }
+}
+
+.lang-list {
+  position: absolute;
+  list-style: none;
+  margin: 0 0 0 10px;
+  padding: 0 10px;
+  background: white;
+  box-shadow: $element-box-shadow;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  border-radius: 6px;
+  right: -1px;
+  top: 32px;
+  min-width: 120px;
+  text-align: right;
+
+  &-item {
+    margin: 8px 0;
   }
 }
 </style>

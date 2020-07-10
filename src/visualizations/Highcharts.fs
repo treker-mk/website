@@ -88,35 +88,17 @@ let addContainmentMeasuresFlags
     (endDate: JsTimestamp option) =
     let events = [|
     // day, mo, color,    i18n
-    // SLO-spec - TODO: replace these below with MK specific, then uncomment next block
-        4,  3, "#FFFFFF", "firstCase"
-        6,  3, "#FFe6e6", "retirementHomes"
-        8,  3, "#FFFFFF", "checkpoints"
-        10, 3, "#FFe6e6", "borders"
-        12, 3, "#FFFFFF", "epidemic"
-        14, 3, "#FFe6e6", "publicTransport"
-        16, 3, "#FFe6e6", "schools"
-        20, 3, "#FFe6e6", "gatherings"
-        30, 3, "#FFe6e6", "municipality"
-        4,  4, "#e6f0ff", "shops"
-        12, 4, "#FFe6e6", "quarantine"
-        18, 4, "#ebfaeb", "liftVacationHomes"
-        20, 4, "#ebfaeb", "liftService"
-        21, 4, "#FFFFFF", "nationalStudy"
-        29, 4, "#ebfaeb", "liftMuseums"
-        30, 4, "#ebfaeb", "liftMunicipality"
-        4,  5, "#ebfaeb", "liftFoodMarkets"
-        11, 5, "#ebfaeb", "liftPublicTransport"
-        15, 5, "#ebfaeb", "liftQuarantine"
-        18, 5, "#ebfaeb", "liftSchools1to3"
-        26, 5, "#FFe6e6", "quarantine14days"
-        1,  6, "#ebfaeb", "liftSchools4to5"
-        15, 6, "#ebfaeb", "liftGatherings500"
-        19, 6, "#FFe6e6", "quarantineStrict"
-        30, 6, "#FFe6e6", "gatherings50"
+        28,  2, "#FFFFFF", "gatheringsMass"
+        16,  3, "#FFe6e6", "bordersClosure"
+        17,  3, "#FFFFFF", "debarQuarantine"
+        19, 3, "#FFe6e6", "gatherings5"
+        21, 3, "#FFFFFF", "21hLockdown"
+        22, 4, "#FFe6e6", "masksOn"
+        12, 5, "#FFe6e6", "lessMeasures"
+        27, 5, "#ebfaeb", "kafanasOpen"
+        23, 6, "#e6f0ff", "bordersOopen"      
     |]
     {|
-(* SLO-spec
         ``type`` = "flags"
         shape = "flag"
         showInLegend = false
@@ -130,13 +112,12 @@ let addContainmentMeasuresFlags
                     | startDate, Some endDate ->
                         ts >= startDate && ts <= endDate
 
-                let title = "cm." + i18n + ".title"
-                let text = "cm." + i18n + ".description"
+                let title = "mk.cm." + i18n + ".title"
+                let text = "mk.cm." + i18n + ".description"
                 if showMeasure then
                     Some {| x=ts; fillColor=color; title=I18N.t title; text=I18N.t text |}
                 else None
             )
- *)
      |}
 
 (* Trigger document event for iframe resizing *)
@@ -260,13 +241,14 @@ let basicChartOptions
             {|
                 index = 0
                 ``type`` = if scaleType=Linear then "linear" else "logarithmic"
-                min = if scaleType=Linear then None else Some 0.5
+                min = if scaleType=Linear then None else Some 1
                 max = None
                 //floor = if scaleType=Linear then None else Some 1.0
                 opposite = true // right side
+                maxPadding = if scaleType = Linear then None else Some 0.25
                 title = {| text = null |} // "oseb" |}
                 showFirstLabel = None
-                tickInterval = if scaleType=Linear then None else Some 0.25
+                tickInterval = if scaleType=Linear then None else Some 0.4
                 gridZIndex = -1
                 plotLines = [| {| value = 0; color = "black" |} |]
                 crosshair = true
@@ -338,7 +320,7 @@ let basicChartOptions
                         chartOptions =
                             {|
                                 yAxis = [| {| labels = pojo {| enabled = false |} |} |]
-                                rangeSelector = pojo {| x = 8 ; inputPosition = pojo {| x = -25 |} |}
+                                rangeSelector = pojo {| x = 8 ; inputPosition = pojo {| x = -10 |} |}
                             |}
                     |} |]
             |}
