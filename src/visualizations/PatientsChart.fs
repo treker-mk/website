@@ -23,7 +23,7 @@ type Breakdown =
         | AllHospitals -> I18N.t "charts.patients.allHospitals"
         | Facility fcode ->
             let _, name = Data.Hospitals.facilitySeriesInfo fcode
-            name
+            I18n.t "mk.hospital" + name
 
 type Series =
     | InHospital
