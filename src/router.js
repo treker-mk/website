@@ -5,83 +5,118 @@ import i18next from 'i18next'
 
 import StaticPage from './pages/StaticPage.vue'
 import StatsPage from './pages/StatsPage.vue'
+import WorldStatsPage from './pages/WorldStatsPage.vue'
 import EmbedMakerPage from './pages/EmbedMakerPage.vue'
 import TablesPage from './pages/TablesPage.vue'
 import DataPage from './pages/DataPage.vue'
 import PageNotFound from './pages/PageNotFound.vue'
 
-import * as aboutMd from './content/about.md'
-import * as aboutMdEn from './content/about_en.md'
-import * as aboutMdMk from './content/about_mk.md'
-import * as aboutMdSq from './content/about_sq.md'
-import * as linksMd from './content/links.md'
-import * as linksMdEn from './content/links_en.md'
-import * as linksMdMk from './content/links_mk.md'
-import * as linksMdSq from './content/links_sq.md'
-import * as contentMd from './content/faq.md'
-import * as contentMdEn from './content/faq_en.md'
-import * as contentMdMk from './content/faq_mk.md'
-import * as contentMdSq from './content/faq_sq.md'
-import * as teamMd from './content/team.md'
-import * as teamMdEn from './content/team_en.md'
-import * as teamMdMk from './content/team_mk.md'
-import * as teamMdSq from './content/team_sq.md'
-import * as sourcesMd from './content/sources.md'
-import * as sourcesMdEn from './content/sources_en.md'
-import * as sourcesMdMk from './content/sources_mk.md'
-import * as sourcesMdSq from './content/sources_sq.md'
-import * as modelsMd from './content/models.md'
-import * as modelsMdEn from './content/models_en.md'
-import * as modelsMdMk from './content/models_mk.md'
-import * as modelsMdSq from './content/models_sq.md'
-import * as datasourcesMd from './content/datasources.md'
-import * as datasourcesMdEn from './content/datasources_en.md'
-import * as datasourcesMdMk from './content/datasources_mk.md'
-import * as datasourcesMdSq from './content/datasources_sq.md'
+import * as aboutMdSl from './content/sl/about.md'
+import * as aboutMdEn from './content/en/about.md'
+import * as aboutMdHr from './content/hr/about.md'
+import * as aboutMdDe from './content/de/about.md'
+import * as aboutMdMk from './content/mk/about.md'
+import * as aboutMdSq from './content/sq/about.md'
+
+import * as linksMdSl from './content/sl/links.md'
+import * as linksMdEn from './content/en/links.md'
+import * as linksMdHr from './content/hr/links.md'
+import * as linksMdDe from './content/de/links.md'
+import * as linksMdMk from './content/mk/links.md'
+import * as linksMdSq from './content/sq/links.md'
+
+import * as contentMdSl from './content/sl/faq.md'
+import * as contentMdEn from './content/en/faq.md'
+import * as contentMdHr from './content/hr/faq.md'
+import * as contentMdDe from './content/de/faq.md'
+import * as contentMdMk from './content/mk/faq.md'
+import * as contentMdSq from './content/sq/faq.md'
+
+import * as teamMdSl from './content/sl/team.md'
+import * as teamMdEn from './content/en/team.md'
+import * as teamMdHr from './content/hr/team.md'
+import * as teamMdDe from './content/de/team.md'
+import * as teamMdMk from './content/mk/team.md'
+import * as teamMdSq from './content/sq/team.md'
+
+import * as sourcesMdSl from './content/sl/sources.md'
+import * as sourcesMdEn from './content/en/sources.md'
+import * as sourcesMdHr from './content/hr/sources.md'
+import * as sourcesMdDe from './content/de/sources.md'
+import * as sourcesMdMk from './content/mk/sources.md'
+import * as sourcesMdSq from './content/sq/sources.md'
+
+import * as modelsMdSl from './content/sl/models.md'
+import * as modelsMdEn from './content/en/models.md'
+import * as modelsMdHr from './content/hr/models.md'
+import * as modelsMdDe from './content/de/models.md'
+import * as modelsMdMk from './content/mk/models.md'
+import * as modelsMdSq from './content/sq/models.md'
+
+import * as datasourcesMdSl from './content/sl/datasources.md'
+import * as datasourcesMdEn from './content/en/datasources.md'
+import * as datasourcesMdHr from './content/hr/datasources.md'
+import * as datasourcesMdDe from './content/de/datasources.md'
+import * as datasourcesMdMk from './content/mk/datasources.md'
+import * as datasourcesMdSq from './content/sq/datasources.md'
 
 Vue.use(VueRouter)
 Vue.use(VueMeta)
 
 const mdContent = {
   faq: {
-    sl: contentMd,
+    sl: contentMdSl,
     en: contentMdEn,
+    hr: contentMdHr,
+    de: contentMdDe,
     mk: contentMdMk,
     sq: contentMdSq,
   },
   about: {
-    sl: aboutMd,
+    sl: aboutMdSl,
     en: aboutMdEn,
+    hr: aboutMdHr,
+    de: aboutMdDe,
     mk: aboutMdMk,
     sq: aboutMdSq,
   },
   team: {
-    sl: teamMd,
+    sl: teamMdSl,
     en: teamMdEn,
+    hr: teamMdHr,
+    de: teamMdDe,
     mk: teamMdMk,
     sq: teamMdSq,
   },
   links: {
-    sl: linksMd,
+    sl: linksMdSl,
     en: linksMdEn,
+    hr: linksMdHr,
+    de: linksMdDe,
     mk: linksMdMk,
     sq: linksMdSq,
   },
   sources: {
-    sl: sourcesMd,
+    sl: sourcesMdSl,
     en: sourcesMdEn,
+    hr: sourcesMdHr,
+    de: sourcesMdDe,
     mk: sourcesMdMk,
     sq: sourcesMdSq,
   },
   models: {
-    sl: modelsMd,
+    sl: modelsMdSl,
     en: modelsMdEn,
-    mk: modelsMdMk,
-    sq: modelsMdSq,
+    hr: modelsMdHr,
+    de: modelsMdDe,
+    sq: modelsMdMk,
+    mk: modelsMdSq,
   },
   datasources: {
-    sl: datasourcesMd,
+    sl: datasourcesMdSl,
     en: datasourcesMdEn,
+    hr: datasourcesMdHr,
+    de: datasourcesMdDe,
     mk: datasourcesMdMk,
     sq: datasourcesMdSq,
   },
@@ -96,7 +131,7 @@ function dynamicProps(route) {
 
   return {
     name: lang === 'en' ? `${baseRoute}-${lang}` : `${baseRoute}`,
-    content: mdContent[baseRoute][lang || 'sl'],
+    content: mdContent[baseRoute][lang || 'en'],
   }
 }
 
@@ -118,6 +153,10 @@ const routes = [
   {
     path: '/stats',
     redirect: `/${i18next.language}/stats`,
+  },
+  {
+    path: '/world',
+    redirect: `/${i18next.language}/world`,
   },
   {
     path: '/tables',
@@ -195,6 +234,10 @@ const routes = [
       {
         path: 'stats',
         component: StatsPage,
+      },
+      {
+        path: 'world',
+        component: WorldStatsPage,
       },
       {
         path: 'data',
