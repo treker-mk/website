@@ -289,7 +289,7 @@ let render (state: State) (_: Msg -> unit) =
     let macedoniaVisualizations =
         [ metricsComparison; spread; map; municipalities
           europeMap; tests; infections
-          cases;
+          cases; patients;
         ]
 
     let embedded, visualizations =
