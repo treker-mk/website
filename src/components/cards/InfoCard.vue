@@ -1,5 +1,6 @@
 <template>
   <div :title="title" class="hp-card-holder">
+    
     <div class="hp-card" v-if="loaded">
       <span class="card-title">{{ title }}</span>
       <span class="card-number">
