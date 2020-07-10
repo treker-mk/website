@@ -241,13 +241,14 @@ let basicChartOptions
             {|
                 index = 0
                 ``type`` = if scaleType=Linear then "linear" else "logarithmic"
-                min = if scaleType=Linear then None else Some 0.5
+                min = if scaleType=Linear then None else Some 1
                 max = None
                 //floor = if scaleType=Linear then None else Some 1.0
                 opposite = true // right side
+                maxPadding = if scaleType = Linear then None else Some 0.25
                 title = {| text = null |} // "oseb" |}
                 showFirstLabel = None
-                tickInterval = if scaleType=Linear then None else Some 0.25
+                tickInterval = if scaleType=Linear then None else Some 0.4
                 gridZIndex = -1
                 plotLines = [| {| value = 0; color = "black" |} |]
                 crosshair = true
