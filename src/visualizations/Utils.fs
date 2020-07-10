@@ -6,6 +6,8 @@ open Feliz
 open Types
 open System
 
+open I18N
+
 /// <summary>
 /// Converts Some 0 value to None.
 /// </summary>
