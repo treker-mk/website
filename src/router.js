@@ -109,8 +109,8 @@ const mdContent = {
     en: modelsMdEn,
     hr: modelsMdHr,
     de: modelsMdDe,
-    sq: modelsMdMk,
-    mk: modelsMdSq,
+    mk: modelsMdMk,
+    sq: modelsMdSq,
   },
   datasources: {
     sl: datasourcesMdSl,
