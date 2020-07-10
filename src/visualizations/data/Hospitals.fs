@@ -5,6 +5,7 @@ open Fable.SimpleHttp
 open Fable.SimpleJson
 
 open Types
+open I18N
 
 let url = "https://api.treker.mk/api/hospitals"
 
