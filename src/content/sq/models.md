@@ -41,7 +41,7 @@ Kur Rt mbahet mbi 1 për një periudhë të caktuar, epidemia përhapet, dhe e k
 <a href="https://drive.google.com/uc?export=view&id=1DDxvCkfxDX4nJ12ABySlQFjc-6yz0qWs" class="img-link">
 <img alt="Rt" src="https://drive.google.com/uc?export=view&id=1DDxvCkfxDX4nJ12ABySlQFjc-6yz0qWs"></a>
 
-**Grafikë Rt.** Numri riprodhues sipas ditëve (Rt) në Maqedoni. Pikat dhe vijat e tregojnë lëvizjen e Rt-së së vlerësuar me kalimin e kohës. Hijet me ngjyrë të kaltër të zbehtë i tregojnë 95% intervalet e besueshmërisë, d.m.th. tregojnë prej ku deri ku mund të jetë Rt i vërtetë dhe pasqyrojnë pasigurinë në Rt-në e vlerësuar. 
+**Grafikë Rt.** Numri riprodhues sipas ditëve (Rt) në Maqedoni. Pikat dhe vijat e tregojnë lëvizjen e Rt-së së vlerësuar me kalimin e kohës. Hijet me ngjyrë të kaltër të zbehtë i tregojnë 95% intervalet e besueshmërisë, d.m.th. tregojnë prej ku deri ku mund të jetë Rt i vërtetë dhe pasqyrojnë pasigurinë në Rt-në e vlerësuar.
 
 
 *1.       Wallinga J, Teunis P. Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures. Am J Epidemiol. 2004;160(6):509-516. doi:10.1093/aje/kwh255*
