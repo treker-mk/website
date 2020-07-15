@@ -38,8 +38,8 @@ Numri riprodhues, i paraqitur këtu, sipas ditëve (Rt) i virusit SARS-CoV-2 në
 
 Kur Rt mbahet mbi 1 për një periudhë të caktuar, epidemia përhapet, dhe e kundërta - gjatë mbajtjes së Rt nën 1, epidemia dobësohet. Thënë thjesht, po të ulet numri riprodhues në 0.7, do të thotë se mesatarisht nga 10 të infektuar, shtatë do të infektonin edhe nga një person tjetër, ndërsa tre nuk do të infektonin askënd. Dhe me kalimin e kohës, me shërimin apo vdekjen e të infektuarve, numri i përgjithshëm i rasteve aktive, d.m.th. individë të cilët mund të infektojnë të tjerë, do të ulet dhe epidemia do të dobësohet derisa personi i fundit të shërohet apo të vdesë. 
 
-<a href="https://drive.google.com/uc?export=view&id=1DDxvCkfxDX4nJ12ABySlQFjc-6yz0qWs" class="img-link">
-<img alt="Rt" src="https://drive.google.com/uc?export=view&id=1DDxvCkfxDX4nJ12ABySlQFjc-6yz0qWs"></a>
+<a href="https://drive.google.com/uc?export=view&id=1lN77ngzSU6M4Al3yLvo-vPsppph0mhPG" class="img-link">
+<img alt="Rt" src="https://drive.google.com/uc?export=view&id=1lN77ngzSU6M4Al3yLvo-vPsppph0mhPG"></a>
 
 **Grafikë Rt.** Numri riprodhues sipas ditëve (Rt) në Maqedoni. Pikat dhe vijat e tregojnë lëvizjen e Rt-së së vlerësuar me kalimin e kohës. Hijet me ngjyrë të kaltër të zbehtë i tregojnë 95% intervalet e besueshmërisë, d.m.th. tregojnë prej ku deri ku mund të jetë Rt i vërtetë dhe pasqyrojnë pasigurinë në Rt-në e vlerësuar.
 
