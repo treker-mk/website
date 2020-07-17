@@ -18,7 +18,7 @@
           </span>
           <span v-if="showIn">
             <div class="trend-icon in bad up"></div>
-            <span v-if="field === 'cases.active'" class="in bad"
+            <span v-if="field === 'cases.recovered'" class="in bad"
               >{{ renderActiveValues(fieldNewCases).lastDay.value }}</span>
             <span v-else class="in bad"
               >{{ renderTotalValues(totalIn) }}</span>
@@ -27,7 +27,6 @@
             <div class="trend-icon out good down"></div>
             <span v-if="field === 'cases.active'" class="out good"
               >{{
-                renderActiveValues(fieldNewCases).lastDay.value -
                   renderActiveValues(field).lastDay.diff +
                   renderActiveValues(fieldDeceased).lastDay.value
               }}</span>
