@@ -179,9 +179,11 @@ export default {
       return this.totalOut && this.renderTotalValues(this.totalOut) > 0
     },
     showDeceased() {
+    /*  SLO-spec
       if (this.field === 'cases.active') {
         return this.renderActiveValues(this.fieldDeceased).lastDay.value > 0
       }
+    */
       return (
         this.totalDeceased && this.renderTotalValues(this.totalDeceased) > 0
       )
