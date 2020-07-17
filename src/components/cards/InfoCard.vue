@@ -25,9 +25,8 @@
           </span>
           <span v-if="showOut">
             <div class="trend-icon out good down"></div>
-            <span v-if="field === 'cases.active'" class="out good"
+            <span v-if="field === 'cases.recovered.todate'" class="out good"
               >{{
-                renderActiveValues(fieldNewCases).lastDay.value -
                   renderActiveValues(field).lastDay.diff +
                   renderActiveValues(fieldDeceased).lastDay.value
               }}</span>
