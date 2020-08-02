@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /embed.html
+Sitemap: https://treker.mk/sitemap.xml
