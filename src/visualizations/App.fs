@@ -384,6 +384,8 @@ let render (state: State) (_: Msg -> unit) =
                  |> unbox) // behavior = smooth | auto
             window.history.pushState (null, null, "#" + visualizationId)
 
+        let context = localStorage.getItem ("contextCountry")
+
         Html.div
             [ prop.className "title-brand-wrapper"
               prop.children
@@ -391,7 +393,7 @@ let render (state: State) (_: Msg -> unit) =
                       [ prop.children
                           [ Html.a
                               [ prop.href ("#" + visualization.ClassName)
-                                prop.text (chartText visualization.ChartTextsGroup ".title")
+                                prop.text (tOptions ("charts." + visualization.ChartTextsGroup + ".title") {| context = context |} )
                                 prop.onClick (fun e -> scrollToElement e visualization.ClassName) ] ] ] ] ]
 
     Html.div

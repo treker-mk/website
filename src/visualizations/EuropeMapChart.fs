@@ -114,83 +114,113 @@ let owdCountries =
     |> List.map (fun code -> if code = "RKS" then "OWID_KOS" else code) // hack for Kosovo code
 
 let greenCountries =
-    Set.ofList
-        [ "AUT"
-          "CYP"
-          "CZE"
-          "DNK"
-          "EST"
-          "FIN"
-          "GRC"
-          "FRA"
-          "IRL"
-          "ISL"
-          "ITA"
-          "LVA"
-          "LIE"
-          "LTU"
-          "HUN"
-          "MLT"
-          "DEU"
-          "NOR"
-          "SVK"
-          "ESP"
-          "CHE"
-          "BEL"
-          "NLD" ]
+    Map.ofList
+        [ 
+            ("AUT", "")
+            ("CYP", "")
+            ("CZE", "")
+            ("EST", "")
+            ("FIN", "")
+            ("FRA", "")
+            ("GRC", "")
+            ("GEO", "")
+            ("IRL", "")
+            ("ITA", "")
+            ("LVA", "")
+            ("LIE", "")
+            ("LTU", "")
+            ("HUN", "")
+            ("MLT", "")
+            ("MCO", "")
+            ("DEU", "")
+            ("NLD", "")
+            ("NOR", "")
+            ("NZL", "")
+            ("POL", "")
+            ("RWA", "")
+            ("SMR", "")
+            ("SVK", "")
+            ("ESP", " (Andaluzija, Asturija, Balearski otoki, Ceuta, Extremandura, Galicija, Kanarski otoki, Kantabrija, Kastilja in Leon
+Kastilja-Manča, Melilla)")
+            ("CHE", "")
+            ("URY", "")
+            ("VAT", "")
+            ("GBR", "") 
+        ]
 
 let redCountries =
-    Set.ofList
-        [ "QAT"
-          "BHR"
-          "CHL"
-          "KWT"
-          "PER"
-          "ARM"
-          "DJI"
-          "OMN"
-          "BRA"
-          "PAN"
-          "BLR"
-          "AND"
-          "SGP"
-          "SWE"
-          "MDV"
-          "STP"
-          "ARE"
-          "USA"
-          "SAU"
-          "RUS"
-          "MDA"
-          "GIB"
-          "BOL"
-          "PRI"
-          "GAB"
-          "CYM"
-          "DOM"
-          "ZAF"
-          "IRN"
-          "GBR"
-          "MKD"
-          "BIH"
-          "SRB"
-          "RKS"
-          "PRT"
-          "ALB" ]
+    Map.ofList
+        [ 
+            ("ALB", "")
+            ("DZA", "")
+            ("ARG", "")
+            ("ARM", "")
+            ("AZE", "")
+            ("BAH", "")
+            ("BHR", "")
+            ("BLR", "")
+            ("BGR", "")
+            ("BOL", "")
+            ("BIH", "")
+            ("BRA", "")
+            ("CHL", "")
+            ("MNE", "")
+            ("VIR", "")
+            ("DOM", "")
+            ("ECU", "")
+            ("SWZ", "")
+            ("GAB", "")
+            ("GTM", "")
+            ("HND", "")
+            ("IND", "")
+            ("IRQ", "")
+            ("IRN", "")
+            ("ISR", "")
+            ("ZAF", "")
+            ("QAT", "")
+            ("KAZ", "")
+            ("KGZ", "")
+            ("CHN", "")
+            ("COL", "")
+            ("RKS", "")
+            ("CRI", "")
+            ("KWT", "")
+            ("LUX", "")
+            ("MDV", "")
+            ("MEX", "")
+            ("MDA", "")
+            ("OMN", "")
+            ("PAN", "")
+            ("PER", "")
+            ("PRI", "")
+            ("ROU", "")
+            ("RUS", "")
+            ("SLV", "")
+            ("STP", "")
+            ("SAU", "")
+            ("MKD", "")
+            ("SGP", "")
+            ("SRB", "")
+            ("SUR", "")
+            ("ESP", " (Valencija, Baskija, Katalonija, Navarra in Aragonija)")
+            ("TCA", "")
+            ("CPV", "")
+            ("USA", "")
+            ("ARE", "")
+        ]
 
 let importedFrom =
     Map.ofList
-        [ ("HRV", 16)
-          ("SRB", 10)
-          ("BIH", 8)
-          ("RKS", 3)
-          ("MNE", 3)
-          ("KAZ", 1)
-          ("AUT", 1)
+        [ ("HRV", 5)
+          ("RKS", 2)
           ("ITA", 1)
-          ("CHE", 1) ]
+          ("AUT", 1)
+          ("SRB", 1)
+          ("BIH", 1)
+          ("MKD", 1) 
+          ("DXB", 1)]
 
-let importedDate = DateTime(2020, 7, 12)
+let importedDate = DateTime(2020, 7, 26)
 
 let loadGeoJson =
     async {
@@ -251,14 +281,17 @@ let prepareCountryData (data: Data.OurWorldInData.DataPoint list) =
         let owdDate =
             dps |> List.map (fun dp -> dp.Date) |> List.max
 
-        let rText, rColor =
+        let red, green = 
+            redCountries.TryFind(fixedCode), 
+            greenCountries.TryFind(fixedCode)
+        let rText, rColor, rAltText =
             if fixedCode = "SVN"
-            then I18N.t "charts.europe.statusNone", "#10829a"
-            else if greenCountries.Contains(fixedCode)
-            then I18N.t "charts.europe.statusGreen", "#C4DE6F"
-            else if redCountries.Contains(fixedCode)
-            then I18N.t "charts.europe.statusRed", "#FF5348"
-            else I18N.t "charts.europe.statusYellow", "#FEF65C"
+            then I18N.t "charts.europe.statusNone", "#10829a", ""
+            else if red.IsSome
+            then I18N.t "charts.europe.statusRed", "#FF5348", red |> Option.defaultValue ""
+            else if green.IsSome
+            then I18N.t "charts.europe.statusGreen", "#C4DE6F", green |> Option.defaultValue ""
+            else I18N.t "charts.europe.statusYellow", "#FEF65C", ""
 
         let imported =
             importedFrom.TryFind(fixedCode)
@@ -272,7 +305,7 @@ let prepareCountryData (data: Data.OurWorldInData.DataPoint list) =
               CountryData.NewCases = newCases
               CountryData.OwdDate = owdDate
               CountryData.RestrictionColor = rColor
-              CountryData.RestrictionText = rText
+              CountryData.RestrictionText = rText + rAltText
               CountryData.ImportedFrom = imported
               CountryData.ImportedDate = importedDate }
 

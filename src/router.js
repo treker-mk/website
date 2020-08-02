@@ -17,6 +17,7 @@ import * as aboutMdHr from './content/hr/about.md'
 import * as aboutMdDe from './content/de/about.md'
 import * as aboutMdMk from './content/mk/about.md'
 import * as aboutMdSq from './content/sq/about.md'
+import * as aboutMdIt from './content/it/about.md'
 
 import * as linksMdSl from './content/sl/links.md'
 import * as linksMdEn from './content/en/links.md'
@@ -24,6 +25,7 @@ import * as linksMdHr from './content/hr/links.md'
 import * as linksMdDe from './content/de/links.md'
 import * as linksMdMk from './content/mk/links.md'
 import * as linksMdSq from './content/sq/links.md'
+import * as linksMdIt from './content/it/links.md'
 
 import * as contentMdSl from './content/sl/faq.md'
 import * as contentMdEn from './content/en/faq.md'
@@ -31,6 +33,7 @@ import * as contentMdHr from './content/hr/faq.md'
 import * as contentMdDe from './content/de/faq.md'
 import * as contentMdMk from './content/mk/faq.md'
 import * as contentMdSq from './content/sq/faq.md'
+import * as contentMdIt from './content/it/faq.md'
 
 import * as teamMdSl from './content/sl/team.md'
 import * as teamMdEn from './content/en/team.md'
@@ -38,6 +41,7 @@ import * as teamMdHr from './content/hr/team.md'
 import * as teamMdDe from './content/de/team.md'
 import * as teamMdMk from './content/mk/team.md'
 import * as teamMdSq from './content/sq/team.md'
+import * as teamMdIt from './content/it/team.md'
 
 import * as sourcesMdSl from './content/sl/sources.md'
 import * as sourcesMdEn from './content/en/sources.md'
@@ -45,6 +49,7 @@ import * as sourcesMdHr from './content/hr/sources.md'
 import * as sourcesMdDe from './content/de/sources.md'
 import * as sourcesMdMk from './content/mk/sources.md'
 import * as sourcesMdSq from './content/sq/sources.md'
+import * as sourcesMdIt from './content/it/sources.md'
 
 import * as modelsMdSl from './content/sl/models.md'
 import * as modelsMdEn from './content/en/models.md'
@@ -52,6 +57,7 @@ import * as modelsMdHr from './content/hr/models.md'
 import * as modelsMdDe from './content/de/models.md'
 import * as modelsMdMk from './content/mk/models.md'
 import * as modelsMdSq from './content/sq/models.md'
+import * as modelsMdIt from './content/it/models.md'
 
 import * as datasourcesMdSl from './content/sl/datasources.md'
 import * as datasourcesMdEn from './content/en/datasources.md'
@@ -59,6 +65,7 @@ import * as datasourcesMdHr from './content/hr/datasources.md'
 import * as datasourcesMdDe from './content/de/datasources.md'
 import * as datasourcesMdMk from './content/mk/datasources.md'
 import * as datasourcesMdSq from './content/sq/datasources.md'
+import * as datasourcesMdIt from './content/it/datasources.md'
 
 Vue.use(VueRouter)
 Vue.use(VueMeta)
@@ -71,6 +78,7 @@ const mdContent = {
     de: contentMdDe,
     mk: contentMdMk,
     sq: contentMdSq,
+    it: contentMdIt,
   },
   about: {
     sl: aboutMdSl,
@@ -79,6 +87,7 @@ const mdContent = {
     de: aboutMdDe,
     mk: aboutMdMk,
     sq: aboutMdSq,
+    it: aboutMdIt,
   },
   team: {
     sl: teamMdSl,
@@ -87,6 +96,7 @@ const mdContent = {
     de: teamMdDe,
     mk: teamMdMk,
     sq: teamMdSq,
+    it: teamMdIt,
   },
   links: {
     sl: linksMdSl,
@@ -95,6 +105,7 @@ const mdContent = {
     de: linksMdDe,
     mk: linksMdMk,
     sq: linksMdSq,
+    it: linksMdIt,
   },
   sources: {
     sl: sourcesMdSl,
@@ -103,6 +114,7 @@ const mdContent = {
     de: sourcesMdDe,
     mk: sourcesMdMk,
     sq: sourcesMdSq,
+    it: sourcesMdIt,
   },
   models: {
     sl: modelsMdSl,
@@ -111,6 +123,7 @@ const mdContent = {
     de: modelsMdDe,
     mk: modelsMdMk,
     sq: modelsMdSq,
+    it: modelsMdIt,
   },
   datasources: {
     sl: datasourcesMdSl,
@@ -119,6 +132,7 @@ const mdContent = {
     de: datasourcesMdDe,
     mk: datasourcesMdMk,
     sq: datasourcesMdSq,
+    it: datasourcesMdIt,
   },
 }
 

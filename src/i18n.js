@@ -9,6 +9,7 @@ import sq from './locales/sq.json'
 import sl from './locales/sl.json'
 import hr from './locales/hr.json'
 import de from './locales/de.json'
+import it from './locales/it.json'
 
 Vue.use(VueI18Next)
 
@@ -93,6 +94,8 @@ moment.updateLocale('hr', {
     'prosinca',
   ],
 })
+
+localStorage.setItem('contextCountry', process.env.VUE_APP_LOCALE_CONTEXT)
 
 const i18n = new VueI18Next(i18next)
 
