@@ -266,7 +266,7 @@ export default {
 
 .card-number {
   display: block;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
 }
 
