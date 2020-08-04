@@ -277,7 +277,7 @@ export default {
 }
 
 .card-diff {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 0.7rem;
 
   > *:not(:last-child) {
