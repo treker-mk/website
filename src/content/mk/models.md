@@ -43,6 +43,12 @@
 
 **График Rt.** Репродуктивен број по денови (Rt) во Македонија. Точките и линиите го покажуваат движењето на проценетиот Rt во тек на време. Бледо-сините сенки ги покажуваат 95% интервалите на доверба, т.е. покажуваат од каде до каде може да е вистинскиот Rt и ја одразуваат несигурноста во проценетиот Rt.
 
+Слична проценка изработи [Баже Петрушев](https://www.linkedin.com/in/petrushev), овој пат со Бејзови статистички методи. Во моделот, Rt се разгледува како фактор кој бавно се менува со Гаусов произволен ôд, во логаритамска скала, а веројатноста на исходот на новозаболени се разгледува како Гама-Поасонова распределба.
+
+<img alt="Rt-bayes" src="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png">
+
+Лево: Репродуктивен број по денови (Rt) во Македонија. Темната линија ја покажува средната проценка, светлата и темната сенка покажуваат 95% и 50% интервал на најголема густина, соодветно. Десно: Црните точки ги покажуваат официјалните бројки на новозаразени по денови. Темната линија и сенките се средната проценка и интервалите.
+
 *1.       Wallinga J, Teunis P. Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures. Am J Epidemiol. 2004;160(6):509-516. doi:10.1093/aje/kwh255*
 
 *2.       Ferretti L, Wymant C, Kendall M, et al. Quantifying SARS-CoV-2 transmission suggests epidemic control with digital contact tracing. Science. March 2020. doi:10.1126/science.abb6936*
