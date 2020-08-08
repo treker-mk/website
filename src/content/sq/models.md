@@ -48,9 +48,9 @@ Vlerësim të ngjashëm ka dhënë edhe [Bazhe Petrushev](https://www.linkedin.c
 <a href="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png" class="img-link">
 <img alt="Rt-bayes" src="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png"></a>
 
-Lartë: Numri riprodhues sipas ditëve (Rt) në Maqedoni. Vija e errët e tregon vlerësimin mesatar, hija e çelë dhe e errët tregojnë 95% dhe 50% interval me dendësi më të madhe, përkatësisht. 
+**Lartë**: Numri riprodhues sipas ditëve (Rt) në Maqedoni. Vija e errët e tregon vlerësimin mesatar, hija e çelë dhe e errët tregojnë 95% dhe 50% interval me dendësi më të madhe, përkatësisht. 
 
-Poshtë: Pikat e zeza i tregojnë numrat zyrtar të të infektuarve të rinj sipas ditëve. Vija e errët dhe hijet janë vlerësimi mesatar dhe intervalet.
+**Poshtë**: Pikat e zeza i tregojnë numrat zyrtar të të infektuarve të rinj sipas ditëve. Vija e errët dhe hijet janë vlerësimi mesatar dhe intervalet.
 
 *1.       Wallinga J, Teunis P. Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures. Am J Epidemiol. 2004;160(6):509-516. doi:10.1093/aje/kwh255*
 
