@@ -43,6 +43,14 @@ Kur Rt mbahet mbi 1 për një periudhë të caktuar, epidemia përhapet, dhe e k
 
 **Grafikë Rt.** Numri riprodhues sipas ditëve (Rt) në Maqedoni. Pikat dhe vijat e tregojnë lëvizjen e Rt-së së vlerësuar me kalimin e kohës. Hijet me ngjyrë të kaltër të zbehtë i tregojnë 95% intervalet e besueshmërisë, d.m.th. tregojnë prej ku deri ku mund të jetë Rt i vërtetë dhe pasqyrojnë pasigurinë në Rt-në e vlerësuar.
 
+Vlerësim të ngjashëm ka dhënë edhe [Bazhe Petrushev](https://www.linkedin.com/in/petrushev), kësaj here me metoda statistikore të Bejzit (Bayes). Në model, Rt shqyrtohet si faktor i cili ndryshon ngadalë me lëvizjen e rastësishme të Gausit, në shkallë logaritmike, ndërsa probabiliteti i rezultatit të pacientëve të rinj shqyrtohet si shpërndarje Gamma-Poisson.
+
+<a href="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png" class="img-link">
+<img alt="Rt-bayes" src="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png"></a>
+
+Lartë: Numri riprodhues sipas ditëve (Rt) në Maqedoni. Vija e errët e tregon vlerësimin mesatar, hija e çelë dhe e errët tregojnë 95% dhe 50% interval me dendësi më të madhe, përkatësisht. 
+
+Poshtë: Pikat e zeza i tregojnë numrat zyrtar të të infektuarve të rinj sipas ditëve. Vija e errët dhe hijet janë vlerësimi mesatar dhe intervalet.
 
 *1.       Wallinga J, Teunis P. Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures. Am J Epidemiol. 2004;160(6):509-516. doi:10.1093/aje/kwh255*
 
