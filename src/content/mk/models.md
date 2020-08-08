@@ -48,9 +48,9 @@
 <a href="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png" class="img-link">
 <img alt="Rt-bayes" src="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png"></a>
 
-Горе: Репродуктивен број по денови (Rt) во Македонија. Темната линија ја покажува средната проценка, светлата и темната сенка покажуваат 95% и 50% интервал на најголема густина, соодветно. 
+**Горе**: Репродуктивен број по денови (Rt) во Македонија. Темната линија ја покажува средната проценка, светлата и темната сенка покажуваат 95% и 50% интервал на најголема густина, соодветно. 
 
-Доле: Црните точки ги покажуваат официјалните бројки на новозаразени по денови. Темната линија и сенките се средната проценка и интервалите.
+**Доле**: Црните точки ги покажуваат официјалните бројки на новозаразени по денови. Темната линија и сенките се средната проценка и интервалите.
 
 *1.       Wallinga J, Teunis P. Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures. Am J Epidemiol. 2004;160(6):509-516. doi:10.1093/aje/kwh255*
 
