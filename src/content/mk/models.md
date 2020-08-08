@@ -46,8 +46,7 @@
 Слична проценка изработи [Баже Петрушев](https://www.linkedin.com/in/petrushev), овој пат со Бејзови статистички методи. Во моделот, Rt се разгледува како фактор кој бавно се менува со Гаусов произволен ôд, во логаритамска скала, а веројатноста на исходот на новозаболени се разгледува како Гама-Поасонова распределба.
 
 <a href="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png" class="img-link">
-  <img alt="Rt-bayes" src=""https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png"">
-</a>
+<img alt="Rt-bayes" src="https://raw.githubusercontent.com/petrushev/bayesian-modeling/covid-19-mk/07%20covid19/mk_daily_R.png"></a>
 
 Лево: Репродуктивен број по денови (Rt) во Македонија. Темната линија ја покажува средната проценка, светлата и темната сенка покажуваат 95% и 50% интервал на најголема густина, соодветно. Десно: Црните точки ги покажуваат официјалните бројки на новозаразени по денови. Темната линија и сенките се средната проценка и интервалите.
 
