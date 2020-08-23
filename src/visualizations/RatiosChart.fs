@@ -17,7 +17,7 @@ type DisplayType =
     | Hospital
     | Mortality
   with
-    static member all = [ Cases; Hospital; Mortality ]
+    static member all = [ Cases; (* Hospital; Mortality SLO-spec *) ]
     static member getName = function
         | Cases     -> I18N.t "charts.ratios.seriousCases"
         | Hospital  -> I18N.t "charts.ratios.hospitalizations"
