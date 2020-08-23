@@ -42,7 +42,7 @@ type Ratios =
 
 module Ratios =
     let getSeries = function
-        | Cases     -> [ HospitalCases; IcuCases; CriticalCases; DeceasedCases ]
+        | Cases     -> [ HospitalCases; (* IcuCases; SLO-spec *) CriticalCases; DeceasedCases ]
         | Hospital  -> [ IcuHospital; CriticalHospital; DeceasedHospital]
         | Mortality -> [ DeceasedHospitalDeceasedTotal; DeceasedIcuDeceasedTotal; DeceasedIcuC; DeceasedHospitalC; ]
 
