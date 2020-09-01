@@ -122,11 +122,16 @@ let init (queryObj : obj) (data : RegionsData) : State * Cmd<Msg> =
                 |> Seq.sortBy (fun dp -> dp.Date)
                 |> Seq.toList
             let totalsShown = totals |> Seq.skip ((Seq.length totals) - showMaxBars) |> Seq.toList
+            let lastDay = Seq.tryLast dp
             let doublingTime =
+                if lastDay.IsSome && lastDay.Value.ActiveCases = Some(0) (* SLO-spec SLO does not have that if condition for ActiveCases == 0 *)
+                then None
+                else
                 dp
-                |> Seq.map (fun dp -> {| Date = dp.Date ; Value = dp.ConfirmedToDate |})
+                |> Seq.map (fun dp -> {| Date = dp.Date ; Value = dp.ActiveCases (* SLO-spec dp.ConfirmedToDate *) |})
                 |> Seq.toList
                 |> Utils.findDoublingTime
+
             let maxConfirmed = totals |> Seq.tryLast |> Option.map (fun dp -> dp.ConfirmedToDate) |> Option.defaultValue None
             let lastChange = totals |> Seq.filter (fun dp -> dp.ConfirmedToDate = maxConfirmed) |> Seq.head
             let activeCases = totalsShown |> Seq.tryLast |> Option.map (fun dp -> dp.ActiveCases) |> Option.defaultValue None
