@@ -776,6 +776,10 @@
             "gatheringsMass": {
                 "description": "Grumbullimet në masë si ngjarjet sportive dhe karnevalet janë ndaluar",
                 "title": "Grumbullime në masë"
+            },
+            "kindergartensOpen": {
+                "title": "Çerdhe",
+                "description": "Relaksim: Çerdhe hapen"
             }
         },
         "phase": {

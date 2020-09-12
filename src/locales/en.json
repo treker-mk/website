@@ -736,6 +736,10 @@
             "bordersOopen": {
                 "description": "Relaxation: borders openned for foreighn citizens",
                 "title": "Borders Open"
+            },
+            "kindergartensOpen": {
+                "title": "Kindergartens",
+                "description": "Relaxation: kindergartens open"
             }
         },
         "region": {
