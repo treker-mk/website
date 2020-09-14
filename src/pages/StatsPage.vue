@@ -42,7 +42,7 @@
           total-deceased="total.deceased.hospital.today"
           series-type="state"
         />
-<!--  
+<!--
         <Info-card
           :title="$t('infocard.icu')"
           field="statePerTreatment.inICU"
@@ -91,7 +91,7 @@ export default {
   mounted() {
     this.$nextTick(() => {
       // must use next tick, so whole DOM is ready and div#id=visualizations exists
-      Visualizations('visualizations', 'macedonia', this.$route.query)
+      Visualizations('visualizations', 'local', this.$route.query)
     })
 
     // stupid spinner impl, but i do not know better (charts are react component, no clue when they are rendered)
