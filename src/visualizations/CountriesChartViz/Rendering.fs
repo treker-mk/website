@@ -198,6 +198,7 @@ let renderChartCode (state: ChartState) (chartData: ChartData) =
 //                       // double of the red condition
 //                       | ActiveCasesPer1M -> Some 800
 //                       | _ -> None
+                   labels = pojo {| formatter = yAxisValueFormatter state |}
                    opposite = true
                    crosshair = true
                    title =
@@ -237,7 +238,7 @@ let renderChartCode (state: ChartState) (chartData: ChartData) =
         legend = legend
         tooltip = pojo {|
                           formatter = fun () ->
-                              tooltipFormatter chartData jsThis
+                              tooltipFormatter state chartData jsThis
                           shared = true
                           useHTML = true
                         |}

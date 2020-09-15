@@ -34,6 +34,14 @@ let formatTo3DecimalWithTrailingZero (value: float) =
     // A hack to replace decimal point with decimal comma.
     formatted.Replace('.', ',')
 
+let percentageValuesWith1DecimalTrailingZeroLabelFormatter (value: float) =
+    let formatted = sprintf "%.1f" value
+    formatted.Replace('.', ',') + "%"
+    
+let percentageValuesLabelFormatter (value: float) =
+    // A hack to replace decimal point with decimal comma.
+    ((abs value).ToString() + "%").Replace('.', ',')
+
 let calculateDoublingTime (v1 : {| Day : int ; PositiveTests : int |}) (v2 : {| Day : int ; PositiveTests : int |}) =
     let v1,  v2,  dt = float v1.PositiveTests,  float v2.PositiveTests,  float (v2.Day - v1.Day)
     if v1 = v2 then None

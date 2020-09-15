@@ -300,6 +300,19 @@ let render (state: State) (_: Msg -> unit) =
                         }
           }
 
+    let countriesDeathsPerCases =
+          { VisualizationType = CountriesDeathsPer1M
+            ClassName = "countries-chart"
+            ChartTextsGroup = "countriesDeathsPerCases"
+            Explicit = false
+            Renderer =
+                fun _ ->
+                    lazyView CountriesChartViz.Rendering.renderChart
+                        { MetricToDisplay = DeathsPerCases
+                          ChartTextsGroup = "countriesDeathsPerCases"
+                        }
+          }
+
     let localVisualizations =
         [ metricsComparison; spread; map; municipalities
           europeMap; tests; infections
@@ -308,13 +321,13 @@ let render (state: State) (_: Msg -> unit) =
 
     let worldVisualizations =
         [ worldMap; countriesActiveCasesPer1M
-          countriesCasesPer1M; countriesDeathsPer1M ]
+          countriesCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M ]
 
     let allVisualizations =
         [ hospitals; metricsComparison; spread; map; municipalities
           europeMap; worldMap; ageGroupsTimeline; tests; hCenters; infections
           cases; patients; ratios; ageGroups; regionMap; regions
-          countriesCasesPer1M; countriesActiveCasesPer1M; countriesDeathsPer1M
+          countriesCasesPer1M; countriesActiveCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M
         ]
 
     let macedoniaVisualizations =
