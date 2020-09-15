@@ -61,7 +61,7 @@ let init (config: CountriesChartConfig):
 
 let update (msg: Msg) (state: ChartState) : ChartState * Cmd<Msg> =
     let getCountriesCodes selectedSet =
-        "SVN" ::
+        "MKD" :: // SLO-spec here we specify origin country
         (selectedSet.CountriesCodes |> Array.toList)
 
     match msg with
