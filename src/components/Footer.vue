@@ -11,18 +11,18 @@
       </div>
       <div class="social">
         <a href="https://fb.me/Covid19TrekerMK" target="_blank">
-          <img src="../assets/svg/fb-icon.svg" alt="Facebook" />
+          <img loading="lazy" src="../assets/svg/fb-icon.svg" alt="Facebook" />
         </a>
         <a href="https://twitter.com/Covid19TrekerMK" target="_blank">
-          <img src="../assets/svg/tw-icon.svg" alt="Twitter" />
+          <img loading="lazy" src="../assets/svg/tw-icon.svg" alt="Twitter" />
         </a>
 <!--  SLO-spec
-        <a href="https://medium.com/treker" target="_blank">
-          <img src="../assets/svg/medium-icon.svg" alt="Medium" />
+        <a href="https://medium.com/sledilnik" target="_blank">
+          <img loading="lazy" src="../assets/svg/medium-icon.svg" alt="Medium" />
         </a>
 -->
         <a href="https://github.com/treker-mk" target="_blank">
-          <img src="../assets/svg/gh-icon.svg" alt="GitHub" class="gh-icon" />
+          <img loading="lazy" src="../assets/svg/gh-icon.svg" alt="GitHub" class="gh-icon" />
         </a>
       </div>
     </div>
