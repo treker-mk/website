@@ -10,7 +10,7 @@ let url = "https://api.treker.mk/api/municipalities"
 
 let parseRegionsData data =
     data
-    |> SimpleJson.parse
+    |> SimpleJson.parseNative
     |> function
         | JArray regions ->
             regions
