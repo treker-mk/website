@@ -112,6 +112,7 @@ type VisualizationType =
     | AgeGroupsTimeline
     | Map
     | RegionMap
+    | SkopjeMunMap
     | EuropeMap
     | WorldMap
     | Infections
@@ -129,6 +130,7 @@ type State =
       Query : obj // URL query parameters
       StatsData : RemoteData<StatsData, string>
       RegionsData : RemoteData<RegionsData, string>
+      SkopjeMunicipalitiesData : RemoteData<RegionsData, string>
       RenderingMode : RenderingMode }
 
 type Visualization = {
@@ -144,4 +146,6 @@ type Msg =
     | StatsDataLoaded of RemoteData<StatsData, string>
     | RegionsDataRequest
     | RegionsDataLoaded of RemoteData<RegionsData, string>
+    | SkopjeMunicipalitiesDataRequest
+    | SkopjeMunicipalitiesDataLoaded of RemoteData<RegionsData, string>
 

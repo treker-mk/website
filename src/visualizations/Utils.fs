@@ -233,6 +233,27 @@ module Dictionaries =
         |> List.map (fun (key, population, code) -> key,  { Key = key ; Name = key ; Population = population ; Code = code })
         |> Map.ofList
 
+    let skopjeMunicipalities =
+        [ "chair", 64773, "Chair"
+          "aerodrom", 72009, "Aerodrom"
+          "butel", 36154, "Butel"
+          "gazi_baba", 72617, "Gazi Baba"
+          "centar", 45412, "Centar"
+          "karposh", 59666, "Karposh"
+          "saraj", 35408, "Saraj"
+          "kisela_voda", 57236, "Kisela Voda"
+          "gjorche_petrov", 41634, "Gjorche Petrov"
+          "studenichani", 17246, "Studenichani"
+          "shuto_orizari", 22017, "Shuto Orizari"
+          "arachinovo", 11597, "Arachinovo"
+          "ilinden", 15894, "Ilinden"
+          "petrovets", 8255, "Petrovets"
+          "chucher-sandevo", 8493, "Chucher - Sandevo"
+          "sopishte", 5656, "Sopishte"
+          "zelenikovo", 4077, "Zelenikovo" ]    
+        |> List.map (fun (key, population, code) -> key,  { Municipality.Key = key ; Municipality.Name = key ; Municipality.Population = population ; Municipality.Code = code })
+        |> Map.ofList
+
 module AgePopulationStats =
     type AgeGroupId = string
 

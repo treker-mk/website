@@ -14,13 +14,14 @@ open Browser
 open Highcharts
 open Types
 
-type MapToDisplay = Municipality | Region
+type MapToDisplay = Municipality | Region | SkopjeMunicipality
 
 (* SLO-spec 
 let munGeoJsonUrl = "/maps/municipalities-gurs-simplified-3857.geojson"
 *)
 let munGeoJsonUrl = "/maps/new_31_Cities_MKD-3857.json"
 let regGeoJsonUrl = "/maps/statistical-regions-gurs-simplified-3857.geojson"
+let skopjeGeoJsonUrl = "/maps/SkopjeOpstini-3857.json"
 
 let excludedMunicipalities = Set.ofList ["kraj" ; "tujina"]
 
@@ -121,6 +122,20 @@ let loadRegGeoJson =
             | ex -> return GeoJsonLoaded (sprintf "Error loading map: %s" ex.Message |> Failure)
     }
 
+let loadSkopjeMunGeoJson =
+    async {
+        let! (statusCode, response) = Http.get skopjeGeoJsonUrl
+
+        if statusCode <> 200 then
+            return GeoJsonLoaded (sprintf "Error loading map: %d" statusCode |> Failure)
+        else
+            try
+                let data = response |> Fable.Core.JS.JSON.parse
+                return GeoJsonLoaded (data |> Success)
+            with
+            | ex -> return GeoJsonLoaded (sprintf "Error loading map: %s" ex.Message |> Failure)
+    }
+
 let init (mapToDisplay : MapToDisplay) (regionsData : RegionsData) : State * Cmd<Msg> =
     let dataTimeInterval = LastDays 14
 
@@ -149,6 +164,24 @@ let init (mapToDisplay : MapToDisplay) (regionsData : RegionsData) : State * Cmd
     let munData =
         seq {
             for municipality in Utils.Dictionaries.municipalities do
+                match Map.tryFind municipality.Key municipalityDataMap with
+                | None ->
+                    yield { Id = municipality.Key
+                            Code = municipality.Value.Code
+                            Name = municipality.Value.Name
+                            Population = municipality.Value.Population
+                            Cases = None }
+                | Some cases ->
+                    yield { Id = municipality.Key
+                            Code = municipality.Value.Code
+                            Name = municipality.Value.Name
+                            Population = municipality.Value.Population
+                            Cases = Some cases }
+        }
+
+    let skopjeMunData = 
+        seq {
+            for municipality in Utils.Dictionaries.skopjeMunicipalities do
                 match Map.tryFind municipality.Key municipalityDataMap with
                 | None ->
                     yield { Id = municipality.Key
@@ -210,6 +243,7 @@ let init (mapToDisplay : MapToDisplay) (regionsData : RegionsData) : State * Cmd
         match mapToDisplay with
         | Municipality -> munData
         | Region -> regData
+        | SkopjeMunicipality -> skopjeMunData
 
     { MapToDisplay = mapToDisplay
       GeoJson = NotAsked
@@ -226,6 +260,7 @@ let update (msg: Msg) (state: State) : State * Cmd<Msg> =
             match state.MapToDisplay with
             | Municipality -> Cmd.OfAsync.result loadMunGeoJson
             | Region -> Cmd.OfAsync.result loadRegGeoJson
+            | SkopjeMunicipality -> Cmd.OfAsync.result loadSkopjeMunGeoJson
         { state with GeoJson = Loading }, cmd
     | GeoJsonLoaded geoJson ->
         { state with GeoJson = geoJson }, Cmd.none
@@ -327,6 +362,7 @@ let renderMap (state : State) =
         let key =
             match state.MapToDisplay with
             | Municipality -> "Name4_E" (* "isoid" SLO-spec *)
+            | SkopjeMunicipality -> "Name4_E"
             | Region -> "code"
 
         let series geoJson =

@@ -7,6 +7,7 @@ open System
 open Types
 
 let url = "https://api.treker.mk/api/municipalities"
+let skMunUrl = "https://api.treker.mk/api/skopje-municipalities"
 
 let parseRegionsData data =
     data
@@ -72,6 +73,24 @@ let load =
         // quick hack to only get last 60 days - enough to show last 30 days + 14 days to calculate active cases
         let startDate = DateTime.Now.AddDays -60.0
         let urlQuery = url + "?from=" + startDate.ToString("yyyy-MM-dd")
+
+        let! (statusCode, response) = Http.get urlQuery
+
+        if statusCode <> 200 then
+            return RegionsDataLoaded (sprintf "Napaka pri nalaganju statističnih podatkov: %d" statusCode |> Failure)
+        else
+            try
+                let data = parseRegionsData response
+                return RegionsDataLoaded (Success data)
+            with
+            | ex -> return RegionsDataLoaded (sprintf "Napaka pri branju statističnih podatkov: %s" (ex.Message.Substring(0, 1000)) |> Failure)
+    }
+ 
+let loadSkMun =
+    async {
+        // quick hack to only get last 60 days - enough to show last 30 days + 14 days to calculate active cases
+        let startDate = DateTime.Now.AddDays -60.0
+        let urlQuery = skMunUrl + "?from=" + startDate.ToString("yyyy-MM-dd")
 
         let! (statusCode, response) = Http.get urlQuery
 
