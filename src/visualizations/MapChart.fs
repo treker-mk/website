@@ -137,7 +137,7 @@ let loadSkopjeMunGeoJson =
     }
 
 let init (mapToDisplay : MapToDisplay) (regionsData : RegionsData) : State * Cmd<Msg> =
-    let dataTimeInterval = LastDays 14
+    let dataTimeInterval = if mapToDisplay = SkopjeMunicipality then Complete else LastDays 14
 
     let municipalityDataMap =
         seq {
@@ -473,13 +473,16 @@ let render (state : State) dispatch =
     Html.div [
         prop.children [
             Utils.renderChartTopControls [
-                Html.div [
-                    prop.className "filters"
-                    prop.children [
-                        renderContentTypeSelector state.ContentType dispatch
-                        renderDataTimeIntervalSelector state.DataTimeInterval (DataTimeIntervalChanged >> dispatch)
+                match state.MapToDisplay with
+                | SkopjeMunicipality -> Html.none
+                | _ ->
+                    Html.div [
+                        prop.className "filters"
+                        prop.children [
+                            renderContentTypeSelector state.ContentType dispatch
+                            renderDataTimeIntervalSelector state.DataTimeInterval (DataTimeIntervalChanged >> dispatch)
+                        ]
                     ]
-                ]
                 renderDisplayTypeSelector
                     state.DisplayType (DisplayTypeChanged >> dispatch)
             ]
