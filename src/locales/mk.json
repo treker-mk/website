@@ -636,6 +636,7 @@
         },
         "map": {
             "confirmedCases": "Потврдени случаи",
+            "activeCases": "Активни случаи",
             "deceased": "Починати",
             "last_x_days": "{{ count }} ден",
             "last_x_days_plural": "{{ count }} дена",
@@ -761,6 +762,12 @@
         },
         "world": {
             "title": "Состојба со COVID-19 во светот"
+        },
+        "sk-municipalities": {
+            "title": "Активни случаи во скопски регион по општини"
+        },
+        "sk-map": {
+            "title": "Скопски регион"
         }
     },
     "phase": {

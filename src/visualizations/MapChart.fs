@@ -282,7 +282,8 @@ let seriesData (state : State) =
         let fmtStr = sprintf "%s: <b>%d</b>" (I18N.t "charts.map.populationC") population
         match state.ContentType with
         | ConfirmedCases ->
-            let label = fmtStr + sprintf "<br>%s: <b>%d</b>" (I18N.t "charts.map.confirmedCases") absolute
+            let labelKey = if state.MapToDisplay = MapToDisplay.SkopjeMunicipality then "charts.map.activeCases" else "charts.map.confirmedCases"
+            let label = fmtStr + sprintf "<br>%s: <b>%d</b>" (I18N.t labelKey) absolute
             if absolute > 0 then
                 label + sprintf " (%s %% %s)" (Utils.formatTo3DecimalWithTrailingZero pctPopulation) (I18N.t "charts.map.population")
             else

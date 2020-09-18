@@ -12,7 +12,8 @@
             "all": "Të gjithë",
             "mortalityOfConfirmedCases": "Vdekshmëria e rasteve të konfirmuara",
             "title": "Harta e qendrave rajonale të shëndetit publik",
-            "yesterday": "Dje"
+            "yesterday": "Dje",
+            "activeCases": "Raste aktive"
         },
         "hospitals": {
             "title": "Kapacitetet spitalore",

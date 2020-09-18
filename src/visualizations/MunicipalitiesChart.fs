@@ -294,11 +294,12 @@ let renderMunicipality (state : State) (municipality : Municipality) =
                                                 prop.children [
                                                     Html.span [ prop.text (I18N.t "charts.municipalities.deceased") ]
                                                     Html.b [ prop.text deceasedToDate ] ] ]
-                                        Html.div [
-                                            prop.className "confirmed"
-                                            prop.children [
-                                                Html.span [ prop.text (I18N.t "charts.municipalities.all") ]
-                                                Html.b [ prop.text confirmedToDate ] ] ]
+                                        if state.DataToDisplay <> DataToDisplay.SkopjeMunicipality then
+                                            Html.div [
+                                                prop.className "confirmed"
+                                                prop.children [
+                                                    Html.span [ prop.text (I18N.t "charts.municipalities.all") ]
+                                                    Html.b [ prop.text confirmedToDate ] ] ]
                                     ]
                                 ]
                             ]
@@ -347,10 +348,11 @@ let renderMunicipality (state : State) (municipality : Municipality) =
                     ]
                 ]
             ]
-            if Highcharts.showExpGrowthFeatures && state.DataToDisplay <> DataToDisplay.SkopjeMunicipality then
-                renderedDoublingTime
-            else
-                renderLastCase
+            if state.DataToDisplay <> DataToDisplay.SkopjeMunicipality then
+                if Highcharts.showExpGrowthFeatures then
+                    renderedDoublingTime
+                else
+                    renderLastCase
         ]
     ]
 
@@ -423,7 +425,8 @@ let renderMunicipalities (state : State) _ =
                 else compareActiveCases m1 m2)
 
     let truncatedData, displayShowAllButton =
-        if state.ShowAll then sortedMunicipalities, true
+        if state.DataToDisplay = DataToDisplay.SkopjeMunicipality then sortedMunicipalities, false
+        else if state.ShowAll then sortedMunicipalities, true
         else if Seq.length sortedMunicipalities <= collapsedMunicipalityCount then sortedMunicipalities, false
         else Seq.take collapsedMunicipalityCount sortedMunicipalities, true
 
@@ -527,9 +530,8 @@ let render (state : State) dispatch =
     let element = Html.div [
         prop.children [
             Utils.renderChartTopControls [
-                if (state.DataToDisplay = DataToDisplay.SkopjeMunicipality)
-                then Html.none
-                else
+                if (state.DataToDisplay <> DataToDisplay.SkopjeMunicipality)
+                then 
                     Html.div [
                         prop.className "filters"
                         prop.children [

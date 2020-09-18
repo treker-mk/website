@@ -300,7 +300,8 @@
             "last_x_days_plural": "{{ count }} days",
             "absolute": "Absolute",
             "deceased": "Deaths",
-            "confirmedCases": "Confirmed Cases"
+            "confirmedCases": "Confirmed Cases",
+            "activeCases": "Active Cases"
         },
         "rmap": {
             "title": "Region Map"
@@ -414,6 +415,12 @@
             "projection7": "Projection, 7-day doubling",
             "projection": "Projection",
             "title": "Hospital capacities"
+        },
+        "sk-municipalities": {
+            "title": "Active cases in Skopje region by municipalities"
+        },
+        "sk-map": {
+            "title": "Skopje region"
         }
     },
     "footer": {
