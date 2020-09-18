@@ -27,6 +27,7 @@ let dropdown (viz: Visualization) =
             | EuropeMap -> (1140, 780)
             | WorldMap -> (1140, 780)
             | Municipalities -> (1140, 1150)
+            | SkopjeMunicipalities -> (1140, 1150)
             | AgeGroups -> (1140, 720)
             | AgeGroupsTimeline -> (1140, 720)
             | Hospitals -> (1140, 1130)
