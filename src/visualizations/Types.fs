@@ -108,6 +108,7 @@ type VisualizationType =
     | Spread
     | Regions
     | Municipalities
+    | SkopjeMunicipalities
     | AgeGroups
     | AgeGroupsTimeline
     | Map

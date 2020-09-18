@@ -27,6 +27,7 @@ let init (query: obj) (visualization: string option) (page: string) =
             | "Spread" -> Some Spread
             | "Regions" -> Some Regions
             | "Municipalities" -> Some Municipalities
+            | "SkopjeMunicipalities" -> Some SkopjeMunicipalities
             | "AgeGroups" -> Some AgeGroups
             | "AgeGroupsTimeline" -> Some AgeGroupsTimeline
             | "HCenters" -> Some HCenters
@@ -158,6 +159,7 @@ let render (state: State) (_: Msg -> unit) =
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView Map.mapChart {| mapToDisplay = Map.MapToDisplay.SkopjeMunicipality; data = data |} }
 
+
     let municipalities =
           { VisualizationType = Municipalities
             ClassName = "municipalities-chart"
@@ -170,7 +172,21 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data ->
-                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; data = data |} }
+                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; dataToDisplay = MunicipalitiesChart.DataToDisplay.Municipality; data = data |} }
+    
+    let skopjeMunicipalities =
+          { VisualizationType = SkopjeMunicipalities
+            ClassName = "sk-municipalities-chart"
+            ChartTextsGroup = "sk-municipalities"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.RegionsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data ->
+                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; dataToDisplay = MunicipalitiesChart.DataToDisplay.SkopjeMunicipality; data = data |} }
 
     let europeMap =
           { VisualizationType = EuropeMap
@@ -347,7 +363,7 @@ let render (state: State) (_: Msg -> unit) =
 
     let localVisualizations =
         [ metricsComparison; spread; map; municipalities
-          skopjeMunMap;
+          skopjeMunMap; skopjeMunicipalities;
           europeMap; tests; infections
           cases; patients;
         ]

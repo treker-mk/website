@@ -11,6 +11,8 @@ open Feliz.ElmishComponents
 
 open Types
 
+type DataToDisplay = Municipality | SkopjeMunicipality
+
 let barMaxHeight = 55
 let showMaxBars = 30
 let collapsedMunicipalityCount = 16
@@ -73,7 +75,8 @@ type Query (query : obj, regions : Region list) =
         | _ -> None
 
 type State =
-    { Municipalities : Municipality seq
+    { DataToDisplay : DataToDisplay
+      Municipalities : Municipality seq
       Regions : Region list
       ShowAll : bool
       SearchQuery : string
@@ -86,7 +89,7 @@ type Msg =
     | RegionFilterChanged of string
     | ViewChanged of View
 
-let init (queryObj : obj) (data : RegionsData) : State * Cmd<Msg> =
+let init (queryObj : obj) (dataToDisplay : DataToDisplay) (data : RegionsData) : State * Cmd<Msg> =
     let lastDataPoint = List.last data
 
     let regions =
@@ -156,7 +159,8 @@ let init (queryObj : obj) (data : RegionsData) : State * Cmd<Msg> =
             })
 
     let state =
-        { Municipalities = municipalities
+        { DataToDisplay = dataToDisplay
+          Municipalities = municipalities
           Regions = regions
           ShowAll = false
           SearchQuery = ""
@@ -343,7 +347,7 @@ let renderMunicipality (state : State) (municipality : Municipality) =
                     ]
                 ]
             ]
-            if Highcharts.showExpGrowthFeatures then
+            if Highcharts.showExpGrowthFeatures && state.DataToDisplay <> DataToDisplay.SkopjeMunicipality then
                 renderedDoublingTime
             else
                 renderLastCase
@@ -492,7 +496,7 @@ let renderRegionSelector (regions : Region list) (selected : string) dispatch =
         prop.onChange (RegionFilterChanged >> dispatch)
     ]
 
-let renderView (currentView : View) dispatch =
+let renderView (currentView : View) (dataToDisplay : DataToDisplay) dispatch =
 
     let renderSelector (view : View) (label : string) =
         let defaultProps =
@@ -510,8 +514,9 @@ let renderView (currentView : View) dispatch =
             Html.text (I18N.t "charts.common.view")
             renderSelector View.LastConfirmedCase (I18N.t "charts.municipalities.viewLast")
             renderSelector View.ActiveCases (I18N.t "charts.municipalities.viewActive")
-            renderSelector View.TotalConfirmedCases (I18N.t "charts.municipalities.viewTotal")
-            if Highcharts.showExpGrowthFeatures then
+            if dataToDisplay <> DataToDisplay.SkopjeMunicipality then
+                renderSelector View.TotalConfirmedCases (I18N.t "charts.municipalities.viewTotal")
+            if Highcharts.showExpGrowthFeatures && dataToDisplay <> DataToDisplay.SkopjeMunicipality then
                 renderSelector View.DoublingTime (I18N.t "charts.municipalities.viewDoublingTime")
         ]
     ]
@@ -522,14 +527,17 @@ let render (state : State) dispatch =
     let element = Html.div [
         prop.children [
             Utils.renderChartTopControls [
-                Html.div [
-                    prop.className "filters"
-                    prop.children [
-                        renderRegionSelector state.Regions state.FilterByRegion dispatch
-                        renderSearch state.SearchQuery dispatch
+                if (state.DataToDisplay = DataToDisplay.SkopjeMunicipality)
+                then Html.none
+                else
+                    Html.div [
+                        prop.className "filters"
+                        prop.children [
+                            renderRegionSelector state.Regions state.FilterByRegion dispatch
+                            renderSearch state.SearchQuery dispatch
+                        ]
                     ]
-                ]
-                renderView state.View dispatch
+                renderView state.View state.DataToDisplay dispatch
             ]
             Html.div [
                 prop.className "municipalities"
@@ -558,5 +566,5 @@ let render (state : State) dispatch =
 
     element
 
-let municipalitiesChart (props : {| query : obj ; data : RegionsData |}) =
-    React.elmishComponent("MunicipalitiesChart", init props.query props.data, update, render)
+let municipalitiesChart (props : {| query : obj ; dataToDisplay : DataToDisplay; data : RegionsData |}) =
+    React.elmishComponent("MunicipalitiesChart", init props.query props.dataToDisplay props.data, update, render)
