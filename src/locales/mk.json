@@ -153,6 +153,16 @@
         },
         "croatia": {
             "title": "Хрватска"
+        },
+        "masks": {
+            "description": "Маските се задолжителни во сите јавни затворени простори како и надвор кога одалеченоста е помала од 2м. <br>Рестораните отворени само до 22:30.",
+            "title": "Маски"
+        },
+        "quarantine10days": {
+            "title": "10 дена"
+        },
+        "allSchools": {
+            "title": "Училишта"
         }
     },
     "country": {
@@ -529,7 +539,8 @@
             "dataSource": "извор на податоците",
             "dsNIJZ": "ИЈЗ",
             "dsMZ": "Министерство за Здравје",
-            "dsOWD": "Our World in Data"
+            "dsOWD": "Our World in Data",
+            "sortBy": "Нареди според:"
         },
         "municipalities": {
             "yesterday": "вчера",
@@ -761,6 +772,16 @@
         },
         "world": {
             "title": "Состојба со COVID-19 во светот"
+        },
+        "rmap": {
+            "title": "Мапа на регионот"
+        },
+        "dailyComparison": {
+            "positivePct": "Удел од позитивните тестови (%)",
+            "tests": "Направени тестови",
+            "active": "Активни случаи",
+            "new": "Потврдени случаи",
+            "title": "Споредба според ден на неделата"
         }
     },
     "phase": {
@@ -794,7 +815,7 @@
     },
     "days": {
         "longerDate": "{{ date, %A, %e. %B %Y }}",
-        "date": "{{ date, D. %b }}",
+        "date": "{{ date, %e. %b }}",
         "x_days_ago": "пред {{ count }} ден",
         "x_days_ago_plural": "пред {{ count }} дена",
         "in_x_days": "во {{ count }} ден",
