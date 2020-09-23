@@ -19,6 +19,7 @@ let init (query: obj) (visualization: string option) (page: string) =
             | "EuropeMap" -> Some EuropeMap
             | "WorldMap" -> Some WorldMap
             | "MetricsComparison" -> Some MetricsComparison
+            | "DailyComparison" -> Some DailyComparison
             | "Patients" -> Some Patients
             | "Ratios" -> Some Ratios
             | "Tests" -> Some Tests
@@ -96,6 +97,19 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView MetricsComparisonChart.metricsComparisonChart {| data = data |} }
+
+    let dailyComparison =
+          { VisualizationType = DailyComparison
+            ClassName = "daily-comparison-chart"
+            ChartTextsGroup = "dailyComparison"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView DailyComparisonChart.dailyComparisonChart {| data = data |} }
 
     let spread =
           { VisualizationType = Spread
@@ -312,7 +326,7 @@ let render (state: State) (_: Msg -> unit) =
 
     let countriesDeathsPerCases =
           { VisualizationType = CountriesDeathsPer1M
-            ClassName = "countries-chart"
+            ClassName = "countries-deaths-per-cases"
             ChartTextsGroup = "countriesDeathsPerCases"
             Explicit = false
             Renderer =
@@ -334,7 +348,7 @@ let render (state: State) (_: Msg -> unit) =
           countriesCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M ]
 
     let allVisualizations =
-        [ hospitals; metricsComparison; spread; map; municipalities
+        [ hospitals; metricsComparison; spread; dailyComparison; map; municipalities
           europeMap; worldMap; ageGroupsTimeline; tests; hCenters; infections
           cases; patients; ratios; ageGroups; regionMap; regions
           countriesCasesPer1M; countriesActiveCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M
@@ -451,19 +465,26 @@ let render (state: State) (_: Msg -> unit) =
                                 prop.onClick (fun e -> scrollToElement e visualization.ClassName) ] ] ] ] ]
 
     Html.div
-        [ Utils.classes
-            [(true, "visualization container")
-             (embedded, "embeded") ]
-          prop.children
-              (visualizations
-               |> List.map (fun viz ->
-                   Html.section
-                       [ prop.className [ viz.ClassName; "visualization-chart" ]
-                         prop.id viz.ClassName
-                         prop.children
-                             [ Html.div
-                                 [ prop.className "title-chart-wrapper"
-                                   prop.children
-                                       [ renderChartTitle viz
-                                         renderFaqAndShareBtn viz ] ]
-                               state |> viz.Renderer ] ])) ]
+        [ Utils.classes [
+            (true, "visualization container")
+            (embedded, "embeded") ]
+          prop.children (
+            visualizations
+            |> List.map (fun viz ->
+                Html.section [
+                    prop.className [ viz.ClassName ; "visualization-chart" ]
+                    prop.id viz.ClassName
+                    prop.children [
+                        Html.div [
+                            prop.className "title-chart-wrapper"
+                            prop.children [
+                                renderChartTitle viz
+                                renderFaqAndShareBtn viz
+                            ]
+                        ]
+                        IntersectionObserver.Component.intersectionObserver
+                            {| targetElementId = viz.ClassName
+                               content = state |> viz.Renderer
+                               options = { IntersectionObserver.defaultOptions with rootMargin = "100px" }
+                            |}
+                    ] ] ) ) ]

@@ -23,21 +23,19 @@ let roundTo1Decimal (value: float) = Math.Round(value, 1)
 let roundTo3Decimals (value: float) = Math.Round(value, 3)
 
 let formatTo1DecimalWithTrailingZero (value: float) =
-    let formatted =
-        sprintf "%.1f" value
+    let formatted = sprintf "%.1f" value
     // A hack to replace decimal point with decimal comma.
     formatted.Replace('.', ',')
 
 let formatTo3DecimalWithTrailingZero (value: float) =
-    let formatted =
-        sprintf "%.3f" value
+    let formatted = sprintf "%.3f" value
     // A hack to replace decimal point with decimal comma.
     formatted.Replace('.', ',')
 
 let percentageValuesWith1DecimalTrailingZeroLabelFormatter (value: float) =
     let formatted = sprintf "%.1f" value
     formatted.Replace('.', ',') + "%"
-    
+
 let percentageValuesLabelFormatter (value: float) =
     // A hack to replace decimal point with decimal comma.
     ((abs value).ToString() + "%").Replace('.', ',')
