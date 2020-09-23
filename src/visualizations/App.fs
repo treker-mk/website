@@ -76,7 +76,7 @@ let update (msg: Msg) (state: State) =
     | RegionsDataRequest ->
         match state.RegionsData with
         | Loading -> state, Cmd.none
-        | _ -> { state with RegionsData = Loading }, Cmd.OfAsync.result Data.Regions.loadSkMun
+        | _ -> { state with RegionsData = Loading }, Cmd.OfAsync.result Data.Regions.load
     | RegionsDataLoaded data -> { state with RegionsData = data }, Cmd.none
     | SkopjeMunicipalitiesDataRequest ->
         match state.SkopjeMunicipalitiesData with
@@ -153,7 +153,7 @@ let render (state: State) (_: Msg -> unit) =
             Explicit = false
             Renderer =
                 fun state ->
-                    match state.RegionsData with
+                    match state.SkopjeMunicipalitiesData with
                     | NotAsked -> Html.none
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
@@ -181,7 +181,7 @@ let render (state: State) (_: Msg -> unit) =
             Explicit = false
             Renderer =
                 fun state ->
-                    match state.RegionsData with
+                    match state.SkopjeMunicipalitiesData with
                     | NotAsked -> Html.none
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error

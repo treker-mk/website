@@ -95,11 +95,11 @@ let loadSkMun =
         let! (statusCode, response) = Http.get urlQuery
 
         if statusCode <> 200 then
-            return RegionsDataLoaded (sprintf "Napaka pri nalaganju statističnih podatkov: %d" statusCode |> Failure)
+            return SkopjeMunicipalitiesDataLoaded (sprintf "Napaka pri nalaganju statističnih podatkov: %d" statusCode |> Failure)
         else
             try
                 let data = parseRegionsData response
-                return RegionsDataLoaded (Success data)
+                return SkopjeMunicipalitiesDataLoaded (Success data)
             with
-            | ex -> return RegionsDataLoaded (sprintf "Napaka pri branju statističnih podatkov: %s" (ex.Message.Substring(0, 1000)) |> Failure)
+            | ex -> return SkopjeMunicipalitiesDataLoaded (sprintf "Napaka pri branju statističnih podatkov: %s" (ex.Message.Substring(0, 1000)) |> Failure)
     }
