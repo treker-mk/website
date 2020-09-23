@@ -298,6 +298,13 @@
             "daysFromOneDeathPerMillion": "Numri i ditëve nga vdekja e parë për 1 milion banorë",
             "legendTitle": "Përqindja e vdekjeve nga rastet e konfirmuara",
             "yAxisTitle": "Gjithsej vdekje nga rastet e konfirmuara"
+        },
+        "dailyComparison": {
+            "positivePct": "Përqindja e testeve pozitive (%)",
+            "tests": "Testimet e kryera",
+            "active": "Raste aktive",
+            "new": "Raste të konfirmuara",
+            "title": "Krahasimi sipas ditëve të javës"
         }
     },
     "shortMonth": {
@@ -873,7 +880,7 @@
     },
     "days": {
         "longerDate": "{{ date, %A, %e. %B %Y }}",
-        "date": "{{ date, D. %b }}",
+        "date": "{{ date, %e. %b }}",
         "x_days_ago": "{{ count }} ditë më parë",
         "x_days_ago_plural": "{{ count }} ditë më parë",
         "in_x_days": "për {{ count }} ditë",

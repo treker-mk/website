@@ -115,7 +115,7 @@ type ChartCfg = {
                 yAxis = {| yAxisBase () with ``type``="logarithmic" |}
                 dataKey = fun dp ->
                     let daily = dp.Cases.ConfirmedToday |> Utils.zeroToNone
-                    let total = dp.Cases.Active |> Utils.zeroToNone
+                    let total = dp.Cases.ConfirmedToDate |> Utils.zeroToNone (* SLO-spec dp.Cases.Active *)
                     let value =
                         (daily, total)
                         ||> Option.map2 (fun daily total ->
