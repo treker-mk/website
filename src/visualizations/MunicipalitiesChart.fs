@@ -324,7 +324,10 @@ let renderMunicipality (state : State) (municipality : Municipality) =
                         prop.children renderedBars
                     ]
                     Html.div [
-                        prop.className "total-and-date"
+                        let showDate = state.DataToDisplay <> DataToDisplay.SkopjeMunicipality
+                        let className = if showDate then "total-and-date" else "total-and-date no-date"
+                        
+                        prop.className className
                         prop.children [
                             Html.div [
                                 prop.className "active"
@@ -341,9 +344,11 @@ let renderMunicipality (state : State) (municipality : Municipality) =
                                             prop.text (sprintf "(+%d)" (municipality.NewCases |> Option.defaultValue 0)) ]
                                 ]
                             ]
-                            Html.div [
-                                prop.className "date"
-                                prop.text (I18N.tOptions "days.date" {| date = municipality.LastConfirmedCase.Date |})]
+                            if showDate
+                            then
+                                Html.div [
+                                    prop.className "date"
+                                    prop.text (I18N.tOptions "days.date" {| date = municipality.LastConfirmedCase.Date |})]
                         ]
                     ]
                 ]
