@@ -11,6 +11,7 @@ on:
       - master
   workflow_dispatch:
     branches:
+      - *
 
 jobs:
   test:
