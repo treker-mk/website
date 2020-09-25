@@ -359,7 +359,8 @@ let renderChartOptions
                         (I18N.t "charts.common.dataSource")
                         (I18N.t "charts.common.dsNIJZ")
                         (I18N.t "charts.common.dsMZ")
-                href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+                // SLO-spec href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+                href = "http://www.iph.mk"
             |}
         tooltip = pojo
             {| formatter = fun () ->
