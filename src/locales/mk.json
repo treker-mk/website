@@ -647,6 +647,7 @@
         },
         "map": {
             "confirmedCases": "Потврдени случаи",
+            "activeCases": "Активни случаи",
             "deceased": "Починати",
             "last_x_days": "{{ count }} ден",
             "last_x_days_plural": "{{ count }} дена",
@@ -772,6 +773,12 @@
         },
         "world": {
             "title": "Состојба со COVID-19 во светот"
+        },
+        "sk-municipalities": {
+            "title": "Активни случаи во скопски регион по општини"
+        },
+        "sk-map": {
+            "title": "Скопски регион"
         },
         "rmap": {
             "title": "Мапа на регионот"
@@ -940,7 +947,24 @@
             "debar": "Дебар",
             "gostivar": "Гостивар",
             "gevgelija": "Гевгелија",
-            "vinica": "Виница"
+            "vinica": "Виница",
+            "chair": "Чаир",
+            "aerodrom": "Аеродром",
+            "butel": "Бутел",
+            "gazi_baba": "Гази Баба",
+            "centar": "Центар",
+            "karposh": "Карпош",
+            "saraj": "Сарај",
+            "kisela_voda": "Кисела Вода",
+            "gjorche_petrov": "Ѓорче Петров",
+            "studenichani": "Студеничани",
+            "shuto_orizari": "Шуто Оризари",
+            "arachinovo": "Арачиново",
+            "ilinden": "Илинден",
+            "petrovets": "Петровец",
+            "chucher-sandevo": "Чучер Сандево",
+            "sopishte": "Сопиште",
+            "zelenikovo": "Зелениково"  
         },
         "hospital": {
             "infdrugi": "Инфективни оделенија во Тетово, Охрид, Велес, Куманово, Прилеп, Гостивар, Струмица и Струга",

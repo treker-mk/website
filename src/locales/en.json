@@ -308,7 +308,8 @@
             "last_x_days_plural": "{{ count }} days",
             "absolute": "Absolute",
             "deceased": "Deaths",
-            "confirmedCases": "Confirmed Cases"
+            "confirmedCases": "Confirmed Cases",
+            "activeCases": "Active Cases"
         },
         "rmap": {
             "title": "Region Map"
@@ -422,6 +423,12 @@
             "projection7": "Projection, 7-day doubling",
             "projection": "Projection",
             "title": "Hospital capacities"
+        },
+        "sk-municipalities": {
+            "title": "Active cases in Skopje region by municipalities"
+        },
+        "sk-map": {
+            "title": "Skopje region"
         }
     },
     "footer": {
@@ -1009,7 +1016,24 @@
             "struga": "Struga",
             "strumica": "Strumica",
             "tetovo": "Tetovo",
-            "stip": "Štip"
+            "stip": "Štip",
+            "chair": "Čair",
+            "aerodrom": "Aerodrom",
+            "butel": "Butel",
+            "gazi_baba": "Gazi Baba",
+            "centar": "Centar",
+            "karposh": "Karpoš",
+            "saraj": "Saraj",
+            "kisela_voda": "Kisela Voda",
+            "gjorche_petrov": "Gjorče Petrov",
+            "studenichani": "Studeničani",
+            "shuto_orizari": "Šuto Orizari",
+            "arachinovo": "Aračinovo",
+            "ilinden": "Ilinden",
+            "petrovets": "Petrovec",
+            "chucher-sandevo": "Čučer Sandevo",
+            "sopishte": "Sopište",
+            "zelenikovo": "Zelenikovo"  
         },
         "hospital": {
             "iksk": "Infektivna Klinika",

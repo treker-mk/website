@@ -16,6 +16,7 @@ let init (query: obj) (visualization: string option) (page: string) =
             match viz with
             | "Map" -> Some Map
             | "RegionMap" -> Some RegionMap
+            | "SkopjeMunMap" -> Some SkopjeMunMap
             | "EuropeMap" -> Some EuropeMap
             | "WorldMap" -> Some WorldMap
             | "MetricsComparison" -> Some MetricsComparison
@@ -27,6 +28,7 @@ let init (query: obj) (visualization: string option) (page: string) =
             | "Spread" -> Some Spread
             | "Regions" -> Some Regions
             | "Municipalities" -> Some Municipalities
+            | "SkopjeMunicipalities" -> Some SkopjeMunicipalities
             | "AgeGroups" -> Some AgeGroups
             | "AgeGroupsTimeline" -> Some AgeGroupsTimeline
             | "HCenters" -> Some HCenters
@@ -44,6 +46,7 @@ let init (query: obj) (visualization: string option) (page: string) =
           Query = query
           StatsData = NotAsked
           RegionsData = NotAsked
+          SkopjeMunicipalitiesData = NotAsked
           RenderingMode = renderingMode }
 
     // Request data loading based on the page we are on
@@ -52,13 +55,15 @@ let init (query: obj) (visualization: string option) (page: string) =
         | "local" ->
             Cmd.batch
                 [ Cmd.ofMsg StatsDataRequested
-                  Cmd.ofMsg RegionsDataRequest ]
+                  Cmd.ofMsg RegionsDataRequest 
+                  Cmd.ofMsg SkopjeMunicipalitiesDataRequest ]
         | "world" ->
             Cmd.none
         | _ ->
             Cmd.batch
                 [ Cmd.ofMsg StatsDataRequested
-                  Cmd.ofMsg RegionsDataRequest ]
+                  Cmd.ofMsg RegionsDataRequest
+                  Cmd.ofMsg SkopjeMunicipalitiesDataRequest ]
 
     initialState, cmd
 
@@ -74,6 +79,11 @@ let update (msg: Msg) (state: State) =
         | Loading -> state, Cmd.none
         | _ -> { state with RegionsData = Loading }, Cmd.OfAsync.result Data.Regions.load
     | RegionsDataLoaded data -> { state with RegionsData = data }, Cmd.none
+    | SkopjeMunicipalitiesDataRequest ->
+        match state.SkopjeMunicipalitiesData with
+        | Loading -> state, Cmd.none
+        | _ -> { state with SkopjeMunicipalitiesData = Loading }, Cmd.OfAsync.result Data.Regions.loadSkMun
+    | SkopjeMunicipalitiesDataLoaded data -> { state with SkopjeMunicipalitiesData = data }, Cmd.none
 
 open Elmish.React
 
@@ -150,6 +160,20 @@ let render (state: State) (_: Msg -> unit) =
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView Map.mapChart {| mapToDisplay = Map.MapToDisplay.Region; data = data |} }
 
+    let skopjeMunMap =
+          { VisualizationType = SkopjeMunMap
+            ClassName = "sk-map-chart"
+            ChartTextsGroup = "sk-map"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.SkopjeMunicipalitiesData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView Map.mapChart {| mapToDisplay = Map.MapToDisplay.SkopjeMunicipality; data = data |} }
+
+
     let municipalities =
           { VisualizationType = Municipalities
             ClassName = "municipalities-chart"
@@ -162,7 +186,21 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data ->
-                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; data = data |} }
+                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; dataToDisplay = MunicipalitiesChart.DataToDisplay.Municipality; data = data |} }
+    
+    let skopjeMunicipalities =
+          { VisualizationType = SkopjeMunicipalities
+            ClassName = "sk-municipalities-chart"
+            ChartTextsGroup = "sk-municipalities"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.SkopjeMunicipalitiesData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data ->
+                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; dataToDisplay = MunicipalitiesChart.DataToDisplay.SkopjeMunicipality; data = data |} }
 
     let europeMap =
           { VisualizationType = EuropeMap
@@ -339,6 +377,7 @@ let render (state: State) (_: Msg -> unit) =
 
     let localVisualizations =
         [ metricsComparison; spread; map; municipalities
+          skopjeMunMap; skopjeMunicipalities;
           europeMap; tests; dailyComparison; infections
           cases; patients;
         ]
@@ -354,21 +393,11 @@ let render (state: State) (_: Msg -> unit) =
           countriesCasesPer1M; countriesActiveCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M
         ]
 
-    let macedoniaVisualizations =
-        [ metricsComparison; spread; map; municipalities
-          europeMap; tests; infections
-          cases; patients;
-        ]
-
     let embedded, visualizations =
         match state.Page, state.RenderingMode with
         | ("local", Normal) ->
             false,
             localVisualizations
-            |> List.filter (fun viz -> not viz.Explicit)
-        | ("macedonia", Normal) ->
-            false,
-            macedoniaVisualizations
             |> List.filter (fun viz -> not viz.Explicit)
         | ("world", Normal) ->
             false,
