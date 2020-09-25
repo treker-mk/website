@@ -287,6 +287,12 @@
         "world": {
             "title": "Gjendja me COVID-19 në botë"
         },
+        "sk-municipalities": {
+            "title": "Rastet aktive në rajonin e Shkupit sipas komunave"
+        },
+        "sk-map": {
+            "title": "Rajoni i Shkupit"
+        },
         "rmap": {
             "title": "Harta e rajoneve"
         },
