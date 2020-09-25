@@ -12,7 +12,8 @@
             "all": "Të gjithë",
             "mortalityOfConfirmedCases": "Vdekshmëria e rasteve të konfirmuara",
             "title": "Harta e qendrave rajonale të shëndetit publik",
-            "yesterday": "Dje"
+            "yesterday": "Dje",
+            "activeCases": "Raste aktive"
         },
         "hospitals": {
             "title": "Kapacitetet spitalore",
@@ -285,6 +286,12 @@
         },
         "world": {
             "title": "Gjendja me COVID-19 në botë"
+        },
+        "sk-municipalities": {
+            "title": "Rastet aktive në rajonin e Shkupit sipas komunave"
+        },
+        "sk-map": {
+            "title": "Rajoni i Shkupit"
         },
         "rmap": {
             "title": "Harta e rajoneve"
@@ -944,7 +951,24 @@
             "veles": "Veles",
             "valandovo": "Vallandovë",
             "bitola": "Manastir",
-            "berovo": "Berovë"
+            "berovo": "Berovë",
+            "chair": "Çairi",
+            "aerodrom": "Aerodromi",
+            "butel": "Butelli",
+            "gazi_baba": "Gazi Baba",
+            "centar": "Komuna Qendër",
+            "karposh": "Karposhi",
+            "saraj": "Saraj",
+            "kisela_voda": "Kisella Vodë",
+            "gjorche_petrov": "Gjorçe Petrov",
+            "studenichani": "Studeniçani",
+            "shuto_orizari": "Shuto Orizare",
+            "arachinovo": "Araqina",
+            "ilinden": "Ilindeni",
+            "petrovets": "Petroveci",
+            "chucher-sandevo": "Çuçer Sandeva",
+            "sopishte": "Sopishte",
+            "zelenikovo": "Zelenikova"  
         },
         "region": {
             "sk": "I Shkupit",
