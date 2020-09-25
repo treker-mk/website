@@ -79,6 +79,10 @@ let shadedWeekendPlotBands =
 
 // if set to true:
 // - MunicipalitiesChart will showDoublesInXday
+let showDoublingTimeFeatures =
+    true
+
+// if set to true:
 // - SpreadChart will show exponential growth pages
 let showExpGrowthFeatures =
     true
@@ -96,7 +100,8 @@ let addContainmentMeasuresFlags
         22, 4, "#FFe6e6", "masksOn"
         12, 5, "#FFe6e6", "lessMeasures"
         27, 5, "#ebfaeb", "kafanasOpen"
-        23, 6, "#e6f0ff", "bordersOopen"      
+        23, 6, "#e6f0ff", "bordersOopen"
+        9, 9, "#ebfaeb", "kindergartensOpen"      
     |]
     {|
         ``type`` = "flags"

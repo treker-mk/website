@@ -1,12 +1,8 @@
 module Data.Hospitals
 
 open System
-open Fable.SimpleHttp
-open Fable.SimpleJson
 
-open Types
-open I18N
-
+// let url = "https://api.sledilnik.org/api/hospitals" SLO-spec
 let url = "https://api.treker.mk/api/hospitals"
 
 type CountType =
@@ -68,7 +64,7 @@ let facilitySeriesInfo : FacilityCode -> (string option * string) = function
     | "ukclj" -> Some "#10829a", "UKC Ljubljana"
     | "ukcmb" -> Some "#003f5c", "UKC Maribor"
     | "ukg"   -> Some "#7B7226", "UK Golnik"
-    | other   -> None          , I18N.t ("mk.hospital." + other)
+    | other   -> None          , I18N.t ("mk.hospital." + other) // SLO-spec
 
 
 type FacilityAssets = {
@@ -78,8 +74,9 @@ type FacilityAssets = {
     overall: Assets
     perHospital: Map<FacilityCode, Assets>
   } with
-    member ps.Date = new DateTime(ps.year, ps.month, ps.day)
-    member ps.JsDate12h = new DateTime(ps.year, ps.month, ps.day) |> Highcharts.Helpers.jsTime12h
+    member ps.Date = DateTime(ps.year, ps.month, ps.day)
+    member ps.JsDate12h = DateTime(ps.year, ps.month, ps.day)
+                          |> Highcharts.Helpers.jsTime12h
 
 let getSortedFacilityCodes (data: FacilityAssets []) =
     match data with

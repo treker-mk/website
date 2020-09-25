@@ -3,8 +3,7 @@
 <!--  comment out SLO SPEC 
     <a
       class="notice-link"
-      href="#europe-chart"
-      v-scroll-to="{ el: '#europe-chart', offset: -115 }"
+      href="world"
     >
       <div class="notice">
         <span>
@@ -47,6 +46,7 @@
   color: $text-c;
   text-decoration: none;
   box-shadow: $element-box-shadow;
+  min-height: 64px;
 
   @media only screen and (min-width: 480px) {
     padding: 26px;
@@ -63,7 +63,6 @@
   span b {
     padding-right: 8px;
   }
-
 }
 
 </style>

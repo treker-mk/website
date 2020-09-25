@@ -43,9 +43,19 @@ export default {
           text: this.$t('charts.metricsComparison.title', { context: process.env.VUE_APP_LOCALE_CONTEXT } ),
           dimensions: [1140, 780]
         },
+        "DailyComparison": {
+          value: "DailyComparison",
+          text: this.$t('charts.dailyComparison.title', { context: process.env.VUE_APP_LOCALE_CONTEXT } ),
+          dimensions: [1140, 720]
+        },
         "EuropeMap": {
           value: "EuropeMap",
           text: this.$t('charts.europe.title'),
+          dimensions: [1140, 780]
+        },
+        "WorldMap": {
+          value: "WorldMap",
+          text: this.$t('charts.world.title'),
           dimensions: [1140, 780]
         },
         "Cases": {
@@ -91,6 +101,11 @@ export default {
         "Map": {
           value: "Map",
           text: this.$t('charts.map.title'),
+          dimensions: [1140, 820]
+        },
+        "RegionMap": {
+          value: "RegionMap",
+          text: this.$t('charts.rmap.title'),
           dimensions: [1140, 820]
         },
         "Municipalities": {

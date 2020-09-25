@@ -14,6 +14,9 @@ import {
   municipalitiesStore
 } from './municipalities.store'
 import {
+  skopjeMunicipalitiesStore
+} from './skopje-municipalities.store'
+import {
   healthCentersStore
 } from './health-centers.store'
 import {
@@ -49,6 +52,7 @@ const store = new Vuex.Store({
     hospitals: hospitalsStore,
     patients: patientsStore,
     municipalities: municipalitiesStore,
+    skopjeMunicipalities: skopjeMunicipalitiesStore,
     healthCenters: healthCentersStore,
     tableData,
   },

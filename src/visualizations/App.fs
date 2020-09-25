@@ -5,50 +5,67 @@ open Elmish
 open Feliz
 
 open Types
-open CountriesChartViz.Synthesis
+open CountriesChartViz.Analysis
 open I18N
 
 let init (query: obj) (visualization: string option) (page: string) =
-    let inner () =
-        let renderingMode =
-            match visualization with
-            | None -> Normal
-            | Some viz ->
-                match viz with
-                | "Map" -> Some Map
-                | "EuropeMap" -> Some EuropeMap
-                | "MetricsComparison" -> Some MetricsComparison
-                | "Patients" -> Some Patients
-                | "Ratios" -> Some Ratios
-                | "Tests" -> Some Tests
-                | "Cases" -> Some Cases
-                | "Spread" -> Some Spread
-                | "Regions" -> Some Regions
-                | "Municipalities" -> Some Municipalities
-                | "AgeGroups" -> Some AgeGroups
-                | "AgeGroupsTimeline" -> Some AgeGroupsTimeline
-                | "HCenters" -> Some HCenters
-                | "Hospitals" -> Some Hospitals
-                | "Infections" -> Some Infections
-                | "CountriesCasesPer1M" -> Some CountriesCasesPer1M
-                | "CountriesDeathsPer1M" -> Some CountriesDeathsPer1M
-                | _ -> None
-                |> Embedded
+    let renderingMode =
+        match visualization with
+        | None -> Normal
+        | Some viz ->
+            match viz with
+            | "Map" -> Some Map
+            | "RegionMap" -> Some RegionMap
+            | "SkopjeMunMap" -> Some SkopjeMunMap
+            | "EuropeMap" -> Some EuropeMap
+            | "WorldMap" -> Some WorldMap
+            | "MetricsComparison" -> Some MetricsComparison
+            | "DailyComparison" -> Some DailyComparison
+            | "Patients" -> Some Patients
+            | "Ratios" -> Some Ratios
+            | "Tests" -> Some Tests
+            | "Cases" -> Some Cases
+            | "Spread" -> Some Spread
+            | "Regions" -> Some Regions
+            | "Municipalities" -> Some Municipalities
+            | "SkopjeMunicipalities" -> Some SkopjeMunicipalities
+            | "AgeGroups" -> Some AgeGroups
+            | "AgeGroupsTimeline" -> Some AgeGroupsTimeline
+            | "HCenters" -> Some HCenters
+            | "Hospitals" -> Some Hospitals
+            | "Infections" -> Some Infections
+            | "CountriesCasesPer1M" -> Some CountriesCasesPer1M
+            | "CountriesActiveCasesPer1M" -> Some CountriesActiveCasesPer1M
+            | "CountriesDeathsPer1M" -> Some CountriesDeathsPer1M
+            | _ -> None
+            |> Embedded
 
-        let initialState =
-            {
-              Page = page
-              Query = query
-              StatsData = NotAsked
-              RegionsData = NotAsked
-              RenderingMode = renderingMode }
+    let initialState =
+        {
+          Page = page
+          Query = query
+          StatsData = NotAsked
+          RegionsData = NotAsked
+          SkopjeMunicipalitiesData = NotAsked
+          RenderingMode = renderingMode }
 
-        initialState,
-        Cmd.batch
-            [ Cmd.ofMsg StatsDataRequested
-              Cmd.ofMsg RegionsDataRequest ]
+    // Request data loading based on the page we are on
+    let cmd =
+        match page with
+        | "local" ->
+            Cmd.batch
+                [ Cmd.ofMsg StatsDataRequested
+                  Cmd.ofMsg RegionsDataRequest 
+                  Cmd.ofMsg SkopjeMunicipalitiesDataRequest ]
+        | "world" ->
+            Cmd.none
+        | _ ->
+            Cmd.batch
+                [ Cmd.ofMsg StatsDataRequested
+                  Cmd.ofMsg RegionsDataRequest
+                  Cmd.ofMsg SkopjeMunicipalitiesDataRequest ]
 
-    inner
+    initialState, cmd
 
 let update (msg: Msg) (state: State) =
     match msg with
@@ -62,6 +79,11 @@ let update (msg: Msg) (state: State) =
         | Loading -> state, Cmd.none
         | _ -> { state with RegionsData = Loading }, Cmd.OfAsync.result Data.Regions.load
     | RegionsDataLoaded data -> { state with RegionsData = data }, Cmd.none
+    | SkopjeMunicipalitiesDataRequest ->
+        match state.SkopjeMunicipalitiesData with
+        | Loading -> state, Cmd.none
+        | _ -> { state with SkopjeMunicipalitiesData = Loading }, Cmd.OfAsync.result Data.Regions.loadSkMun
+    | SkopjeMunicipalitiesDataLoaded data -> { state with SkopjeMunicipalitiesData = data }, Cmd.none
 
 open Elmish.React
 
@@ -72,6 +94,7 @@ let render (state: State) (_: Msg -> unit) =
             ChartTextsGroup = "hospitals"
             Explicit = true
             Renderer = fun _ -> lazyView HospitalsChart.hospitalsChart () }
+
     let metricsComparison =
           { VisualizationType = MetricsComparison
             ClassName = "metrics-comparison-chart"
@@ -84,6 +107,20 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView MetricsComparisonChart.metricsComparisonChart {| data = data |} }
+
+    let dailyComparison =
+          { VisualizationType = DailyComparison
+            ClassName = "daily-comparison-chart"
+            ChartTextsGroup = "dailyComparison"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView DailyComparisonChart.dailyComparisonChart {| data = data |} }
+
     let spread =
           { VisualizationType = Spread
             ClassName = "spread-chart"
@@ -108,7 +145,34 @@ let render (state: State) (_: Msg -> unit) =
                     | NotAsked -> Html.none
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView Map.mapChart {| data = data |} }
+                    | Success data -> lazyView Map.mapChart {| mapToDisplay = Map.MapToDisplay.Municipality; data = data |} }
+
+    let regionMap =
+          { VisualizationType = RegionMap
+            ClassName = "rmap-chart"
+            ChartTextsGroup = "rmap"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.RegionsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView Map.mapChart {| mapToDisplay = Map.MapToDisplay.Region; data = data |} }
+
+    let skopjeMunMap =
+          { VisualizationType = SkopjeMunMap
+            ClassName = "sk-map-chart"
+            ChartTextsGroup = "sk-map"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.SkopjeMunicipalitiesData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView Map.mapChart {| mapToDisplay = Map.MapToDisplay.SkopjeMunicipality; data = data |} }
+
 
     let municipalities =
           { VisualizationType = Municipalities
@@ -122,20 +186,35 @@ let render (state: State) (_: Msg -> unit) =
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data ->
-                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; data = data |} }
+                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; dataToDisplay = MunicipalitiesChart.DataToDisplay.Municipality; data = data |} }
+    
+    let skopjeMunicipalities =
+          { VisualizationType = SkopjeMunicipalities
+            ClassName = "sk-municipalities-chart"
+            ChartTextsGroup = "sk-municipalities"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.SkopjeMunicipalitiesData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data ->
+                        lazyView MunicipalitiesChart.municipalitiesChart {| query = state.Query; dataToDisplay = MunicipalitiesChart.DataToDisplay.SkopjeMunicipality; data = data |} }
 
     let europeMap =
           { VisualizationType = EuropeMap
             ClassName = "europe-chart"
             ChartTextsGroup = "europe"
             Explicit = false
-            Renderer =
-               fun state ->
-                   match state.StatsData with
-                   | NotAsked -> Html.none
-                   | Loading -> Utils.renderLoading
-                   | Failure error -> Utils.renderErrorLoading error
-                   | Success data -> lazyView EuropeMap.mapChart {| data = data |} }
+            Renderer = fun _ -> lazyView EuropeMap.mapChart EuropeMap.MapToDisplay.Europe }
+
+    let worldMap =
+          { VisualizationType = WorldMap
+            ClassName = "world-chart"
+            ChartTextsGroup = "world"
+            Explicit = false
+            Renderer = fun _ -> lazyView EuropeMap.mapChart EuropeMap.MapToDisplay.World }
 
     let ageGroupsTimeline =
           { VisualizationType = AgeGroupsTimeline
@@ -246,7 +325,7 @@ let render (state: State) (_: Msg -> unit) =
 
     let countriesCasesPer1M =
           { VisualizationType = CountriesCasesPer1M
-            ClassName = "countries-chart"
+            ClassName = "countries-cases-chart"
             ChartTextsGroup = "countriesNewCasesPer1M"
             Explicit = false
             Renderer =
@@ -257,9 +336,22 @@ let render (state: State) (_: Msg -> unit) =
                         }
           }
 
+    let countriesActiveCasesPer1M =
+          { VisualizationType = CountriesActiveCasesPer1M
+            ClassName = "countries-active-chart"
+            ChartTextsGroup = "countriesActiveCasesPer1M"
+            Explicit = false
+            Renderer =
+                fun _ ->
+                    lazyView CountriesChartViz.Rendering.renderChart
+                        { MetricToDisplay = ActiveCasesPer1M
+                          ChartTextsGroup = "countriesActiveCasesPer1M"
+                        }
+          }
+
     let countriesDeathsPer1M =
           { VisualizationType = CountriesDeathsPer1M
-            ClassName = "countries-chart"
+            ClassName = "countries-deaths-chart"
             ChartTextsGroup = "countriesTotalDeathsPer1M"
             Explicit = false
             Renderer =
@@ -270,37 +362,42 @@ let render (state: State) (_: Msg -> unit) =
                         }
           }
 
-    let sloveniaVisualizations =
-        [ hospitals; metricsComparison; spread; map; municipalities
-          europeMap; ageGroupsTimeline; tests; hCenters; infections
-          cases; patients; ratios; ageGroups; regions
+    let countriesDeathsPerCases =
+          { VisualizationType = CountriesDeathsPer1M
+            ClassName = "countries-deaths-per-cases"
+            ChartTextsGroup = "countriesDeathsPerCases"
+            Explicit = false
+            Renderer =
+                fun _ ->
+                    lazyView CountriesChartViz.Rendering.renderChart
+                        { MetricToDisplay = DeathsPerCases
+                          ChartTextsGroup = "countriesDeathsPerCases"
+                        }
+          }
+
+    let localVisualizations =
+        [ metricsComparison; spread; map; municipalities
+          skopjeMunMap; skopjeMunicipalities;
+          europeMap; tests; dailyComparison; infections
+          cases; patients;
         ]
 
     let worldVisualizations =
-        [ europeMap; countriesCasesPer1M; countriesDeathsPer1M ]
+        [ worldMap; countriesActiveCasesPer1M
+          countriesCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M ]
 
     let allVisualizations =
-        [ hospitals; metricsComparison; spread; map; municipalities
-          europeMap; ageGroupsTimeline; tests; hCenters; infections
-          cases; patients; ratios; ageGroups; regions
-          countriesCasesPer1M; countriesDeathsPer1M
-        ]
-
-    let macedoniaVisualizations =
-        [ metricsComparison; spread; map; municipalities
-          europeMap; tests; infections
-          cases; patients; ratios;
+        [ hospitals; metricsComparison; spread; dailyComparison; map; municipalities
+          europeMap; worldMap; ageGroupsTimeline; tests; hCenters; infections
+          cases; patients; ratios; ageGroups; regionMap; regions
+          countriesCasesPer1M; countriesActiveCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M
         ]
 
     let embedded, visualizations =
         match state.Page, state.RenderingMode with
-        | ("slovenia", Normal) ->
+        | ("local", Normal) ->
             false,
-            sloveniaVisualizations
-            |> List.filter (fun viz -> not viz.Explicit)
-        | ("macedonia", Normal) ->
-            false,
-            macedoniaVisualizations
+            localVisualizations
             |> List.filter (fun viz -> not viz.Explicit)
         | ("world", Normal) ->
             false,
@@ -324,7 +421,7 @@ let render (state: State) (_: Msg -> unit) =
                 [ prop.className "brand-link"
                   prop.target "_blank"
                   prop.href "https://covid-19.sledilnik.org/"
-                  prop.text (I18N.t "meta.title") ]
+                  prop.text (t "meta.title") ]
 
 
     let renderFaqLink (visualization: Visualization) =
@@ -397,19 +494,26 @@ let render (state: State) (_: Msg -> unit) =
                                 prop.onClick (fun e -> scrollToElement e visualization.ClassName) ] ] ] ] ]
 
     Html.div
-        [ Utils.classes
-            [(true, "visualization container")
-             (embedded, "embeded") ]
-          prop.children
-              (visualizations
-               |> List.map (fun viz ->
-                   Html.section
-                       [ prop.className [ viz.ClassName; "visualization-chart" ]
-                         prop.id viz.ClassName
-                         prop.children
-                             [ Html.div
-                                 [ prop.className "title-chart-wrapper"
-                                   prop.children
-                                       [ renderChartTitle viz
-                                         renderFaqAndShareBtn viz ] ]
-                               state |> viz.Renderer ] ])) ]
+        [ Utils.classes [
+            (true, "visualization container")
+            (embedded, "embeded") ]
+          prop.children (
+            visualizations
+            |> List.map (fun viz ->
+                Html.section [
+                    prop.className [ viz.ClassName ; "visualization-chart" ]
+                    prop.id viz.ClassName
+                    prop.children [
+                        Html.div [
+                            prop.className "title-chart-wrapper"
+                            prop.children [
+                                renderChartTitle viz
+                                renderFaqAndShareBtn viz
+                            ]
+                        ]
+                        IntersectionObserver.Component.intersectionObserver
+                            {| targetElementId = viz.ClassName
+                               content = state |> viz.Renderer
+                               options = { IntersectionObserver.defaultOptions with rootMargin = "100px" }
+                            |}
+                    ] ] ) ) ]

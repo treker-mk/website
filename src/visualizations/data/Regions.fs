@@ -7,10 +7,11 @@ open System
 open Types
 
 let url = "https://api.treker.mk/api/municipalities"
+let skMunUrl = "https://api.treker.mk/api/skopje-municipalities"
 
 let parseRegionsData data =
     data
-    |> SimpleJson.parse
+    |> SimpleJson.parseNative
     |> function
         | JArray regions ->
             regions
@@ -35,7 +36,7 @@ let parseRegionsData data =
                                             |> List.map (fun (cityKey, cityValue) ->
                                                 match cityValue with
                                                 | JObject cityMap ->
-                                                    let activeCases = 
+                                                    let activeCases =
                                                         match Map.tryFind "activeCases" cityMap with
                                                         | Some (JNumber num) -> Some (int num)
                                                         | Some (JNull) -> None
@@ -50,9 +51,9 @@ let parseRegionsData data =
                                                         | Some (JNumber num) -> Some (int num)
                                                         | Some (JNull) -> None
                                                         | _ -> failwith (sprintf "nepričakovan format podatkov za mesto %s in deceasedToDate" cityKey)
-                                                    { Name = cityKey 
+                                                    { Name = cityKey
                                                       ConfirmedToDate = confirmedToDate
-                                                      ActiveCases = activeCases 
+                                                      ActiveCases = activeCases
                                                       DeceasedToDate = deceasedToDate }
                                                 | _ -> failwith (sprintf "nepričakovan format podatkov za mesto %s" cityKey)
                                             )
@@ -82,5 +83,23 @@ let load =
                 let data = parseRegionsData response
                 return RegionsDataLoaded (Success data)
             with
-                | ex -> return RegionsDataLoaded (sprintf "Napaka pri branju statističnih podatkov: %s" ex.Message |> Failure)
+            | ex -> return RegionsDataLoaded (sprintf "Napaka pri branju statističnih podatkov: %s" (ex.Message.Substring(0, 1000)) |> Failure)
+    }
+ 
+let loadSkMun =
+    async {
+        // quick hack to only get last 60 days - enough to show last 30 days + 14 days to calculate active cases
+        let startDate = DateTime.Now.AddDays -60.0
+        let urlQuery = skMunUrl + "?from=" + startDate.ToString("yyyy-MM-dd")
+
+        let! (statusCode, response) = Http.get urlQuery
+
+        if statusCode <> 200 then
+            return SkopjeMunicipalitiesDataLoaded (sprintf "Napaka pri nalaganju statističnih podatkov: %d" statusCode |> Failure)
+        else
+            try
+                let data = parseRegionsData response
+                return SkopjeMunicipalitiesDataLoaded (Success data)
+            with
+            | ex -> return SkopjeMunicipalitiesDataLoaded (sprintf "Napaka pri branju statističnih podatkov: %s" (ex.Message.Substring(0, 1000)) |> Failure)
     }

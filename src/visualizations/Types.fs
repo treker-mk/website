@@ -99,6 +99,7 @@ type RegionsData = RegionsDataPoint list
 
 type VisualizationType =
     | MetricsComparison
+    | DailyComparison
     | Patients
     | Ratios
     | HCenters
@@ -108,12 +109,17 @@ type VisualizationType =
     | Spread
     | Regions
     | Municipalities
+    | SkopjeMunicipalities
     | AgeGroups
     | AgeGroupsTimeline
     | Map
+    | RegionMap
+    | SkopjeMunMap
     | EuropeMap
+    | WorldMap
     | Infections
     | CountriesCasesPer1M
+    | CountriesActiveCasesPer1M
     | CountriesDeathsPer1M
 
 type RenderingMode =
@@ -126,6 +132,7 @@ type State =
       Query : obj // URL query parameters
       StatsData : RemoteData<StatsData, string>
       RegionsData : RemoteData<RegionsData, string>
+      SkopjeMunicipalitiesData : RemoteData<RegionsData, string>
       RenderingMode : RenderingMode }
 
 type Visualization = {
@@ -141,4 +148,6 @@ type Msg =
     | StatsDataLoaded of RemoteData<StatsData, string>
     | RegionsDataRequest
     | RegionsDataLoaded of RemoteData<RegionsData, string>
+    | SkopjeMunicipalitiesDataRequest
+    | SkopjeMunicipalitiesDataLoaded of RemoteData<RegionsData, string>
 
