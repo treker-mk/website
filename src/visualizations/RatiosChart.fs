@@ -42,7 +42,7 @@ type Ratios =
 
 module Ratios =
     let getSeries = function
-        | Cases     -> [ HospitalCases; (* IcuCases; SLO-spec *) CriticalCases; DeceasedCases ]
+        | Cases     -> [ HospitalCases; (* IcuCases; CriticalCases; SLO-spec *) DeceasedCases ]
         | Hospital  -> [ IcuHospital; CriticalHospital; DeceasedHospital]
         | Mortality -> [ DeceasedHospitalDeceasedTotal; DeceasedIcuDeceasedTotal; DeceasedIcuC; DeceasedHospitalC; ]
 
@@ -196,11 +196,15 @@ let renderDisplaySelector state dt dispatch =
     ]
 
 let renderDisplaySelectors state dispatch =
-    Html.div [
-        prop.className "metrics-selectors"
-        prop.children (
-            DisplayType.all
-            |> List.map (fun dt -> renderDisplaySelector state dt dispatch) ) ]
+    if DisplayType.all.Length > 1 (* SLO-spec *)
+    then
+        Html.div [
+            prop.className "metrics-selectors"
+            prop.children (
+                DisplayType.all
+                |> List.map (fun dt -> renderDisplaySelector state dt dispatch) ) ]
+    else
+        Html.none
 
 let render (state : State) dispatch =
     match state.patientsData, state.error with
