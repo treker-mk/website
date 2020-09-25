@@ -189,6 +189,7 @@ let renderChartCode (state: ChartState) (chartData: ChartData) =
                        match state.ScaleType with
                        | Linear -> "linear"
                        | Logarithmic -> "logarithmic"
+                   labels = pojo {| formatter = yAxisValueFormatter state |}
                    min =
                        match state.ScaleType with
                        | Linear -> 0
@@ -198,7 +199,6 @@ let renderChartCode (state: ChartState) (chartData: ChartData) =
 //                       // double of the red condition
 //                       | ActiveCasesPer1M -> Some 800
 //                       | _ -> None
-                   labels = pojo {| formatter = yAxisValueFormatter state |}
                    opposite = true
                    crosshair = true
                    title =

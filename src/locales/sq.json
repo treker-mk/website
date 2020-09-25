@@ -115,14 +115,15 @@
             "oneDay": "Një ditë",
             "oneWeek": "Një javë",
             "oneMonth": "Një muaj",
-            "ifExpGrowth": "Nëse infeksioni do të përhapet në mënyrë eksponenciale me dyfishim në 7, atëherë mund të prisni:",
+            "ifExpGrowth": "Nëse infeksioni do të përhapet në mënyrë eksponenciale me dyfishim në 7 ditë, atëherë mund të presim:",
             "today": "Sot",
             "inOneWeek": "Për një javë",
             "inTwoWeeks": "Për dy javë",
             "inThreeWeeks": "Për tri javë",
             "inFourWeeks": "Për katër javë",
             "hospitalized": "të shtruar në spital",
-            "title": "Rritja e rasteve të konfirmuara"
+            "title": "Rritja e rasteve të konfirmuara",
+            "activeCases": "raste aktive"
         },
         "infections": {
             "otherPersons": "Persona tjerë",
@@ -244,7 +245,8 @@
             "dataSource": "burim i të dhënave",
             "dsNIJZ": "ISHP",
             "dsMZ": "Ministria e shëndetësisë",
-            "dsOWD": "Our World in Data"
+            "dsOWD": "Our World in Data",
+            "sortBy": "Rendit sipas:"
         },
         "europe": {
             "restrictions": "Kufizimet dhe rastet e importuara",
@@ -269,7 +271,7 @@
         "countriesTotalDeathsPer1M": {
             "legendTitle": "Gjithsej raste vdekje për 1 milion banorë",
             "title": "Shtetet: Gjithsej raste vdekje për 1 milion banorë",
-            "yAxisTitle": "Gjuthsej raste vdekje për 1 milion banorë"
+            "yAxisTitle": "Gjithsej raste vdekje për 1 milion banorë"
         },
         "countriesNewCasesPer1M": {
             "legendTitle": "Raste të reja për 1 milion banorë",
@@ -297,6 +299,13 @@
             "daysFromOneDeathPerMillion": "Numri i ditëve nga vdekja e parë për 1 milion banorë",
             "legendTitle": "Përqindja e vdekjeve nga rastet e konfirmuara",
             "yAxisTitle": "Gjithsej vdekje nga rastet e konfirmuara"
+        },
+        "dailyComparison": {
+            "positivePct": "Përqindja e testeve pozitive (%)",
+            "tests": "Testimet e kryera",
+            "active": "Raste aktive",
+            "new": "Raste të konfirmuara",
+            "title": "Krahasimi sipas ditëve të javës"
         }
     },
     "shortMonth": {
@@ -337,8 +346,8 @@
         "home": "Ballina",
         "menu": "Menu",
         "language": {
-            "en": "Angleze",
-            "sl": "Sllovene",
+            "en": "Anglisht",
+            "sl": "Sllovenisht",
             "sq": "Shqip",
             "mk": "Maqedonisht",
             "hr": "Kroatisht",
@@ -621,7 +630,7 @@
         "preview": "Pasqyrë:"
     },
     "tables": {
-        "day": "{{ date, D.M. }}",
+        "day": "{{ date, %e.%m. }}",
         "sourceLink": "Tabela GDocs, CSV format apo REST API",
         "source": "Burimet e të dhënave në formate tjera",
         "tabByAgeFemale": "Sipas moshës - Femra",
@@ -631,8 +640,7 @@
         "title": "Tabela"
     },
     "infocard": {
-        "lastUpdated": "{{ date, dddd, D. MMMM }}",
-        "accordingTo": "Sipas {{ date, MMMM Do }}",
+        "lastUpdated": "{{ date, %A, %e. %b }}",
         "deceasedToDate": "Raste vdekje të konfirmuara",
         "icu": "Në njësinë për kujdes intensiv",
         "inHospital": "Të shtruar në spital",
@@ -643,13 +651,13 @@
     },
     "notice": {
         "news002": "Rastet e konfirmuara sipas grupmoshës",
-        "newChart": "Grafikon i ri:",
+        "newChart": "🆕 📊 Grafikon i ri:",
         "newsText": "Koronavirusi Botë - Harta 🌍 - rastet aktive për 1M popullsi",
-        "newPage": "Faqe e re:"
+        "newPage": "🆕 Faqe e re:"
     },
     "timestamp": {
-        "at": "në {{ date, HH:mm }}",
-        "updated": "Përditësuar më {{ date, dddd, MMMM Do YYYY }}"
+        "at": "në {{ date, %H:%M }}",
+        "updated": "Përditësuar më: {{ date, %A, %B %e, %Y }}"
     },
     "cm": {
         "quarantine14days": {
@@ -767,6 +775,10 @@
         },
         "app": {
             "title": "#OstaniZdrav"
+        },
+        "masks": {
+            "description": "Maskat janë të detyrueshme në të gjitha hapësirat e mbyllura publike dhe jashtë kur distanca është më e vogël se 2m. <br> Restorantet punojnë vetëm deri në orën 22:30.",
+            "title": "Maska"
         }
     },
     "tableDict": {
@@ -868,8 +880,8 @@
         "somethingWentWrong": "ups...diçka shkoi keq :("
     },
     "days": {
-        "longerDate": "{{ date, dddd, D. MMMM YYYY }}",
-        "date": "{{ date, D. MMMM }}",
+        "longerDate": "{{ date, %A, %e. %B %Y }}",
+        "date": "{{ date, %e. %b }}",
         "x_days_ago": "{{ count }} ditë më parë",
         "x_days_ago_plural": "{{ count }} ditë më parë",
         "in_x_days": "për {{ count }} ditë",

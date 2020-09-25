@@ -68,7 +68,7 @@ type Query (query : obj, regions : Region list) =
             | "total-confirmed-cases" -> Some TotalConfirmedCases
             | "last-confirmed-case" -> Some LastConfirmedCase
             | "time-to-double" ->
-                match Highcharts.showExpGrowthFeatures with
+                match Highcharts.showDoublingTimeFeatures with
                 | true -> Some DoublingTime
                 | _ -> None
             | _ -> None
@@ -125,16 +125,6 @@ let init (queryObj : obj) (dataToDisplay : DataToDisplay) (data : RegionsData) :
                 |> Seq.sortBy (fun dp -> dp.Date)
                 |> Seq.toList
             let totalsShown = totals |> Seq.skip ((Seq.length totals) - showMaxBars) |> Seq.toList
-            let lastDay = Seq.tryLast dp
-            let doublingTime =
-                if lastDay.IsSome && lastDay.Value.ActiveCases = Some(0) (* SLO-spec SLO does not have that if condition for ActiveCases == 0 *)
-                then None
-                else
-                dp
-                |> Seq.map (fun dp -> {| Date = dp.Date ; Value = dp.ActiveCases (* SLO-spec dp.ConfirmedToDate *) |})
-                |> Seq.toList
-                |> Utils.findDoublingTime
-
             let maxConfirmed = totals |> Seq.tryLast |> Option.map (fun dp -> dp.ConfirmedToDate) |> Option.defaultValue None
             let lastChange = totals |> Seq.filter (fun dp -> dp.ConfirmedToDate = maxConfirmed) |> Seq.head
             let activeCases = totalsShown |> Seq.tryLast |> Option.map (fun dp -> dp.ActiveCases) |> Option.defaultValue None
@@ -145,6 +135,14 @@ let init (queryObj : obj) (dataToDisplay : DataToDisplay) (data : RegionsData) :
                 | Some before, Some last -> if last > before then Some (last - before) else None
                 | None, Some last -> Some last
                 | _ -> None
+            let doublingTime =
+                if activeCases.IsSome && activeCases.Value >= 1 (* SLO-spec SLO activeCases.Value >= 5 *)
+                then  
+                    dp
+                    |> Seq.map (fun dp -> {| Date = dp.Date ; Value = dp.ActiveCases |})
+                    |> Seq.toList
+                    |> Utils.findDoublingTime
+                else None
             { Key = municipalityKey
               Name = Some (I18N.tt "mk.municipality" municipalityKey) // SLO-spec
               RegionKey = (dp |> Seq.last).RegionKey
@@ -354,7 +352,7 @@ let renderMunicipality (state : State) (municipality : Municipality) =
                 ]
             ]
             if state.DataToDisplay <> DataToDisplay.SkopjeMunicipality then
-                if Highcharts.showExpGrowthFeatures then
+                if Highcharts.showDoublingTimeFeatures then
                     renderedDoublingTime
                 else
                     renderLastCase
@@ -519,13 +517,13 @@ let renderView (currentView : View) (dataToDisplay : DataToDisplay) dispatch =
     Html.div [
         prop.className "chart-display-property-selector"
         prop.children [
-            Html.text (I18N.t "charts.common.view")
+            Html.text (I18N.t "charts.common.sortBy")
+            if Highcharts.showDoublingTimeFeatures then && dataToDisplay <> DataToDisplay.SkopjeMunicipality then
+                renderSelector View.DoublingTime (I18N.t "charts.municipalities.viewDoublingTime")
             renderSelector View.LastConfirmedCase (I18N.t "charts.municipalities.viewLast")
             renderSelector View.ActiveCases (I18N.t "charts.municipalities.viewActive")
             if dataToDisplay <> DataToDisplay.SkopjeMunicipality then
-                renderSelector View.TotalConfirmedCases (I18N.t "charts.municipalities.viewTotal")
-            if Highcharts.showExpGrowthFeatures && dataToDisplay <> DataToDisplay.SkopjeMunicipality then
-                renderSelector View.DoublingTime (I18N.t "charts.municipalities.viewDoublingTime")
+              renderSelector View.TotalConfirmedCases (I18N.t "charts.municipalities.viewTotal")
         ]
     ]
 

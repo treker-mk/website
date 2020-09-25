@@ -753,21 +753,20 @@
         "active": "Aktive Fälle",
         "confirmedToDate": "Bestätigte Fälle",
         "tests": "Tests heute",
-        "lastUpdated": "{{ date, dddd, D. MMMM }}",
+        "lastUpdated": "{{ date, %a, %e. %b }}",
         "icu": "Auf Intensivstationen",
-        "accordingTo": "Am {{ date, D. MMMM }}",
         "deceasedToDate": "Bestätigte Todesfälle",
         "inHospital": "Hospitalisierte"
     },
     "notice": {
-        "newChart": "Neues Diagramm:",
+        "newChart": "🆕 📊 Neues Diagramm:",
         "news002": "Bestätigte Fälle nach Altersgruppen",
         "newsText": "Weltkarte 🌍 – aktive Fälle pro 1 Million Menschen",
-        "newPage": "Neue Seite:"
+        "newPage": "🆕 Neue Seite:"
     },
     "timestamp": {
-        "at": "um {{ date, HH:mm }}",
-        "updated": "Aktualisiert am {{ date, dddd, MMMM Do YYYY }}"
+        "at": "um {{ date, %H:%M }}",
+        "updated": "Aktualisiert am {{ date, %A, %B %e, %Y }}"
     },
     "shortMonth": {
         "11": "Dez",
@@ -969,7 +968,7 @@
         "tabByAgeMale": "Nach Alter – Männer",
         "tabByRegion": "Nach Regionen",
         "source": "Datenquelle in anderen Formaten",
-        "day": "{{ date, D. M. }}"
+        "day": "{{ date, %e. %m. }}"
     },
     "weekday": {
         "5": "Freitag",
@@ -981,8 +980,8 @@
         "0": "Sonntag"
     },
     "days": {
-        "date": "{{ date, D. MMMM }}",
-        "longerDate": "{{ date, dddd, D. MMMM YYYY }}",
+        "date": "{{ date, %e. %b }}",
+        "longerDate": "{{ date, %A, %e. %B %Y }}",
         "x_days_ago": "Vor {{ count }} Tag",
         "x_days_ago_plural": "Vor {{ count }} Tagen",
         "in_x_days": "in {{ count }} Tag",
