@@ -168,7 +168,7 @@ let init (queryObj : obj) (dataToDisplay : DataToDisplay) (data : RegionsData) :
             | Some region -> region
           View =
             match query.View with
-            | None -> LastConfirmedCase
+            | None -> if dataToDisplay = DataToDisplay.SkopjeMunicipality then ActiveCases else LastConfirmedCase
             | Some view -> view }
 
     state, Cmd.none
@@ -514,18 +514,21 @@ let renderView (currentView : View) (dataToDisplay : DataToDisplay) dispatch =
         then Html.div defaultProps
         else Html.div ((prop.onClick (fun _ -> ViewChanged view |> dispatch)) :: defaultProps)
 
-    Html.div [
-        prop.className "chart-display-property-selector"
-        prop.children [
-            Html.text (I18N.t "charts.common.sortBy")
-            if Highcharts.showDoublingTimeFeatures && dataToDisplay <> DataToDisplay.SkopjeMunicipality then
-                renderSelector View.DoublingTime (I18N.t "charts.municipalities.viewDoublingTime")
-            renderSelector View.LastConfirmedCase (I18N.t "charts.municipalities.viewLast")
-            renderSelector View.ActiveCases (I18N.t "charts.municipalities.viewActive")
-            if dataToDisplay <> DataToDisplay.SkopjeMunicipality then
-              renderSelector View.TotalConfirmedCases (I18N.t "charts.municipalities.viewTotal")
+    if dataToDisplay <> DataToDisplay.SkopjeMunicipality
+    then
+        Html.div [
+            prop.className "chart-display-property-selector"
+            prop.children [
+                Html.text (I18N.t "charts.common.sortBy")
+                if Highcharts.showDoublingTimeFeatures then
+                    renderSelector View.DoublingTime (I18N.t "charts.municipalities.viewDoublingTime")
+                renderSelector View.LastConfirmedCase (I18N.t "charts.municipalities.viewLast")
+                renderSelector View.ActiveCases (I18N.t "charts.municipalities.viewActive")
+                renderSelector View.TotalConfirmedCases (I18N.t "charts.municipalities.viewTotal")
+            ]
         ]
-    ]
+    else
+        Html.none
 
 let render (state : State) dispatch =
     let renderedMunicipalities, showMore = renderMunicipalities state dispatch
@@ -533,7 +536,7 @@ let render (state : State) dispatch =
     let element = Html.div [
         prop.children [
             Utils.renderChartTopControls [
-                if (state.DataToDisplay <> DataToDisplay.SkopjeMunicipality)
+                if state.DataToDisplay <> DataToDisplay.SkopjeMunicipality
                 then 
                     Html.div [
                         prop.className "filters"
