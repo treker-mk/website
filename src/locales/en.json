@@ -973,6 +973,10 @@
             "kindergartensOpen": {
                 "title": "Kindergartens",
                 "description": "Relaxation: kindergartens open"
+            },
+            "ucilistaOpen": {
+                "title": "Schools",
+                "description": "Relaxation: schools open"
             }
         },
         "region": {

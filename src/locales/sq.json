@@ -1020,6 +1020,10 @@
             "kindergartensOpen": {
                 "title": "Çerdhe",
                 "description": "Relaksim: Çerdhe hapen"
+            },
+            "ucilistaOpen": {
+                "title": "Shkollat",
+                "description": "Relaksim: Shkollat hapen"
             }
         },
         "phase": {

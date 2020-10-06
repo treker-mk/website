@@ -101,7 +101,8 @@ let addContainmentMeasuresFlags
         12, 5, "#FFe6e6", "lessMeasures"
         27, 5, "#ebfaeb", "kafanasOpen"
         23, 6, "#e6f0ff", "bordersOopen"
-        9, 9, "#ebfaeb", "kindergartensOpen"      
+        9, 9, "#ebfaeb", "kindergartensOpen"   
+        1, 10, "#ebfaeb", "ucilistaOpen"   
     |]
     {|
         ``type`` = "flags"
