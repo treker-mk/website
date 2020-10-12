@@ -420,7 +420,7 @@ let render (state: State) (_: Msg -> unit) =
             Html.a
                 [ prop.className "brand-link"
                   prop.target "_blank"
-                  prop.href "https://covid-19.sledilnik.org/"
+                  prop.href "https://covid-19.treker.mk/"
                   prop.text (t "meta.title") ]
 
 
