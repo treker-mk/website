@@ -13,6 +13,7 @@
 -   [Александра Василевска](https://www.facebook.com/alexandra.laktinski) - преводи
 -   [Арбен Имери]() - преводи
 -   [Бехаре Касами](https://www.facebook.com/be.ka.319) - преводи, комуникација со јавноста
+-   [Бобан Петревски]() - податоци, анализа на податоците
 -   [Виктор Кралевски](https://www.linkedin.com/in/viktor-kralevski-8950789) - податоци, анализа на податоците
 -   [Дино Граматиков](https://www.linkedin.com/in/dino-gramatikov-0901183/) - подобрување на искуството
 -   [Елисавета Јасна Стикова](https://www.linkedin.com/in/elisaveta-stikova-a27b573/) - советничка
@@ -34,5 +35,5 @@
 -   [Владимир Трајковиќ](https://www.linkedin.com/in/vladimir-trajkovik-b085aa) - советник
 -   [Векослав Стефановски](https://mk.linkedin.com/in/swekster) - програмирање, подготовка на податоците
 -   [Владимир Нешковиќ](https://www.linkedin.com/in/k35m4/) -  податоци, координација
--   [Жарко Васиљевиќ](https://www.linkedin.com/in/zarko-vasiljevic-b067407) - преводи, подобрување на искуството
+-   [Жарко Васиљевиќ](https://www.linkedin.com/in/zarko-vasiljevic-b067407) - преводи, подобрување на искуството, податоци, анализа на податоците
 -   [Штефан Беблер](https://www.linkedin.com/in/stefanbaebler/) - локализација на македонски и албански
