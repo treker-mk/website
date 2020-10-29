@@ -15,7 +15,7 @@ Treker jemi:
 -   [Aleksandra Vasillevska](https://www.facebook.com/alexandra.laktinski) - përkthime
 -   [Arben Imeri]() - përkthime
 -   [Behare Kasami](https://www.facebook.com/be.ka.319) - përkthime, komunikim me publikun
--   [Boban Petrevski]() - të dhëna, analiza e të dhënave
+-   [Boban Petrovski]() - të dhëna, analiza e të dhënave
 -   [Viktor Krallevski](https://www.linkedin.com/in/viktor-kralevski-8950789) - të dhëna, analiza e të dhënave
 -   [Dino Gramatikov](https://www.linkedin.com/in/dino-gramatikov-0901183/) - përmirësim i përvojës
 -   [Elisaveta Jasna Stikova](https://www.linkedin.com/in/elisaveta-stikova-a27b573/) - këshilltare
