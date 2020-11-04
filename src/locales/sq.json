@@ -919,7 +919,8 @@
             "gob8sep": "SPQ 8 Shtatori",
             "kozle": "Kozle",
             "iksk": "Klinika infektive",
-            "privatni": "Spitale private"
+            "privatni": "Spitale private",
+            "tbc": "Institut për TBC"
         },
         "municipality": {
             "stip": "Shtip",

@@ -1047,7 +1047,8 @@
             "bitola": "Bitola",
             "stip": "Štip",
             "infdrugi": "Infektivni oddelenija vo Tetovo, Ohrid, Veles, Kumanovo i Prilep",
-            "privatni": "Private hospitals"
+            "privatni": "Private hospitals",
+            "tbc": "TBC institute hospital"
         }
     }
 }
