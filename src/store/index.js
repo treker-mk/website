@@ -22,10 +22,17 @@ import {
 import {
   tableData
 } from './tables.store'
+import ostanizdravStore from './ostanizdrav.store'
 
 Vue.use(Vuex)
 
-export const ApiEndpoint = 'https://api.treker.mk'
+export function ApiEndpoint() {
+  if(window.location.search.indexOf('stage') > 0) {
+    return 'https://api-stage.treker.mk'
+  } else {
+    return 'https://api.treker.mk'
+  }
+} 
 
 export function exportTime(x) {
   return new Date(x * 1000)
@@ -54,6 +61,7 @@ const store = new Vuex.Store({
     municipalities: municipalitiesStore,
     skopjeMunicipalities: skopjeMunicipalitiesStore,
     healthCenters: healthCentersStore,
+    ostanizdrav: ostanizdravStore,
     tableData,
   },
 })

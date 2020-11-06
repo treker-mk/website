@@ -1,6 +1,5 @@
 ﻿module CountriesChartViz.Rendering
 
-open CountriesChartViz.Synthesis
 open System
 open Browser
 open Elmish
@@ -8,36 +7,13 @@ open Feliz
 open Feliz.ElmishComponents
 open Fable.Core.JsInterop
 
+open Data.OurWorldInData
 open Analysis
+open Synthesis
+open CountrySets
 open Highcharts
 open Types
 open I18N
-
-let countriesDisplaySets = [|
-    { Label = "groupCriticalEU"
-      CountriesCodes = [| "BEL"; "ESP"; "FRA"; "GBR"; "ITA"; "SWE" |]
-    }
-    { Label = "groupCriticalWorld"
-      CountriesCodes = [| "BRA"; "ECU"; "ITA"; "RUS"; "SWE"; "USA" |]
-    }
-    { Label = "groupNeighbouring"
-      CountriesCodes = [| "BGR"; "GRC"; "ALB"; "SRB"; "BIH"; "ROU"; "TUR"; "MNE"; "SVN"; "HRV"; "HUN" |]  // SLO-spec - changed for Macedonia
-    }
-    { Label = "groupNordic"
-      CountriesCodes = [| "DNK"; "FIN"; "ISL"; "NOR"; "SWE" |]
-    }
-    (* SLO-spec removed for mk for the time being
-    { Label = "groupExYu"
-      CountriesCodes = [| "BIH"; "HRV"; "MKD"; "MNE"; "OWID_KOS"; "SRB" |]
-    }
-    *)
-    { Label = "groupEastAsiaOceania"
-      CountriesCodes = [| "AUS"; "CHN"; "JPN"; "KOR"; "NZL"; "SGP"; "TWN" |]
-    }
-    { Label = "groupLatinAmerica"
-      CountriesCodes = [| "ARG"; "BRA"; "CHL"; "COL"; "ECU"; "MEX"; "PER" |]
-    }
-|]
 
 type Msg =
     | DataRequested
@@ -48,12 +24,12 @@ type Msg =
 [<Literal>]
 let DaysOfMovingAverage = 7
 
-let init (config: CountriesChartConfig):
-    ChartState * Cmd<Msg> =
+let init (config: CountriesChartConfig): ChartState * Cmd<Msg> =
+    let metric = config.MetricToDisplay
     let state = {
         OwidDataState = NotLoaded
-        DisplayedCountriesSet = countriesDisplaySets.[0]
-        MetricToDisplay = config.MetricToDisplay
+        DisplayedCountriesSet = (countriesDisplaySets metric).[0]
+        MetricToDisplay = metric
         ScaleType = Linear
         ChartTextsGroup = config.ChartTextsGroup
     }
@@ -80,8 +56,11 @@ let update (msg: Msg) (state: ChartState) : ChartState * Cmd<Msg> =
             DisplayedCountriesSet = selectedSet
         },
         Cmd.OfAsync.result
-            (Data.OurWorldInData.loadCountryComparison
-                 countriesCodes DataLoaded)
+            (loadData {
+                DateFrom = None
+                DateTo = None
+                Countries = CountrySelection.Selected countriesCodes
+            } DataLoaded)
     | DataRequested ->
         let countriesCodes = getCountriesCodes state.DisplayedCountriesSet
 
@@ -94,8 +73,11 @@ let update (msg: Msg) (state: ChartState) : ChartState * Cmd<Msg> =
 
         { state with OwidDataState = newOwidDataState },
         Cmd.OfAsync.result
-            (Data.OurWorldInData.loadCountryComparison
-                 countriesCodes DataLoaded)
+            (loadData {
+                DateFrom = None
+                DateTo = None
+                Countries = CountrySelection.Selected countriesCodes
+            } DataLoaded)
     | DataLoaded remoteData ->
         { state with OwidDataState = Current remoteData }, Cmd.none
     | ScaleTypeChanged newScaleType ->
@@ -159,6 +141,8 @@ let renderChartCode (state: ChartState) (chartData: ChartData) =
                 backgroundColor = "rgba(255,255,255,0.9)"
         |}
 
+    let redZoneStart = 50
+
     let baseOptions =
         basicChartOptions state.ScaleType "covid19-metrics-comparison"
             0 (fun _ -> (fun _ -> true))
@@ -209,7 +193,7 @@ let renderChartCode (state: ChartState) (chartData: ChartData) =
                    plotLines =
                        match state.MetricToDisplay with
                        | ActiveCasesPer1M -> [|
-                           {| value=400.0
+                           {| value=redZoneStart
                               label={|
                                        text=t "charts.countriesActiveCasesPer1M.red"
                                        align="left"
@@ -225,7 +209,7 @@ let renderChartCode (state: ChartState) (chartData: ChartData) =
                    plotBands =
                        match state.MetricToDisplay with
                        | ActiveCasesPer1M -> [|
-                           {| from=400.0; ``to``=100000.0
+                           {| from=redZoneStart; ``to``=10000.0
                               color="#FEF8F7"
                             |}
                         |]
@@ -262,6 +246,7 @@ let renderChartContainer state chartData =
     ]
 
 let renderCountriesSetsSelectors
+    (metric: MetricToDisplay)
     (activeSet: CountriesDisplaySet)
     dispatch =
     let renderCountriesSetSelector (setToRender: CountriesDisplaySet) =
@@ -277,7 +262,7 @@ let renderCountriesSetsSelectors
 
     Html.div [
         prop.className "metrics-selectors"
-        countriesDisplaySets
+        countriesDisplaySets metric
         |> Array.map renderCountriesSetSelector
         |> prop.children
     ]
@@ -298,6 +283,7 @@ let render (state: ChartState) dispatch =
             Utils.renderChartTopControls topControls
             renderChartContainer state chartData
             renderCountriesSetsSelectors
+                state.MetricToDisplay
                 state.DisplayedCountriesSet
                 (CountriesSelectionChanged >> dispatch)
 

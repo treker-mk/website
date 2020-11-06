@@ -8,7 +8,7 @@ open Types
 open CountriesChartViz.Analysis
 open I18N
 
-let init (query: obj) (visualization: string option) (page: string) =
+let init (query: obj) (visualization: string option) (page: string) (apiEndpoint: string)=
     let renderingMode =
         match visualization with
         | None -> Normal
@@ -22,11 +22,15 @@ let init (query: obj) (visualization: string option) (page: string) =
             | "MetricsComparison" -> Some MetricsComparison
             | "DailyComparison" -> Some DailyComparison
             | "Patients" -> Some Patients
+            | "CarePatients" -> Some CarePatients
             | "Ratios" -> Some Ratios
             | "Tests" -> Some Tests
             | "Cases" -> Some Cases
             | "Spread" -> Some Spread
             | "Regions" -> Some Regions
+            | "Regions100k" -> Some Regions100k
+            | "Weekly" -> Some Sources
+            | "HcCases" -> Some HcCases
             | "Municipalities" -> Some Municipalities
             | "SkopjeMunicipalities" -> Some SkopjeMunicipalities
             | "AgeGroups" -> Some AgeGroups
@@ -37,14 +41,17 @@ let init (query: obj) (visualization: string option) (page: string) =
             | "CountriesCasesPer1M" -> Some CountriesCasesPer1M
             | "CountriesActiveCasesPer1M" -> Some CountriesActiveCasesPer1M
             | "CountriesDeathsPer1M" -> Some CountriesDeathsPer1M
+            | "PhaseDiagram" -> Some PhaseDiagram
             | _ -> None
             |> Embedded
 
     let initialState =
         {
+          ApiEndpoint = apiEndpoint
           Page = page
           Query = query
           StatsData = NotAsked
+          WeeklyStatsData = NotAsked
           RegionsData = NotAsked
           SkopjeMunicipalitiesData = NotAsked
           RenderingMode = renderingMode }
@@ -55,13 +62,15 @@ let init (query: obj) (visualization: string option) (page: string) =
         | "local" ->
             Cmd.batch
                 [ Cmd.ofMsg StatsDataRequested
-                  Cmd.ofMsg RegionsDataRequest 
+                  Cmd.ofMsg WeeklyStatsDataRequested
+                  Cmd.ofMsg RegionsDataRequest
                   Cmd.ofMsg SkopjeMunicipalitiesDataRequest ]
         | "world" ->
-            Cmd.none
+            Cmd.ofMsg WeeklyStatsDataRequested
         | _ ->
             Cmd.batch
                 [ Cmd.ofMsg StatsDataRequested
+                  Cmd.ofMsg WeeklyStatsDataRequested
                   Cmd.ofMsg RegionsDataRequest
                   Cmd.ofMsg SkopjeMunicipalitiesDataRequest ]
 
@@ -74,15 +83,20 @@ let update (msg: Msg) (state: State) =
         | Loading -> state, Cmd.none
         | _ -> { state with StatsData = Loading }, Cmd.OfAsync.result Data.Stats.load
     | StatsDataLoaded data -> { state with StatsData = data }, Cmd.none
+    | WeeklyStatsDataRequested ->
+        match state.WeeklyStatsData with
+        | Loading -> state, Cmd.none
+        | _ -> { state with WeeklyStatsData = Loading }, Cmd.OfAsync.result Data.WeeklyStats.load
+    | WeeklyStatsDataLoaded data -> { state with WeeklyStatsData = data }, Cmd.none
     | RegionsDataRequest ->
         match state.RegionsData with
         | Loading -> state, Cmd.none
-        | _ -> { state with RegionsData = Loading }, Cmd.OfAsync.result Data.Regions.load
+        | _ -> { state with RegionsData = Loading }, Cmd.OfAsync.result (Data.Regions.load state.ApiEndpoint)
     | RegionsDataLoaded data -> { state with RegionsData = data }, Cmd.none
     | SkopjeMunicipalitiesDataRequest ->
         match state.SkopjeMunicipalitiesData with
         | Loading -> state, Cmd.none
-        | _ -> { state with SkopjeMunicipalitiesData = Loading }, Cmd.OfAsync.result Data.Regions.loadSkMun
+        | _ -> { state with SkopjeMunicipalitiesData = Loading }, Cmd.OfAsync.result (Data.Regions.loadSkMun state.ApiEndpoint)
     | SkopjeMunicipalitiesDataLoaded data -> { state with SkopjeMunicipalitiesData = data }, Cmd.none
 
 open Elmish.React
@@ -207,14 +221,26 @@ let render (state: State) (_: Msg -> unit) =
             ClassName = "europe-chart"
             ChartTextsGroup = "europe"
             Explicit = false
-            Renderer = fun _ -> lazyView EuropeMap.mapChart EuropeMap.MapToDisplay.Europe }
+            Renderer =
+                fun state ->
+                    match state.WeeklyStatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView EuropeMap.mapChart {| mapToDisplay = EuropeMap.MapToDisplay.Europe; data = data |} }
 
     let worldMap =
           { VisualizationType = WorldMap
             ClassName = "world-chart"
             ChartTextsGroup = "world"
             Explicit = false
-            Renderer = fun _ -> lazyView EuropeMap.mapChart EuropeMap.MapToDisplay.World }
+            Renderer =
+                fun state ->
+                    match state.WeeklyStatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView EuropeMap.mapChart {| mapToDisplay = EuropeMap.MapToDisplay.World; data = data |} }
 
     let ageGroupsTimeline =
           { VisualizationType = AgeGroupsTimeline
@@ -249,7 +275,7 @@ let render (state: State) (_: Msg -> unit) =
             ClassName = "hcenters-chart"
             ChartTextsGroup = "hCenters"
             Explicit = false
-            Renderer = fun _ -> lazyView HCentersChart.hCentersChart () }
+            Renderer = fun _ -> lazyView HCentersChart.hCentersChart state.ApiEndpoint }
 
     let infections =
           { VisualizationType = Infections
@@ -282,7 +308,14 @@ let render (state: State) (_: Msg -> unit) =
             ClassName = "patients-chart"
             ChartTextsGroup = "patients"
             Explicit = false
-            Renderer = fun _ -> lazyView PatientsChart.patientsChart () }
+            Renderer = fun _ -> lazyView PatientsChart.patientsChart {| hTypeToDisplay = PatientsChart.HospitalType.CovidHospitals |} }
+
+    let patientsCare =
+          { VisualizationType = CarePatients
+            ClassName = "care-patients-chart"
+            ChartTextsGroup = "carePatients"
+            Explicit = false
+            Renderer = fun _ -> lazyView PatientsChart.patientsChart {| hTypeToDisplay = PatientsChart.HospitalType.CareHospitals |} }
 
     let ratios =
           { VisualizationType = Ratios
@@ -310,7 +343,7 @@ let render (state: State) (_: Msg -> unit) =
                     | Failure error -> Utils.renderErrorLoading error
                     | Success data -> lazyView AgeGroupsChart.renderChart {| data = data |} }
 
-    let regions =
+    let regionsAbs =
           { VisualizationType = Regions
             ClassName = "regions-chart"
             ChartTextsGroup = "regions"
@@ -321,7 +354,60 @@ let render (state: State) (_: Msg -> unit) =
                     | NotAsked -> Html.none
                     | Loading -> Utils.renderLoading
                     | Failure error -> Utils.renderErrorLoading error
-                    | Success data -> lazyView RegionsChart.regionsChart {| data = data |} }
+                    | Success data ->
+                        let config: RegionsChart.RegionsChartConfig =
+                            { RelativeTo = RegionsChart.MetricRelativeTo.Absolute
+                              ChartTextsGroup = "regions"
+                            }
+                        let props = {| data = data |}
+                        lazyView (RegionsChart.renderChart config) props
+            }
+
+    let regions100k =
+          { VisualizationType = Regions100k
+            ClassName = "regions-chart-100k"
+            ChartTextsGroup = "regions100k"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.RegionsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data ->
+                        let config: RegionsChart.RegionsChartConfig =
+                            { RelativeTo = RegionsChart.MetricRelativeTo.Pop100k
+                              ChartTextsGroup = "regions100k"
+                            }
+                        let props = {| data = data |}
+                        lazyView (RegionsChart.renderChart config) props
+         }
+
+    let sources =
+          { VisualizationType = Sources
+            ClassName = "sources-chart"
+            ChartTextsGroup = "sources"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.WeeklyStatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView SourcesChart.sourcesChart {| data = data |} }
+
+    let hcCases =
+          { VisualizationType = HcCases
+            ClassName = "hc-cases-chart"
+            ChartTextsGroup = "hcCases"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.WeeklyStatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView HcCasesChart.hcCasesChart {| data = data |} }
 
     let countriesCasesPer1M =
           { VisualizationType = CountriesCasesPer1M
@@ -375,6 +461,19 @@ let render (state: State) (_: Msg -> unit) =
                         }
           }
 
+    let phaseDiagram =
+          { VisualizationType = PhaseDiagram
+            ClassName = "phase-diagram-chart"
+            ChartTextsGroup = "phaseDiagram"
+            Explicit = false
+            Renderer =
+                fun state ->
+                    match state.StatsData with
+                    | NotAsked -> Html.none
+                    | Loading -> Utils.renderLoading
+                    | Failure error -> Utils.renderErrorLoading error
+                    | Success data -> lazyView PhaseDiagram.Chart.chart {| data = data |} }
+
     let localVisualizations =
         [ metricsComparison; spread; map; municipalities
           skopjeMunMap; skopjeMunicipalities;
@@ -387,10 +486,14 @@ let render (state: State) (_: Msg -> unit) =
           countriesCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M ]
 
     let allVisualizations =
-        [ hospitals; metricsComparison; spread; dailyComparison; map; municipalities
+        [ hospitals; metricsComparison; spread; dailyComparison; map
+          municipalities; sources
           europeMap; worldMap; ageGroupsTimeline; tests; hCenters; infections
-          cases; patients; ratios; ageGroups; regionMap; regions
-          countriesCasesPer1M; countriesActiveCasesPer1M; countriesDeathsPerCases; countriesDeathsPer1M
+          cases; patients; patientsCare; ratios; ageGroups; regionMap; regionsAbs
+          regions100k; hcCases; sources
+          countriesCasesPer1M; countriesActiveCasesPer1M; countriesDeathsPer1M
+          phaseDiagram
+          skopjeMunMap; skopjeMunicipalities;
         ]
 
     let embedded, visualizations =
@@ -491,7 +594,10 @@ let render (state: State) (_: Msg -> unit) =
                           [ Html.a
                               [ prop.href ("#" + visualization.ClassName)
                                 prop.text (tOptions ("charts." + visualization.ChartTextsGroup + ".title") {| context = context |} )
-                                prop.onClick (fun e -> scrollToElement e visualization.ClassName) ] ] ] ] ]
+                                prop.onClick (fun e -> scrollToElement e visualization.ClassName) ]
+                            Html.span
+                              [ prop.text ("charts." + visualization.ChartTextsGroup + ".titleMenu")
+                                prop.className "hidden" ] ] ] ] ]
 
     Html.div
         [ Utils.classes [

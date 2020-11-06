@@ -33,6 +33,7 @@ Uredniki baze in ostali sodelavci:
 -   [Marko Brumen](https://twitter.com/multikultivator) - družabna omrežja, spletna stran, viri
 -   [Matej Jurko](https://www.linkedin.com/in/matejjurko/) - viri, validacija podatkov
 -   [Matej Meglič](https://www.linkedin.com/in/matejmeglic/) - koordinacija, podatkovni model in validacija
+-   [Matjaž Drolc](https://twitter.com/MatjazDrolc/) - vizualizacije
 -   [Matjaž Lipuš](https://twitter.com/MatjazL) - viri, validacija podatkov
 -   [Mia Erbus](https://github.com/miaerbus) - spletna stran
 -   [Miha Kadunc](https://twitter.com/miha_kadunc) - podatkovni model in validacija, modeliranje
@@ -42,6 +43,7 @@ Uredniki baze in ostali sodelavci:
 -   [Nace Štruc](https://www.nace.si/) - vizualizacije
 -   [Peter Keše](https://twitter.com/pkese/) - vizualizacije
 -   [Sabina Tamše Kozovinc](https://www.linkedin.com/in/sabina-tamse-copywriter/) - tekstopisje, viri, FAQ
+-   [Sebastjan Cizel](https://sebastjancizel.github.io) - vizualizacije
 -   [Štefan Baebler](https://www.linkedin.com/in/stefanbaebler/) - spletna stran, zemljevid, prevodi
 -   [Tomaž Kovačič](https://www.linkedin.com/in/tomazkovacic) - vizualizacije
 -   [Vanja Cvelbar](https://github.com/b100w11) - prevodi

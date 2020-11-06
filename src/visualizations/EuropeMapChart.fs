@@ -14,6 +14,8 @@ open Highcharts
 open Types
 open Data.OurWorldInData
 
+let chartText = I18N.chartText "europe"
+
 type MapToDisplay = Europe | World
 
 let europeGeoJsonUrl = "/maps/europe.geo.json"
@@ -21,12 +23,12 @@ let worldGeoJsonUrl = "/maps/world-robinson.geo.json"
 
 type GeoJson = RemoteData<obj, string>
 
-type OwdData = Data.OurWorldInData.OurWorldInDataRemoteData
+type OwdData = OurWorldInDataRemoteData
 
 type CountryData =
     { Country: string
       // OWD data
-      TwoWeekIncidence1M: float
+      TwoWeekIncidence100k: float
       TwoWeekIncidence: float []
       TwoWeekIncidenceMaxValue: float
       NewCases: int list
@@ -34,6 +36,7 @@ type CountryData =
       // NIJZ data
       RestrictionColor: string
       RestrictionText: string
+      RestrictionAltText: string
       ImportedFrom: int
       ImportedDate: DateTime }
 
@@ -42,14 +45,17 @@ type CountriesMap = Map<string, CountryData>
 type ChartType =
     | TwoWeekIncidence
     | Restrictions
+    | WeeklyIncrease
 
     override this.ToString() =
         match this with
-        | TwoWeekIncidence -> I18N.t "charts.europe.twoWeekIncidence"
-        | Restrictions -> I18N.t "charts.europe.restrictions"
+        | TwoWeekIncidence -> chartText "twoWeekIncidence"
+        | Restrictions -> chartText "restrictions"
+        | WeeklyIncrease -> chartText "weeklyIncrease"
 
 type State =
     { MapToDisplay : MapToDisplay
+      Data : WeeklyStatsData
       Countries : CountrySelection
       GeoJson: GeoJson
       OwdData: OwdData
@@ -120,121 +126,156 @@ let euCountries =
 
 let greenCountries =
     Map.ofList
-        [ ("AUT", "")
-          ("CYP", "")
-          ("EST", "")
-          ("FIN", "")
-          ("GEO", "")
-          ("ITA", "")
-          ("LVA", "")
-          ("LIE", "")
-          ("LTU", "")
-          ("HUN", "")
-          ("DEU", "")
-          ("NOR", "")
-          ("NZL", "")
-          ("RWA", "")
-          ("SMR", "")
-          ("SVK", "")
-          ("URY", "")
-          ("VAT", "")
-          ("GBR", "") ]
+        [
+            ("AUS", "")
+            ("NZL", "")
+            ("URY", "")
+        ]
 
 let redCountries =
     Map.ofList
-        [ ("ALB", "")
-          ("AND", "")
-          ("ARG", "")
-          ("ARM", "")
-          ("AZE", "")
-          ("BAH", "")
-          ("BHR", "")
-          ("BEL", "")
-          ("BLZ", "")
-          ("BOL", "")
-          ("BIH", "")
-          ("BRA", "")
-          ("CHL", "")
-          ("MNE", "")
-          ("VIR", "")
-          ("DOM", "")
-          ("ECU", "")
-          ("GNQ", "")
-          ("SWZ", "")
-          ("FRO", "")
-          ("PHL", "")
-          ("GAB", "")
-          ("GMB", "")
-          ("GIB", "")
-          ("GTM", "")
-          ("GUM", "")
-          ("HND", "")
-          ("HRV", "")
-          ("IND", "")
-          ("IRQ", "")
-          ("IRN", "")
-          ("ISR", "")
-          ("ZAF", "")
-          ("QAT", "")
-          ("KAZ", "")
-          ("KGZ", "")
-          ("CHN", "")
-          ("COL", "")
-          ("XKX", "")
-          ("CRI", "")
-          ("KWT", "")
-          ("LBN", "")
-          ("LBY", "")
-          ("LUX", "")
-          ("MDV", "")
-          ("MLT", "")
-          ("MAR", "")
-          ("MEX", "")
-          ("MDA", "")
-          ("MCO", "")
-          ("NAM", "")
-          ("NLD", "")
-          ("OMN", "")
-          ("PAN", "")
-          ("PRY", "")
-          ("PER", "")
-          ("PRI", "")
-          ("ROU", "")
-          ("RUS", "")
-          ("SLV", "")
-          ("STP", "")
-          ("SAU", "")
-          ("MKD", "")
-          ("SGP", "")
-          ("MAF", "")
-          ("SUR", "")
-          ("ESP", "")
-          ("TCA", "")
-          ("VEN", "")
-          ("UKR", "")
-          ("CPV", "")
-          ("USA", "")
-          ("ARE", "") ]
-
-let importedFrom =
-    Map.ofList
-        [  
-            ("AUT", 11)
-            ("HRV", 6)
-            ("DEU", 5)
-            ("XKX", 4)
-            ("BIH", 3)
-            ("GRC", 3)
-            ("ITA", 3)
-            ("HUN", 2)
-            ("CZE", 2)
-            ("RUS", 1)
-            ("MNE", 1)
-            ("FRA", 1) 
-            ("EST", 1)
+        [
+            ("AFG", "")
+            ("ALB", "")
+            ("DZA", "")
+            ("AND", "")
+            ("AGO", "")
+            ("ARG", "")
+            ("ARM", "")
+            ("AUT", "vse razen administrativne enote Koroška (Kärnten)")
+            ("AZE", "")
+            ("BAH", "")
+            ("BHR", "")
+            ("BGD", "")
+            ("BEL", "")
+            ("BLZ", "")
+            ("BLR", "")
+            ("BEN", "")
+            ("BGR", "administrativna enota: Blagoevgrad, Rasgrad, Sliven, Sofia (mesto Sofija), Targovishte")
+            ("BOL", "")
+            ("BIH", "")
+            ("BRA", "")
+            ("BFA", "")
+            ("BDI", "")
+            ("BTN", "")
+            ("TCD", "")
+            ("CZE", "")
+            ("CHL", "")
+            ("MNE", "")
+            ("DNK", "administrativna enota: Hovedstaden, regija glavnega mesta")
+            ("DOM", "")
+            ("EGY", "")
+            ("ECU", "")
+            ("GNQ", "")
+            ("ERI", "")
+            ("EST", "administrativna enota: Jogeva")
+            ("SWZ", "")
+            ("ETH", "")
+            ("PHL", "")
+            ("FIN", "administrativna enota: Österbotten")
+            ("FRA", "vse administrativne enote celinske Francije, čezmorsko ozemlje: Francoska Gvajana, Guadeloupe, Sveti Martin, La Réunion, Martinique")
+            ("GAB", "")
+            ("GMB", "")
+            ("GHA", "")
+            ("GEO", "")
+            ("GUY", "")
+            ("GTM", "")
+            ("GIN", "")
+            ("GNB", "")
+            ("HTI", "")
+            ("HND", "")
+            ("HRV", "administrativne enote: Bjelovarsko-bilogorska, Dubrovniško-neretvanska, Karlovška, Krapinsko-zagorska, Liško-senjska, Medžimurska, Osiješko-baranjska, Požeško-slavonska, Sisaško-moslavška, Splitsko-dalmatinska, Varaždinska, Virovitiško-podravska, Vukovarsko-sremska, Zagreb (celotna županija, vključno z mestom Zagreb)")
+            ("IND", "")
+            ("IDN", "")
+            ("IRQ", "")
+            ("IRN", "")
+            ("IRL", "")
+            ("ISL", "")
+            ("ITA", "administrativne enote: Abruzzo, Valle d'Aosta, Campania, Emilia-Romagna, Friuli Venezia Giulia, Lazio, Liguria, Lombardia, Piedmont, Sardegna, Toscana, Umbria, Veneto, Provincia autonoma di Bolzano – Alto Adige")
+            ("ISR", "")
+            ("JAM", "")
+            ("YEM", "")
+            ("JOR", "")
+            ("ZAF", "")
+            ("SSD", "")
+            ("CMR", "")
+            ("QAT", "")
+            ("KAZ", "")
+            ("KEN", "")
+            ("KGZ", "")
+            ("COL", "")
+            ("COM", "")
+            ("COG", "")
+            ("COD", "")
+            ("XKX", "")
+            ("CRI", "")
+            ("KWT", "")
+            ("LSO", "")
+            ("LBN", "")
+            ("LBR", "")
+            ("LBY", "")
+            ("LIE", "")
+            ("LTU", "administrativna enota: Šiaulių, Kaunas")
+            ("LUX", "")
+            ("MDG", "")
+            ("HUN", "administrativne enote: Budimpešta, Baranya, Borsod-Abaúj-Zemplén, Csongrád-Csanád, Győr-Moson-Sopron, Pest, Hajdú-Bihar, Heves, Jász-Nagykun-Szolnok, Komárom-Esztergom, Nógrád, Pešta (Pest), Somogy, Szabolcs-Szatmár-Bereg, Vas, Veszprém, Zala")
+            ("MWL", "")
+            ("MDV", "")
+            ("MLI", "")
+            ("MLT", "")
+            ("MAR", "")
+            ("MRT", "")
+            ("MEX", "")
+            ("MDA", "")
+            ("MNG", "")
+            ("MOZ", "")
+            ("NPL", "")
+            ("NIG", "")
+            ("NGA", "")
+            ("NIC", "")
+            ("NLD", "")
+            ("OMN", "")
+            ("PAK", "")
+            ("PAN", "")
+            ("PNG", "")
+            ("PRY", "")
+            ("PER", "")
+            ("POL", "")
+            ("PRT", "administrativna enota: Lizbona (Lisboa), Norte")
+            ("ROU", "")
+            ("RUS", "")
+            ("SLV", "")
+            ("STP", "")
+            ("SAU", "")
+            ("SEN", "")
+            ("PRK", "")
+            ("MKD", "")
+            ("SLE", "")
+            ("SYR", "")
+            ("CIV", "")
+            ("SVK", "")
+            ("SOM", "")
+            ("CAF", "")
+            ("SUR", "")
+            ("ESP", "vse administrativne enote razen Kanarski otoki (Islas Canarias)")
+            ("SWE", "administrativne enote: Jämtland, Jönköping, Örebro, Östergötland, Stockholm, Uppsala")
+            ("CHE", "")
+            ("TJK", "")
+            ("TZA", "")
+            ("TGO", "")
+            ("TTO", "")
+            ("TUN", "")
+            ("TUR", "")
+            ("TKM", "")
+            ("UKR", "")
+            ("UZB", "")
+            ("VEN", "")
+            ("TLS", "")
+            ("ZMB", "")
+            ("USA", "")
+            ("ARE", "")
+            ("ZWE", "")
         ]
-
-let importedDate = DateTime(2020, 9, 20)
 
 let loadEuropeGeoJson =
     async {
@@ -272,14 +313,15 @@ let loadWorldGeoJson =
                             |> Failure)
     }
 
-let init (mapToDisplay: MapToDisplay): State * Cmd<Msg> =
+let init (mapToDisplay: MapToDisplay) (data: WeeklyStatsData): State * Cmd<Msg> =
     let cmdGeoJson = Cmd.ofMsg GeoJsonRequested
     let cmdOwdData = Cmd.ofMsg OwdDataRequested
     { MapToDisplay = mapToDisplay
+      Data = data
       Countries =
         match mapToDisplay with
-        | Europe -> CountrySelection.Countries euCountries
-        | World -> All
+        | World -> CountrySelection.All
+        | Europe -> CountrySelection.Selected euCountries
       GeoJson = NotAsked
       OwdData = NotAsked
       CountryData = Map.empty
@@ -290,7 +332,13 @@ let init (mapToDisplay: MapToDisplay): State * Cmd<Msg> =
         | World -> TwoWeekIncidence },
     (cmdGeoJson @ cmdOwdData)
 
-let prepareCountryData (data: Data.OurWorldInData.DataPoint list) =
+let prepareCountryData (data: DataPoint list) (weeklyData: WeeklyStatsData) =
+    let dataForLastTwoWeeks = Array.sub weeklyData (weeklyData.Length - 2) 2
+    let importedFrom = dataForLastTwoWeeks |> Data.WeeklyStats.countryTotals |> Map.ofArray
+    let importedDate = (Array.last dataForLastTwoWeeks).DateTo
+
+    let last n xs = List.toSeq xs |> Seq.skip (xs.Length - n) |> Seq.toList
+
     data
     |> List.groupBy (fun dp -> dp.CountryCode)
     |> List.map (fun (code, dps) ->
@@ -299,22 +347,25 @@ let prepareCountryData (data: Data.OurWorldInData.DataPoint list) =
 
         let country = I18N.tt "country" code // TODO: change country code in i18n for Kosovo
 
-        let incidence1M =
-            dps
+        let incidence100k =
+            (dps
             |> List.map (fun dp -> dp.NewCasesPerMillion)
             |> List.choose id
-            |> List.sum
+            |> last 14 // select the last two weeks
+            |> List.sum)
+            / 10.
 
         let incidence =
             dps
             |> List.map (fun dp -> dp.NewCasesPerMillion)
             |> List.choose id
+            |> last 14
             |> List.toArray
 
         let incidenceMaxValue =
             if incidence.Length = 0
             then 0.
-            else incidence |> Array.toList |> List.max
+            else incidence |> Array.toList  |> last 14 |> List.max
 
         let newCases = dps |> List.map (fun dp -> dp.NewCases)
 
@@ -325,13 +376,18 @@ let prepareCountryData (data: Data.OurWorldInData.DataPoint list) =
             redCountries.TryFind(fixedCode),
             greenCountries.TryFind(fixedCode)
         let rText, rColor, rAltText =
-            if fixedCode = "SVN"
-            then I18N.t "charts.europe.statusNone", "#10829a", ""
-            else if red.IsSome
-            then I18N.t "charts.europe.statusRed", "#FF5348", red |> Option.defaultValue ""
-            else if green.IsSome
-            then I18N.t "charts.europe.statusGreen", "#C4DE6F", green |> Option.defaultValue ""
-            else I18N.t "charts.europe.statusYellow", "#FEF65C", ""
+            match fixedCode with
+            | "SVN" -> chartText "statusNone", "#10829a", ""
+            | _ ->
+                match red with
+                | Some redNote ->
+                    if redNote.Length > 0
+                    then chartText "statusRed", "#FF9057", redNote
+                    else chartText "statusRed", "#FF5348", redNote
+                | _ ->
+                    match green with
+                    | Some greenNote -> chartText "statusGreen", "#C4DE6F", greenNote
+                    | _ -> chartText "statusOrange", "#FFC65A", ""
 
         let imported =
             importedFrom.TryFind(fixedCode)
@@ -339,13 +395,14 @@ let prepareCountryData (data: Data.OurWorldInData.DataPoint list) =
 
         let cd: CountryData =
             { CountryData.Country = country
-              CountryData.TwoWeekIncidence1M = incidence1M
+              CountryData.TwoWeekIncidence100k = incidence100k
               CountryData.TwoWeekIncidence = incidence
               CountryData.TwoWeekIncidenceMaxValue = incidenceMaxValue
               CountryData.NewCases = newCases
               CountryData.OwdDate = owdDate
               CountryData.RestrictionColor = rColor
-              CountryData.RestrictionText = rText + rAltText
+              CountryData.RestrictionText = rText
+              CountryData.RestrictionAltText = rAltText
               CountryData.ImportedFrom = imported
               CountryData.ImportedDate = importedDate }
 
@@ -356,12 +413,12 @@ let update (msg: Msg) (state: State): State * Cmd<Msg> =
 
     let owdCountries =
         match state.Countries with
-        | All ->
-            All
-        | Countries countries ->
+        | CountrySelection.All ->
+            CountrySelection.All
+        | CountrySelection.Selected countries ->
             countries
             |> List.map (fun code -> if code = "XKX" then "OWID_KOS" else code) // hack for Kosovo code
-            |> Countries
+            |> CountrySelection.Selected
 
     match msg with
     | GeoJsonRequested ->
@@ -372,16 +429,19 @@ let update (msg: Msg) (state: State): State * Cmd<Msg> =
         { state with GeoJson = Loading }, cmd
     | GeoJsonLoaded geoJson -> { state with GeoJson = geoJson }, Cmd.none
     | OwdDataRequested ->
-        let twoWeeksAgo = DateTime.Today.AddDays(-14.0)
-        { state with OwdData = Loading },
-        Cmd.OfAsync.result (Data.OurWorldInData.loadCountryIncidence owdCountries twoWeeksAgo OwdDataReceived)
+        let someWeeksAgo = DateTime.Today.AddDays(-21.0) // increased to 21 days from 14
+        let cmd = Cmd.OfAsync.result (loadData {
+            Countries = owdCountries
+            DateFrom = Some someWeeksAgo
+            DateTo = None }  OwdDataReceived)
+        { state with OwdData = Loading }, cmd
     | OwdDataReceived result ->
         let ret =
             match result with
             | Success owdData ->
                 { state with
                       OwdData = result
-                      CountryData = prepareCountryData owdData }
+                      CountryData = prepareCountryData owdData state.Data }
             | _ -> { state with OwdData = result }
 
         ret, Cmd.none
@@ -391,14 +451,14 @@ let update (msg: Msg) (state: State): State * Cmd<Msg> =
 let mapData state =
     let countries =
         match state.Countries with
-        | Countries countries -> countries
-        | All -> worldCountries
+        | CountrySelection.All -> worldCountries
+        | CountrySelection.Selected countries -> countries
 
     countries
     |> List.map (fun code ->
         match state.CountryData.TryFind(code) with
         | Some cd ->
-            let incidence1M = cd.TwoWeekIncidence1M |> int
+            let incidence100k = cd.TwoWeekIncidence100k |> int
             let incidence = cd.TwoWeekIncidence
             let incidenceMaxValue = cd.TwoWeekIncidenceMaxValue
 
@@ -406,6 +466,24 @@ let mapData state =
                 cd.NewCases
                 |> List.tryLast
                 |> Option.defaultValue 0
+
+            let cases = cd.NewCases |> List.toArray
+
+            let casesLastWeek = Array.sub cases (cases.Length - 7) 7 |> Array.sum
+            let casesWeekBefore = Array.sub cases (cases.Length - 14) 7 |> Array.sum
+            let relativeIncrease =
+                if casesWeekBefore > 0
+                    then 100. * (float casesLastWeek/ float casesWeekBefore - 1.) |> min 500.
+                else
+                    0.
+
+            let last n xs = List.toSeq xs |> Seq.skip (xs.Length - n) |> Seq.toList
+            let twoWeekCaseNumbers =
+                cd.NewCases
+                |> List.filter(fun x -> x > 0) // filter out date with missing data
+                |> last 14 // take the last 14 non zero datapoints
+                |> List.toArray
+                |> Array.map float
 
             let ncDate =
                 (I18N.tOptions "days.date" {| date = cd.OwdDate |})
@@ -416,121 +494,279 @@ let mapData state =
             let baseRec =
                 {| code = code
                    country = cd.Country
-                   incidence1M = incidence1M
+                   incidence100k = incidence100k
                    incidence = incidence
                    incidenceMaxValue = incidenceMaxValue
                    newCases = nc
+                   weeklyIncrease = relativeIncrease
+                   twoWeekCases = twoWeekCaseNumbers
                    ncDate = ncDate
                    rType = cd.RestrictionText
+                   rAltText = cd.RestrictionAltText
                    imported = cd.ImportedFrom
                    impDate = impDate |}
 
             match state.ChartType with
             | TwoWeekIncidence ->
                 {| baseRec with
-                       value = incidence1M
+                       value = max (float incidence100k) 0.001
                        color = null
                        dataLabels = {| enabled = false |} |}
             | Restrictions ->
                 {| baseRec with
-                       value = cd.ImportedFrom
+                       value = float cd.ImportedFrom
                        color = cd.RestrictionColor
                        dataLabels = {| enabled = cd.ImportedFrom > 0 |} |}
+            | WeeklyIncrease ->
+                {| baseRec with
+                       value = relativeIncrease
+                       color = null
+                       dataLabels = {| enabled = false |} |}
         | _ ->
             {| code = code
                country = ""
-               value = 0
+               value = 0.1
                color = null
                dataLabels = {| enabled = false |}
-               incidence1M = 0
+               incidence100k = 0
                incidence = null
                incidenceMaxValue = 0.0
                newCases = 0
+               weeklyIncrease = 0.
+               twoWeekCases = [| |]
                ncDate = ""
                rType = ""
+               rAltText = ""
                imported = 0
                impDate = "" |})
     |> List.toArray
 
-let renderMap state geoJson owdData =
+let renderMap state geoJson _ =
 
     let legend =
-        let enabled = state.ChartType = TwoWeekIncidence
+        let enabled = state.ChartType <> Restrictions
         {| enabled = enabled
            title = {| text = null |}
-           align = "left"
-           verticalAlign = "bottom"
+           align = if state.MapToDisplay = World then "left" else "right"
+           verticalAlign = if state.MapToDisplay = World then "bottom" else "top"
            layout = "vertical"
            floating = true
            borderWidth = 1
            backgroundColor = "white"
-           valueDecimals = 0 |}
+           valueDecimals = 0
+           width = 70
+        |}
         |> pojo
 
     let colorAxis =
-        {| dataClassColor = "category"
-           dataClasses =
-               [| {| from = 0; color = "#ffffcc" |}
-                  {| from = 25; color = "#ffeda0" |}
-                  {| from = 50; color = "#fed976" |}
-                  {| from = 100; color = "#feb24c" |}
-                  {| from = 200; color = "#fd8d3c" |}
-                  {| from = 400; color = "#fc4e2a" |}
-                  {| from = 800; color = "#e31a1c" |}
-                  {| from = 1600; color = "#b10026" |} |] |}
-        |> pojo
+        match state.ChartType with
+        | TwoWeekIncidence ->
+            {|
+                ``type`` = "logarithmic"
+                tickInterval = 0.4
+                max = 7000
+                min = 1
+                endOnTick = false
+                startOnTick = false
+                stops =
+                    [|
+                        (0.000,"#ffffff")
+                        (0.001,"#fff7db")
+                        (0.200,"#ffefb7")
+                        (0.280,"#ffe792")
+                        (0.360,"#ffdf6c")
+                        (0.440,"#ffb74d")
+                        (0.520,"#ff8d3c")
+                        (0.600,"#f85d3a")
+                        (0.680,"#ea1641")
+                        (0.760,"#d0004e")
+                        (0.840,"#ad005b")
+                        (0.920,"#800066")
+                        (0.999,"#43006e")
+                    |]
+                reversed = true
+                labels =
+                    {|
+                        formatter = fun() -> jsThis?value
+                    |} |> pojo
+            |} |> pojo
+        | Restrictions ->
+            {|
+                ``type`` = "linear"
+                tickInterval = 0.4
+                max = 7000
+                min = 1
+                endOnTick = false
+                startOnTick = false
+                stops =
+                    [|
+                        (0.000,"#ffffff")
+                        (0.001,"#fff7db")
+                        (0.200,"#ffefb7")
+                        (0.280,"#ffe792")
+                        (0.360,"#ffdf6c")
+                        (0.440,"#ffb74d")
+                        (0.520,"#ff8d3c")
+                        (0.600,"#f85d3a")
+                        (0.680,"#ea1641")
+                        (0.760,"#d0004e")
+                        (0.840,"#ad005b")
+                        (0.920,"#800066")
+                        (0.999,"#43006e")
+                    |]
+                reversed = true
+                labels =
+                    {|
+                        formatter = fun() -> jsThis?value
+                    |} |> pojo
+            |} |> pojo
+        | WeeklyIncrease ->
+            {|
+                ``type`` = "linear"
+                tickInterval = 50
+                max = 200
+                min = -100
+                endOnTick = false
+                startOnTick = false
+                stops =
+                    [|
+                        (0.000,"#009e94")
+                        (0.166,"#6eb49d")
+                        (0.250,"#b2c9a7")
+                        (0.333,"#f0deb0")
+                        (0.500,"#e3b656")
+                        (0.600,"#cc8f00")
+                        (0.999,"#b06a00")
+                    |]
+                reversed=false
+                labels =
+                {|
+                   formatter = fun() -> sprintf "%s%%" jsThis?value
+                |} |> pojo
+            |} |> pojo
+
+
+    let sparklineFormatter newCases =
+        let desaturateColor (rgb:string) (sat:float) =
+            let argb = Int32.Parse (rgb.Replace("#", ""), Globalization.NumberStyles.HexNumber)
+            let r = (argb &&& 0x00FF0000) >>> 16
+            let g = (argb &&& 0x0000FF00) >>> 8
+            let b = (argb &&& 0x000000FF)
+            let avg = (float(r + g + b) / 3.0) * 1.6
+            let newR = int (Math.Round (float(r) * sat + avg * (1.0 - sat)))
+            let newG = int (Math.Round (float(g) * sat + avg * (1.0 - sat)))
+            let newB = int (Math.Round (float(b) * sat + avg * (1.0 - sat)))
+            sprintf "#%02x%02x%02x" newR newG newB
+
+        let maxCases = newCases |> Array.max
+        let tickScale = max 1. (10. ** round (Math.Log10 (maxCases + 1.) - 1.))
+
+        let color1 = "#bda506"
+        let color2 = desaturateColor color1 0.6
+
+        let columnColors = [| ([|color2 |] |> Array.replicate 7 |> Array.concat); ([| color1 |] |> Array.replicate 7 |> Array.concat)  |] |> Array.concat
+        let options =
+            {|
+                chart =
+                    {|
+                        ``type`` = "column"
+                        backgroundColor = "transparent"
+                    |} |> pojo
+                credits = {| enabled = false |}
+                xAxis =
+                    {|
+                        visible = true
+                        labels = {| enabled = false |}
+                        title = {| enabled = false |}
+                        tickInterval = 7
+                        lineColor = "#696969"
+                        tickColor = "#696969"
+                        tickLength = 4
+                    |}
+                yAxis =
+                    {|
+                        title = {| enabled = false |}
+                        visible = true
+                        opposite = true
+                        min = 0.
+                        max = newCases |> Array.max
+                        tickInterval = tickScale
+                        endOnTick = true
+                        startOnTick = false
+                        allowDecimals = false
+                        showFirstLabel = true
+                        showLastLabel = true
+                        gridLineColor = "#000000"
+                        gridLineDashStyle = "dot"
+                    |} |> pojo
+                title = {| text = "" |}
+                legend = {| enabled = false |}
+                series =
+                    [|
+                        {|
+                            data = newCases |> Array.map ( max 0.)
+                            animation = false
+                            colors = columnColors
+                            borderColor = columnColors
+                            pointWidth = 15 //
+                            colorByPoint = true
+                        |} |> pojo
+                    |]
+            |} |> pojo
+        match state.MapToDisplay with
+        | Europe ->
+            Fable.Core.JS.setTimeout (fun () -> sparklineChart("tooltip-chart-eur", options)) 10 |> ignore
+            """<div id="tooltip-chart-eur"; class="tooltip-chart";></div>"""
+        | World ->
+            Fable.Core.JS.setTimeout (fun () -> sparklineChart("tooltip-chart-world", options)) 10 |> ignore
+            """<div id="tooltip-chart-world"; class="tooltip-chart";></div>"""
 
     let tooltipFormatter jsThis =
         let points = jsThis?point
         let twoWeekIncidence = points?incidence
-        let twoWeekIncidenceMaxValue = Math.Ceiling(float points?incidenceMaxValue)
         let country = points?country
-        let incidence1M = points?incidence1M
+        let incidence100k = points?incidence100k
         let newCases = points?newCases
+        let twoWeekCases = points?twoWeekCases
         let ncDate = points?ncDate
         let imported = points?imported
         let impDate = points?impDate
         let rType = points?rType
+        let rAltText = points?rAltText
+        let weeklyIncrease = points?weeklyIncrease
 
-        let s = StringBuilder()
-        let barMaxHeight = 50
 
-        let textHtml =
-            sprintf "<b>%s</b><br/>
-            %s: <b>%s</b><br/>
-            %s: <b>%s</b> (%s)<br/>"
-                country
-                (I18N.t "charts.europe.incidence1M") incidence1M
-                (I18N.t "charts.europe.newCases") newCases ncDate
-                
         (* SLO-spec mk has no imported cases
         let textHtml =
             sprintf "<b>%s</b><br/>
-            %s: <b>%s</b><br/>
+            %s: <b>%s<br/>%s</br></br></b>
             %s: <b>%s</b> (%s)<br/><br/>
             %s: <b>%s</b><br/>
             %s: <b>%s</b> (%s)<br/>"
                 country
-                (I18N.t "charts.europe.countryStatus") rType
-                (I18N.t "charts.europe.importedCases") imported impDate
-                (I18N.t "charts.europe.incidence1M") incidence1M
-                (I18N.t "charts.europe.newCases") newCases ncDate
-        *)
+                (chartText "countryStatus") rType rAltText
+                (chartText "importedCases") imported impDate
+                (chartText "incidence100k") incidence100k
+                (chartText "newCases") newCases ncDate
+            + sprintf "<br>%s: <b>%s%s%%</b>" (I18N.t "charts.map.relativeIncrease") (if weeklyIncrease < 500. then "" else ">") (weeklyIncrease |> Utils.formatTo1DecimalWithTrailingZero)
+         *)
 
-        s.Append textHtml |> ignore
-
-        s.Append "<div class='bars'>" |> ignore
+        let textHtml =
+            sprintf "<b>%s</b><br/>
+            %s: <b>%s</b><br/>
+            %s: <b>%s</b> (%s)<br/>"
+                country
+                (chartText "incidence100k") incidence100k
+                (chartText "newCases") newCases ncDate
+            + sprintf "<br>%s: <b>%s%s%%</b>" (I18N.t "charts.map.relativeIncrease") (if weeklyIncrease < 500. then "" else ">") (weeklyIncrease |> Utils.formatTo1DecimalWithTrailingZero)
 
         match twoWeekIncidence with
-        | null -> I18N.t "charts.europe.noData"
+        | null -> chartText "noData"
         | _ ->
-            twoWeekIncidence
-            |> Array.iter (fun country ->
-                let barHeight = Math.Ceiling(float country * float barMaxHeight / twoWeekIncidenceMaxValue)
-                let barHtml = sprintf "<div class='bar-wrapper'><div class='bar' style='height: %Apx'></div></div>" (int barHeight)
-                s.Append barHtml |> ignore)
-            s.Append "</div>" |> ignore
-            s.ToString()
+            if (twoWeekCases |> Array.max) > 0. then
+                textHtml + sparklineFormatter twoWeekCases
+            else
+                textHtml
 
     let series geoJson =
         {| visible = true
@@ -562,8 +798,8 @@ let renderMap state geoJson owdData =
                pojo
                    {| enabled = true
                       text =
-                          sprintf "%s: %s, %s" (I18N.t "charts.common.dataSource") (I18N.t "charts.common.dsNIJZ")
-                              (I18N.t "charts.common.dsOWD")
+                          sprintf "%s: %s, %s" (I18N.t "charts.common.dataSource") (I18N.tOptions ("charts.common.dsNIJZ") {| context = localStorage.getItem ("contextCountry") |})
+                              (I18N.tOptions ("charts.common.dsMZ") {| context = localStorage.getItem ("contextCountry") |})
                       mapTextFull = ""
                       mapText = ""
                       href = "https://ourworldindata.org/coronavirus" |} |}
@@ -584,9 +820,11 @@ let renderChartTypeSelectors (activeChartType: ChartType) dispatch =
     Html.div
         [ prop.className "chart-display-property-selector"
           prop.children
-              [ Html.text (I18N.t "charts.common.view")
-                // SLO-spec renderChartSelector Restrictions
-                renderChartSelector TwoWeekIncidence ] ]
+              [ // SLO-spec renderChartSelector Restrictions
+                renderChartSelector TwoWeekIncidence
+                renderChartSelector WeeklyIncrease
+              ]
+        ]
 
 
 let render (state: State) dispatch =
@@ -606,5 +844,5 @@ let render (state: State) dispatch =
                     prop.className "map"
                     prop.children [ chart ] ] ] ]
 
-let mapChart (mapToDisplay: MapToDisplay) =
-    React.elmishComponent ("EuropeMapChart", init mapToDisplay, update, render)
+let mapChart (props : {| mapToDisplay : MapToDisplay; data : WeeklyStatsData |}) =
+    React.elmishComponent ("EuropeMapChart", init props.mapToDisplay props.data, update, render)

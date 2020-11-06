@@ -30,11 +30,11 @@ let groupEntriesByCountries
         let valueToUse =
             match metricToDisplay with
             | NewCasesPer1M ->
-                entryRaw.NewCasesPerMillion |> Option.defaultValue 0.
+                (entryRaw.NewCasesPerMillion |> Option.defaultValue 0.) / 10.
             | ActiveCasesPer1M ->
-                entryRaw.NewCasesPerMillion |> Option.defaultValue 0.
+                (entryRaw.NewCasesPerMillion |> Option.defaultValue 0.) / 10.
             | TotalDeathsPer1M ->
-                entryRaw.TotalDeathsPerMillion |> Option.defaultValue 0.
+                (entryRaw.TotalDeathsPerMillion |> Option.defaultValue 0.) / 10.
             | DeathsPerCases ->
                 if entryRaw.TotalCases > 0 then
                     (float entryRaw.TotalDeaths) * 100.0
@@ -83,24 +83,24 @@ let calculateMovingAverages
     let averages: CountryDataDayEntry[] = Array.zeroCreate averagesSetLength
 
     let daysOfMovingAverageFloat = float daysOfMovingAverage
-    let mutable currentNewCasesSum = 0.
+    let mutable currentSum = 0.
 
     let movingAverageFunc index =
         let entry = countryEntries.[index]
 
-        currentNewCasesSum <- currentNewCasesSum + entry.Value
+        currentSum <- currentSum + entry.Value
 
         match index with
         | index when index >= daysOfMovingAverage - 1 ->
             let date = countryEntries.[index - cutOff].Date
-            let newCasesAvg = currentNewCasesSum / daysOfMovingAverageFloat
+            let average = currentSum / daysOfMovingAverageFloat
 
             averages.[index - (daysOfMovingAverage - 1)] <- {
-                Date = date; Value = newCasesAvg }
+                Date = date; Value = average }
 
             let entryToRemove =
                 countryEntries.[index - (daysOfMovingAverage - 1)]
-            currentNewCasesSum <- currentNewCasesSum - entryToRemove.Value
+            currentSum <- currentSum - entryToRemove.Value
 
         | _ -> ignore()
 

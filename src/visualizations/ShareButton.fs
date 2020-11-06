@@ -12,10 +12,11 @@ let dropdown (viz: Visualization) =
         // TODO: needs refactoring eventually because we're just duplicating code from EmbedMakerPage.vue
         let (width, height) =
             match viz.VisualizationType with
-            | MetricsComparison -> (1140, 780)
+            | MetricsComparison -> (1140, 720)
             | DailyComparison -> (1140, 720)
             | Cases -> (1140, 630)
             | Patients -> (1140, 720)
+            | CarePatients -> (1140, 720)
             | Ratios -> (1140, 720)
             | HCenters -> (1140, 720)
             | Tests -> (1140, 720)
@@ -23,6 +24,9 @@ let dropdown (viz: Visualization) =
             | Spread -> (1140, 630)
             | Regions -> (1140, 720)
             | SkopjeMunMap -> (1140, 720)
+            | Regions100k -> (1140, 720)
+            | HcCases -> (1140, 720)
+            | Sources -> (1140, 720)
             | Map -> (1140, 820)
             | RegionMap -> (1140, 820)
             | EuropeMap -> (1140, 780)
@@ -35,6 +39,7 @@ let dropdown (viz: Visualization) =
             | CountriesCasesPer1M -> (1140, 740)
             | CountriesActiveCasesPer1M -> (1140, 740)
             | CountriesDeathsPer1M -> (1140, 740)
+            | PhaseDiagram -> (1140, 720)
 
         let graphUrl =
             "https://covid-19.treker.mk/"
@@ -84,7 +89,7 @@ let dropdown (viz: Visualization) =
                                         // https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent
                                         ("https://twitter.com/intent/tweet/?"
                                          + "text="
-                                         + chartText viz.ChartTextsGroup ".title"
+                                         + chartText viz.ChartTextsGroup "title"
                                          + "&url="
                                          + graphUrl)
                                     prop.children

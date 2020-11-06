@@ -72,7 +72,7 @@ let renderChartOptions (state : State) dispatch =
             labels = pojo {| format = "{value}"; align = "center"; x = -15; reserveSpace = false; |}
             opposite = true
             visible = true
-            max = None
+            max = None // SLO-spec
             crosshair = true
         |}
         {|

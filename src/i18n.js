@@ -2,6 +2,7 @@ import Vue from 'vue'
 import i18next from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import VueI18Next from '@panter/vue-i18next'
+import getWeek from 'date-fns/getWeek'
 import en from './locales/en.json'
 import mk from './locales/mk.json'
 import sq from './locales/sq.json'
@@ -11,7 +12,7 @@ import de from './locales/de.json'
 import it from './locales/it.json'
 
 
-import * as Highcharts from 'highcharts/highstock.js'
+import {Highcharts} from './visualizations/_highcharts'
 
 Vue.use(VueI18Next)
 
@@ -28,6 +29,13 @@ const detectionOptions = {
   lookupLocalStorage: 'i18nextLng',
   lookupFromPathIndex: 0,
 }
+
+// Adds %W to Highcharts date formats
+// docs: https://api.highcharts.com/class-reference/Highcharts.Time
+Highcharts.dateFormats.W = function (timestamp) {
+  return getWeek(timestamp, {weekStartsOn: 1}).toString()
+};
+
 
 function setHighchartsOptions () {
     (window.Highcharts || Highcharts).setOptions({
@@ -51,7 +59,7 @@ function setHighchartsOptions () {
 };
 
 i18next.on('languageChanged', function(lng) {
-    setHighchartsOptions(Highcharts);``
+    setHighchartsOptions(Highcharts);
 });
 
 i18next.use(LanguageDetector).init({

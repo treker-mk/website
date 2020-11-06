@@ -61,9 +61,11 @@ let facilitySeriesInfo : FacilityCode -> (string option * string) = function
     | "sbpt"  -> None          , "SB Ptuj"
     | "sbsg"  -> None          , "SB Slovenj Gradec"
     | "sbtr"  -> None          , "SB Trbovlje"
-    | "ukclj" -> Some "#10829a", "UKC Ljubljana"
-    | "ukcmb" -> Some "#003f5c", "UKC Maribor"
-    | "ukg"   -> Some "#7B7226", "UK Golnik"
+    | "upklj" -> None          , "UPK Ljubljana"
+    | "pbbe"  -> None          , "PB Begunje"
+    | "pbvo"  -> None          , "PB Vojnik"
+    | "pbor"  -> None          , "PB Ormož"
+    | "pbid"  -> None          , "PB Idrija"
     | other   -> None          , I18N.t ("mk.hospital." + other) // SLO-spec
 
 

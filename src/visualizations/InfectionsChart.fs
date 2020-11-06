@@ -11,6 +11,8 @@ open Browser
 open Highcharts
 open Types
 
+let chartText = I18N.chartText "infections"
+
 type Metric =
     | HospitalStaff
     | RestHomeStaff
@@ -63,7 +65,7 @@ type DisplayType = {
 }
 
 [<Literal>]
-let DaysOfMovingAverage = 5
+let DaysOfMovingAverage = 7
 
 let availableDisplayTypes: DisplayType array = [|
     {   Id = "averageByDay"
@@ -183,6 +185,7 @@ let renderChartOptions state dispatch =
                                 (fun (_, value) ->
                                     value |> Option.defaultValue 0 |> float)
                             )
+                        |> roundKeyValueFloatArray 1
 
                 (metric, data))
 
@@ -191,7 +194,7 @@ let renderChartOptions state dispatch =
                 {|
                 visible = true
                 color = metric.Color
-                name = I18N.tt "charts.infections" metric.Id
+                name = chartText metric.Id
                 data = metricData
                 marker = pojo {| enabled = false |}
                 |}
@@ -216,7 +219,7 @@ let renderChartOptions state dispatch =
 
     let className = "covid19-infections"
     let baseOptions =
-        Highcharts.basicChartOptions
+        basicChartOptions
             ScaleType.Linear className
             state.RangeSelectionButtonIndex onRangeSelectorButtonClick
 
@@ -269,7 +272,7 @@ let renderChartContainer state dispatch =
         prop.className "highcharts-wrapper"
         prop.children [
             renderChartOptions state dispatch
-            |> Highcharts.chartFromWindow
+            |> chartFromWindow
         ]
     ]
 
@@ -277,7 +280,7 @@ let renderDisplaySelectors activeDisplayType dispatch =
     let renderSelector (displayType : DisplayType) =
         let active = displayType = activeDisplayType
         Html.div [
-            prop.text (I18N.tt "charts.infections" displayType.Id)
+            prop.text (chartText displayType.Id)
             Utils.classes
                 [(true, "btn btn-sm metric-selector")
                  (active, "metric-selector--selected selected")]
@@ -309,7 +312,17 @@ let render state dispatch =
     Html.div [
         renderChartContainer state dispatch
         renderDisplaySelectors state.DisplayType (ChangeDisplayType >> dispatch)
+
+        (* SLO-spec
+        Html.div [
+            prop.className "disclaimer"
+            prop.children [
+                Html.text (chartText "disclaimer")
+            ]
+        ]
+        *)
     ]
+
 
 let infectionsChart (props : {| data : StatsData |}) =
     React.elmishComponent("InfectionsChart", init props.data, update, render)

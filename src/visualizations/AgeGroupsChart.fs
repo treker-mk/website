@@ -44,6 +44,8 @@ let LabelMale = "Moški"
 [<Literal>]
 let LabelFemale = "Ženske"
 
+let chartText = I18N.chartText "ageGroups"
+
 let populationOf sexLabel ageGroupLabel =
     let parseAgeGroupLabel (label: string): AgeGroupKey =
         if label.Contains('-') then
@@ -134,7 +136,7 @@ let mergeInfectionsAndDeathsByGroups
 /// Fetches the infections and deaths per age groups for the latest day that
 /// has both sets of data.
 /// </summary>
-let latestAgeData state: InfectionsAndDeathsPerAge =
+let latestAgeData state =
     /// <summary>
     /// Filter function for determining whether the specified AgeGroups
     /// actually has any data or just an empty record.
@@ -159,7 +161,7 @@ let latestAgeData state: InfectionsAndDeathsPerAge =
 
         match infectionsDataMaybe, deathsDataMaybe with
         | Some infectionsData, Some deathsData ->
-            mergeInfectionsAndDeathsByGroups infectionsData deathsData |> Some
+             Some (dataPoint.Date, mergeInfectionsAndDeathsByGroups infectionsData deathsData)
         | _ -> None
     )
 
@@ -274,9 +276,10 @@ let renderScaleTypeSelectors activeScaleType dispatch =
     Html.div [
         prop.className "chart-display-property-selector"
         prop.children [
-            Html.text (I18N.t "charts.common.view")
-            renderScaleTypeSelector Absolute activeScaleType (I18N.t "charts.ageGroups.absolute")
-            renderScaleTypeSelector Relative activeScaleType (I18N.t "charts.ageGroups.relative")
+            renderScaleTypeSelector
+                Absolute activeScaleType (chartText "absolute")
+            renderScaleTypeSelector
+                Relative activeScaleType (chartText "populationShare")
         ]
     ]
 
@@ -294,11 +297,11 @@ let renderChartCategorySelector
             (isActive, "metric-selector--selected") ]
         prop.text (
             match chartModeToRender with
-            | AbsoluteInfections        -> I18N.t "charts.ageGroups.confirmedCases"
-            | AbsoluteDeaths            -> I18N.t "charts.ageGroups.deceased"
-            | InfectionsPerPopulation   -> I18N.t "charts.ageGroups.confirmedCasesPerPopulation"
-            | DeathsPerPopulation       -> I18N.t "charts.ageGroups.deceasedPerPopulation"
-            | DeathsPerInfections       -> I18N.t "charts.ageGroups.deceasedPerConfirmedCases"
+            | AbsoluteInfections        -> chartText "confirmedCases"
+            | AbsoluteDeaths            -> chartText "deceased"
+            | InfectionsPerPopulation   -> chartText "confirmedCases"
+            | DeathsPerPopulation       -> chartText "deceased"
+            | DeathsPerInfections       -> chartText "deceasedPerConfirmedCases"
             )
     ]
 
@@ -307,9 +310,11 @@ let renderChartCategorySelectors activeChartMode dispatch =
         match ChartMode.ScaleType chartMode with
         | Absolute -> [ AbsoluteInfections; AbsoluteDeaths ]
         | Relative ->
-            [ InfectionsPerPopulation;
-            DeathsPerPopulation;
-            DeathsPerInfections; ]
+            [ 
+                InfectionsPerPopulation;
+                DeathsPerPopulation;
+                // DeathsPerInfections; 
+            ]
 
     Html.div [
         prop.className "metrics-selectors"
@@ -319,16 +324,19 @@ let renderChartCategorySelectors activeChartMode dispatch =
             ) ]
 
 let renderChartOptions
-    (state : State) (chartData: AgesChartData) =
+    (state : State) (latestDate: DateTime) (chartData: AgesChartData) =
 
     let valuesLabelFormatter (value: float) =
         match ChartMode.ScaleType state.ChartMode with
         | Absolute -> (abs value).ToString()
         | Relative -> Utils.percentageValuesLabelFormatter value
 
+    let dateText = (I18N.tOptions "charts.common.dataDate" {| date = latestDate  |})
+
     {| optionsWithOnLoadEvent "covid19-age-groups" with
         chart = pojo {| ``type`` = "bar" |}
         title = pojo {| text = None |}
+        subtitle = {| text = dateText ; align="left"; verticalAlign="bottom" |}
         xAxis = [|
             {| categories = chartData.AgeGroupsLabels
                reversed = false
@@ -356,11 +364,12 @@ let renderChartOptions
                 enabled = true
                 text =
                     sprintf "%s: %s, %s"
-                        (I18N.t "charts.common.dataSource")
-                        (I18N.t "charts.common.dsNIJZ")
-                        (I18N.t "charts.common.dsMZ")
+                        (I18N.chartText "common" "dataSource")
+                        (I18N.tOptions ("charts.common.dsNIJZ") {| context = localStorage.getItem ("contextCountry") |})
+                        (I18N.tOptions ("charts.common.dsMZ") {| context = localStorage.getItem ("contextCountry") |})
                 // SLO-spec href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
                 href = "http://www.iph.mk"
+
             |}
         tooltip = pojo
             {| formatter = fun () ->
@@ -373,49 +382,49 @@ let renderChartOptions
                      sprintf
                          "<b>%s</b><br/>%s: %s<br/>%s: %A"
                          sex
-                         (I18N.t "charts.ageGroups.age")
+                         (chartText "age")
                          ageGroup
-                         (I18N.t "charts.ageGroups.confirmedCases")
+                         (chartText "confirmedCases")
                          (abs dataValue)
                  | InfectionsPerPopulation ->
                      sprintf
                          "<b>%s</b><br/>%s: %s<br/>%s: %s<br/>%s: %d"
                          sex
-                         (I18N.t "charts.ageGroups.age")
+                         (chartText "age")
                          ageGroup
-                         (I18N.t "charts.ageGroups.shareOfInfectedPopulation")
+                         (chartText "shareOfInfectedPopulation")
                          (Utils.percentageValuesLabelFormatter dataValue)
-                         (I18N.t "charts.ageGroups.populationTotal")
+                         (chartText "populationTotal")
                          (populationOf sex ageGroup)
                  | AbsoluteDeaths ->
                      sprintf
                          "<b>%s</b><br/>%s: %s<br/>%s: %A"
                          sex
-                         (I18N.t "charts.ageGroups.age")
+                         (chartText "age")
                          ageGroup
-                         (I18N.t "charts.ageGroups.deceased")
+                         (chartText "deceased")
                          (abs dataValue)
                  | DeathsPerPopulation ->
                      sprintf
                          "<b>%s</b><br/>%s: %s<br/>%s: %s<br/>%s: %d"
                          sex
-                         (I18N.t "charts.ageGroups.age")
+                         (chartText "age")
                          ageGroup
-                         (I18N.t "charts.ageGroups.shareOfDeceasedPopulation")
+                         (chartText "shareOfDeceasedPopulation")
                          (Utils.percentageValuesLabelFormatter dataValue)
-                         (I18N.t "charts.ageGroups.populationTotal")
+                         (chartText "populationTotal")
                          (populationOf sex ageGroup)
                  | DeathsPerInfections ->
                      sprintf
                          "<b>%s</b><br/>%s: %s<br/>%s: %s"
                          sex
-                         (I18N.t "charts.ageGroups.age")
+                         (chartText "age")
                          ageGroup
-                         (I18N.t "charts.ageGroups.shareOfDeceasedConfirmedCases")
+                         (chartText "shareOfDeceasedConfirmedCases")
                          (Utils.percentageValuesLabelFormatter dataValue)
             |}
         series = [|
-            {| name = I18N.t "charts.ageGroups.male"
+            {| name = chartText "male"
                color = "#73CCD5"
                dataLabels = pojo
                  {| enabled = true
@@ -426,7 +435,7 @@ let renderChartOptions
                data = chartData.MaleValues
                       |> Array.map (Option.map (fun y -> -y))
                 |}
-            {| name = I18N.t "charts.ageGroups.female"
+            {| name = chartText "female"
                color = "#D99A91"
                dataLabels = pojo
                  {| enabled = true
@@ -461,13 +470,15 @@ let update (msg: Msg) (state: State) : State * Cmd<Msg> =
         { state with ChartMode = toChartMode }, Cmd.none
 
 let renderChartContainer state =
-    let infectionsAndDeathsPerAge = latestAgeData state
+    let latest = latestAgeData state
+    let latestDate = fst (latest)
+    let infectionsAndDeathsPerAge = snd (latest)
     let chartData = calculateChartData infectionsAndDeathsPerAge state.ChartMode
-
+    
     Html.div [
         prop.style [ style.height 400 ]
         prop.className "highcharts-wrapper"
-        prop.children [ renderChartOptions state chartData |> chart ]
+        prop.children [ renderChartOptions state latestDate chartData |> chart ]
     ]
 
 let render (state : State) dispatch =
@@ -478,6 +489,16 @@ let render (state : State) dispatch =
             (renderScaleTypeSelectors activeScaleType (ScaleTypeChanged >> dispatch))
         renderChartContainer state
         renderChartCategorySelectors state.ChartMode dispatch
+
+        match state.ChartMode with
+        | AbsoluteDeaths | DeathsPerPopulation | DeathsPerInfections ->
+            Html.div [
+                prop.className "disclaimer"
+                prop.children [
+                    Html.text (chartText "disclaimer")
+                ]
+            ]
+        | _ -> Html.none
     ]
 
 let renderChart (props : {| data : StatsData |}) =

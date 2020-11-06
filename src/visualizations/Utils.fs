@@ -1,14 +1,24 @@
 [<RequireQualifiedAccess>]
 module Utils
 
+open Fable.Core
 open Feliz
 
 open Types
 open System
 
-/// <summary>
-/// Converts Some 0 value to None.
-/// </summary>
+let memoize f =
+    let cache = new System.Collections.Generic.Dictionary<_,_>()
+    (fun x ->
+        match cache.TryGetValue x with
+        | true, value ->
+            value
+        | false, _ ->
+            let value = f x
+            cache.Add(x, value)
+            value)
+
+// Converts Some 0 value to None
 let zeroToNone value =
     match value with
     | Some 0 -> None
@@ -19,8 +29,30 @@ let optionToInt (value: int option) =
     | Some x -> x
     | None -> 0
 
-let roundTo1Decimal (value: float) = Math.Round(value, 1)
-let roundTo3Decimals (value: float) = Math.Round(value, 3)
+[<Emit("(x => isNaN(x) ? null : x)(+$0)")>]
+let nativeParseInt (input : string) : int option = jsNative
+
+[<Emit("(x => isNaN(x) ? null : x)(+$0)")>]
+let nativeParseFloat (input : string) : float option = jsNative
+
+let parseDate (str : string) =
+    try
+        DateTime.Parse(str) |> Ok
+    with _ ->
+        sprintf "Invalid date representation: %s" str |> Error
+
+let roundDecimals (decimals:int) (value: float) = Math.Round(value, decimals)
+
+let roundToInt = roundDecimals 0
+
+let roundTo1Decimal = roundDecimals 1
+
+let roundTo3Decimals = roundDecimals 3
+
+let formatToInt (value: float) =
+    let formatted = sprintf "%.0f" value
+    // A hack to replace decimal point with decimal comma.
+    formatted.Replace('.', ',')
 
 let formatTo1DecimalWithTrailingZero (value: float) =
     let formatted = sprintf "%.1f" value
@@ -90,7 +122,10 @@ let renderScaleSelector scaleType dispatch =
     Html.div [
         prop.className "chart-display-property-selector"
         prop.children [
-            Html.text yLabel
+            Html.div [
+                prop.text yLabel
+                prop.className "chart-display-property-selector__item"
+            ]
             renderSelector Linear scaleType linearLabel
             renderSelector Logarithmic scaleType logLabel
         ]
@@ -118,6 +153,14 @@ let renderLoading =
 
 let renderErrorLoading (error : string) =
     Html.text error
+
+let renderMaybeVisible (visible: bool) (children: ReactElement seq) =
+    Html.div [
+        prop.className (match visible with
+                        | true -> ""
+                        | false -> "invisible" )
+        prop.children children
+    ]
 
 let monthNameOfDate (date : DateTime) =
     match date.Month with
@@ -192,8 +235,9 @@ module Dictionaries =
     type Municipality = {
         Key : string
         Name : string
+        Code : string
         Population : int
-        Code : string }
+    }
 
 (* SLO-spec - replaced for MK *)
     let municipalities =

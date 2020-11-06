@@ -13,7 +13,7 @@ open Types
 
 type DataToDisplay = Municipality | SkopjeMunicipality
 
-let barMaxHeight = 55
+let barMaxHeight = 65
 let showMaxBars = 30
 let collapsedMunicipalityCount = 16
 
@@ -55,6 +55,10 @@ type Query (query : obj, regions : Region list) =
         regions
         |> List.map (fun region -> region.Key)
         |> Set.ofList
+    member this.Search =
+        match query?("search") with
+        | Some (search : string) -> Some search
+        | _ -> None
     member this.Region =
         match query?("region") with
         | Some (region : string) when Set.contains (region.ToLower()) this.Regions ->
@@ -161,7 +165,10 @@ let init (queryObj : obj) (dataToDisplay : DataToDisplay) (data : RegionsData) :
           Municipalities = municipalities
           Regions = regions
           ShowAll = false
-          SearchQuery = ""
+          SearchQuery = 
+            match query.Search with
+            | None -> ""
+            | Some search -> search
           FilterByRegion =
             match query.Region with
             | None -> ""
@@ -559,8 +566,8 @@ let render (state : State) dispatch =
                         prop.href "http://www.iph.mk"
                         prop.text (sprintf "%s: %s, %s"
                             (I18N.t "charts.common.dataSource")
-                            (I18N.t "charts.common.dsNIJZ")
-                            (I18N.t "charts.common.dsMZ"))
+                            (I18N.tOptions ("charts.common.dsNIJZ") {| context = localStorage.getItem ("contextCountry") |})
+                            (I18N.tOptions ("charts.common.dsMZ") {| context = localStorage.getItem ("contextCountry") |}))
                     ]
                 ]
             ]

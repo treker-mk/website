@@ -10,10 +10,10 @@
         </a>
       </div>
       <div class="social">
-        <a href="https://fb.me/Covid19TrekerMK" target="_blank">
+        <a href="https://fb.me/Covid19TrekerMK" target="_blank" rel="noreferrer">
           <img loading="lazy" src="../assets/svg/fb-icon.svg" alt="Facebook" />
         </a>
-        <a href="https://twitter.com/Covid19TrekerMK" target="_blank">
+        <a href="https://twitter.com/Covid19TrekerMK" target="_blank" rel="noreferrer">
           <img loading="lazy" src="../assets/svg/tw-icon.svg" alt="Twitter" />
         </a>
 <!--  SLO-spec
@@ -21,7 +21,7 @@
           <img loading="lazy" src="../assets/svg/medium-icon.svg" alt="Medium" />
         </a>
 -->
-        <a href="https://github.com/treker-mk" target="_blank">
+        <a href="https://github.com/treker-mk" target="_blank" rel="noreferrer">
           <img loading="lazy" src="../assets/svg/gh-icon.svg" alt="GitHub" class="gh-icon" />
         </a>
       </div>
@@ -102,7 +102,7 @@ footer
       transform: none
 
     @media only screen and (max-width: 480px)
-      width:100%
+      width: 100%
       position: static
       transform: none
       display: flex

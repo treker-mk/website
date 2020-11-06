@@ -16,6 +16,9 @@ let chartFromWindow: obj -> ReactElement = jsNative
 [<Import("renderMap", from="./_highcharts")>]
 let map: obj -> ReactElement = jsNative
 
+[<Import("sparklineChart", from="./_highcharts")>]
+let sparklineChart (documentElementId : string, options : obj) : unit = jsNative
+
 [<AutoOpen>]
 module Helpers =
     // Plain-Old-Javascript-Object (i.e. box)
@@ -26,11 +29,17 @@ module Helpers =
     let poja (a: 'T[]) : obj = jsNative
 
     type JsTimestamp = float
+
     [<Emit("$0.getTime()")>]
     let jsTime (x: DateTime): JsTimestamp = jsNative
 
     let jsNoon : JsTimestamp = 43200000.0
     let jsTime12h = jsTime >> ( + ) jsNoon
+    [<Emit("(new Date($0.getFullYear(), $0.getMonth(), $0.getDate())).getTime()")>]
+    let jsTimeMidnight (x: DateTime): JsTimestamp = jsNative
+
+    /// Given two dates it calculates the middle point between the midnight for the first date and end of day for the second date
+    let jsDatesMiddle (a: DateTime) (b: DateTime): JsTimestamp = ( + ) (0.5 * jsTimeMidnight a) (0.5 * jsTimeMidnight b) + 43200000.0
 
 type DashStyle =
     | Solid
@@ -162,6 +171,31 @@ let parseDate (value: String) =
             .Subtract(DateTime(1970,1,1))
             .TotalMilliseconds
 
+let configureRangeSelector selectedRangeSelectionButtonIndex buttons =
+           pojo {|
+                enabled = true
+                allButtonsEnabled = true
+                selected = selectedRangeSelectionButtonIndex
+                inputDateFormat = I18N.t "charts.common.numDateFormat"
+                inputEditDateFormat = I18N.t "charts.common.numDateFormat"
+                inputDateParser = parseDate
+                x = 0
+                inputBoxBorderColor = "#ced4da"
+                buttonTheme = pojo {| r = 6; states = pojo {| select = pojo {| fill = "#ffd922" |} |} |}
+                buttons = buttons
+            |}
+
+let credictsOptions =
+    {| enabled = true
+       text = sprintf "%s: %s, %s"
+            (I18N.t "charts.common.dataSource")
+            (I18N.tOptions ("charts.common.dsNIJZ") {| context = localStorage.getItem ("contextCountry") |})
+            (I18N.tOptions ("charts.common.dsMZ") {| context = localStorage.getItem ("contextCountry") |})
+    // SLO-spec   href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
+       href = "http://www.iph.mk"
+    |} |> pojo
+
+
 let basicChartOptions
     (scaleType:ScaleType)
     (className:string)
@@ -237,7 +271,7 @@ let basicChartOptions
                        label=Some {| align="center"; text=I18N.t "phase.6.title" |}
                     |}
                     {| ``from``=jsTime <| DateTime(2020,5,15);
-                       ``to``=jsTime <| DateTime.Today;
+                       ``to``=jsTime <| DateTime(2020,9,10);
                        color="transparent"
                        label=Some {| align="center"; text=I18N.t "phase.7.title" |}
                     |}
@@ -291,20 +325,7 @@ let basicChartOptions
 
         navigator = pojo {| enabled = false |}
         scrollbar = pojo {| enabled = false |}
-
-        rangeSelector = pojo
-            {|
-                enabled = true
-                allButtonsEnabled = true
-                selected = selectedRangeSelectionButtonIndex
-                inputDateFormat = I18N.t "charts.common.numDateFormat"
-                inputEditDateFormat = I18N.t "charts.common.numDateFormat"
-                inputDateParser = parseDate
-                x = 0
-                inputBoxBorderColor = "#ced4da"
-                buttonTheme = pojo {| r = 6; states = pojo {| select = pojo {| fill = "#ffd922" |} |} |}
-                buttons =
-                    [|
+        rangeSelector = configureRangeSelector selectedRangeSelectionButtonIndex [|
                         {|
                             ``type`` = "month"
                             count = 2
@@ -324,7 +345,6 @@ let basicChartOptions
                             events = pojo {| click = rangeSelectorButtonClickHandler 2 |}
                         |}
                     |]
-            |}
 
         responsive = pojo
             {|
@@ -348,15 +368,5 @@ let basicChartOptions
                     |}
             |}
 
-        credits = pojo
-            {|
-                enabled = true
-                text =
-                    sprintf "%s: %s, %s"
-                        (I18N.t "charts.common.dataSource")
-                        (I18N.t "charts.common.dsNIJZ")
-                        (I18N.t "charts.common.dsMZ")
-                // SLO-spec href = "https://www.nijz.si/sl/dnevno-spremljanje-okuzb-s-sars-cov-2-covid-19"
-                href = "http://www.iph.mk"
-            |}
+        credits = credictsOptions
     |}

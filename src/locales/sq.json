@@ -4,6 +4,7 @@
             "last_x_days": "{{ count }} ditë",
             "last_x_days_plural": "{{ count }} ditë",
             "confirmedCases": "Raste të konfirmuara",
+            "per100k": "për 100 mijë",
             "deceased": "Të vdekur",
             "absolute": "Absolute",
             "population": "e popullsisë",
@@ -13,10 +14,12 @@
             "mortalityOfConfirmedCases": "Vdekshmëria e rasteve të konfirmuara",
             "title": "Harta e qendrave rajonale të shëndetit publik",
             "yesterday": "Dje",
-            "activeCases": "Raste aktive"
+            "activeCases": "Raste aktive",
+            "relativeIncrease": "Rritja javore",
+            "titleMenu": "Komunat - harta"
         },
         "hospitals": {
-            "title": "Kapacitetet spitalore",
+            "title": "Kapaciteti spitalor",
             "projection": "Parashikim",
             "projection7": "Parashikim, dyfishim 7-ditor",
             "projection14": "Parashikim, dyfishim 14-ditor",
@@ -31,19 +34,18 @@
             "bedsICUAll": "Shtretër të kujdesit intensiv, gjithsej",
             "bedsICU70": "Shtretër të kujdesit intensiv, 70%",
             "bedsICUFull": "Shtretër në kujdesin intensiv, të plotësuar",
-            "empty": "Të zbrazur",
+            "empty": "Të lirë",
             "all": "Të gjithë",
             "max": "Maks.",
             "data": "Të dhëna",
             "beds": "Shtretër spitalor",
             "bedsShort": "Shtretër",
             "allHospitals": "Të gjithë spitalet",
-            "full": "Të plotësuar"
+            "full": "Të plotësuar",
+            "titleMenu": "Kapaciteti"
         },
         "countries": {
             "groupNeighbouring": "Shtetet e rajonit",
-            "groupCriticalWorld": "Shtete kritike (në nivel botëror)",
-            "groupCriticalEU": "Shtete kritike (BE)",
             "groupNordic": "Shtetet Nordike",
             "groupExYu": "Ish-Jugosllavia",
             "groupEastAsiaOceania": "Azia Lindore dhe Oqeania",
@@ -66,7 +68,9 @@
             "absolute": "Absolute",
             "female": "Femra",
             "male": "Meshkuj",
-            "title": "Grupmoshat"
+            "title": "Grupmoshat",
+            "populationShare": "Përqindja e popullsisë",
+            "titleMenu": "Mosha, gjinia"
         },
         "municipalities": {
             "lastCase": "Rasti i fundit: ",
@@ -90,13 +94,15 @@
             "viewActive": "Aktive",
             "viewTotal": "Të gjithe",
             "viewDoublingTime": "Koha e dyfishimit",
-            "viewLast": "I fundit"
+            "viewLast": "I fundit",
+            "titleMenu": "Komunat - rastet"
         },
         "regions": {
             "title": "Rastet sipas rajonit",
             "deceased": "Të vdekur",
             "confirmedCases": "Raste të konfirmuara",
-            "activeCases": "Raste aktive"
+            "activeCases": "Raste aktive",
+            "titleMenu": "Rajoni - raste"
         },
         "spread": {
             "absolute": "Rritja absolute ditore",
@@ -123,7 +129,8 @@
             "inFourWeeks": "Për katër javë",
             "hospitalized": "të shtruar në spital",
             "title": "Rritja e rasteve të konfirmuara",
-            "activeCases": "raste aktive"
+            "activeCases": "raste aktive",
+            "titleMenu": "Rritja"
         },
         "infections": {
             "otherPersons": "Persona tjerë",
@@ -134,7 +141,8 @@
             "averageByDay": "Në ditë (mesatarisht)",
             "title": "Struktura e rasteve të konfirmuara",
             "relative": "Relative",
-            "rhOccupant": "Banorë në shtëpi të pleqve"
+            "rhOccupant": "Banorë në shtëpi të pleqve",
+            "titleMenu": "Rastet - struktura"
         },
         "tests": {
             "shareOfPositive": "Përqindje e testeve pozitive (%)",
@@ -143,7 +151,8 @@
             "nationalStudyTesting": "Studim",
             "regularTesting": "Të rregullt",
             "allTesting": "Gjithsej",
-            "title": "Testimi"
+            "title": "Testimi",
+            "titleMenu": "Testimi"
         },
         "hCenters": {
             "allRegions": "Të gjithë rajonet",
@@ -153,7 +162,8 @@
             "suspectedCovidPhone": "Dyshime për COVID-19 (telefon)",
             "suspectedCovidExamination": "Dyshime për COVID-19 (kontroll)",
             "title": "Trajtim në qendër shëndetësore",
-            "emergencyExamination": "Kontrollet në njësinë e urgjencës"
+            "emergencyExamination": "Kontrollet në njësinë e urgjencës",
+            "titleMenu": "Shtëpi e shëndetit - trajtim"
         },
         "ratios": {
             "hospitalDeceasedShare": "Përqindja e rasteve të vdekjes në spital",
@@ -170,7 +180,8 @@
             "mortality": "Vdekshmëria",
             "hospitalizations": "Të shtruar në spital",
             "seriousCases": "Raste të rënda",
-            "title": "Përqindja e rasteve serioze"
+            "title": "Përqindja e rasteve serioze",
+            "titleMenu": "Raste serioze"
         },
         "patients": {
             "allHospitals": "Të gjithë spitalet",
@@ -183,7 +194,8 @@
             "hospitalizedIn": "Të shtruar në spital në:",
             "byHospital": "Sipas spitaleve",
             "structure": "Struktura",
-            "title": "Të shtruar në spital"
+            "title": "Të shtruar në spital",
+            "titleMenu": "Shtrime në spital"
         },
         "cases": {
             "deceased": "Të vdekur",
@@ -192,18 +204,19 @@
             "icu": "Në njësinë për kujdes intensiv",
             "hospitalized": "Të shtruar në spital",
             "active": "Aktive",
-            "title": "Raste të konfirmuara"
+            "title": "Raste të konfirmuara",
+            "titleMenu": "Raste"
         },
         "metricsComparison": {
             "deceasedToDate": "Të vdekur (deri sot)",
-            "deceased": "Të vdekur (në ditë)",
+            "deceased": "Të vdekur",
             "discharged": "Të lëshuar prej spitali (në ditë)",
             "dischargedToDate": "Të lëshuar prej spitali (deri sot)",
             "ventilator": "Në respirator",
             "icu": "Në njësinë për kujdes intensiv",
             "hospitalizedToDate": "Të shtruar në spital (deri sot)",
             "hospitalized": "Të shtruar në spital",
-            "recovered": "Të shëruar (deri sot)",
+            "recovered": "Të shëruar",
             "active": "Raste aktive",
             "confirmedToDate": "Raste të konfirmuara (deri sot)",
             "confirmed": "Raste të konfirmuara (në ditë)",
@@ -212,7 +225,22 @@
             "title": "Situata me COVID-19 në vend",
             "title_SVN": "Situata me COVID-19 në Slloveni",
             "title_MKD": "Situata me COVID-19 në Maqedoninë e Veriut",
-            "title_MNE": "Situata me COVID-19 në Mal të Zi"
+            "title_MNE": "Situata me COVID-19 në Mal të Zi",
+            "ventilatorDischarged": "Të çkyçur nga respiratori",
+            "ventilatorAdmitted": "Të kyçur në respirator",
+            "icuDischarged": "Të lëshuar nga NjKI",
+            "hospitalAdmitted": "Të pranuar në spital",
+            "icuAdmitted": "Të pranuar në NjKI",
+            "hospitalDischarged": "Të lëshuar nga spitali",
+            "activeCases": "Raste aktive",
+            "confirmedCases": "Raste të konfirmuara",
+            "testsPerformed": "Teste",
+            "showToDate": "Deri tani",
+            "showToday": "Në ditë",
+            "showActive": "Aktive",
+            "show7DaysAverage": "Mesatarja 7-ditore",
+            "titleMenu_MNE": "Mali i Zi - gjendja",
+            "titleMenu_MKD": "M. Veriut - gjendja"
         },
         "common": {
             "shortDateFormat": "%e. %b",
@@ -246,72 +274,143 @@
             "dsNIJZ": "ISHP",
             "dsMZ": "Ministria e shëndetësisë",
             "dsOWD": "Our World in Data",
-            "sortBy": "Rendit sipas:"
+            "sortBy": "Rendit sipas:",
+            "dataDate": "Data deri: {{ date, %a., %e. %b. }}"
         },
         "europe": {
             "restrictions": "Kufizimet dhe rastet e importuara",
-            "twoWeekIncidence": "Incidenca 14 ditore për 1 milion banorë",
+            "twoWeekIncidence": "Incidenca 14 ditore për 100.000 banorë",
             "title": "Situata me COVID-19 në Evropë",
-            "statusRed": "karantinë e rreptë 14 ditore",
-            "statusYellow": "karantinë 14 ditore me përjashtime",
+            "statusRed": "karantinë e rreptë 10 ditore",
+            "statusOrange": "karantinë 10 ditore me përjashtime",
             "statusGreen": "pa kufizime",
             "statusNone": "-",
             "countryStatus": "Kufizimet",
             "importedCases": "Rastet e importuara për 14 ditë",
-            "incidence1M": "Raste të reja për 14 ditë në 1M",
+            "incidence100k": "Raste të reja për 14 ditë në 100.000",
             "noData": "Nuk ka të dhëna",
-            "newCases": "Raste të reja"
+            "newCases": "Raste të reja",
+            "weeklyIncrease": "Rritja javore",
+            "titleMenu": "Evropa - gjendja"
         },
         "ageGroupsTimeline": {
             "title": "Rastet e konfirmuara sipas grupmoshës",
             "activeCasesRelative": "Raste aktive (relative)",
             "activeCases": "Raste aktive",
-            "newCases": "Raste të reja"
+            "newCasesRelative": "Raste të reja (relative)",
+            "newCases": "Raste të reja",
+            "titleMenu": "Mosha - përqindja"
         },
         "countriesTotalDeathsPer1M": {
-            "legendTitle": "Gjithsej raste vdekje për 1 milion banorë",
-            "title": "Shtetet: Gjithsej raste vdekje për 1 milion banorë",
-            "yAxisTitle": "Gjithsej raste vdekje për 1 milion banorë"
+            "legendTitle": "Gjithsej raste vdekje për 100.000 banorë",
+            "title": "Shtetet: Gjithsej raste vdekje për 100.000 banorë",
+            "yAxisTitle": "Gjithsej raste vdekje për 100.000 banorë",
+            "titleMenu": "Shtetet - rastet e vdekjes"
         },
         "countriesNewCasesPer1M": {
-            "legendTitle": "Raste të reja për 1 milion banorë",
-            "yAxisTitle": "Raste të reja për 1 milion banorë",
-            "title": "Shtetet: Raste të reja për 1 milion banorë"
+            "legendTitle": "Raste të reja në ditë për 100.000 banorë",
+            "yAxisTitle": "Raste të reja në ditë për 100.000 banorë",
+            "title": "Shtetet: Raste të reja në ditë për 100.000 banorë",
+            "titleMenu": "Shtetet - raste të reja"
         },
         "countriesActiveCasesPer1M": {
             "red": "kriteret për listën e kuqe",
-            "legendTitle": "Rastet aktive për 1M popullsi",
-            "yAxisTitle": "Rastet aktive për 1 milion popullsi",
-            "title": "Shtetet: Rastet aktive për 1 milion popullsi"
+            "legendTitle": "Rastet aktive për 100.000 popullsi",
+            "yAxisTitle": "Rastet aktive për 100.000 popullsi",
+            "title": "Shtetet: Rastet aktive për 100.000 popullsi",
+            "titleMenu": "Shtetet - rastet aktive"
         },
         "world": {
-            "title": "Gjendja me COVID-19 në botë"
+            "title": "Gjendja me COVID-19 në botë",
+            "titleMenu": "Bota - gjendja"
         },
         "sk-municipalities": {
-            "title": "Rastet aktive në rajonin e Shkupit sipas komunave"
+            "title": "Rastet aktive në rajonin e Shkupit sipas komunave",
+            "titleMenu": "Rajoni i Shkupit - rastet aktive"
         },
         "sk-map": {
-            "title": "Rajoni i Shkupit"
+            "title": "Rajoni i Shkupit",
+            "titleMenu": "Rajoni i Shkupit - harta"
         },
         "rmap": {
-            "title": "Harta e rajoneve"
+            "title": "Harta e rajoneve",
+            "titleMenu": "Rajon - harta"
         },
         "countriesDeathsPerCases": {
-            "title": "Shtetet: përqindja e vdekjeve nga rastet e konfirmuara",
+            "title": "Shtetet: gjithsej rastet e vdekjeve nga rastet",
             "chronologically": "Kronologjike",
             "sinceFirstDeath": "Që nga vdekja e parë",
             "sinceOneDeathPerMillion": "Që nga vdekja e parë për 1 milion banorë",
             "daysFromFirstDeath": "Numri i ditëve nga vdekja e parë",
             "daysFromOneDeathPerMillion": "Numri i ditëve nga vdekja e parë për 1 milion banorë",
             "legendTitle": "Përqindja e vdekjeve nga rastet e konfirmuara",
-            "yAxisTitle": "Gjithsej vdekje nga rastet e konfirmuara"
+            "yAxisTitle": "Gjithsej vdekje nga rastet e konfirmuara",
+            "titleMenu": "Shtetet - rastet e vdekjes për numër rastesh"
         },
         "dailyComparison": {
             "positivePct": "Përqindja e testeve pozitive (%)",
             "tests": "Testimet e kryera",
             "active": "Raste aktive",
             "new": "Raste të konfirmuara",
-            "title": "Krahasimi sipas ditëve të javës"
+            "title": "Krahasimi sipas ditëve të javës",
+            "deceased": "Raste vdekjeje",
+            "icuAdmitted": "Të pranuar në NJKI",
+            "hospitalDischarged": "Të lëshuar prej spitali",
+            "hospitalAdmitted": "Të pranuar në spital",
+            "titleMenu": "Ditë e javës - krahasim"
+        },
+        "sources": {
+            "totalImported": "Gjithsej raste të importuara",
+            "totalConfirmed": "Gjithsej raste të konfirmuara",
+            "sourceUnknown": "Burim i panjohur",
+            "localSource": "Burim lokal",
+            "importRelatedCases": "Lidhur me rastet e importuara",
+            "importedCases": "Rastet e importuara",
+            "bySourceCountryRelative": "Rastet e importuara (Relative)",
+            "bySourceCountry": "Rastet e importuara",
+            "bySourceRelative": "Burimet e infektimit (Relative)",
+            "bySource": "Burimet e infektimit",
+            "quarantineRelative": "Karantina (Relative)",
+            "quarantine": "Karantina",
+            "confirmedCases": "Rastet e konfirmuara"
+        },
+        "ostanizdrav": {
+            "validByRisk": {
+                "date": "Data"
+            },
+            "published": {
+                "date": "Data"
+            },
+            "valid": {
+                "date": "Data"
+            }
+        },
+        "phaseDiagram": {
+            "weekVsWeekBefore": {
+                "yAxisLabel": "Dallimi i incidencës",
+                "xAxisLabel": "Incidenca 7 ditore",
+                "yAxisTitle": "Dallimi i incidencës (%)",
+                "name": "Dallimi i incidencës",
+                "xAxisTitle": "Incidenca 7 ditore"
+            },
+            "totalVsWeek": {
+                "yAxisLabel": "Incidenca 7 ditore",
+                "xAxisLabel": "Gjithsej",
+                "yAxisTitle": "Incidenca 7 ditore",
+                "xAxisTitle": "Gjithsej",
+                "name": "Gjithsej vs. javës"
+            },
+            "deceased": "Rastet e vdekjes",
+            "hospitalized": "Të shtruar në spital",
+            "cases": "Rastet e konfirmuara"
+        },
+        "regions100k": {
+            "red": "kriteret për listën e kuqe",
+            "deceased": "Raste vdekjeje",
+            "confirmedCases": "Raste të konfirmuara",
+            "activeCases": "Raste aktive",
+            "titleMenu": "Rajoni - krahasim",
+            "title": "Rastet sipas rajonit (për 100,000 banorë)"
         }
     },
     "shortMonth": {
@@ -363,7 +462,8 @@
         },
         "github": "GitHub",
         "links": "Linqe",
-        "world": "Bota"
+        "world": "Bota",
+        "animation": "Animacion"
     },
     "country": {
         "DEU": "Gjermani",
@@ -399,7 +499,7 @@
         "AUS": "Australi",
         "ALB": "Shqipëri",
         "ARG": "Argjentinë",
-        "BGR": "Bullgari",
+        "BGR": "Bullgaria",
         "BRA": "Brazil",
         "CHL": "Kili",
         "COL": "Kolumbi",
@@ -653,13 +753,20 @@
         "recoveredToDate": "Të shëruar",
         "active": "Raste aktive",
         "confirmedToDate": "Raste të konfirmuara",
-        "tests": "Teste sot"
+        "tests": "Teste sot",
+        "redPhaseGenitive": "kuqe",
+        "redPhase": "Faza e kuqe",
+        "orangePhaseGenitive": "portokalli",
+        "orangePhase": "Faza portokalli",
+        "per100k": "për 100 mijë",
+        "incidence": "Incidenca 14-ditore"
     },
     "notice": {
         "news002": "Rastet e konfirmuara sipas grupmoshës",
         "newChart": "🆕 📊 Grafikon i ri:",
         "newsText": "Koronavirusi Botë - Harta 🌍 - rastet aktive për 1M popullsi",
-        "newPage": "🆕 Faqe e re:"
+        "newPage": "🆕 Faqe e re:",
+        "progressC19": "Progres tipik i COVID-19. Hospitalizim, terapi intensive dhe vdekshmëri."
     },
     "timestamp": {
         "at": "në {{ date, %H:%M }}",
@@ -785,6 +892,15 @@
         "masks": {
             "description": "Maskat janë të detyrueshme në të gjitha hapësirat e mbyllura publike dhe jashtë kur distanca është më e vogël se 2m. <br> Restorantet punojnë vetëm deri në orën 22:30.",
             "title": "Maska"
+        },
+        "testOrQuarantine": {
+            "title": "Test"
+        },
+        "municipality2": {
+            "title": "Komunat"
+        },
+        "regions": {
+            "title": "Rajonet"
         }
     },
     "tableDict": {
@@ -844,30 +960,41 @@
     "phase": {
         "7": {
             "description": "përfundim i epidemisë",
-            "title": "Faza 7"
+            "title": "faza<br>7"
         },
         "6": {
             "description": "metodologji e re testimi, studim",
-            "title": "Faza 6"
+            "title": "faza<br>6"
         },
         "5": {
             "description": "metodologji e re testimi",
-            "title": "Faza 5"
+            "title": "faza<br>5"
         },
         "4": {
             "description": "metodologji e re testimi",
-            "title": "Faza 4"
+            "title": "faza<br>4"
         },
         "3": {
             "description": "metodologji e re testimi",
-            "title": "Faza 3"
+            "title": "faza<br>3"
         },
         "2": {
             "description": "epidemi, metodologji e re testimi",
-            "title": "Faza 2"
+            "title": "faza<br>2"
         },
         "1": {
-            "title": "Faza 1"
+            "title": "faza<br>1"
+        },
+        "9": {
+            "description": "kalim në ndjekje të pjesshme kontaktesh",
+            "title": "faza<br>9"
+        },
+        "8": {
+            "description": "metodologji e re testimi - fëmijë",
+            "title": "faza<br>8"
+        },
+        "11": {
+            "description": "epidemi"
         }
     },
     "weekday": {
@@ -943,7 +1070,7 @@
             "kratovo": "Kratovë",
             "kocani": "Koçani",
             "kicevo": "Kërçovë",
-            "kavadarci": "Kavadari",
+            "kavadarci": "Kavadar",
             "demir_hisar": "Demir Hisar",
             "delcevo": "Dellçevë",
             "debar": "Dibër",
@@ -1031,37 +1158,51 @@
         "phase": {
             "6": {
                 "description": "Dibra 4, Kumanova 4, Shkupi 3, Tetova 4, Resnja 3, Maqedonia 2, Shtipi 3",
-                "title": "Faza 6"
+                "title": "faza<br>6"
             },
             "5": {
                 "description": "Shkupi 4, Tetova 4, Shtipi 3, Maqedonia 2",
-                "title": "Faza 5"
+                "title": "faza<br>5"
             },
             "4": {
                 "description": "Maqedonia 3",
-                "title": "Faza 4"
+                "title": "faza<br>4"
             },
             "3": {
                 "description": "Dibra 4",
-                "title": "Faza 3"
+                "title": "faza<br>3"
             },
             "2": {
                 "description": "Shkupi 4",
-                "title": "Faza 2"
+                "title": "faza<br>2"
             },
             "1": {
                 "description": "Dibra 4, Shkupi 3, Maqedonia 2 ",
-                "title": "Faza 1"
+                "title": "faza<br>1"
             }
         }
     },
     "country-groups": {
-        "groupNeighbouring": "Shtetet fqinje",
         "groupCriticalEU": "Shtetet kritike (BE)",
         "groupCriticalWorld": "Shtetet kritike (Botë)",
+        "groupNeighbouring": "shtetet fqinje",
         "groupNordic": "Shtetet Nordike",
         "groupExYu": "Ish-Jugosllavia",
         "groupEastAsiaOceania": "Azia Lindore dhe Oqeania",
-        "groupLatinAmerica": "Amerika Latine"
+        "groupLatinAmerica": "Amerika Latine",
+        "groupLargestWorldCountries": "shtetet më të mëdha në botë",
+        "groupLargestEuCountries": "Shtetet më të mëdha të BE*",
+        "groupHighestTotalDeaths": "vlerat më të larta",
+        "groupHighestActiveCases": "vlerat më të larta",
+        "groupHighestNewCases": "vlerat më të larta"
+    },
+    "weekdayShort": {
+        "6": "Sht",
+        "5": "Pr",
+        "4": "Enj",
+        "3": "Më",
+        "2": "Ma",
+        "1": "Hë",
+        "0": "Di"
     }
 }
