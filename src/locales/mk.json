@@ -685,7 +685,7 @@
             "yesterday": "Вчера",
             "titleMenu": "Општини - карта",
             "per100k": "на 100 илјади",
-            "relativeIncrease": "Неделна раст"
+            "relativeIncrease": "Неделен раст"
         },
         "infections": {
             "allConfirmed": "Сите потврдени",
@@ -783,7 +783,7 @@
             "noData": "Нема податоци",
             "newCases": "Нови случаи",
             "titleMenu": "Европа - ситуација",
-            "weeklyIncrease": "Неделна раст"
+            "weeklyIncrease": "Неделен раст"
         },
         "ageGroupsTimeline": {
             "title": "Потврдени случаи по старосни групи",
