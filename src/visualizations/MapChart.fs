@@ -509,12 +509,16 @@ let renderMap (state : State) =
                 | ConfirmedCases ->
                     let labelKey = if state.MapToDisplay = MapToDisplay.SkopjeMunicipality then "charts.map.activeCases" else "charts.map.confirmedCases"                
                     let label = fmtStr + sprintf "<br>%s: <b>%d</b>" (I18N.t labelKey) absolute
-                    if totalConfirmed > 0 && state.MapToDisplay <> MapToDisplay.SkopjeMunicipality then
-                        label
-                            + sprintf " (%s %% %s)" (Utils.formatTo3DecimalWithTrailingZero pctPopulation) (I18N.t "charts.map.population")
-                            + sprintf "<br>%s: <b>%0.1f</b> %s" (I18N.t "charts.map.confirmedCases") value100k (I18N.t "charts.map.per100k")
-                            + sprintf "<br>%s: <b>%s%s%%</b>" (I18N.t "charts.map.relativeIncrease") (if weeklyIncrease < 500. then "" else ">") (weeklyIncrease |> Utils.formatTo1DecimalWithTrailingZero)
-                            + if (Array.max lastTwoWeeks) > 0. then sparklineFormatter lastTwoWeeks else ""
+                    if totalConfirmed > 0 then
+                        if state.MapToDisplay = MapToDisplay.SkopjeMunicipality then
+                            label
+                                + sprintf " (%s %% %s)" (Utils.formatTo3DecimalWithTrailingZero pctPopulation) (I18N.t "charts.map.population")
+                        else
+                            label
+                                + sprintf " (%s %% %s)" (Utils.formatTo3DecimalWithTrailingZero pctPopulation) (I18N.t "charts.map.population")
+                                + sprintf "<br>%s: <b>%0.1f</b> %s" (I18N.t "charts.map.confirmedCases") value100k (I18N.t "charts.map.per100k")
+                                + sprintf "<br>%s: <b>%s%s%%</b>" (I18N.t "charts.map.relativeIncrease") (if weeklyIncrease < 500. then "" else ">") (weeklyIncrease |> Utils.formatTo1DecimalWithTrailingZero)
+                                + if (Array.max lastTwoWeeks) > 0. then sparklineFormatter lastTwoWeeks else ""
                     else
                         label
                 | Deceased ->
