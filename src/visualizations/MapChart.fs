@@ -550,7 +550,7 @@ let renderMap (state : State) =
                borderWidth = 1
                backgroundColor = "white"
                valueDecimals = 0 
-               width = 70
+               width = 58 // SLO-spec 70
             |}
             |> pojo
 
