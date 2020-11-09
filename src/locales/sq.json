@@ -1048,7 +1048,8 @@
             "kozle": "Kozle",
             "iksk": "Klinika infektive",
             "privatni": "Spitale private",
-            "tbc": "Institut për TBC"
+            "tbc": "Institut për TBC",
+            "neuro": "Klinika e neurologjisë"
         },
         "municipality": {
             "stip": "Shtip",
