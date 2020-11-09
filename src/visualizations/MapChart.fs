@@ -56,7 +56,7 @@ type DisplayType =
     | RegionPopulationWeightedValues
     | RelativeIncrease
 with
-    static member Default = RegionPopulationWeightedValues
+    static member Default = AbsoluteValues // SLO-specRegionPopulationWeightedValues
 
     override this.ToString() =
        match this with
