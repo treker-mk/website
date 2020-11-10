@@ -1049,7 +1049,8 @@
             "iksk": "Klinika infektive",
             "privatni": "Spitale private",
             "tbc": "Institut për TBC",
-            "neuro": "Klinika e neurologjisë"
+            "neuro": "Klinika e neurologjisë",
+            "skin": "Klinika e dermatologjisë"
         },
         "municipality": {
             "stip": "Shtip",

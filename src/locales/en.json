@@ -1289,7 +1289,8 @@
             "infdrugi": "Infektivni oddelenija vo Tetovo, Ohrid, Veles, Kumanovo i Prilep",
             "privatni": "Private hospitals",
             "tbc": "TBC institute hospital",
-            "neuro": "Hospital for Neurology"
+            "neuro": "Hospital for Neurology",
+            "skin": "Hospital for skin diseases"
         }
     }
 }
