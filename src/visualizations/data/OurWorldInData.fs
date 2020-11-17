@@ -6,7 +6,8 @@ open Fable.Extras.Web
 
 open Types
 
-let apiUrl = "https://api.sledilnik.org/api/owid"
+// let apiUrl = "https://api.sledilnik.org/api/owid" SLO-spec
+let apiUrl = "https://api.treker.mk/api/owid"
 
 type CountryIsoCode = string
 

@@ -24,8 +24,8 @@
       <a
         class="brand-link"
         target="_blank"
-        href="https://covid-19.sledilnik.org/"
-        >COVID-19 Sledilnik</a
+        href="https://covid-19.treker.mk/"
+        >COVID-19 Treker</a
       >
     </div>
   </div>

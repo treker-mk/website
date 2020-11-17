@@ -4,7 +4,8 @@ open Fable.SimpleHttp
 open Fable.SimpleJson
 open Types
 
-let url = "https://api.sledilnik.org/api/stats-weekly"
+// let url = "https://api.sledilnik.org/api/stats-weekly" SLO-spec
+let url = "https://api.treker.mk/api/stats-weekly"
 
 type private TransferSource =
     { quarantine : int option
