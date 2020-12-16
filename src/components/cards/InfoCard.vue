@@ -94,7 +94,7 @@ export default {
           break
         }
         case 'MKD': {
-          return 20.83374
+          return 20.88318
           break
         }
         default:

@@ -38,7 +38,7 @@
         />
         <Info-card
           :title="$t('infocard.incidence')"
-          field="cases.active"
+          field="cases.last14Days"
           name="incidence"
           series-type="state"
         />
