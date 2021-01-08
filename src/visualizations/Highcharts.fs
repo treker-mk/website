@@ -112,6 +112,7 @@ let addContainmentMeasuresFlags
         23, 6, "#e6f0ff", "bordersOopen"
         9, 9, "#ebfaeb", "kindergartensOpen"   
         1, 10, "#ebfaeb", "ucilistaOpen"   
+        14, 12, "#FFe6e6", "kafanas18h"
     |]
     {|
         ``type`` = "flags"

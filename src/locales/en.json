@@ -1203,11 +1203,11 @@
                 "title": "Lockdown off"
             },
             "kafanasOpen": {
-                "description": "Relaxation: bars and reaturants oppened",
+                "description": "Relaxation: bars and restaurants oppened",
                 "title": "Kafanas"
             },
             "bordersOopen": {
-                "description": "Relaxation: borders openned for foreighn citizens",
+                "description": "Relaxation: borders openned for foreign citizens",
                 "title": "Borders Open"
             },
             "kindergartensOpen": {
@@ -1217,6 +1217,10 @@
             "ucilistaOpen": {
                 "title": "Schools",
                 "description": "Relaxation: schools open"
+            },
+            "kafanas18h": {
+                "title": "Restaurants 18h",
+                "description": "Bars and restaurants close at 18h"
             }
         },
         "region": {

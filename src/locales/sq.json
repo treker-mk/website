@@ -1156,6 +1156,10 @@
             "ucilistaOpen": {
                 "title": "Shkollat",
                 "description": "Relaksim: Shkollat hapen"
+            },
+            "kafanas18h": {
+                "title": "Restoranet 18h",
+                "description": "Restoranet 18h"
             }
         },
         "phase": {
