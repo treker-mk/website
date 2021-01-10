@@ -111,7 +111,8 @@ let addContainmentMeasuresFlags
         27, 5, "#ebfaeb", "kafanasOpen"
         23, 6, "#e6f0ff", "bordersOopen"
         9, 9, "#ebfaeb", "kindergartensOpen"   
-        1, 10, "#ebfaeb", "ucilistaOpen"   
+        1, 10, "#ebfaeb", "ucilistaOpen"
+        4, 11, "#FFe6e6", "kafanas21h"
         18, 12, "#FFe6e6", "kafanas18h"
     |]
     {|
