@@ -1218,6 +1218,10 @@
                 "title": "Schools",
                 "description": "Relaxation: schools open"
             },
+            "kafanas21h": {
+                "title": "Restaurants 21h",
+                "description": "Bars and restaurants close at 21h"
+            },
             "kafanas18h": {
                 "title": "Restaurants 18h",
                 "description": "Bars and restaurants close at 18h"
