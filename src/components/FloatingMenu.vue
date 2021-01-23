@@ -158,6 +158,10 @@ export default {
           titleMenu: this.$t('charts.phaseDiagram.titleMenu'),
           icon: 'graph',
         },
+        'details-dash': {
+          titleMenu: this.$t('powerbiDash.titleMenu'),
+          icon: '',
+        },
       },
     }
   },

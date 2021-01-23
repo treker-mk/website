@@ -1300,5 +1300,9 @@
             "neuro": "Hospital for Neurology",
             "skin": "Hospital for skin diseases"
         }
+    },
+    "powerbiDash" : {
+        "titleMenu": "Other",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZWRlMWY0ZDItNmJiNC00Y2IzLTgwOTEtMWYyNDM3ODM4ZWZkIiwidCI6ImY1NDllODY2LTJiYjYtNDRkYS1hNTZhLWEzNjM2NThjOGMyOSIsImMiOjl9&pageName=ReportSection"
     }
 }

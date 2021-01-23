@@ -1117,5 +1117,9 @@
                 "title": "Фаза 1"
             }
         }
-    }
+    },
+    "powerbiDash" : {
+        "titleMenu": "Друго",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZGY2ZGUzYTQtMzM3NC00YzE3LTgyMzItYTJjYjY4ZGFkM2NjIiwidCI6ImY1NDllODY2LTJiYjYtNDRkYS1hNTZhLWEzNjM2NThjOGMyOSIsImMiOjl9&pageName=ReportSection"
+    } 
 }

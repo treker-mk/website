@@ -79,6 +79,11 @@
           <div id="visualizations" class="visualizations"></div>
         </b-col>
       </b-row>
+      <b-row cols="12">
+        <b-col>
+          <iframe id="details-dash" width="100%" height="804" :src="$t('powerbiDash.url')" frameborder="0" allowFullScreen="false" />
+        </b-col>
+      </b-row>
     </b-container>
     <FloatingMenu :list="charts" />
   </div>
@@ -157,6 +162,10 @@ export default {
         obj.link = el.getAttribute('href').substring(1)
         this.charts.push(obj)
       })
+      let dashboard = new Object
+      dashboard.title = "details-dash"
+      dashboard.link = "details-dash"
+      this.charts.push(dashboard)
     },
   },
   watch: {

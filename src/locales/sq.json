@@ -1215,5 +1215,9 @@
         "2": "Ma",
         "1": "Hë",
         "0": "Di"
+    },
+    "powerbiDash" : {
+        "titleMenu": "Tjetër",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiMzQyN2M5ZDUtZWJiYS00ZDdkLWFiNDctM2UxMWMwNzMxMmJmIiwidCI6ImY1NDllODY2LTJiYjYtNDRkYS1hNTZhLWEzNjM2NThjOGMyOSIsImMiOjl9&pageName=ReportSection"
     }
 }
