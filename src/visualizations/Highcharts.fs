@@ -100,21 +100,21 @@ let addContainmentMeasuresFlags
     (startDate: JsTimestamp)
     (endDate: JsTimestamp option) =
     let events = [|
-    // day, mo, color,    i18n
-        28,  2, "#FFFFFF", "gatheringsMass"
-        16,  3, "#FFe6e6", "bordersClosure"
-        17,  3, "#FFFFFF", "debarQuarantine"
-        19, 3, "#FFe6e6", "gatherings5"
-        21, 3, "#FFFFFF", "21hLockdown"
-        22, 4, "#FFe6e6", "masksOn"
-        12, 5, "#FFe6e6", "lessMeasures"
-        27, 5, "#ebfaeb", "kafanasOpen"
-        23, 6, "#e6f0ff", "bordersOopen"
-        9, 9, "#ebfaeb", "kindergartensOpen"   
-        1, 10, "#ebfaeb", "ucilistaOpen"
-        4, 11, "#FFe6e6", "kafanas21h"
-        18, 12, "#FFe6e6", "kafanas18h"
-         21, 1, "#ebfaeb", "kafanas21h"
+    // day, mo, year, color,    i18n
+        28,  2, 2020, "#FFFFFF", "gatheringsMass"
+        16,  3, 2020, "#FFe6e6", "bordersClosure"
+        17,  3, 2020, "#FFFFFF", "debarQuarantine"
+        19, 3, 2020, "#FFe6e6", "gatherings5"
+        21, 3, 2020, "#FFFFFF", "21hLockdown"
+        22, 4, 2020, "#FFe6e6", "masksOn"
+        12, 5, 2020, "#FFe6e6", "lessMeasures"
+        27, 5, 2020, "#ebfaeb", "kafanasOpen"
+        23, 6, 2020, "#e6f0ff", "bordersOopen"
+        9, 9, 2020, "#ebfaeb", "kindergartensOpen"   
+        1, 10, 2020, "#ebfaeb", "ucilistaOpen"
+        4, 11, 2020, "#FFe6e6", "kafanas21h"
+        18, 12, 2020, "#FFe6e6", "kafanas18h"
+        21, 1, 2021, "#ebfaeb", "kafanas21h"
     |]
     {|
         ``type`` = "flags"
@@ -122,8 +122,8 @@ let addContainmentMeasuresFlags
         showInLegend = false
         color = "#444"
         data =
-            events |> Array.choose (fun (d,m,color,i18n) ->
-                let ts = DateTime(2020,m,d) |> jsTime
+            events |> Array.choose (fun (d,m,y,color,i18n) ->
+                let ts = DateTime(y,m,d) |> jsTime
                 let showMeasure =
                     match startDate, endDate with
                     | startDate, None -> ts >= startDate
