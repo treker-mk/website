@@ -114,6 +114,7 @@ let addContainmentMeasuresFlags
         1, 10, "#ebfaeb", "ucilistaOpen"
         4, 11, "#FFe6e6", "kafanas21h"
         18, 12, "#FFe6e6", "kafanas18h"
+         21, 1, "#ebfaeb", "kafanas21h"
     |]
     {|
         ``type`` = "flags"
