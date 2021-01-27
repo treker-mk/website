@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{037E7FEC-664B-4D24-BC9D-736AF1A83AE7}|Default">
+  <MonoDevelop.Ide.ItemProperties.Visualizations.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/visualizations/data/Hospitals.fs">
+    <Files>
+      <File FileName="src/visualizations/I18N.fs" Line="11" Column="23" IsPinned="True" />
+      <File FileName="src/visualizations/data/Hospitals.fs" Line="72" Column="1" />
+      <File FileName="src/visualizations/Highcharts.fs" Line="136" Column="70" />
+      <File FileName="src/visualizations/Utils.fs" Line="8" Column="1" />
+      <File FileName="src/visualizations/App.fs" Line="73" Column="60" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SloCovid19Website" expanded="True">
+            <Node name="App" expanded="True">
+              <Node name="data" expanded="True">
+                <Node name="Hospitals.fs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
