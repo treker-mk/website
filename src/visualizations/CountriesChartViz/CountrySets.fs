@@ -5,7 +5,7 @@ open Synthesis
 
 let setNeighboringCountries = {
       Label = "groupNeighbouring"
-      CountriesCodes = [| "BGR"; "GRC"; "ALB"; "SRB"; "BIH"; "ROU"; "TUR"; "MNE"; "SVN"; "HRV"; "HUN" |]  // SLO-spec - changed for Macedonia
+      CountriesCodes = [| "BGR"; "GRC"; "ALB"; "OWID_KOS"; "SRB"; "BIH"; "ROU"; "TUR"; "MNE"; "SVN"; "HRV"; "HUN" |]  // SLO-spec - changed for Macedonia
     }
 
 let setHighestNewCases = {
