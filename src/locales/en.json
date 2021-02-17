@@ -1225,6 +1225,10 @@
             "kafanas18h": {
                 "title": "Restaurants 18h",
                 "description": "Bars and restaurants close at 18h"
+            },
+            "vaksajns": {
+                "title": "Vaccination",
+                "description": "Start of the immunization process"
             }
         },
         "region": {

@@ -115,6 +115,7 @@ let addContainmentMeasuresFlags
         4, 11, 2020, "#FFe6e6", "kafanas21h"
         18, 12, 2020, "#FFe6e6", "kafanas18h"
         21, 1, 2021, "#ebfaeb", "kafanas21h"
+        17, 2, 2021, "#ebfaeb", "vaksajns"
     |]
     {|
         ``type`` = "flags"

@@ -1164,6 +1164,10 @@
             "kafanas18h": {
                 "title": "Restoranet 18h",
                 "description": "Restoranet 18h"
+            },
+            "vaksajns": {
+                "title": "Vaksinimi",
+                "description": "Vaksinimi"
             }
         },
         "phase": {
