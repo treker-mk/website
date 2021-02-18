@@ -135,7 +135,7 @@ let init data : State * Cmd<Msg> =
     let cmd = Cmd.OfAsync.either getOrFetch () ConsumePatientsData ConsumeServerError
     let state = {
         ScaleType = Linear
-        MetricType = { MetricType = Active; IsAveraged = false }
+        MetricType = { MetricType = Today; IsAveraged = false }
         Metrics = Metrics.initial
         StatsData = data
         PatientsData = [||]
