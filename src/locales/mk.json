@@ -494,6 +494,8 @@
         "metricsComparison": {
             "hospitalized": "Хоспитализирани",
             "recovered": "Оздравени (вкупно)",
+            "vaccinationAdministered": "Вакцинирани 💉",
+            "vaccinationAdministered2nd": "Вакцинирани 💉💉",
             "active": "Активни случаи",
             "confirmedToDate": "Позитивни случаи (вкупно)",
             "confirmed": "Позитивни случаи (дневно)",
@@ -936,9 +938,10 @@
         "region_nm_todate": "Southeast Slovenia",
         "region_ng_todate": "Gorizia Region",
         "region_kr_todate": "Горењска",
-        "state_out_of_hospital_todate": "Отпуштени од болница (до денес)",
-        "cases_unclassified_confirmed_todate": "Потврдени случаи - други (до денес)",
-        "cases_closed_todate": "Затворени случаи (до денес)"
+        "state_out_of_hospital_todate": "Отпуштени од болница (вкупно)",
+        "cases_unclassified_confirmed_todate": "Потврдени случаи - други (вкупно)",
+        "cases_closed_todate": "Затворени случаи (вкупно)",
+        "vaccination_administered_todate": "Вакцинирани (вкупно)"
     },
     "footer": {
         "copyright": "© 2020 Sledilnik.org"

@@ -33,6 +33,10 @@ type Cases =
       Active : int option
     }
 
+type Vaccination =
+    { Administered : TestMeasure
+      Administered2nd : TestMeasure }
+
 type Treatment =
     { InHospital : int option
       InHospitalToDate : int option
@@ -77,6 +81,7 @@ type StatsDataPoint =
       RestHomeEmployeePositiveTestsToDate : int option
       RestHomeOccupantPositiveTestsToDate : int option
       UnclassifiedPositiveTestsToDate : int option
+      Vaccination : Vaccination
     }
 
 type StatsData = StatsDataPoint list

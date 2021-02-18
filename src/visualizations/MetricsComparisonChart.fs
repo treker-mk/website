@@ -59,10 +59,15 @@ type Metric =
     | VentilatorToDate
     | DeceasedToday
     | DeceasedToDate
+    | VacAdministeredToday
+    | VacAdministeredToDate
+    | VacAdministered2Today
+    | VacAdministered2ToDate
     with
         static member UseStatsData metric =
             [PerformedTestsToday; PerformedTestsToDate; ConfirmedCasesToday
-             ConfirmedCasesToDate; ActiveCases; RecoveredToDate]
+             ConfirmedCasesToDate; ActiveCases; RecoveredToDate
+             VacAdministeredToday; VacAdministeredToDate; VacAdministered2Today; VacAdministered2ToDate]
             |> List.contains metric
 
 type MetricCfg = {
@@ -83,6 +88,8 @@ module Metrics  =
         // SLO-spec { Metric=VentilatorToday;       Color="#bf5747"; Visible=true;  Type=Active; Id="ventilator" }
         { Metric=PerformedTestsToday;   Color="#19aebd"; Visible=false; Type=Today;  Id="testsPerformed" }
         { Metric=ConfirmedCasesToday;   Color="#bda506"; Visible=true;  Type=Today;  Id="confirmedCases" }
+        { Metric=VacAdministeredToday;  Color="#189a73"; Visible=true;  Type=Today;  Id="vaccinationAdministered" }
+        // MK-spec hide for now { Metric=VacAdministered2Today; Color="#0e5842"; Visible=true;  Type=Today;  Id="vaccinationAdministered2nd" }
         // SLO-spec { Metric=HospitalIn;            Color="#be7A2a"; Visible=true;  Type=Today;  Id="hospitalAdmitted" }
         // SLO-spec { Metric=HospitalOut;           Color="#8cd4b2"; Visible=false; Type=Today;  Id="hospitalDischarged" }
         // SLO-spec { Metric=ICUIn;                 Color="#d96756"; Visible=true;  Type=Today;  Id="icuAdmitted" }
@@ -93,6 +100,8 @@ module Metrics  =
         { Metric=PerformedTestsToDate;  Color="#19aebd"; Visible=false; Type=ToDate; Id="testsPerformed" }
         { Metric=ConfirmedCasesToDate;  Color="#bda506"; Visible=true;  Type=ToDate; Id="confirmedCases" }
         { Metric=RecoveredToDate;       Color="#20b16d"; Visible=true;  Type=ToDate; Id="recovered" }
+        { Metric=VacAdministeredToDate; Color="#189a73"; Visible=true;  Type=ToDate; Id="vaccinationAdministered" }
+        // MK-spec hide for now { Metric=VacAdministered2ToDate;Color="#0e5842"; Visible=true;  Type=ToDate; Id="vaccinationAdministered2nd" }
         { Metric=HospitalToDate;        Color="#be7A2a"; Visible=true;  Type=ToDate; Id="hospitalAdmitted" }
         // SLO-spec { Metric=HospitalOutToDate;     Color="#8cd4b2"; Visible=false; Type=ToDate; Id="hospitalDischarged" }
         // SLO-spec { Metric=ICUToDate;             Color="#d96756"; Visible=false; Type=ToDate; Id="icuAdmitted" }
@@ -167,6 +176,10 @@ let statsDataGenerator metric =
         | ConfirmedCasesToDate -> point.Cases.ConfirmedToDate
         | ActiveCases -> point.Cases.Active
         | RecoveredToDate -> point.Cases.RecoveredToDate
+        | VacAdministeredToday -> point.Vaccination.Administered.Today
+        | VacAdministeredToDate -> point.Vaccination.Administered.ToDate
+        | VacAdministered2Today -> point.Vaccination.Administered2nd.Today
+        | VacAdministered2ToDate -> point.Vaccination.Administered2nd.ToDate
         | _ -> None
 
 let patientsDataGenerator metric =
@@ -195,38 +208,42 @@ let calcRunningAverage (data: (JsTimestamp * float)[]) =
     let roundToDecimals = 1
 
     let entriesCount = data.Length
-    let cutOff = daysOfMovingAverage / 2
-    let averagedDataLength = entriesCount - cutOff * 2
 
-    let averages = Array.zeroCreate averagedDataLength
+    if entriesCount >= daysOfMovingAverage then
+        let cutOff = daysOfMovingAverage / 2
+        let averagedDataLength = entriesCount - cutOff * 2
 
-    let daysOfMovingAverageFloat = float daysOfMovingAverage
-    let mutable currentSum = 0.
+        let averages = Array.zeroCreate averagedDataLength
 
-    let movingAverageFunc index =
-        let (_, entryValue) = data.[index]
+        let daysOfMovingAverageFloat = float daysOfMovingAverage
+        let mutable currentSum = 0.
 
-        currentSum <- currentSum + entryValue
+        let movingAverageFunc index =
+            let (_, entryValue) = data.[index]
 
-        match index with
-        | index when index >= daysOfMovingAverage - 1 ->
-            let date = data.[index - cutOff] |> fst
-            let average =
-                currentSum / daysOfMovingAverageFloat
-                |> Utils.roundDecimals roundToDecimals
+            currentSum <- currentSum + entryValue
 
-            averages.[index - (daysOfMovingAverage - 1)] <- (date, average)
+            match index with
+            | index when index >= daysOfMovingAverage - 1 ->
+                let date = data.[index - cutOff] |> fst
+                let average =
+                    currentSum / daysOfMovingAverageFloat
+                    |> Utils.roundDecimals roundToDecimals
 
-            let valueToSubtract =
-                data.[index - (daysOfMovingAverage - 1)] |> snd
-            currentSum <- currentSum - valueToSubtract
+                averages.[index - (daysOfMovingAverage - 1)] <- (date, average)
 
-        | _ -> ignore()
+                let valueToSubtract =
+                    data.[index - (daysOfMovingAverage - 1)] |> snd
+                currentSum <- currentSum - valueToSubtract
 
-    for i in 0 .. entriesCount-1 do
-        movingAverageFunc i
+            | _ -> ignore()
 
-    averages
+        for i in 0 .. entriesCount-1 do
+            movingAverageFunc i
+
+        averages
+    else
+        [||]
 
 
 let prepareMetricsData (metric: MetricCfg) (state: State) =
