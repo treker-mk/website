@@ -17,7 +17,7 @@ type DisplayType =
     | Hospital
     | Mortality
   with
-    static member all = [ Cases; Hospital; Mortality ]
+    static member all = [ Cases; (* Hospital; Mortality SLO-spec *) ]
     static member getName = function
         | Cases     -> I18N.t "charts.ratios.seriousCases"
         | Hospital  -> I18N.t "charts.ratios.hospitalizations"
@@ -42,7 +42,7 @@ type Ratios =
 
 module Ratios =
     let getSeries = function
-        | Cases     -> [ HospitalCases; IcuCases; CriticalCases; DeceasedCases ]
+        | Cases     -> [ HospitalCases; (* IcuCases; CriticalCases; SLO-spec *) DeceasedCases ]
         | Hospital  -> [ IcuHospital; CriticalHospital; DeceasedHospital]
         | Mortality -> [ DeceasedHospitalDeceasedTotal; DeceasedIcuDeceasedTotal; DeceasedIcuC; DeceasedHospitalC; ]
 
@@ -80,7 +80,7 @@ let init (data : StatsData) : State * Cmd<Msg> =
         patientsData = [||]
         error = None
         displayType = Cases
-        RangeSelectionButtonIndex = 0
+        RangeSelectionButtonIndex = 2 (* SLO-spec 0 *)
     }
     let cmd = Cmd.OfAsync.either Data.Patients.getOrFetch () ConsumePatientsData ConsumeServerError
     state, cmd
@@ -196,11 +196,15 @@ let renderDisplaySelector state dt dispatch =
     ]
 
 let renderDisplaySelectors state dispatch =
-    Html.div [
-        prop.className "metrics-selectors"
-        prop.children (
-            DisplayType.all
-            |> List.map (fun dt -> renderDisplaySelector state dt dispatch) ) ]
+    if DisplayType.all.Length > 1 (* SLO-spec *)
+    then
+        Html.div [
+            prop.className "metrics-selectors"
+            prop.children (
+                DisplayType.all
+                |> List.map (fun dt -> renderDisplaySelector state dt dispatch) ) ]
+    else
+        Html.none
 
 let render (state : State) dispatch =
     match state.patientsData, state.error with
