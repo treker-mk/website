@@ -39,7 +39,7 @@ let init apiEndpoint : State * Cmd<Msg> =
         Error = None
         Regions = [ ]
         FilterByRegion = ""
-        RangeSelectionButtonIndex = 0
+        RangeSelectionButtonIndex = 1
     }
 
     state, (cmd)

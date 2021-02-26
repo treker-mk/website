@@ -147,7 +147,7 @@ let renderChartCode (state: ChartState) (chartData: ChartData) =
 
     let baseOptions =
         basicChartOptions state.ScaleType "covid19-metrics-comparison"
-            0 (fun _ -> (fun _ -> true))
+            1 (fun _ -> (fun _ -> true))
     {| baseOptions with
         chart = pojo
             {|

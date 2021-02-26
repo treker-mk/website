@@ -103,7 +103,7 @@ let init (config: RegionsChartConfig) (data : RegionsData) : State * Cmd<Msg> =
     { ScaleType = Linear; MetricType = ActiveCases
       ChartConfig = config
       Data = data ; Regions = regionsByTotalCases ; Metrics = metrics
-      RangeSelectionButtonIndex = 0 },
+      RangeSelectionButtonIndex = 1 },
     Cmd.none
 
 let update (msg: Msg) (state: State) : State * Cmd<Msg> =

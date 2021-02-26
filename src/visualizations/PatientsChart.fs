@@ -77,7 +77,7 @@ type State = {
             AllFacilities = []
             HTypeToDisplay = hTypeToDisplay
             Breakdown = AllHospitals
-            RangeSelectionButtonIndex = 0
+            RangeSelectionButtonIndex = 1
         }
 
 let getAllBreakdowns state = seq {

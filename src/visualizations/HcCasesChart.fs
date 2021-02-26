@@ -38,7 +38,7 @@ let init data: State * Cmd<Msg> =
         { scaleType = Linear
           displayType = Healthcare
           data = data
-          RangeSelectionButtonIndex = 0 }
+          RangeSelectionButtonIndex = 1 }
 
     state, Cmd.none
 

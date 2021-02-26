@@ -70,7 +70,7 @@ let init data: State * Cmd<Msg> =
     let state =
         { displayType = BySource
           data = data
-          RangeSelectionButtonIndex = 0 }
+          RangeSelectionButtonIndex = 1 }
 
     state, Cmd.none
 

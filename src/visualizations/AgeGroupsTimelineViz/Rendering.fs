@@ -30,7 +30,7 @@ let init data : State * Cmd<Msg> =
     let state = {
         Data = data
         Metrics = availableDisplayMetrics.[0]
-        RangeSelectionButtonIndex = 0
+        RangeSelectionButtonIndex = 1
     }
     state, Cmd.none
 
