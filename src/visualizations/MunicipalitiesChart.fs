@@ -285,7 +285,7 @@ let renderMunicipality (state : State) (municipality : Municipality) =
                                             if (activeCases > 0) then
                                                 prop.className "active"
                                                 prop.children [
-                                                    Html.span [ prop.text (I18N.t "charts.municipalities.active") ]
+                                                    Html.span [ prop.text (I18N.tOptions "charts.map.last_x_days" {| count = 7 |} + ": ") ]
                                                     Html.b [ prop.text activeCases ] ] ]
                                         Html.div [
                                             if (recoveredToDate > 0) then
@@ -530,7 +530,7 @@ let renderView (currentView : View) (dataToDisplay : DataToDisplay) dispatch =
                 if Highcharts.showDoublingTimeFeatures then
                     renderSelector View.DoublingTime (I18N.t "charts.municipalities.viewDoublingTime")
                 renderSelector View.LastConfirmedCase (I18N.t "charts.municipalities.viewLast")
-                renderSelector View.ActiveCases (I18N.t "charts.municipalities.viewActive")
+                renderSelector View.ActiveCases (I18N.tOptions "charts.map.last_x_days" {| count = 7 |})
                 renderSelector View.TotalConfirmedCases (I18N.t "charts.municipalities.viewTotal")
             ]
         ]
