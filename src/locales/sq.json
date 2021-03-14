@@ -739,7 +739,7 @@
         "preview": "Pasqyrë:"
     },
     "tables": {
-        "day": "{{ date, %e.%m. }}",
+        "day": "{{ date, %m/%d/%y }}",
         "sourceLink": "Tabela GDocs, CSV format apo REST API",
         "source": "Burimet e të dhënave në formate tjera",
         "tabByAgeFemale": "Sipas moshës - Femra",

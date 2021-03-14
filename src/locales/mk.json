@@ -484,7 +484,7 @@
         "tabByAgeFemale": "По возраст - Женски",
         "tabByAgeMale": "По возраст - Машки",
         "title": "Табела",
-        "day": "{{ date, %e.%m. }}",
+        "day": "{{ date, %m/%d/%y }}",
         "sourceLink": "GDocs табела во CSV облик или REST API",
         "source": "Извори на податоци во други облици",
         "tabByRegion": "По регион",
