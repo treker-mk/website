@@ -1232,6 +1232,10 @@
             "vaksajns": {
                 "title": "Vaccination",
                 "description": "Start of the immunization process"
+            },
+            "22_05hLockdown": {
+                "description": "Full lockdown from 22h-05h every day",
+                "title": "Lockdown"
             }
         },
         "region": {

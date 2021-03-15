@@ -1171,6 +1171,10 @@
             "vaksajns": {
                 "title": "Vaksinimi",
                 "description": "Fillim i procesit të imunizimit"
+            },
+            "22_05hLockdown": {
+                "title": "Ndalim i lëvizjes",
+                "description": "Ndalim i tërësishëm i lëvizjes prej orës 22-05 çdo ditë"
             }
         },
         "phase": {
