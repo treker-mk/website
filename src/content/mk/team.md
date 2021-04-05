@@ -13,6 +13,7 @@
 -   [Александра Василевска](https://www.facebook.com/alexandra.laktinski) - преводи
 -   [Арбен Имери]() - преводи
 -   [Бехаре Касами](https://www.facebook.com/be.ka.319) - преводи, комуникација со јавноста
+-   [Баже Петрушев](https://www.linkedin.com/in/petrushev/) - моделирање
 -   [Бобан Петровски]() - податоци, анализа на податоците
 -   [Виктор Кралевски](https://www.linkedin.com/in/viktor-kralevski-8950789) - податоци, анализа на податоците
 -   [Дино Граматиков](https://www.linkedin.com/in/dino-gramatikov-0901183/) - подобрување на искуството
