@@ -81,7 +81,7 @@
       </b-row>
       <b-row cols="12">
         <b-col>
-          <iframe id="details-dash" width="100%" height="804" :src="$t('powerbiDash.url')" frameborder="0" allowFullScreen="false" />
+          <iframe id="details-dash" width="100%" height="1024" :src="$t('powerbiDash.url')" frameborder="0" allowFullScreen="false" />
         </b-col>
       </b-row>
     </b-container>
