@@ -1236,6 +1236,10 @@
             "22_05hLockdown": {
                 "description": "Full lockdown from 22h-05h every day",
                 "title": "Lockdown"
+            },
+            "kafanasClosed": {
+                "title": "Restaurants",
+                "description": "Bars, restaurants and fitness centers are closed"
             }
         },
         "region": {
