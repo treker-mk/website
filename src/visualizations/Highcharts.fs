@@ -100,7 +100,7 @@ let addContainmentMeasuresFlags
     (startDate: JsTimestamp)
     (endDate: JsTimestamp option) =
     let events = [|
-    // day, mo, year, color,    i18n
+        // day, mo, year, color,    i18n
         28,  2, 2020, "#FFe6e6", "gatheringsMass"
         16,  3, 2020, "#FFe6e6", "bordersClosure"
         17,  3, 2020, "#FFe6e6", "debarQuarantine"
