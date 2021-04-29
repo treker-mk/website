@@ -118,6 +118,7 @@ let addContainmentMeasuresFlags
         17, 2, 2021, "#ebfaeb", "vaksajns"
         10, 3, 2021, "#FFe6e6", "22_05hLockdown"
         6, 4, 2021, "#FFe6e6", "kafanasClosed"
+        28, 4, 2021, "#ebfaeb", "goceva_terasa"
     |]
     {|
         ``type`` = "flags"

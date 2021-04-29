@@ -1240,6 +1240,10 @@
             "kafanasClosed": {
                 "title": "Restaurants",
                 "description": "Bars, restaurants and fitness centers are closed"
+            },
+            "goceva_terasa": {
+                "title": "Terraces open",
+                "description": "Terraces open until 20:30h"
             }
         },
         "region": {

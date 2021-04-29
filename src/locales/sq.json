@@ -1179,6 +1179,10 @@
             "kafanasClosed": {
                 "title": "Restoranet",
                 "description": "Restoranet dhe klubet e fitnesit mbyllen"
+            },
+            "goceva_terasa": {
+                "title": "Tarracat e hapura",
+                "description": "Tarracat e hapura deri 20:30"
             }
         },
         "phase": {
