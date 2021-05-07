@@ -701,10 +701,13 @@ let renderMap (state : State) =
                 | _ -> None) 
 
         let dateText = (I18N.tOptions "charts.common.dataDate" {| date = lastDate  |})
+        let noData = (I18N.t "noData.skopjeMun")
+        
+        let subtitle = if state.MapToDisplay = MapToDisplay.SkopjeMunicipality then noData else dateText
 
         {| Highcharts.optionsWithOnLoadEvent "covid19-map" with
             title = null
-            subtitle = {| text = dateText ; align="left"; verticalAlign="bottom" |}
+            subtitle = {| text = subtitle ; align="left"; verticalAlign="bottom" |}
             series = [| series geoJson |]
             legend = legend
             colorAxis = colorAxis

@@ -1238,5 +1238,9 @@
     "powerbiDash" : {
         "titleMenu": "Tjetër",
         "url": "https://app.powerbi.com/view?r=eyJrIjoiMzQyN2M5ZDUtZWJiYS00ZDdkLWFiNDctM2UxMWMwNzMxMmJmIiwidCI6ImY1NDllODY2LTJiYjYtNDRkYS1hNTZhLWEzNjM2NThjOGMyOSIsImMiOjl9&pageName=ReportSection"
+    },
+    "noData" : {
+        "skopjeMun": "Nga 31 janari 2021, Ministria e shëndetësisë nuk njofton lidhur me të infektuarit në komunat e Shkupit.",
+        "macedoniaMun": "Për shkak të regjistrimit të parregullt të të shëruarve nga Ministria e shëndetësisë dhe vlerësimeve më të sakta të gjendjes reale lidhur me prezencën e virusit në bashkësi, i paraqesim rastet e reja në shtatë ditët e fundit."
     }
 }

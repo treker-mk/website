@@ -558,6 +558,25 @@ let render (state : State) dispatch =
                 prop.className "municipalities"
                 prop.children renderedMunicipalities ]
             (if showMore then renderShowMore state.ShowAll dispatch else Html.none)
+            
+            if state.DataToDisplay <> DataToDisplay.SkopjeMunicipality
+            then
+                Html.div [
+                    prop.className "highcharts-subtitle"
+                    prop.children [
+                        Html.p [
+                            prop.text (I18N.t "noData.macedoniaMun")
+                        ]
+                    ]
+                    prop.style [ 
+                        style.marginLeft 10 
+                        style.marginRight 10 
+                        style.marginTop 20 
+                    ]
+                ]
+            else
+                Html.none
+
             Html.div [
                 prop.className "credits"
                 prop.children [

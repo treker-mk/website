@@ -1323,5 +1323,9 @@
     "powerbiDash" : {
         "titleMenu": "Other",
         "url": "https://app.powerbi.com/view?r=eyJrIjoiZWRlMWY0ZDItNmJiNC00Y2IzLTgwOTEtMWYyNDM3ODM4ZWZkIiwidCI6ImY1NDllODY2LTJiYjYtNDRkYS1hNTZhLWEzNjM2NThjOGMyOSIsImMiOjl9&pageName=ReportSection"
+    },
+    "noData" : {
+        "skopjeMun": "Since January 31st 2021, the Ministry of Health does not report active cases for the municipalities of Skopje",
+        "macedoniaMun": "Due to the sporadic reporting on the recovered cases by the Ministry of Health and the missing precise estimations on the state of the virus in the various municipalities, we are only displaying cases for the last 7 days."
     }
 }

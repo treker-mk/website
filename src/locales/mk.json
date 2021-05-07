@@ -1140,5 +1140,9 @@
     "powerbiDash" : {
         "titleMenu": "Друго",
         "url": "https://app.powerbi.com/view?r=eyJrIjoiZGY2ZGUzYTQtMzM3NC00YzE3LTgyMzItYTJjYjY4ZGFkM2NjIiwidCI6ImY1NDllODY2LTJiYjYtNDRkYS1hNTZhLWEzNjM2NThjOGMyOSIsImMiOjl9&pageName=ReportSection"
-    } 
+    },
+    "noData" : {
+        "skopjeMun": "Од 31 јан. 2021, Министерството за здравство не известува за заболените во скопските општини",
+        "macedoniaMun": "Заради нередовното регистрирање на оздравените од страна на Министерството за здравство и попрецизните оценки на реалната состојба за присуството на вирусот во заедниците, ги прикажуваме новите случаи од последните седум дена."
+    }
 }
