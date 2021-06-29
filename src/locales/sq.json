@@ -1241,6 +1241,7 @@
     },
     "noData" : {
         "skopjeMun": "Nga 31 janari 2021, Ministria e shëndetësisë nuk njofton lidhur me të infektuarit në komunat e Shkupit.",
-        "macedoniaMun": "Për shkak të regjistrimit të parregullt të të shëruarve nga Ministria e shëndetësisë dhe vlerësimeve më të sakta të gjendjes reale lidhur me prezencën e virusit në bashkësi, i paraqesim rastet e reja në shtatë ditët e fundit."
+        "macedoniaMun": "Për shkak të regjistrimit të parregullt të të shëruarve nga Ministria e shëndetësisë dhe vlerësimeve më të sakta të gjendjes reale lidhur me prezencën e virusit në bashkësi, i paraqesim rastet e reja në shtatë ditët e fundit.",
+        "hospitals": "Prej 17.06.2021, Ministria e shëndetësisë nuk njofton lidhur me gjendjen nëpër spitale në vend"
     }
 }

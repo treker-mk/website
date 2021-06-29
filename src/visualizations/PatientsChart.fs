@@ -364,6 +364,19 @@ let render (state : State) dispatch =
         Html.div [
             renderChartContainer state dispatch
             renderBreakdownSelectors state dispatch
+            Html.div [
+                prop.className "highcharts-subtitle"
+                prop.children [
+                    Html.p [
+                        prop.text (I18N.t "noData.hospitals")
+                    ]
+                ]
+                prop.style [ 
+                    style.marginLeft 10 
+                    style.marginRight 10 
+                    style.marginTop 20 
+                ]
+            ]
         ]
 
 let patientsChart (props : {| hTypeToDisplay : HospitalType |}) =

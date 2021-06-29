@@ -1326,6 +1326,7 @@
     },
     "noData" : {
         "skopjeMun": "Since January 31st 2021, the Ministry of Health does not report active cases for the municipalities of Skopje",
-        "macedoniaMun": "Due to the sporadic reporting on the recovered cases by the Ministry of Health and the missing precise estimations on the state of the virus in the various municipalities, we are only displaying cases for the last 7 days."
+        "macedoniaMun": "Due to the sporadic reporting on the recovered cases by the Ministry of Health and the missing precise estimations on the state of the virus in the various municipalities, we are only displaying cases for the last 7 days.",
+        "hospitals": "Since June 17th 2021, the Ministry of Health does not report the situation in the hospitals throughout the country"
     }
 }
