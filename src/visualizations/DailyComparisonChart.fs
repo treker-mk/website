@@ -22,9 +22,10 @@ type DisplayType =
     | HospitalDischarged
     | ICUAdmitted
     | Deceased
+    | VacDosesAdministered
 with
-    static member UseStatsData dType = [ Active; New; Tests; PositivePct; ] |> List.contains dType
-    static member all = [ New; Active; Tests; PositivePct; (* SLO-spec HospitalAdmitted; HospitalDischarged; ICUAdmitted; *)Deceased; ]
+    static member UseStatsData dType = [ Active; New; Tests; PositivePct; VacDosesAdministered; ] |> List.contains dType
+    static member all = [ New; Active; Tests; PositivePct; VacDosesAdministered; (* SLO-spec HospitalAdmitted; HospitalDischarged; ICUAdmitted; *)Deceased; ]
     static member getName = function
         | New -> I18N.t "charts.dailyComparison.new"
         | Active -> I18N.t "charts.dailyComparison.active"
@@ -34,6 +35,7 @@ with
         | HospitalDischarged -> I18N.t "charts.dailyComparison.hospitalDischarged"
         | ICUAdmitted -> I18N.t "charts.dailyComparison.icuAdmitted"
         | Deceased -> I18N.t "charts.dailyComparison.deceased"
+        | VacDosesAdministered -> I18N.t "charts.dailyComparison.vaccineDosesAdministered"
     static member getColor = function
         | New -> "#bda506"
         | Active -> "#dba51d"
@@ -43,6 +45,7 @@ with
         | HospitalDischarged -> "#20b16d"
         | ICUAdmitted -> "#d96756"
         | Deceased -> "#696969"
+        | VacDosesAdministered -> "#189a73"
 
 type State = {
     StatsData: StatsData
@@ -106,11 +109,19 @@ let renderChartOptions (state : State) dispatch =
         fmtStr <- fmtStr + "</table>"
         fmtStr
 
+    let add (a : int option) (b : int option) =
+        match a, b with
+        | Some aa, Some bb -> Some (aa + bb)
+        | Some _, None -> a
+        | None, Some _ -> b
+        | _ -> None
+
     let getStatsValue dp =
         match state.DisplayType with
         | New -> dp.Cases.ConfirmedToday
         | Active -> dp.Cases.Active
         | Tests -> dp.Tests.Performed.Today
+        | VacDosesAdministered -> dp.Vaccination.Administered.Today |> add dp.Vaccination.Administered2nd.Today
         | PositivePct -> 
             match dp.Tests.Positive.Today, dp.Tests.Performed.Today with
             | Some p, Some t -> Some ( (float p / float t * 100.0 * 100.0) |> int)

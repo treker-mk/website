@@ -162,6 +162,10 @@ export default {
           titleMenu: this.$t('powerbiDash.titleMenu'),
           icon: '',
         },
+        'metrics-correlation-chart': {
+          titleMenu: this.$t('charts.metricsCorrelation.titleMenu'),
+          icon: 'graph',
+        },
       },
     }
   },

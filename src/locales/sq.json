@@ -104,6 +104,15 @@
             "activeCases": "Raste aktive",
             "titleMenu": "Rajoni - raste"
         },
+        "metricsCorrelation": {
+            "title": "Raporti mes rasteve, të shtruarve në spital dhe rasteve të vdekjeve",
+            "titleMenu": "Raporti",
+            "averageByDay": "Sipas ditëve (mesatarisht)",
+            "all": "Gjithsej",
+            "cases": "Rastet e konfirmuara",
+            "hospitalized": "Të shtruar në spital",
+            "deceased": "Raste vdekje"
+        },
         "spread": {
             "absolute": "Rritja absolute ditore",
             "percentage": "Rritja relative ditore",
@@ -353,6 +362,7 @@
             "positivePct": "Përqindja e testeve pozitive (%)",
             "tests": "Testimet e kryera",
             "active": "Raste aktive",
+            "vaccineDosesAdministered": "Dozat e administruara të vaksinës",
             "new": "Raste të konfirmuara",
             "title": "Krahasimi sipas ditëve të javës",
             "deceased": "Raste vdekjeje",
@@ -749,6 +759,7 @@
         "title": "Tabela"
     },
     "infocard": {
+        "vaccinationSummary": "Të rivaksinuar",
         "lastUpdated": "{{ date, %A, %e. %b }}",
         "deceasedToDate": "Raste vdekje të konfirmuara",
         "icu": "Në njësinë për kujdes intensiv",

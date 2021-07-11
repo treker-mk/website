@@ -47,6 +47,7 @@
         "newsText": "Coronavirus World Map 🌍- active cases per 1M people"
     },
     "infocard": {
+        "vaccinationSummary": "Fully Vaccinated",
         "tests": "Tests Today",
         "confirmedToDate": "Confirmed Cases",
         "active": "Active Cases",
@@ -256,6 +257,7 @@
             "titleMenu": "Day of Week - comparison",
             "new": "Confirmed Cases",
             "active": "Active Cases",
+            "vaccineDosesAdministered": "Vaccine Doses Administered",
             "tests": "Tests Performed",
             "positivePct": "Share of Positive Tests (%)",
             "hospitalAdmitted": "Admitted to Hospital",
@@ -354,6 +356,15 @@
             "rhOccupant": "Retirement Home Residents",
             "allConfirmed": "All Confirmed",
             "otherPersons": "Other Persons"
+        },
+        "metricsCorrelation": {
+            "title": "Correlation between cases, hospitalized and deceased",
+            "titleMenu": "Correlation",
+            "averageByDay": "By Day (average)",
+            "all": "Total",
+            "cases": "Confirmed cases",
+            "hospitalized": "Hospitalized",
+            "deceased": "Deceased"
         },
         "spread": {
             "title": "Growth of Confirmed Cases",

@@ -16,6 +16,7 @@
           series-type="state"
         />
 -->
+        <!-- MK-spec we don't need these anymore. they are irrelevant
         <Info-card
           :title="$t('infocard.confirmedToDate')"
           field="cases.confirmedToDate"
@@ -28,6 +29,8 @@
           good-trend="up"
           series-type="state"
         />
+        -->
+
         <Info-card
           :title="$t('infocard.active')"
           field="cases.active"
@@ -49,6 +52,12 @@
           total-out="total.inHospital.out"
           total-deceased="total.deceased.hospital.today"
           name="statePerTreatment.inHospital"
+          series-type="state"
+        />
+        <Info-card
+          :title="$t('infocard.vaccinationSummary')"
+          field="vaccination.administered2nd.toDate"
+          name="vaccination.administered2nd.toDate"
           series-type="state"
         />
 <!--

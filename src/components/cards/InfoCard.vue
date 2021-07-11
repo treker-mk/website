@@ -1,5 +1,5 @@
 <template>
-  <div class="hp-card-holder">
+  <div class="hp-card-holder" :class="specialCardStyleClass">
     <div class="hp-card" v-if="loaded">
       <div class="card-title">{{ title }}</div>
       <div v-if="field !== 'statePerTreatment.inHospital'">
@@ -7,12 +7,16 @@
           <span v-if="showIncidence">{{
             Math.round(renderValues.lastDay.value / incidence)
           }}</span>
-          <span v-else>{{ renderValues.lastDay.value }}</span>
-          <div class="card-percentage-diff" :class="diffClass">
+          <span v-else>{{ renderValues.lastDay.value | number }}</span>
+          <div class="card-percentage-diff" :class="diffClass" v-if="field !== 'vaccination.administered2nd.toDate'">
             {{ renderValues.lastDay.percentDiff | prefixDiff }}%
           </div>
         </div>
         <div :id="name" class="card-diff">
+          <div class="card-diff-item percent" v-if="field === 'vaccination.administered2nd.toDate'">
+            <div class="trend-icon percent tests"></div>
+            <span class="percent tests">{{ Math.round(renderValues.lastDay.value / population * 100) }}%</span>
+          </div>
           <div v-if="showIncidence">
             <span class="card-note">{{ $t('infocard.per100k') }} </span>
           </div>
@@ -107,6 +111,9 @@ export default {
           break
       }
     },
+    population() {
+      return 2076255
+    },
     diffClass() {
       if (this.field === 'statePerTreatment.deceasedToDate') {
         return 'deceased'
@@ -117,6 +124,13 @@ export default {
         return this.goodTrend === 'down' ? 'bad' : 'good'
       } else {
         return this.goodTrend === 'down' ? 'good' : 'bad'
+      }
+    },
+    specialCardStyleClass() {
+      if (this.field === 'vaccination.administered2nd.toDate') {
+        return 'cardtype-vaccinationSummary'
+      } else {
+        return ''
       }
     },
     incidenceClass() {
@@ -194,10 +208,11 @@ export default {
         )
       }
       return (
-        (!this.totalIn && !this.totalOut && !this.totalDeceased) ||
+        this.field !== 'vaccination.administered2nd.toDate' &&
+        ((!this.totalIn && !this.totalOut && !this.totalDeceased) ||
         (this.renderTotalValues(this.totalIn) === 0 &&
           this.renderTotalValues(this.totalOut) === 0 &&
-          this.renderTotalValues(this.totalDeceased) !== 0)
+          this.renderTotalValues(this.totalDeceased) !== 0))
       )
     },
     showIn() {
@@ -310,7 +325,7 @@ export default {
 }
 
 .card-diff {
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 0.7rem;
 
   .card-diff-item {
@@ -362,6 +377,12 @@ export default {
     background-color: #404040;
   }
 
+  &.percent {
+    -webkit-mask: url(../../assets/svg/close-circle-percent.svg) no-repeat center;
+    mask: url(../../assets/svg/close-circle-percent.svg) no-repeat center;
+    background-color: #665191;
+  }
+
   &.none {
     display: none;
   }
@@ -388,5 +409,23 @@ export default {
   font-size: 12px;
   color: #a0a0a0;
   margin-top: auto;
+}
+
+/**
+  SPECIAL CARD STYLES
+ */
+
+.cardtype-vaccinationSummary {
+  .percent {
+    &.trend-icon {
+      background-color: #a0a0a0;
+    }
+    &.tests {
+      color: #a0a0a0;
+    }
+  }
+  .in {
+    display: none;
+  }
 }
 </style>

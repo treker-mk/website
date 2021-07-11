@@ -153,6 +153,7 @@ type VisualizationType =
     | CountriesActiveCasesPer1M
     | CountriesDeathsPer1M
     | PhaseDiagram
+    | MetricsCorrelation
 
 type RenderingMode =
     | Normal

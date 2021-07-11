@@ -114,4 +114,8 @@ localStorage.setItem('contextCountry', process.env.VUE_APP_LOCALE_CONTEXT)
 
 const i18n = new VueI18Next(i18next)
 
+export function formatNumber(number, opts = {}){
+  return Intl.NumberFormat(i18next.language || 'sl', opts).format(number)
+}
+
 export default i18n
