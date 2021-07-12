@@ -759,7 +759,7 @@
         "title": "Tabela"
     },
     "infocard": {
-        "vaccinationSummary": "Të rivaksinuar",
+        "vaccinationSummary": "Plotësisht të vaksinuar",
         "lastUpdated": "{{ date, %A, %e. %b }}",
         "deceasedToDate": "Raste vdekje të konfirmuara",
         "icu": "Në njësinë për kujdes intensiv",
