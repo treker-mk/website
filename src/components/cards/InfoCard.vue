@@ -2,66 +2,64 @@
   <div class="hp-card-holder" :class="specialCardStyleClass">
     <div class="hp-card" v-if="loaded">
       <div class="card-title">{{ title }}</div>
-      <div v-if="field !== 'statePerTreatment.inHospital'">
-        <div class="card-number">
-          <span v-if="showIncidence">{{
-            Math.round(renderValues.lastDay.value / incidence)
-          }}</span>
-          <span v-else>{{ renderValues.lastDay.value | number }}</span>
-          <div class="card-percentage-diff" :class="diffClass" v-if="field !== 'vaccination.administered2nd.toDate'">
-            {{ renderValues.lastDay.percentDiff | prefixDiff }}%
-          </div>
-        </div>
-        <div :id="name" class="card-diff">
-          <div class="card-diff-item percent" v-if="field === 'vaccination.administered2nd.toDate'">
-            <div class="trend-icon percent tests"></div>
-            <span class="percent tests">{{ Math.round(renderValues.lastDay.value / population * 100) }}%</span>
-          </div>
-          <div v-if="showIncidence">
-            <span class="card-note">{{ $t('infocard.per100k') }} </span>
-          </div>
-          <div v-if="showAbsolute">
-            <div class="trend-icon" :class="[diffClass, iconClass]"></div>
-            <span :class="diffClass"
-              >{{ Math.abs(renderValues.lastDay.diff) }}
-            </span>
-          </div>
-          <div v-if="showIn" class="card-diff-item">
-            <div class="trend-icon in bad up"></div>
-            <span v-if="field === 'cases.active'" class="in bad">{{
-              renderActiveValues(fieldNewCases).lastDay.value
-            }}</span>
-            <span v-else class="in bad">{{ renderTotalValues(totalIn) }}</span>
-          </div>
-          <div v-if="showOut" class="card-diff-item">
-            <div class="trend-icon out good down"></div>
-            <span v-if="field === 'cases.active'" class="out good">{{
-              renderActiveValues(fieldNewCases).lastDay.value -
-                renderActiveValues(field).lastDay.diff -
-                renderActiveValues(fieldDeceased).lastDay.value
-            }}</span>
-            <span v-else class="out good">{{ renderTotalValues(totalOut) }}</span>
-          </div>
-          <div v-if="showDeceased" class="card-diff-item">
-            <div class="trend-icon deceased"></div>
-            <span v-if="field === 'cases.active'" class="deceased">{{
-              renderActiveValues(fieldDeceased).lastDay.value
-            }}</span>
-            <span v-else class="deceased"
-              >{{ renderTotalValues(totalDeceased) }}
-            </span>
-          </div>
-        </div>
-        <div class="data-time">
-          {{
-            $t('infocard.lastUpdated', {
-              date: new Date(renderValues.lastDay.displayDate),
-            })
-          }}
+      <div class="card-number">
+        <span v-if="showIncidence">{{
+          Math.round(renderValues.lastDay.value / incidence)
+        }}</span>
+        <span v-else>{{ renderValues.lastDay.value | number }}</span>
+        <div class="card-percentage-diff" :class="diffClass" v-if="field !== 'vaccination.administered2nd.toDate'">
+          {{ renderValues.lastDay.percentDiff | prefixDiff }}%
         </div>
       </div>
-      <div v-if="field === 'statePerTreatment.inHospital'" class="card-diff-item">
+      <div :id="name" class="card-diff">
+        <div class="card-diff-item percent" v-if="field === 'vaccination.administered2nd.toDate'">
+          <div class="trend-icon percent tests"></div>
+          <span class="percent tests">{{ Math.round(renderValues.lastDay.value / population * 100) }}%</span>
+        </div>
+        <div v-if="showIncidence">
+          <span class="card-note">{{ $t('infocard.per100k') }} </span>
+        </div>
+        <div v-if="showAbsolute">
+          <div class="trend-icon" :class="[diffClass, iconClass]"></div>
+          <span :class="diffClass"
+            >{{ Math.abs(renderValues.lastDay.diff) }}
+          </span>
+        </div>
+        <div v-if="showIn" class="card-diff-item">
+          <div class="trend-icon in bad up"></div>
+          <span v-if="field === 'cases.active'" class="in bad">{{
+            renderActiveValues(fieldNewCases).lastDay.value
+          }}</span>
+          <span v-else class="in bad">{{ renderTotalValues(totalIn) }}</span>
+        </div>
+        <div v-if="showOut" class="card-diff-item">
+          <div class="trend-icon out good down"></div>
+          <span v-if="field === 'cases.active'" class="out good">{{
+            renderActiveValues(fieldNewCases).lastDay.value -
+              renderActiveValues(field).lastDay.diff -
+              renderActiveValues(fieldDeceased).lastDay.value
+          }}</span>
+          <span v-else class="out good">{{ renderTotalValues(totalOut) }}</span>
+        </div>
+        <div v-if="showDeceased" class="card-diff-item">
+          <div class="trend-icon deceased"></div>
+          <span v-if="field === 'cases.active'" class="deceased">{{
+            renderActiveValues(fieldDeceased).lastDay.value
+          }}</span>
+          <span v-else class="deceased"
+            >{{ renderTotalValues(totalDeceased) }}
+          </span>
+        </div>
+      </div>
+      <div v-if="field === 'statePerTreatment.inHospital'" class="card-title" style="font-weight: 300">
           {{ $t('noData.hospitals') }}
+      </div>
+      <div class="data-time">
+        {{
+          $t('infocard.lastUpdated', {
+            date: new Date(renderValues.lastDay.displayDate),
+          })
+        }}
       </div>
     </div>
     <div class="hp-card" v-else>
