@@ -276,23 +276,23 @@ module Dictionaries =
         |> Map.ofList
 
     let skopjeMunicipalities =
-        [ "chair", 64773, "Chair"
-          "aerodrom", 72009, "Aerodrom"
-          "butel", 36154, "Butel"
-          "gazi_baba", 72617, "Gazi Baba"
-          "centar", 45412, "Centar"
-          "karposh", 59666, "Karposh"
-          "saraj", 35408, "Saraj"
-          "kisela_voda", 57236, "Kisela Voda"
-          "gjorche_petrov", 41634, "Gjorche Petrov"
-          "studenichani", 17246, "Studenichani"
-          "shuto_orizari", 22017, "Shuto Orizari"
-          "arachinovo", 11597, "Arachinovo"
-          "ilinden", 15894, "Ilinden"
-          "petrovets", 8255, "Petrovets"
-          "chucher-sandevo", 8493, "Chucher - Sandevo"
-          "sopishte", 5656, "Sopishte"
-          "zelenikovo", 4077, "Zelenikovo" ]    
+        [ "chair", 62586, "Chair"
+          "aerodrom", 77735, "Aerodrom"
+          "butel", 37968, "Butel"
+          "gazi_baba", 69626, "Gazi Baba"
+          "centar", 43893, "Centar"
+          "karposh", 63760, "Karposh"
+          "saraj", 38399, "Saraj"
+          "kisela_voda", 61965, "Kisela Voda"
+          "gjorche_petrov", 44844, "Gjorche Petrov"
+          "studenichani", 21970, "Studenichani"
+          "shuto_orizari", 25726, "Shuto Orizari"
+          "arachinovo", 12676, "Arachinovo"
+          "ilinden", 17435, "Ilinden"
+          "petrovets", 9150, "Petrovets"
+          "chucher-sandevo", 9200, "Chucher - Sandevo"
+          "sopishte", 6713, "Sopishte"
+          "zelenikovo", 3361, "Zelenikovo" ]    
         |> List.map (fun (key, population, code) -> key,  { Municipality.Key = key ; Municipality.Name = key ; Municipality.Population = population ; Municipality.Code = code })
         |> Map.ofList
 
