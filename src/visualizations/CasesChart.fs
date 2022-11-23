@@ -160,7 +160,7 @@ let renderChartOptions (state : State) dispatch =
         series = allSeries
         plotOptions = pojo
             {|
-                series = {| stacking = "normal"; crisp = false; borderWidth = 0; pointPadding = 0; groupPadding = 0  |}
+                series = {| stacking = "normal"; crisp = false; borderWidth = 0; pointPadding = 0; groupPadding = 0; turboThreshold = 0 |}
             |}
 
         tooltip = pojo
