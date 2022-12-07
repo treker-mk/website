@@ -312,7 +312,7 @@ let renderStructureChart (state : State) dispatch =
             |}
         plotOptions = pojo
             {|
-                column = {| stacking = "normal"; crisp = false; borderWidth = 0; pointPadding = 0; groupPadding = 0; turboThreshold = 0 |}
+                column = pojo {| stacking = "normal"; crisp = false; borderWidth = 0; pointPadding = 0; groupPadding = 0; turboThreshold = 0 |}
             |}
 
         series = [| for series in Series.structure state.HTypeToDisplay
